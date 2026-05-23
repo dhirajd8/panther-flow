@@ -54,9 +54,9 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1D3E]">
+    <div className="min-h-screen bg-[#0B1D3E]" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B1D3E]/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/10 shadow-lg" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img 
@@ -75,7 +75,7 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-[#0B1D3E]">
+      <section className="pt-32 pb-20 px-4" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="inline-block">
@@ -163,7 +163,7 @@ const Home = () => {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-20 px-4 bg-[#0B1D3E]">
+      <section className="py-20 px-4" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -245,7 +245,7 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-[#0B1D3E]">
+      <section className="py-20 px-4" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -302,7 +302,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0B1D3E] text-white py-12 px-4 border-t border-white/10">
+      <footer className="text-white py-12 px-4 border-t border-white/10" style={{ backgroundImage: 'url(https://customer-assets.emergentagent.com/job_panther-training/artifacts/jsyr9xb6_ChatGPT%20Image%20May%2023%2C%202026%2C%2012_08_42%20AM.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
