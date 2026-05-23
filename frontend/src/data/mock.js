@@ -4,61 +4,78 @@ export const courseData = {
   title: "Beginner Meta Ads Training",
   price: 1199,
   currency: "₹",
-  heroHeadline: "मेटा ॲड्स शिका आणि तुमचा व्यवसाय वाढवा",
-  heroSubheadline: "महाराष्ट्रातील विद्यार्थ्यांसाठी मराठी भाषेतील संपूर्ण Meta Ads प्रशिक्षण",
-  heroCTA: "आता नोंदणी करा - फक्त ₹1,199",
+  heroHeadline: "Most affordable & practical Course in Marathi",
+  heroCTA: "Join Now - फक्त ₹1,199",
   
   benefits: [
     {
       id: 1,
-      title: "मराठीत शिका",
-      description: "तुमच्या मातृभाषेत सोप्या पद्धतीने Meta Ads चे सर्व तंत्र शिका",
-      icon: "Languages"
+      title: "Marathi Language",
+      description: "सोप्या आणि simple मराठी मध्ये concepts clear होतात आणि result लवकर मिळतात",
+      icon: "Target"
     },
     {
       id: 2,
-      title: "प्रॅक्टिकल ट्रेनिंग",
-      description: "थिअरी नाही, फक्त प्रॅक्टिकल उदाहरणांसह शिकवणी",
-      icon: "Laptop"
+      title: "Practical Training",
+      description: "Real campaigns, real examples शिकता शिकता तुमचा पहिला Ad live करा!",
+      icon: "Rocket"
     },
     {
       id: 3,
-      title: "लाईफटाइम ॲक्सेस",
-      description: "एकदा खरेदी केल्यावर आयुष्यभर कोर्स मटेरियल उपलब्ध",
+      title: "Lifetime Access",
+      description: "एकदा invest करा, आणि doubt साठी हवे तेव्हा recordings refer करा नवीन updates पण free मिळतील!",
       icon: "Infinity"
     },
     {
       id: 4,
-      title: "कमी खर्चात शिका",
-      description: "फक्त ₹1,199 मध्ये संपूर्ण Meta Ads कोर्स",
-      icon: "IndianRupee"
+      title: "Value At Low Price",
+      description: "फक्त ₹1,199 मध्ये एक professional-level Meta Ads expert बना आजच सुरुवात करा!",
+      icon: "DollarSign"
     }
   ],
   
   targetAudience: [
     {
       id: 1,
-      title: "व्यवसाय मालक",
-      description: "तुमच्या व्यवसायाला ऑनलाइन वाढवायचं आहे?",
+      title: "Business Owner",
+      description: "तुमच्या व्यवसायाला online वाढवायचं आहे?",
       icon: "Store"
     },
     {
       id: 2,
-      title: "फ्रीलान्सर्स",
-      description: "Meta Ads चे एक्सपर्ट बनून कमाई करायची आहे?",
+      title: "Freelancers",
+      description: "Meta Ads चे expert बनून कमाई करायची आहे?",
       icon: "Briefcase"
     },
     {
       id: 3,
-      title: "विद्यार्थी",
-      description: "नवीन स्किल शिकून करिअर बनवायचं आहे?",
+      title: "Students",
+      description: "नवीन skill शिकून करिअर बनवायचं आहे?",
       icon: "GraduationCap"
     },
     {
       id: 4,
-      title: "मार्केटर्स",
+      title: "Marketers",
       description: "तुमचे डिजिटल मार्केटिंग स्किल्स वाढवायचे आहेत?",
       icon: "TrendingUp"
+    }
+  ],
+
+  requirements: [
+    {
+      id: 1,
+      title: "Laptop",
+      icon: "Laptop"
+    },
+    {
+      id: 2,
+      title: "Internet Connection",
+      icon: "Wifi"
+    },
+    {
+      id: 3,
+      title: "Will to Learn",
+      icon: "BookOpen"
     }
   ],
   
@@ -66,18 +83,20 @@ export const courseData = {
     {
       id: 1,
       module: "Module 1",
-      title: "Meta Ads चा परिचय",
+      title: "Meta Ads Introduction",
       topics: [
         "Facebook आणि Instagram Ads समजून घ्या",
+        "Facebook Page Creation",
+        "Basic Ad Metrics",
         "Meta Business Suite सेटअप",
         "Ads Manager चा परिचय",
-        "पेमेंट मेथड सेटअप"
+        "Payment Method Setup"
       ]
     },
     {
       id: 2,
       module: "Module 2",
-      title: "कॅम्पेन तयार करणे",
+      title: "Campaign Setup",
       topics: [
         "Campaign Objective निवडणे",
         "Target Audience तयार करणे",
@@ -88,21 +107,22 @@ export const courseData = {
     {
       id: 3,
       module: "Module 3",
-      title: "Ad Creative आणि Copywriting",
+      title: "Ad Creative & Copywriting with AI",
       topics: [
         "आकर्षक Ad Creative तयार करणे",
         "Effective Ad Copy लिहिणे",
         "Image आणि Video Ads",
-        "A/B Testing करणे"
+        "Call-to-Action (CTA) Perfect करणे"
       ]
     },
     {
       id: 4,
       module: "Module 4",
-      title: "Analytics आणि Optimization",
+      title: "Analytics & Optimization",
       topics: [
         "Meta Pixel सेटअप",
         "Campaign Performance ट्रॅक करणे",
+        "Ad Reporting",
         "ROI कॅल्क्युलेट करणे",
         "Ads Optimize करणे"
       ]
@@ -133,11 +153,11 @@ export const courseData = {
     {
       id: 5,
       question: "पेमेंट केल्यानंतर कोर्स कसा मिळेल?",
-      answer: "पेमेंट केल्यानंतर तुम्हाला लगेच ईमेल आणि SMS द्वारे कोर्स ॲक्सेस लिंक मिळेल. तुम्ही त्वरित शिकणे सुरू करू शकता."
+      answer: "पेमेंट केल्यानंतर तुम्हाला लगेच ईमेल आणि WhatsApp द्वारे कोर्स ॲक्सेस लिंक मिळेल."
     },
     {
       id: 6,
-      question: "काही तांत्रिक मदत मिळेल का?",
+      question: "Doubt solve होतील का?",
       answer: "होय! कोर्स दरम्यान कोणतीही अडचण आली तर तुम्ही आम्हाला संपर्क करू शकता. आम्ही तुम्हाला मदत करू."
     }
   ]
