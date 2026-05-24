@@ -96,22 +96,23 @@ const Home = () => {
 
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-4 text-center shadow-lg" style={{
+        <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
           background: 'linear-gradient(90deg, #ef4444 0%, #dc2626 50%, #ef4444 100%)',
           backgroundSize: '200% 100%',
           animation: 'gradient-shift 4s ease infinite',
           fontFamily: 'Google Sans, sans-serif'
         }} data-testid="announcement-bar">
-          <div className="flex items-center justify-center gap-2 text-white text-sm font-semibold">
-            <span className="relative flex h-2 w-2">
+          <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
+            <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
-            <Calendar className="w-4 h-4" />
-            <span>🔥 New Batch Starting on <strong>4th June</strong> · Limited Seats Available!</span>
+            <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>4th June</strong> · Limited Seats Available!</span>
+            <span className="sm:hidden">🔥 New Batch · <strong>4th June</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
-              className="ml-2 underline hover:no-underline font-bold"
+              className="underline hover:no-underline font-bold whitespace-nowrap"
               data-testid="announcement-cta"
             >
               Join Now →
@@ -120,23 +121,23 @@ const Home = () => {
         </div>
 
         {/* Header - Floating Pill Menu */}
-        <header className="fixed top-12 left-1/2 -translate-x-1/2 z-50">
-          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-3 py-2" style={{
+        <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
+          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
             background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.85) 0%, rgba(42, 63, 138, 0.85) 100%)',
             boxShadow: '0 10px 40px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
           }}>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2 justify-center">
               <span 
-                className="text-white font-bold px-4 py-2 text-base tracking-wide"
+                className="hidden md:inline-block text-white font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
                 style={{ fontFamily: 'Times New Roman, serif' }}
                 data-testid="menu-brand"
               >
                 Panther Flow
               </span>
-              <div className="w-px h-6 bg-white/30"></div>
+              <div className="hidden md:block w-px h-6 bg-white/30"></div>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
+                className="text-white hover:bg-white/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-about"
               >
@@ -144,7 +145,7 @@ const Home = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('course')}
-                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
+                className="text-white hover:bg-white/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-course"
               >
@@ -152,7 +153,7 @@ const Home = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('faq')}
-                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
+                className="text-white hover:bg-white/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-faq"
               >
@@ -160,7 +161,7 @@ const Home = () => {
               </button>
               <Button 
                 onClick={handleEnrollClick}
-                className="bg-white text-[#17245a] hover:bg-white/90 font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern"
+                className="bg-white text-[#17245a] hover:bg-white/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto whitespace-nowrap"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="header-join-now"
               >
@@ -171,7 +172,7 @@ const Home = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="pt-40 pb-20 px-4 relative overflow-hidden">
+        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden">
           {/* Grid background pattern */}
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
@@ -223,17 +224,17 @@ const Home = () => {
                 </span>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
-                  <Video className="w-4 h-4" />
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                  <Video className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   Beginner Meta Ads Practical Live Training
                 </span>
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
-                  <Play className="w-4 h-4" />
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                  <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight" style={{ fontFamily: 'Times New Roman, serif' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight" style={{ fontFamily: 'Times New Roman, serif' }}>
                 Most affordable & practical<br />Course in Marathi
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
