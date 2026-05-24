@@ -120,8 +120,40 @@ const Home = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+          {/* Grid background pattern */}
+          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
+          
+          {/* Floating decorative icons */}
+          <div className="absolute top-32 left-16 opacity-25 animate-float pointer-events-none">
+            <Target className="w-20 h-20 text-white" />
+          </div>
+          <div className="absolute top-48 right-20 opacity-25 animate-float-slow pointer-events-none">
+            <Rocket className="w-16 h-16 text-white" />
+          </div>
+          <div className="absolute bottom-32 left-24 opacity-25 animate-float-reverse pointer-events-none">
+            <Sparkles className="w-14 h-14 text-white" />
+          </div>
+          <div className="absolute bottom-40 right-32 opacity-25 animate-float pointer-events-none">
+            <Award className="w-16 h-16 text-white" />
+          </div>
+          <div className="absolute top-1/2 left-8 opacity-20 animate-float-slow pointer-events-none">
+            <Video className="w-12 h-12 text-white" />
+          </div>
+          <div className="absolute top-1/3 right-8 opacity-20 animate-float-reverse pointer-events-none">
+            <Activity className="w-12 h-12 text-white" />
+          </div>
+
+          {/* Glowing orbs */}
+          <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full animate-pulse-glow pointer-events-none" style={{
+            background: 'radial-gradient(circle, rgba(106, 127, 199, 0.4) 0%, transparent 70%)'
+          }}></div>
+          <div className="absolute bottom-20 right-1/4 w-72 h-72 rounded-full animate-pulse-glow pointer-events-none" style={{
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%)',
+            animationDelay: '2s'
+          }}></div>
+
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center space-y-6">
               <div className="flex flex-wrap justify-center gap-3 mb-6">
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
@@ -170,8 +202,19 @@ const Home = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 px-4 relative overflow-hidden">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
+          
+          {/* Floating icons */}
+          <div className="absolute top-20 right-12 opacity-20 animate-float pointer-events-none">
+            <DollarSign className="w-14 h-14 text-white" />
+          </div>
+          <div className="absolute bottom-20 left-12 opacity-20 animate-float-slow pointer-events-none">
+            <Sparkles className="w-12 h-12 text-white" />
+          </div>
+
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 Why Panther Flow
@@ -363,8 +406,22 @@ const Home = () => {
         </section>
 
         {/* Requirements & Target Audience Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 px-4 relative overflow-hidden">
+          {/* Grid background */}
+          <div className="absolute inset-0 dot-bg pointer-events-none"></div>
+          
+          {/* Floating icons */}
+          <div className="absolute top-32 left-16 opacity-20 animate-float pointer-events-none">
+            <Store className="w-14 h-14 text-white" />
+          </div>
+          <div className="absolute top-48 right-24 opacity-20 animate-float-slow pointer-events-none">
+            <GraduationCap className="w-12 h-12 text-white" />
+          </div>
+          <div className="absolute bottom-32 right-16 opacity-20 animate-float-reverse pointer-events-none">
+            <Briefcase className="w-14 h-14 text-white" />
+          </div>
+
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
                 हा कोर्स कोणासाठी आहे?
@@ -415,14 +472,31 @@ const Home = () => {
         </section>
 
         {/* Course Content Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 px-4 relative overflow-hidden">
+          {/* Grid background pattern */}
+          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
+          
+          {/* Floating decorative icons */}
+          <div className="absolute top-20 left-10 opacity-20 animate-float pointer-events-none">
+            <Target className="w-16 h-16 text-white" />
+          </div>
+          <div className="absolute top-40 right-20 opacity-20 animate-float-slow pointer-events-none">
+            <Rocket className="w-12 h-12 text-white" />
+          </div>
+          <div className="absolute bottom-40 left-20 opacity-20 animate-float-reverse pointer-events-none">
+            <Activity className="w-14 h-14 text-white" />
+          </div>
+          <div className="absolute bottom-20 right-10 opacity-20 animate-float pointer-events-none">
+            <Award className="w-12 h-12 text-white" />
+          </div>
+
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 <Activity className="w-10 h-10" />
                 Course Anatomy
               </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
               </p>
             </div>
@@ -460,8 +534,19 @@ const Home = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl">
+        <section className="py-20 px-4 relative overflow-hidden">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
+          
+          {/* Floating icons */}
+          <div className="absolute top-32 left-20 opacity-20 animate-float pointer-events-none">
+            <BookOpen className="w-14 h-14 text-white" />
+          </div>
+          <div className="absolute bottom-32 right-20 opacity-20 animate-float-slow pointer-events-none">
+            <Sparkles className="w-12 h-12 text-white" />
+          </div>
+
+          <div className="container mx-auto max-w-4xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>
                 FAQ's
@@ -491,13 +576,29 @@ const Home = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <div className="space-y-6 backdrop-blur-sm rounded-3xl p-12 border border-white/30" style={{ background: 'rgba(255, 255, 255, 0.3)' }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+        <section className="py-20 px-4 relative overflow-hidden">
+          {/* Grid background */}
+          <div className="absolute inset-0 dot-bg pointer-events-none"></div>
+          
+          {/* Floating icons */}
+          <div className="absolute top-10 left-1/4 opacity-30 animate-float pointer-events-none">
+            <Rocket className="w-10 h-10 text-white" />
+          </div>
+          <div className="absolute top-20 right-1/4 opacity-30 animate-float-slow pointer-events-none">
+            <Sparkles className="w-12 h-12 text-white" />
+          </div>
+          <div className="absolute bottom-10 left-1/3 opacity-30 animate-float-reverse pointer-events-none">
+            <Award className="w-10 h-10 text-white" />
+          </div>
+
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
+            <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 border-white/30 shadow-2xl" style={{ 
+              background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.6) 0%, rgba(42, 63, 138, 0.5) 100%)'
+            }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 Take the First Step
               </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                 फक्त ₹1,199 मध्ये संपूर्ण कोर्स + Lifetime Access
               </p>
               <div className="pt-6">
@@ -505,13 +606,13 @@ const Home = () => {
                   onClick={handleEnrollClick}
                   disabled={isProcessing}
                   size="lg"
-                  className="text-white hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
-                  style={{ background: '#17245a', fontFamily: 'Google Sans, sans-serif' }}
+                  className="text-[#17245a] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 animate-pulse-glow"
+                  style={{ background: 'linear-gradient(135deg, #ffffff 0%, #e8edf7 100%)', fontFamily: 'Google Sans, sans-serif' }}
                 >
                   {isProcessing ? 'Processing...' : `Join Now - ${courseData.currency}${courseData.price}`}
                 </Button>
               </div>
-              <div className="flex items-center justify-center gap-8 pt-4 text-sm" style={{ color: '#17245a' }}>
+              <div className="flex items-center justify-center gap-8 pt-4 text-sm text-white">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>100% Secure Payment</span>
