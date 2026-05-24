@@ -28,7 +28,8 @@ import {
   Video,
   Activity,
   Sparkles,
-  Quote
+  Quote,
+  Calendar
 } from 'lucide-react';
 
 const iconMap = {
@@ -47,7 +48,7 @@ const iconMap = {
 
 const Home = () => {
   const handleEnrollClick = () => {
-    window.open('https://pages.razorpay.com/pl_SsuGBSoKUho6wr', '_blank', 'noopener,noreferrer');
+    window.open('https://rzp.io/rzp/pantherflow', '_blank', 'noopener,noreferrer');
   };
 
   const scrollToSection = (sectionId) => {
@@ -94,8 +95,32 @@ const Home = () => {
       }}></div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
+        {/* Announcement Bar */}
+        <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-4 text-center shadow-lg" style={{
+          background: 'linear-gradient(90deg, #ef4444 0%, #dc2626 50%, #ef4444 100%)',
+          backgroundSize: '200% 100%',
+          animation: 'gradient-shift 4s ease infinite',
+          fontFamily: 'Google Sans, sans-serif'
+        }} data-testid="announcement-bar">
+          <div className="flex items-center justify-center gap-2 text-white text-sm font-semibold">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            <Calendar className="w-4 h-4" />
+            <span>🔥 New Batch Starting on <strong>4th June</strong> · Limited Seats Available!</span>
+            <button 
+              onClick={handleEnrollClick}
+              className="ml-2 underline hover:no-underline font-bold"
+              data-testid="announcement-cta"
+            >
+              Join Now →
+            </button>
+          </div>
+        </div>
+
         {/* Header - Floating Pill Menu */}
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+        <header className="fixed top-12 left-1/2 -translate-x-1/2 z-50">
           <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-3 py-2" style={{
             background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.85) 0%, rgba(42, 63, 138, 0.85) 100%)',
             boxShadow: '0 10px 40px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
@@ -138,7 +163,7 @@ const Home = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+        <section className="pt-40 pb-20 px-4 relative overflow-hidden">
           {/* Grid background pattern */}
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
@@ -173,6 +198,23 @@ const Home = () => {
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center space-y-6">
+              {/* New Batch Urgency Banner */}
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 animate-pulse-glow" style={{
+                background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                fontFamily: 'Google Sans, sans-serif'
+              }} data-testid="urgency-banner">
+                <span className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                  </span>
+                  <Calendar className="w-4 h-4 text-white" />
+                </span>
+                <span className="text-sm font-bold text-white tracking-wide">
+                  🔥 New Batch Starting on 4th June
+                </span>
+              </div>
+
               <div className="flex flex-wrap justify-center gap-3 mb-6">
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30">
                   <Video className="w-4 h-4" />
@@ -196,9 +238,15 @@ const Home = () => {
                 >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
-                <div className="flex items-center gap-2 text-white/90">
-                  <Users className="w-5 h-5" />
-                  <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>45+ विद्यार्थी आधीच शिकत आहेत</span>
+                <div className="flex flex-col items-start gap-1">
+                  <div className="flex items-center gap-2 text-white/90">
+                    <Users className="w-5 h-5" />
+                    <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>45+ विद्यार्थी आधीच शिकत आहेत</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white">
+                    <Calendar className="w-4 h-4" />
+                    <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 4th June Batch</span>
+                  </div>
                 </div>
               </div>
               <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-white/80">
@@ -559,9 +607,17 @@ const Home = () => {
                     <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
                       14 Days Live Classes
                     </h3>
-                    <p className="text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
                       <strong>१४ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
+                      background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                      color: 'white',
+                      fontFamily: 'Google Sans, sans-serif'
+                    }}>
+                      <Calendar className="w-4 h-4" />
+                      <span>New Batch Starting on 4th June</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -661,6 +717,21 @@ const Home = () => {
             <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 border-white/30 shadow-2xl" style={{ 
               background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.6) 0%, rgba(42, 63, 138, 0.5) 100%)'
             }}>
+              {/* Urgency Banner */}
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl animate-pulse-glow" style={{
+                background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                fontFamily: 'Google Sans, sans-serif'
+              }}>
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                </span>
+                <Calendar className="w-4 h-4 text-white" />
+                <span className="text-sm font-bold text-white tracking-wide">
+                  New Batch Starting on 4th June · Limited Seats!
+                </span>
+              </div>
+
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 Take the First Step
               </h2>
