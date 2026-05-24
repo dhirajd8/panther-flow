@@ -294,7 +294,8 @@ const Home = () => {
                       <Award className="w-4 h-4" />
                       Meet Your Trainer
                     </span>
-                    <h2 className="text-5xl md:text-6xl font-bold mb-2" style={{ 
+                    <h2 className="font-bold mb-2" style={{ 
+                      fontSize: '24px',
                       fontFamily: 'Times New Roman, serif',
                       background: 'linear-gradient(135deg, #0a1442 0%, #17245a 50%, #2a3f8a 100%)',
                       WebkitBackgroundClip: 'text',
