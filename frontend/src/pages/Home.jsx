@@ -27,7 +27,9 @@ import {
   Award,
   Clock,
   Video,
-  Activity
+  Activity,
+  Sparkles,
+  Quote
 } from 'lucide-react';
 
 const iconMap = {
@@ -191,6 +193,87 @@ const Home = () => {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Trainer Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Photo Column */}
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border-2 border-white/30 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
+                    alt="Dhiraj - Panther Flow Founder" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                {/* Floating Stats Badge */}
+                <div className="absolute -bottom-6 -right-6 backdrop-blur-md rounded-2xl p-6 border-2 border-white/40 shadow-2xl" style={{ background: 'rgba(23, 36, 90, 0.9)' }}>
+                  <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
+                  <div className="text-sm text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>Students Trained</div>
+                </div>
+                {/* Floating Top Badge */}
+                <div className="absolute -top-4 -left-4 backdrop-blur-md rounded-full px-5 py-2 border-2 border-white/40 shadow-xl" style={{ background: 'rgba(255, 255, 255, 0.95)' }}>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" style={{ color: '#17245a' }} />
+                    <span className="text-sm font-semibold" style={{ color: '#17245a', fontFamily: 'Google Sans, sans-serif' }}>Meta Ads Expert</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Column */}
+              <div className="space-y-6">
+                <div>
+                  <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30 mb-4" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                    तुमचा Trainer
+                  </span>
+                  <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Times New Roman, serif' }}>
+                    Dhiraj
+                  </h2>
+                  <p className="text-lg text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                    Founder · Panther Flow · Meta Ads Trainer
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                  <p className="text-base leading-relaxed">
+                    नमस्कार! मी <strong className="text-white">धीरज</strong> — Panther Flow चा Founder. मी देखील तुमच्यासारखाच एक <strong className="text-white">मराठी तरुण</strong> आहे, ज्याने Meta Ads च्या जगात स्वतःचं स्थान निर्माण केलं.
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    मला माहित आहे की English मध्ये उपलब्ध असलेले Digital Marketing courses समजायला किती कठीण असतात. म्हणूनच मी <strong className="text-white">100% मराठी भाषेत</strong> Meta Ads training सुरू केलं — जेणेकरून प्रत्येक मराठी माणसाला त्याच्या मातृभाषेत हे skill शिकता येईल.
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    हे फक्त theoretical knowledge नाही — मी स्वतः <strong className="text-white">live campaigns चालवतो</strong>, real businesses साठी ads optimize करतो, आणि तेच practical experience तुमच्यासमोर ठेवतो. कोर्स मध्ये तुम्ही स्वतःचा पहिला Ad live करण्यापर्यंत पोहोचाल!
+                  </p>
+                </div>
+
+                {/* Quote */}
+                <div className="relative pl-6 py-4 border-l-4 border-white/40">
+                  <Quote className="absolute -top-2 -left-3 w-6 h-6 text-white/60" />
+                  <p className="italic text-white text-lg leading-relaxed" style={{ fontFamily: 'Times New Roman, serif' }}>
+                    "English Marketing language ला सोप्या मराठीत आणून प्रत्येक मराठी माणसाला Meta Ads expert बनवणे — हेच Panther Flow चं मिशन आहे."
+                  </p>
+                </div>
+
+                {/* Stats Row */}
+                <div className="grid grid-cols-3 gap-4 pt-4">
+                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
+                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठी Teaching</div>
+                  </div>
+                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
+                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Training</div>
+                  </div>
+                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
+                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
