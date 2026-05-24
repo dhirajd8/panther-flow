@@ -185,6 +185,88 @@
   animation: shimmer 3s linear infinite;
 }
 
+/* Wave/Light Running Effect for CTA buttons */
+@keyframes wave-shine {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.cta-wave {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-wave::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: wave-shine 3s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-wave-dark::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(23, 36, 90, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.cta-wave > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Dynamic CTA glow border animation */
+@keyframes border-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2),
+      0 10px 40px rgba(23, 36, 90, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.3),
+      0 15px 50px rgba(23, 36, 90, 0.5);
+  }
+}
+
+.cta-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* Floating WhatsApp - gentle motion, no pulse */
+@keyframes whatsapp-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.whatsapp-floating {
+  animation: whatsapp-float 3s ease-in-out infinite;
+}
+
 .App {
   text-align: left;
 }
