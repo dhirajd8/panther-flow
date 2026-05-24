@@ -173,10 +173,10 @@ const Home = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 Why Panther Flow
               </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                 कोर्स मध्ये बाकी लोकांपेक्षा नक्की वेगळं काय आहे
               </p>
             </div>
@@ -301,7 +301,7 @@ const Home = () => {
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text'
                     }}>
-                      Dhiraj
+                      धिरज दयानंद
                     </h2>
                     <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
                       Founder · Panther Flow · Meta Ads Strategist
@@ -310,13 +310,13 @@ const Home = () => {
 
                   <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#1a2d6e' }}>
                     <p className="text-base leading-relaxed">
-                      मराठी मातीतला एक तरुण, ज्याने Meta Ads च्या जगात स्वतःचं स्थान निर्माण केलं — आणि आता तेच knowledge <strong style={{ color: '#0a1442' }}>आपल्या मराठी बांधवांपर्यंत</strong> सोप्या भाषेत पोहोचवायचं ठरवलं आहे.
+                      <strong style={{ color: '#0a1442' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#0a1442' }}>live शिकवलं जातं</strong>.
                     </p>
                     <p className="text-base leading-relaxed">
-                      Internet वर हजारो Marketing courses उपलब्ध आहेत — पण <strong style={{ color: '#0a1442' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी</strong> समजेल असा course मिळत नाही. हीच गोष्ट लक्षात घेऊन मी Panther Flow सुरू केलं — जिथे प्रत्येक concept मराठी मध्ये clear होतो आणि result तुमच्या business मध्ये दिसतो.
+                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#0a1442' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो.
                     </p>
                     <p className="text-base leading-relaxed">
-                      माझ्याकडे Marketing चं फक्त पुस्तकी ज्ञान नाही — मी <strong style={{ color: '#0a1442' }}>स्वतः campaigns चालवतो, स्वतःचे पैसे invest करतो</strong>, आणि त्यातून जे मिळवलं ते सर्व तुमच्यासमोर ठेवतो. कोर्स पूर्ण झाल्यावर तुम्ही फक्त "शिकलेले" नसाल, तर खऱ्या अर्थाने <strong style={{ color: '#0a1442' }}>Meta Ads run करायला तयार</strong> असाल!
+                      माझ्याकडे फक्त पुस्तकी ज्ञान नाही, मी freelancing करतो, clients साठी काम करतो आणि त्यातून जे <strong style={{ color: '#0a1442' }}>real अनुभव</strong> मिळतात ते इथे शिकवतो. आतापर्यंत माझा एकूण ad spend <strong style={{ color: '#0a1442' }}>१.५ लाख रुपयांपर्यंत</strong> पोहोचला आहे. Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#0a1442' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
                     </p>
                   </div>
 
