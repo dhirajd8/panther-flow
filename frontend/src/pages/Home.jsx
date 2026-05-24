@@ -65,9 +65,20 @@ const Home = () => {
 
   return (
     <div className="min-h-screen" style={{ 
-      background: 'linear-gradient(135deg, #17245a 0%, #ffffff 100%)',
+      background: 'linear-gradient(135deg, #0a1442 0%, #17245a 25%, #2a3f8a 50%, #6b7fc7 75%, #e8edf7 100%)',
       position: 'relative'
     }}>
+      {/* Radial gradient overlays for premium AI-site feel */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'radial-gradient(circle at 20% 20%, rgba(106, 127, 199, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 90%, rgba(23, 36, 90, 0.5) 0%, transparent 50%)',
+        pointerEvents: 'none',
+        zIndex: 0
+      }}></div>
       <div style={{
         position: 'absolute',
         top: 0,
@@ -78,9 +89,10 @@ const Home = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        opacity: 0.15,
+        opacity: 0.08,
         pointerEvents: 'none',
-        zIndex: 0
+        zIndex: 0,
+        mixBlendMode: 'overlay'
       }}></div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
@@ -198,79 +210,150 @@ const Home = () => {
         </section>
 
         {/* Trainer Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 relative">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Photo Column */}
-              <div className="relative">
-                <div className="relative rounded-3xl overflow-hidden backdrop-blur-sm border-2 border-white/30 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
-                    alt="Dhiraj - Panther Flow Founder" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                {/* Floating Stats Badge */}
-                <div className="absolute -bottom-6 -right-6 backdrop-blur-md rounded-2xl p-6 border-2 border-white/40 shadow-2xl" style={{ background: 'rgba(23, 36, 90, 0.9)' }}>
-                  <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
-                  <div className="text-sm text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>Students Trained</div>
-                </div>
-                {/* Floating Top Badge */}
-                <div className="absolute -top-4 -left-4 backdrop-blur-md rounded-full px-5 py-2 border-2 border-white/40 shadow-xl" style={{ background: 'rgba(255, 255, 255, 0.95)' }}>
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4" style={{ color: '#17245a' }} />
-                    <span className="text-sm font-semibold" style={{ color: '#17245a', fontFamily: 'Google Sans, sans-serif' }}>Meta Ads Expert</span>
+            {/* Section Backdrop with premium gradient */}
+            <div className="relative rounded-3xl overflow-hidden p-8 md:p-12" style={{
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(230, 237, 250, 0.9) 50%, rgba(180, 195, 230, 0.85) 100%)',
+              boxShadow: '0 25px 80px -20px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
+              border: '1px solid rgba(255, 255, 255, 0.6)'
+            }}>
+              {/* Decorative gradient orbs */}
+              <div style={{
+                position: 'absolute',
+                top: '-100px',
+                right: '-100px',
+                width: '400px',
+                height: '400px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(23, 36, 90, 0.15) 0%, transparent 70%)',
+                pointerEvents: 'none'
+              }}></div>
+              <div style={{
+                position: 'absolute',
+                bottom: '-150px',
+                left: '-150px',
+                width: '500px',
+                height: '500px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(106, 127, 199, 0.2) 0%, transparent 70%)',
+                pointerEvents: 'none'
+              }}></div>
+
+              <div className="grid md:grid-cols-5 gap-10 items-center relative z-10">
+                {/* Photo Column - 2/5 width */}
+                <div className="md:col-span-2 relative">
+                  <div className="relative">
+                    {/* Glowing border effect */}
+                    <div className="absolute inset-0 rounded-3xl" style={{
+                      background: 'linear-gradient(135deg, #17245a 0%, #6b7fc7 50%, #ffffff 100%)',
+                      transform: 'scale(1.05)',
+                      filter: 'blur(20px)',
+                      opacity: 0.5,
+                      zIndex: 0
+                    }}></div>
+                    <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10" style={{
+                      border: '4px solid white',
+                      background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)'
+                    }}>
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
+                        alt="Dhiraj - Panther Flow Founder" 
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                    {/* Floating Stats Badge */}
+                    <div className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-2xl z-20" style={{
+                      background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)',
+                      border: '3px solid white'
+                    }}>
+                      <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
+                      <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
+                    </div>
+                    {/* Floating Top Badge */}
+                    <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-xl z-20" style={{
+                      background: 'linear-gradient(135deg, #ffffff 0%, #e8edf7 100%)',
+                      border: '2px solid #17245a'
+                    }}>
+                      <div className="flex items-center gap-2">
+                        <Sparkles className="w-4 h-4" style={{ color: '#17245a' }} />
+                        <span className="text-sm font-bold" style={{ color: '#17245a', fontFamily: 'Google Sans, sans-serif' }}>Meta Ads Expert</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Content Column */}
-              <div className="space-y-6">
-                <div>
-                  <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/30 mb-4" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                    तुमचा Trainer
-                  </span>
-                  <h2 className="text-5xl md:text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Times New Roman, serif' }}>
-                    Dhiraj
-                  </h2>
-                  <p className="text-lg text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                    Founder · Panther Flow · Meta Ads Trainer
-                  </p>
-                </div>
-
-                <div className="space-y-4 text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                  <p className="text-base leading-relaxed">
-                    नमस्कार! मी <strong className="text-white">धीरज</strong> — Panther Flow चा Founder. मी देखील तुमच्यासारखाच एक <strong className="text-white">मराठी तरुण</strong> आहे, ज्याने Meta Ads च्या जगात स्वतःचं स्थान निर्माण केलं.
-                  </p>
-                  <p className="text-base leading-relaxed">
-                    मला माहित आहे की English मध्ये उपलब्ध असलेले Digital Marketing courses समजायला किती कठीण असतात. म्हणूनच मी <strong className="text-white">100% मराठी भाषेत</strong> Meta Ads training सुरू केलं — जेणेकरून प्रत्येक मराठी माणसाला त्याच्या मातृभाषेत हे skill शिकता येईल.
-                  </p>
-                  <p className="text-base leading-relaxed">
-                    हे फक्त theoretical knowledge नाही — मी स्वतः <strong className="text-white">live campaigns चालवतो</strong>, real businesses साठी ads optimize करतो, आणि तेच practical experience तुमच्यासमोर ठेवतो. कोर्स मध्ये तुम्ही स्वतःचा पहिला Ad live करण्यापर्यंत पोहोचाल!
-                  </p>
-                </div>
-
-                {/* Quote */}
-                <div className="relative pl-6 py-4 border-l-4 border-white/40">
-                  <Quote className="absolute -top-2 -left-3 w-6 h-6 text-white/60" />
-                  <p className="italic text-white text-lg leading-relaxed" style={{ fontFamily: 'Times New Roman, serif' }}>
-                    "English Marketing language ला सोप्या मराठीत आणून प्रत्येक मराठी माणसाला Meta Ads expert बनवणे — हेच Panther Flow चं मिशन आहे."
-                  </p>
-                </div>
-
-                {/* Stats Row */}
-                <div className="grid grid-cols-3 gap-4 pt-4">
-                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
-                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
-                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठी Teaching</div>
+                {/* Content Column - 3/5 width */}
+                <div className="md:col-span-3 space-y-5">
+                  <div>
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
+                      background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)',
+                      color: 'white',
+                      fontFamily: 'Google Sans, sans-serif'
+                    }}>
+                      <Award className="w-4 h-4" />
+                      Meet Your Trainer
+                    </span>
+                    <h2 className="text-5xl md:text-6xl font-bold mb-2" style={{ 
+                      fontFamily: 'Times New Roman, serif',
+                      background: 'linear-gradient(135deg, #0a1442 0%, #17245a 50%, #2a3f8a 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
+                      Dhiraj
+                    </h2>
+                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+                      Founder · Panther Flow · Meta Ads Strategist
+                    </p>
                   </div>
-                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
-                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
-                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Training</div>
+
+                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#1a2d6e' }}>
+                    <p className="text-base leading-relaxed">
+                      मराठी मातीतला एक तरुण, ज्याने Meta Ads च्या जगात स्वतःचं स्थान निर्माण केलं — आणि आता तेच knowledge <strong style={{ color: '#0a1442' }}>आपल्या मराठी बांधवांपर्यंत</strong> सोप्या भाषेत पोहोचवायचं ठरवलं आहे.
+                    </p>
+                    <p className="text-base leading-relaxed">
+                      Internet वर हजारो Marketing courses उपलब्ध आहेत — पण <strong style={{ color: '#0a1442' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी</strong> समजेल असा course मिळत नाही. हीच गोष्ट लक्षात घेऊन मी Panther Flow सुरू केलं — जिथे प्रत्येक concept मराठी मध्ये clear होतो आणि result तुमच्या business मध्ये दिसतो.
+                    </p>
+                    <p className="text-base leading-relaxed">
+                      माझ्याकडे Marketing चं फक्त पुस्तकी ज्ञान नाही — मी <strong style={{ color: '#0a1442' }}>स्वतः campaigns चालवतो, स्वतःचे पैसे invest करतो</strong>, आणि त्यातून जे मिळवलं ते सर्व तुमच्यासमोर ठेवतो. कोर्स पूर्ण झाल्यावर तुम्ही फक्त "शिकलेले" नसाल, तर खऱ्या अर्थाने <strong style={{ color: '#0a1442' }}>Meta Ads run करायला तयार</strong> असाल!
+                    </p>
                   </div>
-                  <div className="text-center p-4 rounded-xl backdrop-blur-sm border border-white/20" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
-                    <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
-                    <div className="text-xs text-white/70 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
+
+                  {/* Quote */}
+                  <div className="relative pl-6 py-4 rounded-r-xl" style={{
+                    background: 'linear-gradient(90deg, rgba(23, 36, 90, 0.08) 0%, transparent 100%)',
+                    borderLeft: '4px solid #17245a'
+                  }}>
+                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#17245a' }} />
+                    <p className="italic text-lg leading-relaxed font-semibold" style={{ 
+                      fontFamily: 'Times New Roman, serif',
+                      color: '#0a1442'
+                    }}>
+                      "मराठी माणसाने मराठीतच शिकावं, मराठीतच earn करावं — हीच Panther Flow ची मूळ कल्पना!"
+                    </p>
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="grid grid-cols-3 gap-3 pt-2">
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{
+                      background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)'
+                    }}>
+                      <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठीतून शिकवणी</div>
+                    </div>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{
+                      background: 'linear-gradient(135deg, #2a3f8a 0%, #6b7fc7 100%)'
+                    }}>
+                      <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Sessions</div>
+                    </div>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{
+                      background: 'linear-gradient(135deg, #6b7fc7 0%, #17245a 100%)'
+                    }}>
+                      <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
+                    </div>
                   </div>
                 </div>
               </div>
