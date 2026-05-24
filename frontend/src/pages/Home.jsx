@@ -509,7 +509,7 @@ const Home = () => {
           </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 <Activity className="w-10 h-10" />
                 Course Anatomy
@@ -517,6 +517,54 @@ const Home = () => {
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
               </p>
+            </div>
+
+            {/* 14 Days Live Classes Banner */}
+            <div className="max-w-3xl mx-auto mb-16">
+              <div className="relative overflow-hidden rounded-2xl backdrop-blur-md border-2 border-white/30 shadow-2xl" style={{
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 237, 247, 0.95) 100%)'
+              }}>
+                {/* Decorative gradient orb */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
+                  background: 'radial-gradient(circle, rgba(23, 36, 90, 0.15) 0%, transparent 70%)'
+                }}></div>
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full pointer-events-none" style={{
+                  background: 'radial-gradient(circle, rgba(106, 127, 199, 0.2) 0%, transparent 70%)'
+                }}></div>
+
+                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
+                  {/* Icon Badge */}
+                  <div className="flex-shrink-0 relative">
+                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl animate-pulse-glow" style={{
+                      background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)'
+                    }}>
+                      <div className="text-4xl font-bold text-white leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>14</div>
+                      <div className="text-xs text-white/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
+                        background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                        color: 'white',
+                        fontFamily: 'Google Sans, sans-serif'
+                      }}>
+                        <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        LIVE
+                      </span>
+                      <Video className="w-5 h-5" style={{ color: '#17245a' }} />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+                      14 Days Live Classes
+                    </h3>
+                    <p className="text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+                      <strong>१४ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {courseData.courseContent.map((module) => (
@@ -617,7 +665,7 @@ const Home = () => {
                 Take the First Step
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
-                फक्त ₹1,199 मध्ये संपूर्ण कोर्स + Lifetime Access
+                फक्त ₹899 मध्ये संपूर्ण कोर्स + Lifetime Access
               </p>
               <div className="pt-6">
                 <Button 
