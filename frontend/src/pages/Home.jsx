@@ -126,6 +126,14 @@ const Home = () => {
             boxShadow: '0 10px 40px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
           }}>
             <div className="flex items-center gap-2">
+              <span 
+                className="text-white font-bold px-4 py-2 text-base tracking-wide"
+                style={{ fontFamily: 'Times New Roman, serif' }}
+                data-testid="menu-brand"
+              >
+                Panther Flow
+              </span>
+              <div className="w-px h-6 bg-white/30"></div>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
