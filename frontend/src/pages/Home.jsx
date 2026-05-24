@@ -47,7 +47,7 @@ const iconMap = {
 
 const Home = () => {
   const handleEnrollClick = () => {
-    window.open('https://razorpay.me/@pantherflow', '_blank', 'noopener,noreferrer');
+    window.open('https://pages.razorpay.com/pantherflow', '_blank', 'noopener,noreferrer');
   };
 
   const scrollToSection = (sectionId) => {
