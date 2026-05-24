@@ -94,28 +94,16 @@ const Home = () => {
       }}></div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* Header */}
-        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/20 shadow-lg" style={{
-          background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%)'
-        }}>
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_e8b2affb-4278-4b53-85ab-a14c53337943/artifacts/v8618thc_ChatGPT%20Image%20May%2020%2C%202026%2C%2003_54_16%20PM.png" 
-                alt="Panther Flow Logo" 
-                className="h-14 w-auto opacity-90"
-                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
-              />
-              <span className="text-xl md:text-2xl font-bold text-white hidden sm:block" style={{ fontFamily: 'Times New Roman, serif' }}>
-                Panther Flow
-              </span>
-            </div>
-            
-            {/* Center Menu */}
-            <nav className="hidden md:flex items-center gap-8">
+        {/* Header - Floating Pill Menu */}
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-white/30 px-3 py-2" style={{
+            background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.85) 0%, rgba(42, 63, 138, 0.85) 100%)',
+            boxShadow: '0 10px 40px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+          }}>
+            <div className="flex items-center gap-2">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-white hover:text-white/80 font-medium transition-colors duration-300"
+                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-about"
               >
@@ -123,7 +111,7 @@ const Home = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('course')}
-                className="text-white hover:text-white/80 font-medium transition-colors duration-300"
+                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-course"
               >
@@ -131,23 +119,22 @@ const Home = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('faq')}
-                className="text-white hover:text-white/80 font-medium transition-colors duration-300"
+                className="text-white hover:bg-white/10 font-medium px-5 py-2 rounded-full transition-all duration-300"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-faq"
               >
                 FAQ
               </button>
-            </nav>
-
-            <Button 
-              onClick={handleEnrollClick}
-              className="bg-white/90 text-[#17245a] hover:bg-white font-semibold px-6 transition-all duration-300 hover:scale-105 cta-wave shadow-lg"
-              style={{ fontFamily: 'Google Sans, sans-serif' }}
-              data-testid="header-join-now"
-            >
-              Join Now
-            </Button>
-          </div>
+              <Button 
+                onClick={handleEnrollClick}
+                className="bg-white text-[#17245a] hover:bg-white/90 font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern"
+                style={{ fontFamily: 'Google Sans, sans-serif' }}
+                data-testid="header-join-now"
+              >
+                Join Now
+              </Button>
+            </div>
+          </nav>
         </header>
 
         {/* Hero Section */}
@@ -203,7 +190,7 @@ const Home = () => {
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="bg-white text-[#17245a] hover:bg-white/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow"
+                  className="text-[#17245a] hover:bg-white/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="hero-join-now"
                 >
@@ -636,8 +623,8 @@ const Home = () => {
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#17245a] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow"
-                  style={{ background: 'linear-gradient(135deg, #ffffff 0%, #e8edf7 100%)', fontFamily: 'Google Sans, sans-serif' }}
+                  className="text-[#17245a] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="cta-join-now"
                 >
                   {`Join Now - ${courseData.currency}${courseData.price}`}
