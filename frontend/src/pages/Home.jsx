@@ -252,7 +252,7 @@ const Home = () => {
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white" style={{ 
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
                 lineHeight: '1.4',
