@@ -327,7 +327,7 @@ const Home = () => {
                   <Card 
                     key={benefit.id}
                     className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ background: 'rgba(255, 255, 255, 0.7)' }}
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
                   >
                     <CardHeader className="relative z-10">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#17245a' }}>
@@ -554,7 +554,7 @@ const Home = () => {
                   <Card 
                     key={audience.id}
                     className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ background: 'rgba(255, 255, 255, 0.7)' }}
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#17245a' }}>
@@ -666,7 +666,7 @@ const Home = () => {
                 <Card 
                   key={module.id}
                   className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ background: 'rgba(255, 255, 255, 0.7)' }}
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
@@ -713,16 +713,16 @@ const Home = () => {
                 FAQ's
               </h2>
               <p className="text-xl text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                Nehmi Vicharle Janare Prashna
+                नेहमी विचारले जाणारे प्रश्न ❓
               </p>
             </div>
             <Accordion type="single" collapsible className="space-y-4">
-              {courseData.faqs.map((faq) => (
+                {courseData.faqs.map((faq) => (
                 <AccordionItem 
                   key={faq.id} 
                   value={`item-${faq.id}`}
-                  className="backdrop-blur-sm border-2 border-white/30 rounded-lg px-6 hover:border-white/50 transition-colors duration-300"
-                  style={{ background: 'rgba(255, 255, 255, 0.2)' }}
+                  className="backdrop-blur-sm border-2 border-white/30 rounded-lg px-6 hover:border-white/50 transition-colors duration-300 card-grid-pattern-light"
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
                 >
                   <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-white/80 py-6" style={{ fontFamily: 'Google Sans, sans-serif' }}>
                     {faq.question}
