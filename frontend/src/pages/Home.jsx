@@ -252,9 +252,10 @@ const Home = () => {
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight" style={{ 
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
+                lineHeight: '1.4',
                 textShadow: '0 4px 20px rgba(106, 127, 199, 0.5), 0 0 60px rgba(168, 85, 247, 0.2)'
               }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
@@ -721,7 +722,7 @@ const Home = () => {
                 <AccordionItem 
                   key={faq.id} 
                   value={`item-${faq.id}`}
-                  className="backdrop-blur-sm border-2 border-white/30 rounded-lg px-6 hover:border-white/50 transition-colors duration-300 card-grid-pattern-light"
+                  className="backdrop-blur-sm border-2 border-white/30 rounded-lg px-6 hover:border-white/50 transition-colors duration-300"
                   style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
                 >
                   <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-white/80 py-6" style={{ fontFamily: 'Google Sans, sans-serif' }}>

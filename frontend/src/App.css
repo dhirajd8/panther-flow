@@ -315,16 +315,16 @@
 /* Subtle grid pattern for cards */
 .card-grid-pattern {
   background-image: 
-    linear-gradient(rgba(23, 36, 90, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 36, 90, 0.18) 1px, transparent 1px);
-  background-size: 16px 16px;
+    linear-gradient(rgba(23, 36, 90, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 36, 90, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 .card-grid-pattern-light {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
-  background-size: 16px 16px;
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 .cta-grid-pattern-dark {
