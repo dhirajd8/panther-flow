@@ -64,7 +64,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen" style={{ 
-      background: 'linear-gradient(135deg, #0a1442 0%, #17245a 25%, #2a3f8a 50%, #6b7fc7 75%, #e8edf7 100%)',
+      background: 'linear-gradient(135deg, #050a26 0%, #0a1442 20%, #17245a 40%, #2a3f8a 60%, #6b7fc7 80%, #e8edf7 100%)',
       position: 'relative'
     }}>
       {/* Radial gradient overlays for premium AI-site feel */}
@@ -74,7 +74,7 @@ const Home = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'radial-gradient(circle at 20% 20%, rgba(106, 127, 199, 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.3) 0%, transparent 50%), radial-gradient(circle at 50% 90%, rgba(23, 36, 90, 0.5) 0%, transparent 50%)',
+        background: 'radial-gradient(circle at 15% 15%, rgba(106, 127, 199, 0.5) 0%, transparent 45%), radial-gradient(circle at 85% 25%, rgba(168, 85, 247, 0.25) 0%, transparent 50%), radial-gradient(circle at 75% 65%, rgba(255, 255, 255, 0.35) 0%, transparent 50%), radial-gradient(circle at 25% 85%, rgba(23, 36, 90, 0.6) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
         pointerEvents: 'none',
         zIndex: 0
       }}></div>
@@ -88,7 +88,7 @@ const Home = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        opacity: 0.08,
+        opacity: 0.1,
         pointerEvents: 'none',
         zIndex: 0,
         mixBlendMode: 'overlay'
@@ -176,33 +176,48 @@ const Home = () => {
           {/* Grid background pattern */}
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
+          {/* Premium ambient gradient orbs */}
+          <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full animate-pulse-glow pointer-events-none" style={{
+            background: 'radial-gradient(circle, rgba(106, 127, 199, 0.5) 0%, transparent 70%)',
+            filter: 'blur(40px)'
+          }}></div>
+          <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] rounded-full animate-pulse-glow pointer-events-none" style={{
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%)',
+            animationDelay: '2s',
+            filter: 'blur(40px)'
+          }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full animate-pulse-glow pointer-events-none" style={{
+            background: 'radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%)',
+            animationDelay: '1s',
+            filter: 'blur(60px)'
+          }}></div>
+
           {/* Floating decorative icons */}
-          <div className="absolute top-32 left-16 opacity-25 animate-float pointer-events-none">
+          <div className="absolute top-32 left-16 opacity-30 animate-float pointer-events-none">
             <Target className="w-20 h-20 text-white" />
           </div>
-          <div className="absolute top-48 right-20 opacity-25 animate-float-slow pointer-events-none">
+          <div className="absolute top-48 right-20 opacity-30 animate-float-slow pointer-events-none">
             <Rocket className="w-16 h-16 text-white" />
           </div>
-          <div className="absolute bottom-32 left-24 opacity-25 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-32 left-24 opacity-30 animate-float-reverse pointer-events-none">
             <Sparkles className="w-14 h-14 text-white" />
           </div>
-          <div className="absolute bottom-40 right-32 opacity-25 animate-float pointer-events-none">
+          <div className="absolute bottom-40 right-32 opacity-30 animate-float pointer-events-none">
             <Award className="w-16 h-16 text-white" />
           </div>
-          <div className="absolute top-1/2 left-8 opacity-20 animate-float-slow pointer-events-none">
+          <div className="absolute top-1/2 left-8 opacity-25 animate-float-slow pointer-events-none">
             <Video className="w-12 h-12 text-white" />
           </div>
-          <div className="absolute top-1/3 right-8 opacity-20 animate-float-reverse pointer-events-none">
+          <div className="absolute top-1/3 right-8 opacity-25 animate-float-reverse pointer-events-none">
             <Activity className="w-12 h-12 text-white" />
           </div>
 
-          {/* Glowing orbs */}
-          <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(106, 127, 199, 0.4) 0%, transparent 70%)'
+          {/* Decorative gradient lines */}
+          <div className="absolute top-1/4 left-0 w-32 h-px opacity-30 pointer-events-none" style={{
+            background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)'
           }}></div>
-          <div className="absolute bottom-20 right-1/4 w-72 h-72 rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%)',
-            animationDelay: '2s'
+          <div className="absolute bottom-1/4 right-0 w-32 h-px opacity-30 pointer-events-none" style={{
+            background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)'
           }}></div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -234,8 +249,11 @@ const Home = () => {
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight" style={{ fontFamily: 'Times New Roman, serif' }}>
-                Most affordable & practical<br />Course in Marathi
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight" style={{ 
+                fontFamily: 'Times New Roman, serif',
+                textShadow: '0 4px 20px rgba(106, 127, 199, 0.5), 0 0 60px rgba(168, 85, 247, 0.2)'
+              }}>
+                Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
                 <Button 
@@ -304,10 +322,10 @@ const Home = () => {
                 return (
                   <Card 
                     key={benefit.id}
-                    className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+                    className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
                     style={{ background: 'rgba(255, 255, 255, 0.7)' }}
                   >
-                    <CardHeader>
+                    <CardHeader className="relative z-10">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#17245a' }}>
                         <Icon className="w-6 h-6 text-white" />
                       </div>
@@ -315,7 +333,7 @@ const Home = () => {
                         {benefit.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="relative z-10">
                       <p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
                         {benefit.description}
                       </p>
@@ -380,13 +398,21 @@ const Home = () => {
                         className="w-full h-auto object-cover"
                       />
                     </div>
-                    {/* Floating Stats Badge */}
+                    {/* Floating Stats Badge - 45+ Students */}
                     <div className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-2xl z-20" style={{
                       background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)',
                       border: '3px solid white'
                     }}>
                       <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
                       <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
+                    </div>
+                    {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
+                    <div className="absolute -bottom-6 -left-6 rounded-2xl p-6 shadow-2xl z-20" style={{
+                      background: 'linear-gradient(135deg, #2a3f8a 0%, #17245a 100%)',
+                      border: '3px solid white'
+                    }}>
+                      <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>₹1.5L+</div>
+                      <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
                     <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-xl z-20" style={{
@@ -449,7 +475,7 @@ const Home = () => {
                       fontFamily: 'Times New Roman, serif',
                       color: '#0a1442'
                     }}>
-                      "मराठी माणसाने मराठीतच शिकावं, मराठीतच earn करावं — हीच Panther Flow ची मूळ कल्पना!"
+                      "मराठीत शिकलं की concepts जास्त clear होतात आणि result पण लवकर दिसतो. हेच Panther Flow चं ध्येय आहे!"
                     </p>
                   </div>
 
@@ -523,10 +549,10 @@ const Home = () => {
                 return (
                   <Card 
                     key={audience.id}
-                    className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+                    className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
                     style={{ background: 'rgba(255, 255, 255, 0.7)' }}
                   >
-                    <CardHeader className="flex flex-row items-center gap-4">
+                    <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#17245a' }}>
                         <Icon className="w-8 h-8 text-white" />
                       </div>
@@ -635,10 +661,10 @@ const Home = () => {
               {courseData.courseContent.map((module) => (
                 <Card 
                   key={module.id}
-                  className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
+                  className="border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
                   style={{ background: 'rgba(255, 255, 255, 0.7)' }}
                 >
-                  <CardHeader>
+                  <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="px-3 py-1 text-white text-sm font-semibold rounded-full" style={{ background: '#17245a', fontFamily: 'Google Sans, sans-serif' }}>
                         {module.module}
@@ -648,7 +674,7 @@ const Home = () => {
                       {module.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="relative z-10">
                     <ul className="space-y-3">
                       {module.topics.map((topic, idx) => (
                         <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
@@ -683,7 +709,7 @@ const Home = () => {
                 FAQ's
               </h2>
               <p className="text-xl text-white/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                तुमच्या मनातील शंका दूर करूया
+                Nehmi Vicharle Janare Prashna
               </p>
             </div>
             <Accordion type="single" collapsible className="space-y-4">
