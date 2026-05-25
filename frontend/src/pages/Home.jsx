@@ -104,7 +104,6 @@ const Home = () => {
         }} data-testid="announcement-bar">
           <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
             <span className="relative flex h-2 w-2 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
@@ -223,13 +222,17 @@ const Home = () => {
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 animate-pulse-glow" style={{
-                background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
-                fontFamily: 'Google Sans, sans-serif'
-              }} data-testid="urgency-banner">
+              <button
+                onClick={handleEnrollClick}
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
+                style={{
+                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                  fontFamily: 'Google Sans, sans-serif'
+                }} 
+                data-testid="urgency-banner"
+              >
                 <span className="flex items-center gap-2">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
                   </span>
                   <Calendar className="w-4 h-4 text-white" />
@@ -237,7 +240,7 @@ const Home = () => {
                 <span className="text-sm font-bold text-white tracking-wide">
                   🔥 New Batch Starting on 4th June
                 </span>
-              </div>
+              </button>
 
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
                 <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-xs sm:text-sm font-medium border border-white/30">
@@ -249,8 +252,9 @@ const Home = () => {
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight" style={{ 
-                fontFamily: 'Times New Roman, serif',
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight" style={{ 
+                fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
+                fontWeight: 800,
                 textShadow: '0 4px 20px rgba(106, 127, 199, 0.5), 0 0 60px rgba(168, 85, 247, 0.2)'
               }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
@@ -604,7 +608,7 @@ const Home = () => {
 
             {/* 14 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
-              <div className="relative overflow-hidden rounded-2xl backdrop-blur-md border-2 border-white/30 shadow-2xl" style={{
+              <div className="relative overflow-hidden rounded-2xl backdrop-blur-md border-2 border-white/30 shadow-2xl card-grid-pattern" style={{
                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 237, 247, 0.95) 100%)'
               }}>
                 {/* Decorative gradient orb */}
@@ -618,7 +622,7 @@ const Home = () => {
                 <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
                   {/* Icon Badge */}
                   <div className="flex-shrink-0 relative">
-                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl animate-pulse-glow" style={{
+                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
                       background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)'
                     }}>
                       <div className="text-4xl font-bold text-white leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>14</div>
@@ -634,7 +638,7 @@ const Home = () => {
                         color: 'white',
                         fontFamily: 'Google Sans, sans-serif'
                       }}>
-                        <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        <span className="w-2 h-2 bg-white rounded-full"></span>
                         LIVE
                       </span>
                       <Video className="w-5 h-5" style={{ color: '#17245a' }} />
@@ -753,19 +757,22 @@ const Home = () => {
               background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.6) 0%, rgba(42, 63, 138, 0.5) 100%)'
             }}>
               {/* Urgency Banner */}
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl animate-pulse-glow" style={{
-                background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
-                fontFamily: 'Google Sans, sans-serif'
-              }}>
+              <button 
+                onClick={handleEnrollClick}
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
+                style={{
+                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                  fontFamily: 'Google Sans, sans-serif'
+                }}
+              >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
                 </span>
                 <Calendar className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold text-white tracking-wide">
                   New Batch Starting on 4th June · Limited Seats!
                 </span>
-              </div>
+              </button>
 
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                 Take the First Step
