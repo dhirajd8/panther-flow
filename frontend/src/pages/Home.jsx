@@ -318,7 +318,7 @@ const Home = () => {
                 Why Panther Flow
               </h2>
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
-                कोर्स मध्ये बाकी लोकांपेक्षा नक्की वेगळं काय आहे
+                या Course मध्ये इतर Courses पेक्षा नक्की वेगळं काय आहे
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
