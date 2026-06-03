@@ -107,8 +107,8 @@ const Home = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>4th June</strong> · Limited Seats Available!</span>
-            <span className="sm:hidden">🔥 New Batch · <strong>4th June</strong> · Limited Seats!</span>
+            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>12th June</strong> · Limited Seats Available!</span>
+            <span className="sm:hidden">🔥 New Batch · <strong>12th June</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
               className="underline hover:no-underline font-bold whitespace-nowrap"
@@ -238,7 +238,7 @@ const Home = () => {
                   <Calendar className="w-4 h-4 text-white" />
                 </span>
                 <span className="text-sm font-bold text-white tracking-wide">
-                  🔥 New Batch Starting on 4th June
+                  🔥 New Batch Starting on 12th June
                 </span>
               </button>
 
@@ -277,7 +277,7 @@ const Home = () => {
                   </div>
                   <div className="flex items-center gap-2 text-white">
                     <Calendar className="w-4 h-4" />
-                    <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 4th June Batch</span>
+                    <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 12th June Batch</span>
                   </div>
                 </div>
               </div>
@@ -656,7 +656,7 @@ const Home = () => {
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
                       <Calendar className="w-4 h-4" />
-                      <span>New Batch Starting on 4th June</span>
+                      <span>New Batch Starting on 12th June</span>
                     </div>
                   </div>
                 </div>
@@ -771,7 +771,7 @@ const Home = () => {
                 </span>
                 <Calendar className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold text-white tracking-wide">
-                  New Batch Starting on 4th June · Limited Seats!
+                  New Batch Starting on 12th June · Limited Seats!
                 </span>
               </button>
 
