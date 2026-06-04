@@ -2,10 +2,10 @@
 
 export const courseData = {
   title: "Beginner Meta Ads Training",
-  price: 899,
+  price: 1199,
   currency: "₹",
   heroHeadline: "Most affordable & practical Course in Marathi",
-  heroCTA: "Join Now - फक्त ₹899",
+  heroCTA: "Join Now - फक्त ₹1199",
   
   benefits: [
     {
@@ -29,7 +29,7 @@ export const courseData = {
     {
       id: 4,
       title: "Value At Low Price",
-      description: "फक्त ₹899 मध्ये एक professional-level Meta Ads expert बना आजच सुरुवात करा!",
+      description: "फक्त ₹1199 मध्ये एक professional-level Meta Ads expert बना आजच सुरुवात करा!",
       icon: "DollarSign"
     }
   ],

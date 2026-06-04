@@ -779,7 +779,7 @@ const Home = () => {
                 Take the First Step
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
-                फक्त ₹899 मध्ये संपूर्ण कोर्स + Lifetime Access
+                फक्त ₹1199 मध्ये संपूर्ण कोर्स + Lifetime Access
               </p>
               <div className="pt-6">
                 <Button 
