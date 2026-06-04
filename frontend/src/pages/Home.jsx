@@ -607,7 +607,7 @@ const Home = () => {
               </p>
             </div>
 
-            {/* 14 Days Live Classes Banner */}
+            {/* 30 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
               <div className="relative overflow-hidden rounded-2xl backdrop-blur-md border-2 border-white/30 shadow-2xl card-grid-pattern" style={{
                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 237, 247, 0.95) 100%)'
@@ -645,7 +645,7 @@ const Home = () => {
                       <Video className="w-5 h-5" style={{ color: '#17245a' }} />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
-                      14 Days Live Classes
+                      30 Days Live Classes
                     </h3>
                     <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
                       <strong>१४ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
