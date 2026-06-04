@@ -626,7 +626,7 @@ const Home = () => {
                     <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
                       background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 100%)'
                     }}>
-                      <div className="text-4xl font-bold text-white leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>14</div>
+                      <div className="text-4xl font-bold text-white leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>30</div>
                       <div className="text-xs text-white/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
                     </div>
                   </div>
