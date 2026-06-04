@@ -184,7 +184,10 @@ const PaymentModal = ({ open, onOpenChange }) => {
                 onClick={handlePay}
                 size="lg"
                 className="w-full text-white text-lg py-6 rounded-xl font-bold transition-all duration-300 hover:scale-[1.02] cta-wave"
-                style={{
+                
+                
+            
+    style={{
                   background: 'linear-gradient(135deg, #17245a 0%, #2a3f8a 50%, #17245a 100%)',
                   fontFamily: 'Google Sans, sans-serif'
                 }}
