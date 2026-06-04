@@ -648,7 +648,7 @@ const Home = () => {
                       30 Days Live Classes
                     </h3>
                     <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
-                      <strong>१४ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
+                      <strong>३० दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
                       background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
