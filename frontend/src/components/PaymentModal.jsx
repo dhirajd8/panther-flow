@@ -118,7 +118,7 @@ const PaymentModal = ({ open, onOpenChange }) => {
                 </Label>
                 <div className="relative">
                   <Input 
-                    value="₹ 1199
+                    value="₹ 1099
                     .00"
                     disabled
                     className="text-lg font-semibold cursor-not-allowed"
@@ -194,7 +194,7 @@ const PaymentModal = ({ open, onOpenChange }) => {
                 }}
                 data-testid="pay-now-btn"
               >
-                Pay ₹ 1199.00
+                Pay ₹ 1099.00
               </Button>
               <div className="flex items-center justify-center gap-2 mt-4 text-xs" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
                 <Lock className="w-3 h-3" />
