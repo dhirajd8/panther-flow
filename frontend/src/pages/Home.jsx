@@ -143,7 +143,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
               </button>
               <button 
                 onClick={() => scrollToSection('course')}
-                className="text-#edebde hover:bg-#edebde/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+                className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-course"
               >
@@ -151,7 +151,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
               </button>
               <button 
                 onClick={() => scrollToSection('faq')}
-                className="text-#edebde hover:bg-#edebde/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+                className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="menu-faq"
               >
