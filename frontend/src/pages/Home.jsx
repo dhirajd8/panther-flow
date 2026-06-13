@@ -263,7 +263,7 @@ textShadow: 'none'              }}>
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="bg-#810100 text-[#edebde] hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="bg-[#810100] text-[#edebde] hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="hero-join-now"
                 >
