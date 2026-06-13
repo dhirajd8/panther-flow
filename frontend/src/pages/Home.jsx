@@ -803,25 +803,7 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                 </div>
               </div>
             </div>
-                  size="lg"
-                  className="text-[#810100] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
-                  style={{ fontFamily: 'Google Sans, sans-serif' }}
-                  data-testid="cta-join-now"
-                >
-                  {`Join Now - ${courseData.currency}${courseData.price}`}
-                </Button>
-              </div>
-              <div className="flex items-center justify-center gap-8 pt-4 text-sm text-#edebde">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>100% Secure Payment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Video className="w-5 h-5" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Live Course</span>
-                </div>
-              </div>
-            </div>
+                  
           </div>
         </section>
 
