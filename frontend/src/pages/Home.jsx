@@ -872,7 +872,7 @@ textShadow: 'none'              }}>
       {/* Floating WhatsApp Button */}
       <button
         onClick={openWhatsApp}
-        className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 whatsapp-floating"
+        className="fixed bottom-16 left-6 z-50 flex items-center justify-center w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 whatsapp-floating"
         style={{
           background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
           fontFamily: 'Google Sans, sans-serif'
