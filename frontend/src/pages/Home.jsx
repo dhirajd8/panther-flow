@@ -64,7 +64,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen" style={{ 
-background: 'linear-gradient(135deg, #1a0000 0%, #3d0000 20%, #610000 40%, #810100 60%, #a83232 80%, #f5eeee 100%)',
+background: '#ffffff',
       position: 'relative'
     }}>
       {/* Radial gradient overlays for premium AI-site feel */}
@@ -256,7 +256,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 fontWeight: 800,
 color: '#edebde',
                 lineHeight: '1.4',
-textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'              }}>
+textShadow: 'none'              }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
