@@ -753,23 +753,24 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
           </div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 border-#edebde/30 shadow-2xl" style={{ 
-              background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.6) 0%, rgba(42, 63, 138, 0.5) 100%)'
+            <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 shadow-2xl" style={{ 
+              background: '#810100',
+              borderColor: 'rgba(237, 235, 222, 0.3)'
             }}>
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
                 style={{
-                  background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
+                  background: '#ffffff',
                   fontFamily: 'Google Sans, sans-serif'
                 }}
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#810100' }}></span>
                 </span>
-                <Calendar className="w-4 h-4 text-[#810100]" />
-                <span className="text-sm font-bold text-[#810100] tracking-wide">
+                <Calendar className="w-4 h-4" style={{ color: '#810100' }} />
+                <span className="text-sm font-bold tracking-wide" style={{ color: '#810100' }}>
                   New Batch Starting on 20th June · Limited Seats!
                 </span>
               </button>
@@ -777,12 +778,31 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
                 Take the First Step
               </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
                 फक्त ₹1099 मध्ये संपूर्ण कोर्स + Lifetime Access
               </p>
               <div className="pt-6">
                 <Button 
                   onClick={handleEnrollClick}
+                  size="lg"
+                  className="text-[#810100] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  style={{ fontFamily: 'Google Sans, sans-serif' }}
+                  data-testid="cta-join-now"
+                >
+                  {`Join Now - ${courseData.currency}${courseData.price}`}
+                </Button>
+              </div>
+              <div className="flex items-center justify-center gap-8 pt-4 text-sm" style={{ color: '#edebde' }}>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5" />
+                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>100% Secure Payment</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Video className="w-5 h-5" />
+                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Live Course</span>
+                </div>
+              </div>
+            </div>
                   size="lg"
                   className="text-[#810100] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
