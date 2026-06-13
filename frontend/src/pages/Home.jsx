@@ -159,7 +159,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
               </button>
               <Button 
                 onClick={handleEnrollClick}
-                className="bg-#edebde text-[#17245a] hover:bg-#edebde/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto #edebdespace-nowrap"
+                className="bg-#edebde text-[#810100] hover:bg-#edebde/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto #edebdespace-nowrap"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="header-join-now"
               >
@@ -254,6 +254,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-#edebde" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
+color: '#edebde',
                 lineHeight: '1.4',
                 textShadow: '0 4px 20px rgba(106, 127, 199, 0.5), 0 0 60px rgba(168, 85, 247, 0.2)'
               }}>
@@ -263,7 +264,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#17245a] hover:bg-#edebde/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="text-[#810100] hover:bg-#edebde/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="hero-join-now"
                 >
@@ -327,18 +328,18 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                   <Card 
                     key={benefit.id}
                     className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
+                    style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
                   >
                     <CardHeader className="relative z-10">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#17245a' }}>
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#810100' }}>
                         <Icon className="w-6 h-6 text-#edebde" />
                       </div>
-                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                         {benefit.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+                      <p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                         {benefit.description}
                       </p>
                     </CardContent>
@@ -554,17 +555,17 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                   <Card 
                     key={audience.id}
                     className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
+                    style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
-                      <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#17245a' }}>
+                      <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#810100' }}>
                         <Icon className="w-8 h-8 text-#edebde" />
                       </div>
                       <div>
-                        <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#17245a' }}>
+                        <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                           {audience.title}
                         </CardTitle>
-                        <p className="text-base mt-2" style={{ fontFamily: 'Google Sans, sans-serif', color: '#17245a' }}>
+                        <p className="text-base mt-2" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                           {audience.description}
                         </p>
                       </div>
@@ -666,7 +667,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 <Card 
                   key={module.id}
                   className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}
+                  style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
@@ -784,7 +785,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#17245a] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="text-[#810100] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="cta-join-now"
                 >
