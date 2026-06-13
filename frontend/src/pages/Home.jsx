@@ -47,14 +47,6 @@ const iconMap = {
 };
 
 const Home = () => {
-  const [formData, setFormData] = React.useState({ name: '', email: '', phone: '', role: '' });
-  const handleFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    handleEnrollClick();
-  };
   const handleEnrollClick = () => {
     window.open('https://rzp.io/rzp/pantherflow', '_blank', 'noopener,noreferrer');
   };
@@ -227,8 +219,7 @@ background: 'none',        pointerEvents: 'none',
           }}></div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="text-center lg:text-left space-y-6">
+            <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
               <button
                 onClick={handleEnrollClick}
@@ -272,7 +263,7 @@ textShadow: 'none'              }}>
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#ffffff] hover:bg-#edebde/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="bg-#810100 text-[#edebde] hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="hero-join-now"
                 >
@@ -289,7 +280,7 @@ textShadow: 'none'              }}>
                   </div>
                 </div>
               </div>
-              <div className="pt-8 flex flex-wrap justify-center lg:justify-start gap-8 text-sm text-[#810100]/80">
+              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#810100]/80">
                 <div className="flex items-center gap-2 text-[#810100]">
                   <Clock className="w-4 h-4 text-[#810100]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Lifetime Access</span>
@@ -304,51 +295,6 @@ textShadow: 'none'              }}>
                 </div>
               </div>
             </div>
-
-            {/* Enrollment Form */}
-            <div className="rounded-3xl p-8 shadow-2xl border-2 lg:mt-0" style={{ background: '#ffffff', borderColor: '#810100' }}>
-              <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
-                Enroll Now
-              </h3>
-              <form onSubmit={handleFormSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Name</label>
-                  <input type="text" name="name" value={formData.name} onChange={handleFormChange} required
-                    className="w-full px-4 py-2.5 rounded-lg border-2 focus:outline-none"
-                    style={{ borderColor: '#810100', fontFamily: 'Google Sans, sans-serif', color: '#810100' }} />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Email</label>
-                  <input type="email" name="email" value={formData.email} onChange={handleFormChange} required
-                    className="w-full px-4 py-2.5 rounded-lg border-2 focus:outline-none"
-                    style={{ borderColor: '#810100', fontFamily: 'Google Sans, sans-serif', color: '#810100' }} />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Phone Number</label>
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleFormChange} required
-                    className="w-full px-4 py-2.5 rounded-lg border-2 focus:outline-none"
-                    style={{ borderColor: '#810100', fontFamily: 'Google Sans, sans-serif', color: '#810100' }} />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>You are a</label>
-                  <select name="role" value={formData.role} onChange={handleFormChange} required
-                    className="w-full px-4 py-2.5 rounded-lg border-2 focus:outline-none"
-                    style={{ borderColor: '#810100', fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                    <option value="">Select</option>
-                    <option value="student">Student</option>
-                    <option value="freelancer">Freelancer</option>
-                    <option value="agency_owner">Agency Owner</option>
-                    <option value="business_owner">Business Owner</option>
-                  </select>
-                </div>
-                <Button type="submit" size="lg"
-                  className="w-full text-white text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
-                  style={{ fontFamily: 'Google Sans, sans-serif' }}>
-                  {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
-                </Button>
-              </form>
-            </div>
-          </div>
           </div>
         </section>
 
