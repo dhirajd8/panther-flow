@@ -234,7 +234,7 @@ background: 'none',        pointerEvents: 'none',
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
                   </span>
-                  <Calendar className="w-4 h-4 text-[#edebde]" />
+                  <Calendar className="w-4 h-4 text-[#810100]" />
                 </span>
                 <span className="text-sm font-bold text-[#edebde] tracking-wide">
                   🔥 New Batch Starting on 20th June
@@ -270,27 +270,27 @@ textShadow: 'none'              }}>
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
                 <div className="flex flex-col items-start gap-1">
-                  <div className="flex items-center gap-2 text-[#edebde]/90">
+                  <div className="flex items-center gap-2 text-[#810100]/90">
                     <Users className="w-5 h-5" />
                     <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>45+ विद्यार्थी आधीच शिकत आहेत</span>
                   </div>
-                  <div className="flex items-center gap-2 gap-2 text-[#edebde]">
+                  <div className="flex items-center gap-2 gap-2 text-[#810100]">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 20th June Batch</span>
                   </div>
                 </div>
               </div>
-              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#edebde]/80">
-                <div className="flex items-center gap-2 text-[#edebde]">
-                  <Clock className="w-4 h-4 text-[#edebde]" />
+              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#810100]/80">
+                <div className="flex items-center gap-2 text-[#810100]">
+                  <Clock className="w-4 h-4 text-[#810100]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Lifetime Access</span>
                 </div>
-                <div className="flex items-center gap-2 text-[#edebde]">
-                  <Play className="w-4 h-4 text-[#edebde]" />
+                <div className="flex items-center gap-2 text-[#810100]">
+                  <Play className="w-4 h-4 text-[#810100]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Video Tutorials</span>
                 </div>
-                <div className="flex items-center gap-2 text-[#edebde]">
-                  <Award className="w-4 h-4 text-[#edebde]" />
+                <div className="flex items-center gap-2 text-[#810100]">
+                  <Award className="w-4 h-4 text-[#810100]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Certificate</span>
                 </div>
               </div>
