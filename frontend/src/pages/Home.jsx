@@ -313,7 +313,7 @@ textShadow: 'none'              }}>
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Why Panther Flow
               </h2>
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
@@ -327,7 +327,7 @@ textShadow: 'none'              }}>
                   <Card 
                     key={benefit.id}
                     className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: '#edebde' }}
+                    style={{ backgroundColor: '#ffffff' }}
                   >
                     <CardHeader className="relative z-10">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#810100' }}>
@@ -554,7 +554,7 @@ textShadow: 'none'              }}>
                   <Card 
                     key={audience.id}
                     className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: '#edebde' }}
+                    style={{ backgroundColor: '#ffffff' }}
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#810100' }}>
@@ -597,7 +597,7 @@ textShadow: 'none'              }}>
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 <Activity className="w-10 h-10" />
                 Course Anatomy
               </h2>
@@ -666,7 +666,7 @@ textShadow: 'none'              }}>
                 <Card 
                   key={module.id}
                   className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ backgroundColor: '#edebde' }}
+                  style={{ backgroundColor: '#ffffff' }}
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
@@ -775,7 +775,7 @@ textShadow: 'none'              }}>
                 </span>
               </button>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Take the First Step
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
