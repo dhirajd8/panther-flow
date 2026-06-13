@@ -397,7 +397,7 @@ textShadow: 'none'              }}>
                       background: '#ffffff'
                     }}>
                       <img 
-  src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
+  src="https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/Untitled%20design.svg" 
   alt="Dhiraj - Panther Flow Founder" 
   className="w-full h-auto object-cover"
 />
