@@ -74,7 +74,7 @@ background: '#ffffff',
         left: 0,
         right: 0,
         bottom: 0,
-background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transparent 45%), radial-gradient(circle at 85% 25%, rgba(129, 1, 0, 0.25) 0%, transparent 50%), radial-gradient(circle at 75% 65%, rgba(237, 235, 222, 0.35) 0%, transparent 50%), radial-gradient(circle at 25% 85%, rgba(26, 0, 0, 0.6) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(129, 1, 0, 0.15) 0%, transparent 70%)',        pointerEvents: 'none',
+background: 'none',        pointerEvents: 'none',
         zIndex: 0
       }}></div>
       <div style={{
@@ -87,7 +87,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        opacity: 0.1,
+        opacity: 0,
         pointerEvents: 'none',
         zIndex: 0,
         mixBlendMode: 'overlay'
@@ -254,7 +254,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-#edebde" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
-color: '#edebde',
+color: '#810100',
                 lineHeight: '1.4',
 textShadow: 'none'              }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
