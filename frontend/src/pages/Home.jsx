@@ -64,7 +64,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen" style={{ 
-background: '#0d0000',
+background: '#ffffff',
       position: 'relative'
     }}>
       {/* Radial gradient overlays for premium AI-site feel */}
@@ -176,16 +176,16 @@ background: 'none',        pointerEvents: 'none',
           
           {/* Premium ambient gradient orbs */}
           <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(129, 1, 0, 0.4) 0%, transparent 70%)',
+            background: 'none',
             filter: 'blur(40px)'
           }}></div>
           <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(237, 235, 222, 0.15) 0%, transparent 70%)',
+            background: 'none',
             animationDelay: '2s',
             filter: 'blur(40px)'
           }}></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(129, 1, 0, 0.2) 0%, transparent 70%)',
+            background: 'none',
             animationDelay: '1s',
             filter: 'blur(60px)'
           }}></div>
@@ -254,7 +254,7 @@ background: 'none',        pointerEvents: 'none',
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-#edebde" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
-color: '#FFFFFF',
+color: '#810100',
                 lineHeight: '1.4',
 textShadow: 'none'              }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
@@ -314,9 +314,9 @@ textShadow: 'none'              }}>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
-                Why Panther <span style={{ color: '#810100' }}>Flow</span>
+                Why Panther Flow
               </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                 या Course मध्ये इतर Courses पेक्षा नक्की वेगळं काय आहे
               </p>
             </div>
@@ -326,19 +326,19 @@ textShadow: 'none'              }}>
                 return (
                   <Card 
                     key={benefit.id}
-                    className="border border-white/10 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)' }}
+                    className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
+                    style={{ backgroundColor: '#edebde' }}
                   >
                     <CardHeader className="relative z-10">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#810100' }}>
                         <Icon className="w-6 h-6 text-[#edebde]" />
                       </div>
-                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#FFFFFF' }}>
+                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
               {benefit.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10">
-<p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+<p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
   {benefit.description}                     
  </p>
                     </CardContent>
@@ -424,8 +424,8 @@ textShadow: 'none'              }}>
                       border: '2px solid #810100'
                     }}>
                       <div className="flex items-center gap-2">
-                        <Sparkles className="w-4 h-4" style={{ color: '#FFFFFF' }} />
-                        <span className="text-sm font-bold" style={{ color: '#FFFFFF', fontFamily: 'Google Sans, sans-serif' }}>Meta Ads Expert</span>
+                        <Sparkles className="w-4 h-4" style={{ color: '#810100' }} />
+                        <span className="text-sm font-bold" style={{ color: '#810100', fontFamily: 'Google Sans, sans-serif' }}>Meta Ads Expert</span>
                       </div>
                     </div>
                   </div>
@@ -452,20 +452,20 @@ textShadow: 'none'              }}>
                     }}>
                       धिरज दयानंद
                     </h2>
-                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                       Founder · Panther Flow · Meta Ads Strategist
                     </p>
                   </div>
 
-                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                     <p className="text-base leading-relaxed">
-                      <strong style={{ color: '#FFFFFF' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#FFFFFF' }}>live शिकवलं जातं</strong>.
+                      <strong style={{ color: '#810100' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#810100' }}>live शिकवलं जातं</strong>.
                     </p>
                     <p className="text-base leading-relaxed">
-                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#FFFFFF' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो.
+                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#810100' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो.
                     </p>
                     <p className="text-base leading-relaxed">
-                      माझ्याकडे फक्त पुस्तकी ज्ञान नाही, मी freelancing करतो, clients साठी काम करतो आणि त्यातून जे <strong style={{ color: '#FFFFFF' }}>real अनुभव</strong> मिळतात ते इथे शिकवतो. आतापर्यंत माझा एकूण ad spend <strong style={{ color: '#FFFFFF' }}>१.५ लाख रुपयांपर्यंत</strong> पोहोचला आहे. Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#FFFFFF' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
+                      माझ्याकडे फक्त पुस्तकी ज्ञान नाही, मी freelancing करतो, clients साठी काम करतो आणि त्यातून जे <strong style={{ color: '#810100' }}>real अनुभव</strong> मिळतात ते इथे शिकवतो. आतापर्यंत माझा एकूण ad spend <strong style={{ color: '#810100' }}>१.५ लाख रुपयांपर्यंत</strong> पोहोचला आहे. Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#810100' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
                     </p>
                   </div>
 
@@ -474,10 +474,10 @@ textShadow: 'none'              }}>
                     background: 'linear-gradient(90deg, rgba(23, 36, 90, 0.08) 0%, transparent 100%)',
                     borderLeft: '4px solid #810100'
                   }}>
-                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#FFFFFF' }} />
+                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#810100' }} />
                     <p className="italic text-lg leading-relaxed font-semibold" style={{ 
                       fontFamily: 'Times New Roman, serif',
-                      color: '#FFFFFF'
+                      color: '#810100'
                     }}>
                       "मराठीत शिकलं की concepts जास्त clear होतात आणि result पण लवकर दिसतो. हेच Panther Flow चं ध्येय आहे!"
                     </p>
@@ -553,18 +553,18 @@ textShadow: 'none'              }}>
                 return (
                   <Card 
                     key={audience.id}
-                    className="border border-white/10 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)' }}
+                    className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
+                    style={{ backgroundColor: '#edebde' }}
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#810100' }}>
                         <Icon className="w-8 h-8 text-#edebde" />
                       </div>
                       <div>
-                        <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#FFFFFF' }}>
+                        <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                           {audience.title}
                         </CardTitle>
-                        <p className="text-base mt-2" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                        <p className="text-base mt-2" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                           {audience.description}
                         </p>
                       </div>
@@ -601,7 +601,7 @@ textShadow: 'none'              }}>
                 <Activity className="w-10 h-10" />
                 Course Anatomy
               </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
               </p>
             </div>
@@ -641,12 +641,12 @@ textShadow: 'none'              }}>
                         <span className="w-2 h-2 bg-#edebde rounded-full"></span>
                         LIVE
                       </span>
-                      <Video className="w-5 h-5" style={{ color: '#FFFFFF' }} />
+                      <Video className="w-5 h-5" style={{ color: '#810100' }} />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#FFFFFF' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                       25 Days Live Classes
                     </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
@@ -665,8 +665,8 @@ textShadow: 'none'              }}>
               {courseData.courseContent.map((module) => (
                 <Card 
                   key={module.id}
-                  className="border border-white/10 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)' }}
+                  className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
+                  style={{ backgroundColor: '#edebde' }}
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
@@ -674,15 +674,15 @@ textShadow: 'none'              }}>
                         {module.module}
                       </span>
                     </div>
-                    <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#FFFFFF' }}>
+                    <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                       {module.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="relative z-10">
                     <ul className="space-y-3">
                       {module.topics.map((topic, idx) => (
-                        <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
-                          <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#FFFFFF' }} />
+                        <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                          <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
                           <span>{topic}</span>
                         </li>
                       ))}
@@ -709,10 +709,10 @@ textShadow: 'none'              }}>
 
           <div className="container mx-auto max-w-4xl relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#FFFFFF' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                 FAQ's
               </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF', opacity: 0.8 }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.8 }}>
                 नेहमी विचारले जाणारे प्रश्न ❓
               </p>
             </div>
@@ -722,12 +722,12 @@ textShadow: 'none'              }}>
                   key={faq.id} 
                   value={`item-${faq.id}`}
                   className="backdrop-blur-sm border-2 rounded-lg px-6 transition-colors duration-300"
-                  style={{ backgroundColor: '#ffffff', bordercolor: '#FFFFFF' }}
+                  style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                  <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-6 text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                  <AccordionContent className="pb-6 text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -762,15 +762,15 @@ textShadow: 'none'              }}>
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
                 style={{
-                  background: '#0d0000',
+                  background: '#ffffff',
                   fontFamily: 'Google Sans, sans-serif'
                 }}
               >
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#810100' }}></span>
                 </span>
-                <Calendar className="w-4 h-4" style={{ color: '#FFFFFF' }} />
-                <span className="text-sm font-bold tracking-wide" style={{ color: '#FFFFFF' }}>
+                <Calendar className="w-4 h-4" style={{ color: '#810100' }} />
+                <span className="text-sm font-bold tracking-wide" style={{ color: '#810100' }}>
                   New Batch Starting on 20th June · Limited Seats!
                 </span>
               </button>
@@ -809,30 +809,30 @@ textShadow: 'none'              }}>
 
         {/* Footer */}
         <footer className="py-12 px-4 border-t" style={{
-          background: '#0d0000',
+          background: '#ffffff',
           borderColor: 'rgba(129, 1, 0, 0.2)',
-          color: '#FFFFFF'
+          color: '#810100'
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>Contact Email</p>
-                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Email</p>
+                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                   contactpantherflow@gmail.com
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>Contact Number</p>
-                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Number</p>
+                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                   +91 9307378191
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF' }}>Address</p>
-                <p style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF', opacity: 0.85 }}>Dharashiv धाराशिव</p>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Address</p>
+                <p style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.85 }}>Dharashiv धाराशिव</p>
               </div>
               <div className="pt-6 border-t" style={{ borderColor: 'rgba(129, 1, 0, 0.2)' }}>
-                <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: '#FFFFFF', opacity: 0.7 }}>
+                <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.7 }}>
                   © 2026 Panther Flow. All rights reserved.
                 </p>
               </div>
@@ -862,7 +862,7 @@ textShadow: 'none'              }}>
       className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
       style={{
         background: '#edebde',
-        color: '#FFFFFF'
+        color: '#810100'
       }}
     >
       आजच Join करा →
