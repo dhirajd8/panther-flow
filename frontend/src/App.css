@@ -211,7 +211,7 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.4) 50%,
+    rgba(129, 1, 0, 0.4) 50%,
     transparent 100%
   );
   animation: wave-shine 3s infinite;
