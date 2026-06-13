@@ -10,9 +10,7 @@ import {
 } from '../components/ui/accordion';
 import {
   Target,
-  Rocket,
   Infinity,
-  DollarSign,
   Laptop,
   Wifi,
   BookOpen,
@@ -23,20 +21,18 @@ import {
   CheckCircle2,
   Play,
   Users,
+  Sparkles,
+  Activity,
   Award,
   Clock,
   Video,
-  Activity,
-  Sparkles,
   Quote,
   Calendar
 } from 'lucide-react';
 
 const iconMap = {
   Target,
-  Rocket,
   Infinity,
-  DollarSign,
   Laptop,
   Wifi,
   BookOpen,
@@ -191,22 +187,22 @@ background: 'none',        pointerEvents: 'none',
           }}></div>
 
           {/* Floating decorative icons */}
-          <div className="absolute top-32 left-16 opacity-60 animate-float pointer-events-none">
+          <div className="absolute top-32 left-16 opacity-60 ">
             <Target className="w-20 h-20 text-[#810100]" />
           </div>
-          <div className="absolute top-48 right-20 opacity-60 animate-float-slow pointer-events-none">
+          <div className="absolute top-48 right-20 opacity-60 ">
             <Rocket className="w-16 h-16 text-[#810100]" />
           </div>
-          <div className="absolute bottom-32 left-24 opacity-60 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-32 left-24 opacity-60 animate-float">
             <Sparkles className="w-14 h-14 text-[#810100]" />
           </div>
-          <div className="absolute bottom-40 right-32 opacity-60 animate-float pointer-events-none">
+          <div className="absolute bottom-40 right-32 opacity-60 ">
             <Award className="w-16 h-16 text-[#810100]" />
           </div>
-          <div className="absolute top-1/2 left-8 opacity-60 animate-float-slow pointer-events-none">
+          <div className="absolute top-1/2 left-8 opacity-60 animate-float">
             <Video className="w-12 h-12 text-[#810100]" />
           </div>
-          <div className="absolute top-1/3 right-8 opacity-60 animate-float-reverse pointer-events-none">
+          <div className="absolute top-1/3 right-8 opacity-60 animate-float">
             <Activity className="w-12 h-12 text-[#810100]" />
           </div>
 
@@ -304,10 +300,10 @@ textShadow: 'none'              }}>
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
           {/* Floating icons */}
-          <div className="absolute top-20 right-12 opacity-20 animate-float pointer-events-none">
+          <div className="absolute top-20 right-12 opacity-20 ">
             <DollarSign className="w-14 h-14 text-[#810100]" />
           </div>
-          <div className="absolute bottom-20 left-12 opacity-20 animate-float-slow pointer-events-none">
+          <div className="absolute bottom-20 left-12 opacity-20 ">
             <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
 
@@ -518,13 +514,13 @@ textShadow: 'none'              }}>
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
           
           {/* Floating icons */}
-          <div className="absolute top-32 left-16 opacity-20 animate-float pointer-events-none">
+          <div className="absolute top-32 left-16 opacity-20 ">
             <Store className="w-14 h-14 text-[#810100]" />
           </div>
-          <div className="absolute top-48 right-24 opacity-20 animate-float-slow pointer-events-none">
+          <div className="absolute top-48 right-24 opacity-20 ">
             <GraduationCap className="w-12 h-12 text-[#810100]" />
           </div>
-          <div className="absolute bottom-32 right-16 opacity-20 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-32 right-16 opacity-20 ">
             <Briefcase className="w-14 h-14 text-[#810100]" />
           </div>
 
@@ -584,16 +580,16 @@ textShadow: 'none'              }}>
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
           {/* Floating decorative icons */}
-          <div className="absolute top-20 left-10 opacity-20 animate-float pointer-events-none">
+          <div className="absolute top-20 left-10 opacity-20">
             <Target className="w-16 h-16 text-[#810100]" />
           </div>
-          <div className="absolute top-40 right-20 opacity-20 animate-float-slow pointer-events-none">
+          <div className="absolute top-40 right-20 opacity-20" >
             <Rocket className="w-12 h-12 text-[#810100]" />
           </div>
-          <div className="absolute bottom-40 left-20 opacity-20 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-40 left-20 opacity-20" >
             <Activity className="w-14 h-14 text-[#810100]" />
           </div>
-          <div className="absolute bottom-20 right-10 opacity-20 animate-float pointer-events-none">
+          <div className="absolute bottom-20 right-10 opacity-20">
             <Award className="w-12 h-12 text-[#810100]" />
           </div>
 
@@ -702,10 +698,10 @@ textShadow: 'none'              }}>
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
           
           {/* Floating icons */}
-          <div className="absolute top-32 left-20 opacity-20 animate-float pointer-events-none">
+          <div className="absolute top-32 left-20 opacity-20 ">
             <BookOpen className="w-14 h-14 text-[#810100]" />
           </div>
-          <div className="absolute bottom-32 right-20 opacity-20 animate-float-slow pointer-events-none">
+          <div className="absolute bottom-32 right-20 opacity-20">
             <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
 
@@ -744,13 +740,13 @@ textShadow: 'none'              }}>
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
           
           {/* Floating icons */}
-          <div className="absolute top-10 left-1/4 opacity-60 animate-float pointer-events-none">
+          <div className="absolute top-10 left-1/4 opacity-60 ">
             <Rocket className="w-10 h-10 text-[#810100]" />
           </div>
-          <div className="absolute top-20 right-1/4 opacity-60 animate-float-slow pointer-events-none">
+          <div className="absolute top-20 right-1/4 opacity-60 ">
             <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
-          <div className="absolute bottom-10 left-1/3 opacity-60 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-10 left-1/3 opacity-60 ">
             <Award className="w-10 h-10 text-[#810100]" />
           </div>
 
