@@ -840,7 +840,35 @@ textShadow: 'none'              }}>
           </div>
         </footer>
       </div>
-
+{/* Bottom Sticky Bar */}
+<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between shadow-2xl" style={{
+  background: '#810100',
+  borderTop: '2px solid rgba(237, 235, 222, 0.3)',
+  fontFamily: 'Google Sans, sans-serif'
+}}>
+  <div className="flex items-center gap-2">
+    <span style={{ color: '#edebde' }}>⚡</span>
+    <span className="text-xs sm:text-sm font-semibold" style={{ color: '#edebde' }}>
+      Limited Offer · <strong>₹1099 फक्त</strong> — पहिल्या 10 जणांसाठी!
+    </span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="hidden sm:flex items-center gap-1">
+      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      <span className="text-xs" style={{ color: '#edebde' }}>फक्त 10 Seats उरल्या!</span>
+    </div>
+    <button
+      onClick={handleEnrollClick}
+      className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
+      style={{
+        background: '#edebde',
+        color: '#810100'
+      }}
+    >
+      आजच Join करा →
+    </button>
+  </div>
+</div>
       {/* Floating WhatsApp Button */}
       <button
         onClick={openWhatsApp}
