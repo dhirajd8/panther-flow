@@ -806,23 +806,31 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
         </section>
 
         {/* Footer */}
-        <footer className="text-#edebde py-12 px-4 border-t border-#edebde/20" style={{
-          background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.95) 0%, rgba(255, 255, 255, 0.1) 100%)'
+        <footer className="py-12 px-4 border-t" style={{
+          background: '#ffffff',
+          borderColor: 'rgba(129, 1, 0, 0.2)',
+          color: '#810100'
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Contact Email</p>
-                <a href="mailto:contactpantherflow@gmail.com" className="text-#edebde/80 hover:text-#edebde" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Email</p>
+                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                   contactpantherflow@gmail.com
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Address</p>
-                <p className="text-#edebde/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>Dharashiv धाराशिव</p>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Number</p>
+                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                  +91 9307378191
+                </a>
               </div>
-              <div className="pt-6 border-t border-#edebde/20">
-                <p className="text-#edebde/70 text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+              <div>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Address</p>
+                <p style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.85 }}>Dharashiv धाराशिव</p>
+              </div>
+              <div className="pt-6 border-t" style={{ borderColor: 'rgba(129, 1, 0, 0.2)' }}>
+                <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.7 }}>
                   © 2026 Panther Flow. All rights reserved.
                 </p>
               </div>
