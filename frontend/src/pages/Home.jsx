@@ -96,12 +96,12 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
-          background: 'linear-gradient(90deg, #ef4444 0%, #dc2626 50%, #ef4444 100%)',
+          background: 'linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #ffffff 100%)',
           backgroundSize: '200% 100%',
           animation: 'gradient-shift 4s ease infinite',
           fontFamily: 'Google Sans, sans-serif'
         }} data-testid="announcement-bar">
-          <div className="flex items-center justify-center gap-2 text-#edebde text-xs sm:text-sm font-semibold flex-wrap">
+          <div className="flex items-center justify-center gap-2 text-[#810100] text-xs sm:text-sm font-semibold flex-wrap">
             <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-#edebde"></span>
             </span>
@@ -110,7 +110,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
             <span className="sm:hidden">🔥 New Batch · <strong> 20th June</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
-              className="underline hover:no-underline font-bold #edebdespace-nowrap"
+              className="underline hover:no-underline font-bold text-[#810100] whitespace-nowrap"
               data-testid="announcement-cta"
             >
               Join Now →
@@ -120,9 +120,9 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
 
         {/* Header - Floating Pill Menu */}
         <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
-          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-#edebde/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
-            background: 'linear-gradient(135deg, rgba(23, 36, 90, 0.85) 0%, rgba(42, 63, 138, 0.85) 100%)',
-            boxShadow: '0 10px 40px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-[#810100]/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
+            background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.85) 0%, rgba(90, 0, 0, 0.85) 100%)',
+            boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
           }}>
             <div className="flex items-center gap-1 sm:gap-2 justify-center">
               <span 
@@ -225,7 +225,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
                 style={{
-                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
                   fontFamily: 'Google Sans, sans-serif'
                 }} 
                 data-testid="urgency-banner"
@@ -234,19 +234,19 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
                   </span>
-                  <Calendar className="w-4 h-4 text-#edebde" />
+                  <Calendar className="w-4 h-4 text-[#810100]" />
                 </span>
-                <span className="text-sm font-bold text-#edebde tracking-wide">
+                <span className="text-sm font-bold text-[#810100] tracking-wide">
                   🔥 New Batch Starting on 20th June
                 </span>
               </button>
 
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-#edebde/20 backdrop-blur-sm text-#edebde rounded-full text-xs sm:text-sm font-medium border border-#edebde/30">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30">
                   <Video className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   Beginner Meta Ads Practical Live Training
                 </span>
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-#edebde/20 backdrop-blur-sm text-#edebde rounded-full text-xs sm:text-sm font-medium border border-#edebde/30">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30">
                   <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   No Recorded - Live Course
                 </span>
@@ -270,27 +270,27 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
                 <div className="flex flex-col items-start gap-1">
-                  <div className="flex items-center gap-2 text-#edebde/90">
+                  <div className="flex items-center gap-2 text-[#edebde]/90">
                     <Users className="w-5 h-5" />
                     <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>45+ विद्यार्थी आधीच शिकत आहेत</span>
                   </div>
-                  <div className="flex items-center gap-2 text-#edebde">
+                  <div className="flex items-center gap-2 gap-2 text-[#edebde]">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 20th June Batch</span>
                   </div>
                 </div>
               </div>
-              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-#edebde/80">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
+              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#edebde]/80">
+                <div className="flex items-center gap-2 text-[#edebde]">
+                  <Clock className="w-4 h-4 text-[#edebde]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Lifetime Access</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Play className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-[#edebde]">
+                  <Play className="w-4 h-4 text-[#edebde]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Video Tutorials</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-[#edebde]">
+                  <Award className="w-4 h-4 text-[#edebde]" />
                   <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Certificate</span>
                 </div>
               </div>
@@ -537,7 +537,7 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                   return (
                     <span 
                       key={req.id}
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-#edebde/20 backdrop-blur-sm text-#edebde rounded-full text-sm font-medium border border-#edebde/30"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#810100] rounded-full text-sm font-medium border border-[#810100]/30"
                       style={{ fontFamily: 'Google Sans, sans-serif' }}
                     >
                       <Icon className="w-4 h-4" />
@@ -634,7 +634,7 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                        background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
                         color: '#edebde',
                         fontFamily: 'Google Sans, sans-serif'
                       }}>
@@ -650,7 +650,7 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                      background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
                       color: '#edebde',
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
@@ -761,15 +761,15 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
                 style={{
-                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                  background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
                   fontFamily: 'Google Sans, sans-serif'
                 }}
               >
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
                 </span>
-                <Calendar className="w-4 h-4 text-#edebde" />
-                <span className="text-sm font-bold text-#edebde tracking-wide">
+                <Calendar className="w-4 h-4 text-[#810100]" />
+                <span className="text-sm font-bold text-[#810100] tracking-wide">
                   New Batch Starting on 20th June · Limited Seats!
                 </span>
               </button>
