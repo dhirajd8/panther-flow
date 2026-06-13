@@ -307,7 +307,7 @@
   background-image: 
     linear-gradient(rgba(23, 36, 90, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 36, 90, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #edebde 0%, #e8edf7 100%) !important;
+    linear-gradient(135deg, #edebde 0%, #810100 100%) !important;
   background-size: 16px 16px, 16px 16px, 100% 100% !important;
   background-blend-mode: normal, normal, normal !important;
 }
