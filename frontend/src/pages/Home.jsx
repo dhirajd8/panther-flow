@@ -349,6 +349,7 @@ textShadow: 'none'              }}>
               </form>
             </div>
           </div>
+          </div>
         </section>
 
         {/* Benefits Section */}
