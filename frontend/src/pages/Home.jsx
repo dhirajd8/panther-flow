@@ -849,7 +849,7 @@ textShadow: 'none'              }}>
   <div className="flex items-center gap-2">
     <span style={{ color: '#edebde' }}>⚡</span>
     <span className="text-xs sm:text-sm font-semibold" style={{ color: '#edebde' }}>
-      Limited Offer · <strong>₹1099 फक्त</strong> — पहिल्या 10 जणांसाठी!
+      💰 पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical! 🎯
     </span>
   </div>
   <div className="flex items-center gap-3">
