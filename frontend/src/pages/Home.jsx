@@ -176,16 +176,16 @@ background: 'none',        pointerEvents: 'none',
           
           {/* Premium ambient gradient orbs */}
           <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(106, 127, 199, 0.5) 0%, transparent 70%)',
+            background: 'none',
             filter: 'blur(40px)'
           }}></div>
           <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%)',
+            background: 'none',
             animationDelay: '2s',
             filter: 'blur(40px)'
           }}></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full animate-pulse-glow pointer-events-none" style={{
-            background: 'radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%)',
+            background: 'none',
             animationDelay: '1s',
             filter: 'blur(60px)'
           }}></div>
