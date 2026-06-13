@@ -126,7 +126,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
           }}>
             <div className="flex items-center gap-1 sm:gap-2 justify-center">
               <span 
-                className="hidden md:inline-block text-#edebde font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
+                className="hidden md:inline-block text-[#edebde] font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
                 style={{ fontFamily: 'Times New Roman, serif' }}
                 data-testid="menu-brand"
               >
@@ -191,22 +191,22 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
           }}></div>
 
           {/* Floating decorative icons */}
-          <div className="absolute top-32 left-16 opacity-30 animate-float pointer-events-none">
+          <div className="absolute top-32 left-16 opacity-60 animate-float pointer-events-none">
             <Target className="w-20 h-20 text-#edebde" />
           </div>
-          <div className="absolute top-48 right-20 opacity-30 animate-float-slow pointer-events-none">
+          <div className="absolute top-48 right-20 opacity-60 animate-float-slow pointer-events-none">
             <Rocket className="w-16 h-16 text-#edebde" />
           </div>
-          <div className="absolute bottom-32 left-24 opacity-30 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-32 left-24 opacity-60 animate-float-reverse pointer-events-none">
             <Sparkles className="w-14 h-14 text-#edebde" />
           </div>
-          <div className="absolute bottom-40 right-32 opacity-30 animate-float pointer-events-none">
+          <div className="absolute bottom-40 right-32 opacity-60 animate-float pointer-events-none">
             <Award className="w-16 h-16 text-#edebde" />
           </div>
-          <div className="absolute top-1/2 left-8 opacity-25 animate-float-slow pointer-events-none">
+          <div className="absolute top-1/2 left-8 opacity-60 animate-float-slow pointer-events-none">
             <Video className="w-12 h-12 text-#edebde" />
           </div>
-          <div className="absolute top-1/3 right-8 opacity-25 animate-float-reverse pointer-events-none">
+          <div className="absolute top-1/3 right-8 opacity-60 animate-float-reverse pointer-events-none">
             <Activity className="w-12 h-12 text-#edebde" />
           </div>
 
@@ -742,13 +742,13 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
           
           {/* Floating icons */}
-          <div className="absolute top-10 left-1/4 opacity-30 animate-float pointer-events-none">
+          <div className="absolute top-10 left-1/4 opacity-60 animate-float pointer-events-none">
             <Rocket className="w-10 h-10 text-#edebde" />
           </div>
-          <div className="absolute top-20 right-1/4 opacity-30 animate-float-slow pointer-events-none">
+          <div className="absolute top-20 right-1/4 opacity-60 animate-float-slow pointer-events-none">
             <Sparkles className="w-12 h-12 text-#edebde" />
           </div>
-          <div className="absolute bottom-10 left-1/3 opacity-30 animate-float-reverse pointer-events-none">
+          <div className="absolute bottom-10 left-1/3 opacity-60 animate-float-reverse pointer-events-none">
             <Award className="w-10 h-10 text-#edebde" />
           </div>
 
