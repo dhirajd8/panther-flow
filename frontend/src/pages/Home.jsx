@@ -436,7 +436,7 @@ textShadow: 'none'              }}>
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
                       background: '#ffffff',
-                      color: '#810100',,
+                      color: '#810100',
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
                       <Award className="w-4 h-4" style={{ color: '#810100' }} />
