@@ -256,8 +256,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 fontWeight: 800,
 color: '#edebde',
                 lineHeight: '1.4',
-                textShadow: '0 4px 20px rgba(106, 127, 199, 0.5), 0 0 60px rgba(168, 85, 247, 0.2)'
-              }}>
+textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'              }}>
                 Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
               </h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
