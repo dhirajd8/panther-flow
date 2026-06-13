@@ -141,8 +141,8 @@
 /* Grid background pattern */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+linear-gradient(rgba(129, 1, 0, 0.08) 1px, transparent 1px),
+linear-gradient(90deg, rgba(129, 1, 0, 0.08) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -155,7 +155,7 @@
 
 /* Dotted background pattern */
 .dot-bg {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(129, 1, 0, 0.15) 1px, transparent 1px);
   background-size: 25px 25px;
 }
 
