@@ -225,7 +225,7 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
                 style={{
-                  background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
+                  background: '#810100',
                   fontFamily: 'Google Sans, sans-serif'
                 }} 
                 data-testid="urgency-banner"
@@ -234,9 +234,9 @@ background: 'radial-gradient(circle at 15% 15%, rgba(129, 1, 0, 0.5) 0%, transpa
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
                   </span>
-                  <Calendar className="w-4 h-4 text-[#810100]" />
+                  <Calendar className="w-4 h-4 text-[#edebde]" />
                 </span>
-                <span className="text-sm font-bold text-[#810100] tracking-wide">
+                <span className="text-sm font-bold text-[#edebde] tracking-wide">
                   🔥 New Batch Starting on 20th June
                 </span>
               </button>
@@ -634,7 +634,7 @@ textShadow: 'none'              }}>
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
+                        background: '#810100',
                         color: '#edebde',
                         fontFamily: 'Google Sans, sans-serif'
                       }}>
@@ -650,7 +650,7 @@ textShadow: 'none'              }}>
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
+                      background: '#810100',
                       color: '#edebde',
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
