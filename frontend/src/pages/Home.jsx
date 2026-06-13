@@ -227,7 +227,7 @@ background: 'none',        pointerEvents: 'none',
           }}></div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="text-center lg:text-left space-y-6">
               {/* New Batch Urgency Banner */}
               <button
@@ -306,7 +306,7 @@ textShadow: 'none'              }}>
             </div>
 
             {/* Enrollment Form */}
-            <div className="rounded-3xl p-8 shadow-2xl border-2" style={{ background: '#ffffff', borderColor: '#810100' }}>
+            <div className="rounded-3xl p-8 shadow-2xl border-2 lg:mt-0" style={{ background: '#ffffff', borderColor: '#810100' }}>
               <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                 Enroll Now
               </h3>
