@@ -709,10 +709,10 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
 
           <div className="container mx-auto max-w-4xl relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-#edebde mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
                 FAQ's
               </h2>
-              <p className="text-xl text-#edebde/80" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.8 }}>
                 नेहमी विचारले जाणारे प्रश्न ❓
               </p>
             </div>
@@ -721,13 +721,13 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                 <AccordionItem 
                   key={faq.id} 
                   value={`item-${faq.id}`}
-                  className="backdrop-blur-sm border-2 border-#edebde/30 rounded-lg px-6 hover:border-#edebde/50 transition-colors duration-300"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+                  className="backdrop-blur-sm border-2 rounded-lg px-6 transition-colors duration-300"
+                  style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-#edebde hover:text-#edebde/80 py-6" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                  <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-#edebde/90 pb-6 text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif' }}>
+                  <AccordionContent className="pb-6 text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
