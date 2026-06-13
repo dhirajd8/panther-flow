@@ -326,21 +326,21 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                 return (
                   <Card 
                     key={benefit.id}
-                    className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
+                    className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
+                    style={{ backgroundColor: 'rgba(129, 1, 0, 0.3)' }}
                   >
                     <CardHeader className="relative z-10">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#810100' }}>
                         <Icon className="w-6 h-6 text-#edebde" />
                       </div>
-                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
-                        {benefit.title}
+                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#edebde' }}>
+              {benefit.title}' }}>
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                        {benefit.description}
-                      </p>
+<p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
+  {benefit.description}                     
+ </p>
                     </CardContent>
                   </Card>
                 );
@@ -553,8 +553,8 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
                 return (
                   <Card 
                     key={audience.id}
-                    className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
+                    className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
+                    style={{ backgroundColor: 'rgba(129, 1, 0, 0.3)' }}
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#810100' }}>
@@ -665,8 +665,8 @@ textShadow: '0 4px 20px rgba(129, 1, 0, 0.5), 0 0 60px rgba(129, 1, 0, 0.2)'    
               {courseData.courseContent.map((module) => (
                 <Card 
                   key={module.id}
-                  className="border-2 border-#edebde/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ backgroundColor: 'rgba(237, 235, 222, 0.15)' }}
+                  className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
+                  style={{ backgroundColor: 'rgba(129, 1, 0, 0.3)' }}
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
