@@ -192,22 +192,22 @@ background: 'none',        pointerEvents: 'none',
 
           {/* Floating decorative icons */}
           <div className="absolute top-32 left-16 opacity-60 animate-float pointer-events-none">
-            <Target className="w-20 h-20 text-#edebde" />
+            <Target className="w-20 h-20 text-[#810100]" />
           </div>
           <div className="absolute top-48 right-20 opacity-60 animate-float-slow pointer-events-none">
-            <Rocket className="w-16 h-16 text-#edebde" />
+            <Rocket className="w-16 h-16 text-[#810100]" />
           </div>
           <div className="absolute bottom-32 left-24 opacity-60 animate-float-reverse pointer-events-none">
-            <Sparkles className="w-14 h-14 text-#edebde" />
+            <Sparkles className="w-14 h-14 text-[#810100]" />
           </div>
           <div className="absolute bottom-40 right-32 opacity-60 animate-float pointer-events-none">
-            <Award className="w-16 h-16 text-#edebde" />
+            <Award className="w-16 h-16 text-[#810100]" />
           </div>
           <div className="absolute top-1/2 left-8 opacity-60 animate-float-slow pointer-events-none">
-            <Video className="w-12 h-12 text-#edebde" />
+            <Video className="w-12 h-12 text-[#810100]" />
           </div>
           <div className="absolute top-1/3 right-8 opacity-60 animate-float-reverse pointer-events-none">
-            <Activity className="w-12 h-12 text-#edebde" />
+            <Activity className="w-12 h-12 text-[#810100]" />
           </div>
 
           {/* Decorative gradient lines */}
@@ -251,7 +251,7 @@ background: 'none',        pointerEvents: 'none',
                   No Recorded - Live Course
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-#edebde" style={{ 
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#810100]" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
 color: '#810100',
@@ -305,10 +305,10 @@ textShadow: 'none'              }}>
           
           {/* Floating icons */}
           <div className="absolute top-20 right-12 opacity-20 animate-float pointer-events-none">
-            <DollarSign className="w-14 h-14 text-#edebde" />
+            <DollarSign className="w-14 h-14 text-[#810100]" />
           </div>
           <div className="absolute bottom-20 left-12 opacity-20 animate-float-slow pointer-events-none">
-            <Sparkles className="w-12 h-12 text-#edebde" />
+            <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -407,16 +407,16 @@ textShadow: 'none'              }}>
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
                       border: '3px solid #edebde'
                     }}>
-                      <div className="text-3xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
-                      <div className="text-xs text-#edebde/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
+                      <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
+                      <div className="text-xs text-[#810100]/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
                     </div>
                     {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
                     <div className="absolute -bottom-6 -left-6 rounded-2xl p-6 shadow-2xl z-20" style={{
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
                       border: '3px solid #edebde'
                     }}>
-                      <div className="text-3xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
-                      <div className="text-xs text-#edebde/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
+                      <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
+                      <div className="text-xs text-[#810100]/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
                     <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-xl z-20" style={{
@@ -488,20 +488,20 @@ textShadow: 'none'              }}>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
                     }}>
-                      <div className="text-2xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
-                      <div className="text-xs text-#edebde/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठीतून शिकवणी</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठीतून शिकवणी</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
                     }}>
-                      <div className="text-2xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
-                      <div className="text-xs text-#edebde/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Sessions</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Sessions</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
                     }}>
-                      <div className="text-2xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
-                      <div className="text-xs text-#edebde/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
@@ -517,18 +517,18 @@ textShadow: 'none'              }}>
           
           {/* Floating icons */}
           <div className="absolute top-32 left-16 opacity-20 animate-float pointer-events-none">
-            <Store className="w-14 h-14 text-#edebde" />
+            <Store className="w-14 h-14 text-[#810100]" />
           </div>
           <div className="absolute top-48 right-24 opacity-20 animate-float-slow pointer-events-none">
-            <GraduationCap className="w-12 h-12 text-#edebde" />
+            <GraduationCap className="w-12 h-12 text-[#810100]" />
           </div>
           <div className="absolute bottom-32 right-16 opacity-20 animate-float-reverse pointer-events-none">
-            <Briefcase className="w-14 h-14 text-#edebde" />
+            <Briefcase className="w-14 h-14 text-[#810100]" />
           </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-#edebde mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
                 हा कोर्स कोणासाठी आहे?
               </h2>
               <div className="flex flex-wrap justify-center gap-3 mb-16">
@@ -558,7 +558,7 @@ textShadow: 'none'              }}>
                   >
                     <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0" style={{ background: '#810100' }}>
-                        <Icon className="w-8 h-8 text-#edebde" />
+                        <Icon className="w-8 h-8 text-[#810100]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
@@ -583,16 +583,16 @@ textShadow: 'none'              }}>
           
           {/* Floating decorative icons */}
           <div className="absolute top-20 left-10 opacity-20 animate-float pointer-events-none">
-            <Target className="w-16 h-16 text-#edebde" />
+            <Target className="w-16 h-16 text-[#810100]" />
           </div>
           <div className="absolute top-40 right-20 opacity-20 animate-float-slow pointer-events-none">
-            <Rocket className="w-12 h-12 text-#edebde" />
+            <Rocket className="w-12 h-12 text-[#810100]" />
           </div>
           <div className="absolute bottom-40 left-20 opacity-20 animate-float-reverse pointer-events-none">
-            <Activity className="w-14 h-14 text-#edebde" />
+            <Activity className="w-14 h-14 text-[#810100]" />
           </div>
           <div className="absolute bottom-20 right-10 opacity-20 animate-float pointer-events-none">
-            <Award className="w-12 h-12 text-#edebde" />
+            <Award className="w-12 h-12 text-[#810100]" />
           </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -625,8 +625,8 @@ textShadow: 'none'              }}>
                     <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
                     }}>
-                      <div className="text-4xl font-bold text-#edebde leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
-                      <div className="text-xs text-#edebde/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
+                      <div className="text-4xl font-bold text-[#810100] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
+                      <div className="text-xs text-[#810100]/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
                     </div>
                   </div>
 
@@ -670,7 +670,7 @@ textShadow: 'none'              }}>
                 >
                   <CardHeader className="relative z-10">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="px-3 py-1 text-#edebde text-sm font-semibold rounded-full" style={{ background: '#810100', fontFamily: 'Google Sans, sans-serif' }}>
+                      <span className="px-3 py-1 text-[#810100] text-sm font-semibold rounded-full" style={{ background: '#810100', fontFamily: 'Google Sans, sans-serif' }}>
                         {module.module}
                       </span>
                     </div>
@@ -701,10 +701,10 @@ textShadow: 'none'              }}>
           
           {/* Floating icons */}
           <div className="absolute top-32 left-20 opacity-20 animate-float pointer-events-none">
-            <BookOpen className="w-14 h-14 text-#edebde" />
+            <BookOpen className="w-14 h-14 text-[#810100]" />
           </div>
           <div className="absolute bottom-32 right-20 opacity-20 animate-float-slow pointer-events-none">
-            <Sparkles className="w-12 h-12 text-#edebde" />
+            <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
 
           <div className="container mx-auto max-w-4xl relative z-10">
@@ -743,13 +743,13 @@ textShadow: 'none'              }}>
           
           {/* Floating icons */}
           <div className="absolute top-10 left-1/4 opacity-60 animate-float pointer-events-none">
-            <Rocket className="w-10 h-10 text-#edebde" />
+            <Rocket className="w-10 h-10 text-[#810100]" />
           </div>
           <div className="absolute top-20 right-1/4 opacity-60 animate-float-slow pointer-events-none">
-            <Sparkles className="w-12 h-12 text-#edebde" />
+            <Sparkles className="w-12 h-12 text-[#810100]" />
           </div>
           <div className="absolute bottom-10 left-1/3 opacity-60 animate-float-reverse pointer-events-none">
-            <Award className="w-10 h-10 text-#edebde" />
+            <Award className="w-10 h-10 text-[#810100]" />
           </div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
@@ -883,7 +883,7 @@ textShadow: 'none'              }}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 24 24" 
-          className="w-8 h-8 text-#edebde"
+          className="w-8 h-8 text-[#810100]"
           fill="currentColor"
         >
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
