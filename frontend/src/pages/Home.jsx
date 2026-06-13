@@ -272,7 +272,7 @@ textShadow: 'none'              }}>
                 <div className="flex flex-col items-start gap-1">
                   <div className="flex items-center gap-2 text-[#810100]/90">
                     <Users className="w-5 h-5" />
-                    <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>45+ विद्यार्थी आधीच शिकत आहेत</span>
+                    <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>✅ 45+ Students Trained & Running Ads</span>
                   </div>
                   <div className="flex items-center gap-2 gap-2 text-[#810100]">
                     <Calendar className="w-4 h-4" />
