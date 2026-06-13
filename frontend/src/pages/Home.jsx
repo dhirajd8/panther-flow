@@ -159,7 +159,7 @@ background: 'none',        pointerEvents: 'none',
               </button>
               <Button 
                 onClick={handleEnrollClick}
-                className="bg-#edebde text-[#810100] hover:bg-#edebde/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto #edebdespace-nowrap"
+                className="bg-#edebde text-[#ffffff] hover:bg-#edebde/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto #edebdespace-nowrap"
                 style={{ fontFamily: 'Google Sans, sans-serif' }}
                 data-testid="header-join-now"
               >
@@ -263,7 +263,7 @@ textShadow: 'none'              }}>
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#810100] hover:bg-#edebde/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="text-[#ffffff] hover:bg-#edebde/90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="hero-join-now"
                 >
@@ -785,7 +785,7 @@ textShadow: 'none'              }}>
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#810100] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
+                  className="text-[#ffffff] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
                   style={{ fontFamily: 'Google Sans, sans-serif' }}
                   data-testid="cta-join-now"
                 >
