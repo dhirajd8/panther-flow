@@ -415,7 +415,7 @@ textShadow: 'none'              }}>
                       background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
                       border: '3px solid #edebde'
                     }}>
-                      <div className="text-3xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>₹1.5L+</div>
+                      <div className="text-3xl font-bold text-#edebde" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
                       <div className="text-xs text-#edebde/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
