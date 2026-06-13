@@ -354,7 +354,7 @@ textShadow: 'none'              }}>
           <div className="container mx-auto max-w-6xl">
             {/* Section Backdrop with premium gradient */}
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12" style={{
-              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(230, 237, 250, 0.9) 50%, rgba(180, 195, 230, 0.85) 100%)',
+              background: '#810100',
               boxShadow: '0 25px 80px -20px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
               border: '1px solid rgba(255, 255, 255, 0.6)'
             }}>
@@ -394,7 +394,7 @@ textShadow: 'none'              }}>
                     }}></div>
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10" style={{
                       border: '4px solid #edebde',
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
+                      background: '#ffffff'
                     }}>
                       <img 
                         src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
@@ -404,7 +404,7 @@ textShadow: 'none'              }}>
                     </div>
                     {/* Floating Stats Badge - 45+ Students */}
                     <div className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
+                      background: '#ffffff',
                       border: '3px solid #edebde'
                     }}>
                       <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
@@ -412,7 +412,7 @@ textShadow: 'none'              }}>
                     </div>
                     {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
                     <div className="absolute -bottom-6 -left-6 rounded-2xl p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
+                      background: '#ffffff',
                       border: '3px solid #edebde'
                     }}>
                       <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
@@ -435,12 +435,12 @@ textShadow: 'none'              }}>
                 <div className="md:col-span-3 space-y-5">
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)',
+                      background: '#ffffff',
                       color: '#edebde',
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
                       <Award className="w-4 h-4" />
-                      Meet Your Trainer
+                      Meet Your Instructor
                     </span>
                     <h2 className="font-bold mb-2" style={{ 
                       fontSize: '24px',
@@ -452,12 +452,12 @@ textShadow: 'none'              }}>
                     }}>
                       धिरज दयानंद
                     </h2>
-                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                      Founder · Panther Flow · Meta Ads Strategist
+                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
+                      · Panther Flow AI Labs · Facebook Ads Strategist
                     </p>
                   </div>
 
-                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                     <p className="text-base leading-relaxed">
                       <strong style={{ color: '#810100' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#810100' }}>live शिकवलं जातं</strong>.
                     </p>
@@ -486,19 +486,19 @@ textShadow: 'none'              }}>
                   {/* Stats Row */}
                   <div className="grid grid-cols-3 gap-3 pt-2">
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
+                      background: '#ffffff'
                     }}>
                       <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
                       <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठीतून शिकवणी</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
+                      background: '#ffffff'
                     }}>
                       <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
                       <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Sessions</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
+                      background: '#ffffff'
                     }}>
                       <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
                       <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
@@ -623,7 +623,7 @@ textShadow: 'none'              }}>
                   {/* Icon Badge */}
                   <div className="flex-shrink-0 relative">
                     <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 100%)'
+                      background: '#ffffff'
                     }}>
                       <div className="text-4xl font-bold text-[#810100] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
                       <div className="text-xs text-[#810100]/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
