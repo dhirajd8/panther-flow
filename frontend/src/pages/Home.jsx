@@ -396,13 +396,14 @@ textShadow: 'none'              }}>
                       border: '4px solid #edebde',
                       background: '#ffffff'
                     }}>
+                      <img 
+  src="https://customer-assets.emergentagent.com/job_panther-training/artifacts/35ddx3vg_dhiraj%20photo%20%284%29.png" 
+  alt="Dhiraj - Panther Flow Founder" 
+  className="w-full h-auto object-cover"
+/>
                       className="w-full h-auto object-cover"
-              />
-              <img 
-                src="/Untitled design.svg"
-                alt="Panther Flow Design"
-                className="w-full h-auto"
-              />
+      
+
             </div>
                     {/* Floating Stats Badge - 45+ Students */}
                     <div className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-2xl z-20" style={{
