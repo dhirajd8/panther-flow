@@ -202,7 +202,7 @@ background: 'none',        pointerEvents: 'none',
             <div className="flex items-center gap-1 sm:gap-2 justify-center">
               <span 
                 className="hidden md:inline-block text-[#edebde] font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
-                style={{ fontFamily: 'Times New Roman, serif' }}
+                style={{ fontFamily: 'Poppins, sans-serif' }}
                 data-testid="menu-brand"
               >
                 Panther Flow
@@ -317,11 +317,11 @@ background: 'none',        pointerEvents: 'none',
               </button>
 
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   <Video className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   Beginner Meta Ads Practical Live Training
                 </span>
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   No Recorded - Live Course
                 </span>
@@ -358,68 +358,21 @@ textShadow: 'none'              }}>
               <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#810100]/80">
                 <div className="flex items-center gap-2 text-[#810100]">
                   <Clock className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Lifetime Access</span>
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Lifetime Access</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#810100]">
                   <Play className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Video Tutorials</span>
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Live Course</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#810100]">
-                  <Award className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Certificate</span>
+                  <BookOpen className="w-4 h-4 text-[#810100]" />
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Marathi Language</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#810100]">
+                  <Users className="w-4 h-4 text-[#810100]" />
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Doubt Support After Course</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          {/* Grid pattern */}
-          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
-          
-          {/* Floating icons */}
-          <div className="absolute top-20 right-12 opacity-20 ">
-            <DollarSign className="w-14 h-14 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-20 left-12 opacity-20 ">
-            <Sparkles className="w-12 h-12 text-[#810100]" />
-          </div>
-
-          <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Why Panther Flow
-              </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                या Course मध्ये इतर Courses पेक्षा नक्की वेगळं काय आहे
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {courseData.benefits.map((benefit, index) => {
-                const Icon = iconMap[benefit.icon];
-                return (
-                  <Card 
-                    key={benefit.id}
-                    className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group card-grid-pattern relative overflow-hidden"
-                    style={{ backgroundColor: '#ffffff' }}
-                  >
-                    <CardHeader className="relative z-10">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: '#810100' }}>
-                        <Icon className="w-6 h-6 text-[#edebde]" />
-                      </div>
-                      <CardTitle className="text-xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
-              {benefit.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-<p className="leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-  {benefit.description}                     
- </p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
             </div>
           </div>
         </section>
