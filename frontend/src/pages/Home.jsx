@@ -234,8 +234,8 @@ background: 'none',        pointerEvents: 'none',
               </button>
               <Button 
                 onClick={handleEnrollClick}
-                className="bg-#edebde text-[#ffffff] hover:bg-#edebde/90 font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 cta-wave cta-grid-pattern text-sm sm:text-base h-auto #edebdespace-nowrap"
-                style={{ fontFamily: 'Google Sans, sans-serif' }}
+                className="text-white font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
+                style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
                 data-testid="header-join-now"
               >
                 Join Now
@@ -338,8 +338,8 @@ textShadow: 'none'              }}>
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="bg-[#810100] text-[#edebde] hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
-                  style={{ fontFamily: 'Google Sans, sans-serif' }}
+                  className="text-white hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
                   data-testid="hero-join-now"
                 >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
@@ -832,8 +832,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-[#ffffff] hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 cta-wave cta-glow cta-grid-pattern"
-                  style={{ fontFamily: 'Google Sans, sans-serif' }}
+                  className="text-white hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
                   data-testid="cta-join-now"
                 >
                   {`Join Now - ${courseData.currency}${courseData.price}`}
