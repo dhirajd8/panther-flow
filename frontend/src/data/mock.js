@@ -83,25 +83,23 @@ export const courseData = {
     {
       id: 1,
       module: "Module 1",
-      title: "Meta Ads Introduction",
+      title: "Why Meta Ads? - Foundation",
       topics: [
-        "Facebook आणि Instagram Ads समजून घ्या",
-        "Facebook Page Creation",
-        "Basic Ad Metrics",
-        "Meta Business Suite सेटअप",
-        "Ads Manager चा परिचय",
-        "Payment Method Setup"
+        "Facebook आणि Instagram वर Ads का द्यायचे? - Digital vs Traditional marketing",
+        "Meta Business Suite, Ads Manager आणि Facebook Page Setup",
+        "Basic Ad Metrics समजून घेणे - Reach, Impressions, CTR, CPC, CPM",
+        "Payment Method आणि Ad Account Setup करणे"
       ]
     },
     {
       id: 2,
       module: "Module 2",
-      title: "Campaign Setup",
+      title: "Campaign Structure & Setup",
       topics: [
-        "Campaign Objective निवडणे",
-        "Target Audience तयार करणे",
-        "Budget आणि Schedule सेट करणे",
-        "Ad Placement समजून घेणे"
+        "Campaign Objective निवडणे - Awareness, Traffic, Leads, Sales",
+        "Target Audience तयार करणे - Location, Age, Interests, Behaviors",
+        "Budget आणि Schedule - Daily vs Lifetime Budget",
+        "Ad Placement - Feed, Reels, Stories, Marketplace समजून घेणे"
       ]
     },
     {
@@ -109,22 +107,45 @@ export const courseData = {
       module: "Module 3",
       title: "Ad Creative & Copywriting with AI",
       topics: [
-        "आकर्षक Ad Creative तयार करणे",
-        "Effective Ad Copy लिहिणे",
-        "Image आणि Video Ads",
-        "Call-to-Action (CTA) Perfect करणे"
+        "आकर्षक Image आणि Video Ad Creative तयार करणे",
+        "AI वापरून Effective Ad Copy लिहिणे - Hook, Body, CTA",
+        "Marathi आणि English Copywriting Strategies",
+        "Canva आणि AI Tools वापरून Image AD Creatives बनवणे",
+        "Google Flow वापरून AI जाहिरात व्हिडिओ बनवणे"
       ]
     },
     {
       id: 4,
       module: "Module 4",
-      title: "Analytics & Optimization",
+      title: "Meta Pixel & Website Integration",
       topics: [
-        "Meta Pixel सेटअप",
-        "Campaign Performance ट्रॅक करणे",
-        "Ad Reporting",
-        "ROI कॅल्क्युलेट करणे",
-        "Ads Optimize करणे"
+        "Meta Pixel म्हणजे काय आणि Website वर Install कसे करायचे",
+        "Events Setup - Page View, Add to Cart, Purchase Track करणे",
+        "Custom Conversions तयार करणे - Website Purchase Goal Set करणे",
+        "Pixel Data वापरून Smarter Audiences बनवणे"
+      ]
+    },
+    {
+      id: 5,
+      module: "Module 5",
+      title: "Sales Campaign - Website Purchase Ads",
+      topics: [
+        "Sales Campaign Objective निवडणे - Website Purchase Setup",
+        "Retargeting Ads - Website Visitors आणि Cart Abandoners ला Target करणे",
+        "Lookalike Audiences तयार करणे - Best Buyers सारखे नवीन Customers शोधणे",
+        "Full Funnel Strategy → Awareness → Retarget → Purchase"
+      ]
+    },
+    {
+      id: 6,
+      module: "Module 6",
+      title: "Analytics, Scaling & Optimization",
+      topics: [
+        "Campaign Performance ट्रॅक करणे - Ads Manager Reports वाचणे",
+        "A/B Testing - Winning AD कोणता Ad जास्त काम करतो ते शोधणे",
+        "ROI कॅल्क्युलेट करणे आणि ROAS सुधारणे",
+        "Budget Scale करणे - Winning Ads वर जास्त पैसे कसे लावायचे",
+        "Common Ad Mistakes आणि Account Ban पासून कसे वाचायचे"
       ]
     }
   ],
