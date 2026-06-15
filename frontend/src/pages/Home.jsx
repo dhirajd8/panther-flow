@@ -611,7 +611,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
             {/* 25 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl card-grid-pattern" style={{
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%)'
+                background: '#810100'
               }}>
                 {/* Decorative gradient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
@@ -625,9 +625,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                   {/* Icon Badge */}
                   <div className="flex-shrink-0 relative">
                     <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: '#ffffff'
+                      background: 'rgba(255,255,255,0.15)'
                     }}>
-                      <div className="text-4xl font-bold text-[#810100] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
+                      <div className="text-4xl font-bold text-[#ffffff] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
                       <div className="text-xs text-[#810100]/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
                     </div>
                   </div>
@@ -645,10 +645,10 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                       </span>
                       <Video className="w-5 h-5" style={{ color: '#810100' }} />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                       25 Days Live Classes
                     </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
