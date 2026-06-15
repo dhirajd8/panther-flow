@@ -469,13 +469,13 @@ textShadow: 'none'              }}>
                   </div>
 
                   {/* Quote */}
-                  <div className="relative pl-6 py-4 rounded-r-xl" style={{
+                  <div className="relative pl-6 py-4 rounded-2xl" style={{
                     background: '#ffffff',
                     borderLeft: '4px solid #810100'
                   }}>
                     <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#810100' }} />
                     <p className="italic text-lg leading-relaxed font-semibold" style={{ 
-                      fontFamily: 'Times New Roman, serif',
+                      fontFamily: 'Aparajita, serif',
                       color: '#810100'
                     }}>
                       पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
