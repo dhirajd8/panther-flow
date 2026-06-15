@@ -370,7 +370,7 @@ textShadow: 'none'              }}>
                 </div>
                 <div className="flex items-center gap-2 text-[#810100]">
                   <Users className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Doubt Support After Course</span>
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>After Course Doubt Support</span>
                 </div>
               </div>
             </div>
@@ -518,20 +518,20 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: '#ffffff'
                     }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>100%</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>मराठीतून शिकवणी</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Results</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: '#ffffff'
                     }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Live</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Sessions</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{
                       background: '#ffffff'
                     }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>Real</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Campaigns</div>
+                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
+                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
@@ -841,7 +841,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </footer>
       </div>
 {/* Bottom Sticky Bar */}
-<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between shadow-2xl" style={{
+<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl" style={{
   background: '#810100',
   borderTop: '2px solid rgba(237, 235, 222, 0.3)',
   fontFamily: 'Google Sans, sans-serif'
