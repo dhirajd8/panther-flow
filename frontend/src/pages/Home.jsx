@@ -405,19 +405,19 @@ textShadow: 'none'              }}>
 
             </div>
                     {/* Floating Stats Badge - 45+ Students */}
-                    <div className="absolute -bottom-6 -right-6 rounded-2xl p-6 shadow-2xl z-20" style={{
+                    <div className="absolute -bottom-6 -right-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
                       background: '#ffffff',
                       border: '3px solid #edebde'
                     }}>
-                      <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
+                      <div className="text-xl sm:text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
                       <div className="text-xs text-[#810100]/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
                     </div>
                     {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
-                    <div className="absolute -bottom-6 -left-6 rounded-2xl p-6 shadow-2xl z-20" style={{
+                    <div className="absolute -bottom-6 -left-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
                       background: '#ffffff',
                       border: '3px solid #edebde'
                     }}>
-                      <div className="text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
+                      <div className="text-xl sm:text-3xl font-bold text-[#810100]" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
                       <div className="text-xs text-[#810100]/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
