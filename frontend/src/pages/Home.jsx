@@ -777,7 +777,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
                 Take the First Step
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
