@@ -674,9 +674,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3" style={{ fontFamily: 'Times New Roman, serif', background: 'linear-gradient(135deg, #810100 0%, #3d0000 50%, #000000 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                <Activity className="w-10 h-10" />
-                Course Anatomy
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100' }}>
+                COURSE OVERVIEW
               </h2>
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
@@ -718,7 +717,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                         <span className="w-2 h-2 bg-[#810100] rounded-full"></span>
                         LIVE
                       </span>
-                      <Video className="w-5 h-5" style={{ color: '#810100' }} />
+                      <Video className="w-5 h-5" style={{ color: '#ffffff' }} />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
                       25 Days Live Classes
