@@ -45,7 +45,78 @@ const iconMap = {
   Rocket,      // ← Add this
   DollarSign   // ← Add this
 };
+const ModuleAccordion = ({ modules }) => {
+  const [openModule, setOpenModule] = React.useState(null);
 
+  const toggleModule = (id) => {
+    setOpenModule(openModule === id ? null : id);
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {modules.map((module) => (
+          <div key={module.id}>
+            <button
+              onClick={() => toggleModule(module.id)}
+              className="w-full rounded-2xl px-6 py-8 text-center transition-all duration-300 hover:opacity-90 shadow-xl"
+              style={{
+                background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
+                border: openModule === module.id ? '2px solid rgba(255,255,255,0.3)' : '2px solid transparent',
+                fontFamily: 'Poppins, sans-serif',
+              }}
+            >
+              <div className="text-sm font-semibold mb-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                {module.module}
+              </div>
+              <div className="text-base font-bold leading-snug" style={{ color: '#ffffff' }}>
+                {module.title}
+              </div>
+            </button>
+
+            {/* Mobile: opens below each card */}
+            {openModule === module.id && (
+              <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
+                <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #2d0000, #810100)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+                  {module.title}
+                </div>
+                <ul className="space-y-3">
+                  {module.topics.map((topic, idx) => (
+                    <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '14px' }}>
+                      <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: opens below all 6 buttons */}
+      {openModule && (
+        <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
+          {modules.filter(m => m.id === openModule).map(module => (
+            <div key={module.id}>
+              <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #2d0000 0%, #810100 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+                {module.title}
+              </div>
+              <ul className="space-y-4">
+                {module.topics.map((topic, idx) => (
+                  <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '15px' }}>
+                    <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                    <span>{topic}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 const Home = () => {
   const handleEnrollClick = () => {
     window.open('https://rzp.io/rzp/pantherflow', '_blank', 'noopener,noreferrer');
@@ -663,36 +734,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </div>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {courseData.courseContent.map((module) => (
-                <Card 
-                  key={module.id}
-                  className="border-2 border-[#edebde]/40 backdrop-blur-sm transition-all duration-300 hover:shadow-lg card-grid-pattern relative overflow-hidden"
-                  style={{ backgroundColor: '#ffffff' }}
-                >
-                  <CardHeader className="relative z-10">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="px-3 py-1 text-[#810100] text-sm font-semibold rounded-full" style={{ background: '#810100', fontFamily: 'Google Sans, sans-serif' }}>
-                        {module.module}
-                      </span>
-                    </div>
-                    <CardTitle className="text-2xl font-bold" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
-                      {module.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative z-10">
-                    <ul className="space-y-3">
-                      {module.topics.map((topic, idx) => (
-                        <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                          <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
-                          <span>{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ModuleAccordion modules={courseData.courseContent} />
           </div>
         </section>
 
