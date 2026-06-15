@@ -525,17 +525,6 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           {/* Grid background */}
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
           
-          {/* Floating icons */}
-          <div className="absolute top-32 left-16 opacity-20 ">
-            <Store className="w-14 h-14 text-[#810100]" />
-          </div>
-          <div className="absolute top-48 right-24 opacity-20 ">
-            <GraduationCap className="w-12 h-12 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-32 right-16 opacity-20 ">
-            <Briefcase className="w-14 h-14 text-[#810100]" />
-          </div>
-
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
