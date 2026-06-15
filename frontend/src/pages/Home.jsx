@@ -590,20 +590,6 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         <section id="course" className="py-20 px-4 relative overflow-hidden">
           {/* Grid background pattern */}
           <div className="absolute inset-0 grid-bg pointer-events-none"></div>
-          
-          {/* Floating decorative icons */}
-          <div className="absolute top-20 left-10 opacity-20">
-            <Target className="w-16 h-16 text-[#810100]" />
-          </div>
-          <div className="absolute top-40 right-20 opacity-20" >
-            <Rocket className="w-12 h-12 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-40 left-20 opacity-20" >
-            <Activity className="w-14 h-14 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-20 right-10 opacity-20">
-            <Award className="w-12 h-12 text-[#810100]" />
-          </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
