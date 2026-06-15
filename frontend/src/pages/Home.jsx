@@ -694,48 +694,6 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section id="faq" className="py-20 px-4 relative overflow-hidden">
-          {/* Grid pattern */}
-          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
-          
-          {/* Floating icons */}
-          <div className="absolute top-32 left-20 opacity-20 ">
-            <BookOpen className="w-14 h-14 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-32 right-20 opacity-20">
-            <Sparkles className="w-12 h-12 text-[#810100]" />
-          </div>
-
-          <div className="container mx-auto max-w-4xl relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Times New Roman, serif', color: '#810100' }}>
-                FAQ's
-              </h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.8 }}>
-                नेहमी विचारले जाणारे प्रश्न ❓
-              </p>
-            </div>
-            <Accordion type="single" collapsible className="space-y-4">
-                {courseData.faqs.map((faq) => (
-                <AccordionItem 
-                  key={faq.id} 
-                  value={`item-${faq.id}`}
-                  className="backdrop-blur-sm border-2 rounded-lg px-6 transition-colors duration-300"
-                  style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}
-                >
-                  <AccordionTrigger className="text-left text-lg font-semibold py-6 hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-6 text-base leading-relaxed" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           {/* Grid background */}
