@@ -625,10 +625,10 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                   {/* Icon Badge */}
                   <div className="flex-shrink-0 relative">
                     <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: 'rgba(255,255,255,0.15)'
+                      background: '#ffffff'
                     }}>
-                      <div className="text-4xl font-bold text-[#ffffff] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
-                      <div className="text-xs text-[#810100]/90 uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
+                      <div className="text-4xl font-bold text-[#810100] leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
+                      <div className="text-xs text-[#810100] uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
                     </div>
                   </div>
 
@@ -636,11 +636,11 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                   <div className="flex-1 text-center md:text-left">
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: '#810100',
-                        color: '#edebde',
+                        background: '#ffffff',
+                        color: '#810100',
                         fontFamily: 'Google Sans, sans-serif'
                       }}>
-                        <span className="w-2 h-2 bg-#edebde rounded-full"></span>
+                        <span className="w-2 h-2 bg-[#810100] rounded-full"></span>
                         LIVE
                       </span>
                       <Video className="w-5 h-5" style={{ color: '#810100' }} />
@@ -652,8 +652,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: '#810100',
-                      color: '#edebde',
+                      background: '#ffffff',
+                      color: '#810100',
                       fontFamily: 'Google Sans, sans-serif'
                     }}>
                       <Calendar className="w-4 h-4" />
