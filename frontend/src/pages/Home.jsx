@@ -59,10 +59,14 @@ const ModuleAccordion = ({ modules }) => {
           <div key={module.id}>
             <button
               onClick={() => toggleModule(module.id)}
-              className="w-full rounded-2xl px-6 py-8 text-center transition-all duration-300 hover:opacity-90 shadow-xl"
+              className="w-full rounded-2xl px-6 py-4 text-center transition-all duration-300 hover:opacity-90 shadow-xl"
               style={{
-                background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
-                border: openModule === module.id ? '2px solid rgba(255,255,255,0.3)' : '2px solid transparent',
+                background: openModule === module.id
+                  ? 'linear-gradient(180deg, #000000 0%, #4a0000 50%, #810100 100%)'
+                  : 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
+                border: openModule === module.id ? '3px solid #ffffff' : '2px solid transparent',
+                boxShadow: openModule === module.id ? '0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(129,1,0,0.5)' : '',
+                transform: openModule === module.id ? 'scale(1.03)' : 'scale(1)',
                 fontFamily: 'Poppins, sans-serif',
               }}
             >
