@@ -41,7 +41,9 @@ const iconMap = {
   Store,
   Briefcase,
   GraduationCap,
-  TrendingUp
+  TrendingUp,
+  Rocket,      // ← Add this
+  DollarSign   // ← Add this
 };
 
 const Home = () => {
