@@ -678,17 +678,6 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         <section className="py-20 px-4 relative overflow-hidden">
           {/* Grid background */}
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
-          
-          {/* Floating icons */}
-          <div className="absolute top-10 left-1/4 opacity-60 ">
-            <Rocket className="w-10 h-10 text-[#810100]" />
-          </div>
-          <div className="absolute top-20 right-1/4 opacity-60 ">
-            <Sparkles className="w-12 h-12 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-10 left-1/3 opacity-60 ">
-            <Award className="w-10 h-10 text-[#810100]" />
-          </div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 shadow-2xl" style={{ 
