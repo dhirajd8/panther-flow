@@ -461,13 +461,10 @@ textShadow: 'none'              }}>
 
                   <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
                     <p className="text-base leading-relaxed">
-                      <strong style={{ color: '#edebde' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#edebde' }}>live शिकवलं जातं</strong>.
+                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#edebde' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong style={{ color: '#edebde' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#edebde' }}>live शिकवलं जातं</strong>.
                     </p>
                     <p className="text-base leading-relaxed">
-                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#edebde' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो.
-                    </p>
-                    <p className="text-base leading-relaxed">
-                      माझ्याकडे फक्त पुस्तकी ज्ञान नाही, मी freelancing करतो, clients साठी काम करतो आणि त्यातून जे <strong style={{ color: '#edebde' }}>real अनुभव</strong> मिळतात ते इथे शिकवतो. आतापर्यंत माझा एकूण ad spend <strong style={{ color: '#edebde' }}>१.५ लाख रुपयांपर्यंत</strong> पोहोचला आहे. Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#edebde' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
+                      Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#edebde' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
                     </p>
                   </div>
 
