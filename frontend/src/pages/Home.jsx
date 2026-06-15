@@ -481,7 +481,10 @@ textShadow: 'none'              }}>
                       fontFamily: 'Times New Roman, serif',
                       color: '#810100'
                     }}>
-                      "मराठीत शिकलं की concepts जास्त clear होतात आणि result पण लवकर दिसतो. हेच Panther Flow चं ध्येय आहे!"
+                      पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
+लवकर Job पाहिजे म्हणून बघून Admission ही घेतात, पण Course संपून गेला तरी Skills येत नाहीत, Confidence येत नाही.
+आणि हाच Problem आम्ही Solve करतोय.
+Affordable Price मध्ये, Practical Marathi मध्ये शिकवणारा Meta Ads + AI Complete Course. 🚀
                     </p>
                   </div>
 
