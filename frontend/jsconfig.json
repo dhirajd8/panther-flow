@@ -5,5 +5,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "ignoreDeprecations": "6.0"
 }

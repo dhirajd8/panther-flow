@@ -12,6 +12,8 @@ import {
   Target,
   Infinity,
   Laptop,
+  Rocket,
+  DollarSign,
   Wifi,
   BookOpen,
   Store,
