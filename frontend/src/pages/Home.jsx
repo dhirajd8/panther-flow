@@ -686,7 +686,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
             {/* 25 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl card-grid-pattern" style={{
-                background: '#810100'
+                background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)'
               }}>
                 {/* Decorative gradient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
