@@ -265,26 +265,6 @@ background: 'none',        pointerEvents: 'none',
             filter: 'blur(60px)'
           }}></div>
 
-          {/* Floating decorative icons */}
-          <div className="absolute top-32 left-16 opacity-60 ">
-            <Target className="w-20 h-20 text-[#810100]" />
-          </div>
-          <div className="absolute top-48 right-20 opacity-60 ">
-            <Rocket className="w-16 h-16 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-32 left-24 opacity-60 animate-float">
-            <Sparkles className="w-14 h-14 text-[#810100]" />
-          </div>
-          <div className="absolute bottom-40 right-32 opacity-60 ">
-            <Award className="w-16 h-16 text-[#810100]" />
-          </div>
-          <div className="absolute top-1/2 left-8 opacity-60 animate-float">
-            <Video className="w-12 h-12 text-[#810100]" />
-          </div>
-          <div className="absolute top-1/3 right-8 opacity-60 animate-float">
-            <Activity className="w-12 h-12 text-[#810100]" />
-          </div>
-
           {/* Decorative gradient lines */}
           <div className="absolute top-1/4 left-0 w-32 h-px opacity-30 pointer-events-none" style={{
             background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)'
