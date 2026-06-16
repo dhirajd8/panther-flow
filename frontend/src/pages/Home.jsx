@@ -193,48 +193,45 @@ background: 'none',        pointerEvents: 'none',
           </div>
         </div>
 
-        <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
+       <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
   <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-[#810100]/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
     background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.85) 0%, rgba(90, 0, 0, 0.85) 100%)',
     boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
   }}>
-    <div className="flex items-center gap-1 sm:gap-2 justify-center">
+    <div className="flex items-center gap-1 sm:gap-2 justify-between sm:justify-center">
       <button
         onClick={() => scrollToSection('socials')}
-        className="text-[#edebde] font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
+        className="text-[#edebde] font-bold px-2 sm:px-3 lg:px-4 py-2 text-sm sm:text-base tracking-wide whitespace-nowrap"
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         Panther Flow
       </button>
-      <div className="hidden md:block w-px h-6 bg-#edebde/30"></div>
+      <div className="hidden md:block w-px h-6"></div>
       <button
         onClick={() => scrollToSection('about')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
         style={{ fontFamily: 'Poppins, sans-serif' }}
-        data-testid="menu-about"
       >
         About
       </button>
       <button
         onClick={() => scrollToSection('course')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
         style={{ fontFamily: 'Poppins, sans-serif' }}
-        data-testid="menu-course"
       >
         Course
       </button>
       <button
-  onClick={() => scrollToSection('socials')}
-  className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-  style={{ fontFamily: 'Google Sans, sans-serif' }}
->
-  Connect
-</button>
+        onClick={() => scrollToSection('socials')}
+        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
+        style={{ fontFamily: 'Google Sans, sans-serif' }}
+      >
+        Connect
+      </button>
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
+        className="text-white font-semibold px-2 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-xs sm:text-base h-auto whitespace-nowrap"
         style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
-        data-testid="header-join-now"
       >
         Join Now
       </Button>
@@ -678,7 +675,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
     <p className="mb-10 text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', opacity: 0.7 }}>
       Stay connected with Panther Flow on social media
     </p>
-    <div className="flex flex-wrap justify-center gap-6">
+    <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
 
       {/* Facebook */}
       <a href="https://www.facebook.com/profile.php?id=61590443666474" target="_blank" rel="noopener noreferrer"
