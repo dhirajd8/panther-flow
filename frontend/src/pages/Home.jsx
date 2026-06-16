@@ -729,7 +729,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
               <div className="flex justify-center mb-4">
-  <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-16 w-auto" />
+  <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-28 w-auto" />
 </div>
               <div>
                 <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Email</p>
