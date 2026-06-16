@@ -225,12 +225,13 @@ background: 'none',        pointerEvents: 'none',
           Course
         </button>
         <button
-          onClick={() => scrollToSection('socials')}
-          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
-        >
-          Connect
-        </button>
+  onClick={() => scrollToSection('socials')}
+  className="text-[#edebde] font-bold px-2 sm:px-3 lg:px-4 py-2 text-xs sm:text-base tracking-wide whitespace-nowrap"
+  style={{ fontFamily: 'Poppins, sans-serif' }}
+>
+  <span className="hidden sm:inline">Panther Flow</span>
+  <span className="sm:hidden">PF</span>
+</button>
       </div>
 
       {/* Join Now Button */}
