@@ -200,18 +200,14 @@ background: 'none',        pointerEvents: 'none',
             boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
           }}>
             <div className="flex items-center gap-1 sm:gap-2 justify-center">
-              <span 
-                className="hidden md:inline-block text-[#edebde] font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-                data-testid="menu-brand"
-              >
-                Panther Flow
-              </span>
+              <span className="hidden md:inline-flex items-center gap-2 px-3 lg:px-4 py-2" data-testid="menu-brand">
+  <img src="/Pantherflowlogo.svg" alt="Panther Flow" className="h-8 w-auto" />
+</span>
               <div className="hidden md:block w-px h-6 bg-#edebde/30"></div>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-                style={{ fontFamily: 'Google Sans, sans-serif' }}
+                style={{ fontFamily: 'Poppins, sans-serif' }}
                 data-testid="menu-about"
               >
                 About
@@ -219,7 +215,7 @@ background: 'none',        pointerEvents: 'none',
               <button 
                 onClick={() => scrollToSection('course')}
                 className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-                style={{ fontFamily: 'Google Sans, sans-serif' }}
+                style={{ fontFamily: 'Poppins, sans-serif' }}
                 data-testid="menu-course"
               >
                 Course
@@ -234,7 +230,7 @@ background: 'none',        pointerEvents: 'none',
               <Button 
                 onClick={handleEnrollClick}
                 className="text-white font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
-                style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
+                style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
                 data-testid="header-join-now"
               >
                 Join Now
@@ -723,6 +719,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
+              <div className="flex justify-center mb-4">
+  <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-16 w-auto" />
+</div>
               <div>
                 <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Email</p>
                 <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
