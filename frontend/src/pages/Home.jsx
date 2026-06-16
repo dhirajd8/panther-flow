@@ -276,36 +276,7 @@ background: 'none',        pointerEvents: 'none',
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
-              <button
-                onClick={handleEnrollClick}
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-2xl mb-2 transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
-                style={{
-                  background: '#810100',
-                  fontFamily: 'Google Sans, sans-serif'
-                }} 
-                data-testid="urgency-banner"
-              >
-                <span className="flex items-center gap-2">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-#edebde"></span>
-                  </span>
-                  <Calendar className="w-4 h-4 text-[#810100]" />
-                </span>
-                <span className="text-sm font-bold text-[#edebde] tracking-wide">
-                  🔥 New Batch Starting on 20th June
-                </span>
-              </button>
-
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  <Video className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  Beginner Meta Ads Practical Live Training
-                </span>
-                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-[#810100] rounded-full text-xs sm:text-sm font-medium border border-[#810100]/30" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  No Recorded - Live Course
-                </span>
-              </div>
+              
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#810100]" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
