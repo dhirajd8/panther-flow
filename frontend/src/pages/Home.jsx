@@ -224,13 +224,12 @@ background: 'none',        pointerEvents: 'none',
         Course
       </button>
       <button
-        onClick={() => scrollToSection('faq')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-        style={{ fontFamily: 'Google Sans, sans-serif' }}
-        data-testid="menu-faq"
-      >
-        FAQ
-      </button>
+  onClick={() => scrollToSection('socials')}
+  className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+  style={{ fontFamily: 'Google Sans, sans-serif' }}
+>
+  Connect
+</button>
       <Button
         onClick={handleEnrollClick}
         className="text-white font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
