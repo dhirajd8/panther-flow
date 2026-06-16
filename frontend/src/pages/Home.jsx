@@ -531,9 +531,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100' }}>
-                COURSE OVERVIEW
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 px-6 py-2 inline-block" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}>
+  COURSE OVERVIEW
+</h2>
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
               </p>
@@ -667,7 +667,6 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         fontFamily: 'Poppins, sans-serif', 
         color: '#ffffff',
         background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
-        borderRadius: '16px'
       }}>
         Follow Us
       </h2>
