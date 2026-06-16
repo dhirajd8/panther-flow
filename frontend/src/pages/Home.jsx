@@ -193,57 +193,66 @@ background: 'none',        pointerEvents: 'none',
           </div>
         </div>
 
-        {/* Header - Floating Pill Menu */}
-        <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
-          <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-[#810100]/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
-            background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.85) 0%, rgba(90, 0, 0, 0.85) 100%)',
-            boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-          }}>
-            <div className="flex items-center gap-1 sm:gap-2 justify-center">
-              <span className="hidden md:inline-flex items-center gap-2 px-3 lg:px-4 py-2" data-testid="menu-brand">
-  <button
-  onClick={() => scrollToSection('socials')}
-  className="text-[#edebde] font-bold px-3 lg:px-4 py-2 text-base tracking-wide"
-  style={{ fontFamily: 'Poppins, sans-serif' }}
->
-  Panther Flow
-</button>
-</span>
-              <div className="hidden md:block w-px h-6 bg-#edebde/30"></div>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-                data-testid="menu-about"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => scrollToSection('course')}
-                className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-                data-testid="menu-course"
-              >
-                Course
-              </button>
-              <button 
-                onClick={() => scrollToSection('socials')}
-                className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                Connect
-              </button>
-              <Button 
-                onClick={handleEnrollClick}
-                className="text-white font-semibold px-3 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
-                style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
-                data-testid="header-join-now"
-              >
-                Join Now
-              </Button>
-            </div>
-          </nav>
-        </header>
+      <header className="fixed top-8 sm:top-8 left-0 right-0 z-50 px-4">
+  <nav className="backdrop-blur-xl shadow-2xl border-b border-[#810100]/30 px-6 py-3" style={{
+    background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.95) 0%, rgba(90, 0, 0, 0.95) 100%)',
+    boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4)'
+  }}>
+    <div className="flex items-center justify-between max-w-7xl mx-auto">
+      {/* Left side - Brand + CTA */}
+      <div className="flex items-center gap-4">
+        <button
+          onClick={() => scrollToSection('socials')}
+          className="text-[#edebde] font-bold text-base tracking-wide"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Panther Flow
+        </button>
+        <button
+          onClick={handleEnrollClick}
+          className="hidden sm:inline-flex items-center gap-2 text-[#edebde] text-xs sm:text-sm font-semibold hover:underline"
+          style={{ fontFamily: 'Google Sans, sans-serif' }}
+        >
+          <Calendar className="w-3.5 h-3.5" />
+          🔥 New Batch · <strong>20th June</strong> · Limited Seats!
+          <span className="underline">Join Now →</span>
+        </button>
+      </div>
+
+      {/* Right side - Nav links */}
+      <div className="flex items-center gap-1 sm:gap-2">
+        <button
+          onClick={() => scrollToSection('about')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          About
+        </button>
+        <button
+          onClick={() => scrollToSection('course')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Course
+        </button>
+        <button
+          onClick={() => scrollToSection('socials')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+          style={{ fontFamily: 'Google Sans, sans-serif' }}
+        >
+          Connect
+        </button>
+        <Button
+          onClick={handleEnrollClick}
+          className="text-white font-semibold px-3 sm:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base h-auto"
+          style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
+        >
+          Join Now
+        </Button>
+      </div>
+    </div>
+  </nav>
+</header>
 
         {/* Hero Section */}
         <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden">
