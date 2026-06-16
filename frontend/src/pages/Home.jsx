@@ -276,7 +276,7 @@ background: 'none',        pointerEvents: 'none',
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
-              
+
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#810100]" style={{ 
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
                 fontWeight: 800,
@@ -306,24 +306,7 @@ textShadow: 'none'              }}>
                   </div>
                 </div>
               </div>
-              <div className="pt-8 flex flex-wrap justify-center gap-8 text-sm text-[#810100]/80">
-                <div className="flex items-center gap-2 text-[#810100]">
-                  <Clock className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Lifetime Access</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#810100]">
-                  <Play className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Live Course</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#810100]">
-                  <BookOpen className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Marathi Language</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#810100]">
-                  <Users className="w-4 h-4 text-[#810100]" />
-                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>After Course Doubt Support</span>
-                </div>
-              </div>
+  
             </div>
           </div>
         </section>
