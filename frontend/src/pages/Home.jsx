@@ -198,40 +198,46 @@ background: 'none',        pointerEvents: 'none',
     background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.85) 0%, rgba(90, 0, 0, 0.85) 100%)',
     boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
   }}>
-    <div className="flex items-center gap-1 sm:gap-2 justify-between sm:justify-center">
-      <button
-        onClick={() => scrollToSection('socials')}
-        className="text-[#edebde] font-bold px-2 sm:px-3 lg:px-4 py-2 text-sm sm:text-base tracking-wide whitespace-nowrap"
+    <div className="flex items-center justify-between w-full gap-1">
+      {/* Brand - hidden on mobile */}
+      <span
+        className="hidden md:inline-block text-[#edebde] font-bold px-3 py-2 text-base tracking-wide whitespace-nowrap"
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         Panther Flow
-      </button>
-      <div className="hidden md:block w-px h-6"></div>
-      <button
-        onClick={() => scrollToSection('about')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
-      >
-        About
-      </button>
-      <button
-        onClick={() => scrollToSection('course')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
-      >
-        Course
-      </button>
-      <button
-        onClick={() => scrollToSection('socials')}
-        className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
-        style={{ fontFamily: 'Google Sans, sans-serif' }}
-      >
-        Connect
-      </button>
+      </span>
+      <div className="hidden md:block w-px h-6 bg-white/20"></div>
+
+      {/* Nav Links */}
+      <div className="flex items-center gap-0.5 sm:gap-1">
+        <button
+          onClick={() => scrollToSection('about')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          About
+        </button>
+        <button
+          onClick={() => scrollToSection('course')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Course
+        </button>
+        <button
+          onClick={() => scrollToSection('socials')}
+          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Connect
+        </button>
+      </div>
+
+      {/* Join Now Button */}
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-semibold px-2 sm:px-5 lg:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 hover:scale-105 text-xs sm:text-base h-auto whitespace-nowrap"
-        style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
+        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 hover:scale-105 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0"
+        style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)', border: '2px solid rgba(255,255,255,0.3)' }}
       >
         Join Now
       </Button>
