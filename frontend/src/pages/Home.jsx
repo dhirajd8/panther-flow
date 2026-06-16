@@ -132,7 +132,17 @@ const Home = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
+React.useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  return () => observer.disconnect();
+}, []);
   const openWhatsApp = () => {
     window.open('https://wa.link/kzhidt', '_blank', 'noopener,noreferrer');
   };
@@ -247,9 +257,10 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden">
-          {/* Grid background pattern */}
-          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
+        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden hero-dot-bg">
+  <div className="absolute inset-0 pointer-events-none" style={{
+    background: 'radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.08) 0%, transparent 60%)'
+  }}></div>
           
           {/* Premium ambient gradient orbs */}
           <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full animate-pulse-glow pointer-events-none" style={{
@@ -279,22 +290,30 @@ background: 'none',        pointerEvents: 'none',
             <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
 
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#810100]" style={{ 
-                fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
-                fontWeight: 800,
-color: '#810100',
-                lineHeight: '1.4',
-textShadow: 'none'              }}>
-                Zero ते Expert<br />Meta Ads चा संपूर्ण<br />Course, मराठीत!
-              </h1>
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black reveal" style={{ 
+  fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
+  fontWeight: 800,
+  color: '#0f172a',
+  lineHeight: '1.4',
+  textShadow: 'none'
+}}>
+  Zero ते Expert<br />
+  <span style={{
+    background: 'linear-gradient(135deg, #2563eb 0%, #a855f7 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text'
+  }}>Meta Ads चा संपूर्ण</span><br />
+  Course, मराठीत!
+</h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
                 <Button 
-                  onClick={handleEnrollClick}
-                  size="lg"
-                  className="text-white hover:opacity-90 text-lg px-8 py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
-                  data-testid="hero-join-now"
-                >
+  onClick={handleEnrollClick}
+  size="lg"
+  className="text-white text-lg px-8 py-6 rounded-xl font-semibold shadow-lg btn-glow reveal"
+  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)' }}
+  data-testid="hero-join-now"
+>
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
                 <div className="flex flex-col items-start gap-1">
@@ -478,7 +497,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 {/* Right For You Section */}
         <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100' }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100' }}>
               Right For You?
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -594,7 +613,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 px-6 py-2 inline-block" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)', borderRadius: '6px' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)', borderRadius: '6px' }}>
   COURSE OVERVIEW
 </h2>
               <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
@@ -689,7 +708,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
                 Take the First Step
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
