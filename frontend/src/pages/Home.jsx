@@ -201,7 +201,7 @@ background: 'none',        pointerEvents: 'none',
           }}>
             <div className="flex items-center gap-1 sm:gap-2 justify-center">
               <span className="hidden md:inline-flex items-center gap-2 px-3 lg:px-4 py-2" data-testid="menu-brand">
-  <img src="/Pantherflowlogo.svg" alt="Panther Flow" className="h-8 w-auto" />
+  <img src="/Pantherflowlogo.svg" alt="Panther Flow" className="h-12 w-12 rounded-full object-cover border-2 border-[#edebde]" />
 </span>
               <div className="hidden md:block w-px h-6 bg-#edebde/30"></div>
               <button 
