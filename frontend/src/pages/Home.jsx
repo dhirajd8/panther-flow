@@ -130,13 +130,13 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 {isActive && (
                   <ul className="space-y-2 w-full text-left mt-2">
                     {module.topics.slice(0, 4).map((topic, i) => (
-                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '13px' }}>
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#4F46E5', fontSize: '13px' }}>
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
                         <span>{topic}</span>
                       </li>
                     ))}
                     {module.topics.length > 4 && (
-                      <li className="text-xs font-semibold" style={{ color: '#4F46E5', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
+                      <li className="text-xs font-semibold" style={{ color: '#7C3AED', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
                         +{module.topics.length - 4} more topics
                       </li>
                     )}
