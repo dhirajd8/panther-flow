@@ -109,7 +109,6 @@ export const courseData = {
       topics: [
         "आकर्षक Image आणि Video Ad Creative तयार करणे",
         "AI वापरून Effective Ad Copy लिहिणे - Hook, Body, CTA",
-        "Marathi आणि English Copywriting Strategies",
         "Canva आणि AI Tools वापरून Image AD Creatives बनवणे",
         "Google Flow वापरून AI जाहिरात व्हिडिओ बनवणे"
       ]
@@ -144,8 +143,7 @@ export const courseData = {
         "Campaign Performance ट्रॅक करणे - Ads Manager Reports वाचणे",
         "A/B Testing - Winning AD कोणता Ad जास्त काम करतो ते शोधणे",
         "ROI कॅल्क्युलेट करणे आणि ROAS सुधारणे",
-        "Budget Scale करणे - Winning Ads वर जास्त पैसे कसे लावायचे",
-        "Common Ad Mistakes आणि Account Ban पासून कसे वाचायचे"
+        "Budget Scale करणे - Winning Ads वर जास्त पैसे कसे लावायचे"
       ]
     }
   ],

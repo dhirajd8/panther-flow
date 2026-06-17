@@ -198,6 +198,154 @@ const ModuleShowcaseCarousel = ({ modules }) => {
 };
 
 const ModuleAccordion = ({ modules }) => {
+  const ModuleCarousel = ({ modules }) => {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const carouselRef = React.useRef(null);
+
+  const goTo = (index) => {
+    const clamped = Math.max(0, Math.min(index, modules.length - 1));
+    setActiveIndex(clamped);
+    if (carouselRef.current) {
+      const cards = carouselRef.current.querySelectorAll('.module-card');
+      if (cards[clamped]) {
+        cards[clamped].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  };
+
+  const handleScroll = () => {
+    if (carouselRef.current) {
+      const scrollLeft = carouselRef.current.scrollLeft;
+      const cardWidth = carouselRef.current.offsetWidth;
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveIndex(index);
+    }
+  };
+
+  return (
+    <div className="relative w-full">
+      {/* Carousel Track */}
+      <div
+        ref={carouselRef}
+        onScroll={handleScroll}
+        className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-4"
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          WebkitOverflowScrolling: 'touch',
+        }}
+      >
+        {modules.map((module, index) => (
+          <div
+            key={module.id}
+            className="module-card flex-shrink-0 snap-center rounded-3xl p-8 flex flex-col gap-4 transition-all duration-500"
+            style={{
+              width: 'min(340px, 85vw)',
+              background: index === activeIndex
+                ? 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%)'
+                : 'linear-gradient(135deg, #1f2937 0%, #111827 100%)',
+              border: index === activeIndex
+                ? '2px solid rgba(139, 92, 246, 0.6)'
+                : '2px solid rgba(255,255,255,0.08)',
+              boxShadow: index === activeIndex
+                ? '0 0 40px rgba(99, 102, 241, 0.3), 0 20px 60px rgba(0,0,0,0.4)'
+                : '0 8px 32px rgba(0,0,0,0.3)',
+              transform: index === activeIndex ? 'scale(1.03)' : 'scale(0.97)',
+            }}
+            onClick={() => goTo(index)}
+          >
+            {/* Module Badge */}
+            <div className="flex justify-center">
+              <span
+                className="px-4 py-1.5 rounded-full text-sm font-bold text-white"
+                style={{
+                  background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+                  fontFamily: 'Poppins, sans-serif'
+                }}
+              >
+                {module.module}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h3
+              className="text-xl font-bold text-white text-center leading-snug"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
+            >
+              {module.title}
+            </h3>
+
+            {/* Topics — only show on active */}
+            {index === activeIndex && (
+              <ul className="space-y-3 mt-2">
+                {module.topics.map((topic, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-sm"
+                    style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Poppins, sans-serif' }}
+                  >
+                    <CheckCircle2
+                      className="w-4 h-4 mt-0.5 flex-shrink-0"
+                      style={{ color: '#818cf8' }}
+                    />
+                    <span>{topic}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Dot Indicators */}
+      <div className="flex justify-center gap-2 mt-4">
+        {modules.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => goTo(idx)}
+            className="rounded-full transition-all duration-300"
+            style={{
+              width: idx === activeIndex ? '24px' : '8px',
+              height: '8px',
+              background: idx === activeIndex
+                ? 'linear-gradient(135deg, #4F46E5, #7C3AED)'
+                : 'rgba(255,255,255,0.2)'
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Arrow Buttons — OUTSIDE the cards */}
+      <div className="flex justify-center gap-4 mt-6">
+        <button
+          onClick={() => goTo(activeIndex - 1)}
+          disabled={activeIndex === 0}
+          className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-30"
+          style={{
+            background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+            border: '2px solid rgba(255,255,255,0.2)'
+          }}
+        >
+          <span className="text-white font-bold text-lg">‹</span>
+        </button>
+        <button
+          onClick={() => goTo(activeIndex + 1)}
+          disabled={activeIndex === modules.length - 1}
+          className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-30"
+          style={{
+            background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+            border: '2px solid rgba(255,255,255,0.2)'
+          }}
+        >
+          <span className="text-white font-bold text-lg">›</span>
+        </button>
+      </div>
+    </div>
+  );
+
+
+
+};
   const [openModule, setOpenModule] = React.useState(null);
 
   const toggleModule = (id) => {
@@ -492,15 +640,16 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
         {/* Trainer Section */}
-        <section id="about" className="py-20 px-4 relative">
-          <div className="container mx-auto max-w-6xl">
-            {/* Section Backdrop with premium gradient */}
+        <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a0f' }}>
+          {/* Ambient glow */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(10,10,30,0.95) 50%, rgba(15,15,50,0.98) 100%)',
-              backdropFilter: 'blur(24px)',
-              WebkitBackdropFilter: 'blur(24px)',
-              border: '1px solid rgba(79,70,229,0.3)',
-              boxShadow: '0 25px 80px -20px rgba(0,0,0,0.8), 0 0 60px rgba(79,70,229,0.15), inset 0 1px 0 rgba(255,255,255,0.05)'
+              background: 'linear-gradient(135deg, rgba(30,27,75,0.9) 0%, rgba(17,24,39,0.95) 100%)',
+              border: '1px solid rgba(99,102,241,0.2)',
+              boxShadow: '0 25px 80px -20px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.05)',
+              backdropFilter: 'blur(20px)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -646,9 +795,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 {/* Right For You Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
-          <div className="container mx-auto max-w-6xl">
-           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a0f' }}>
+          {/* Ambient glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.1) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="container mx-auto max-w-6xl relative z-10">
+           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span className="gradient-text">You?</span>
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -832,12 +984,20 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          {/* Grid background */}
-          <div className="absolute inset-0 dot-bg pointer-events-none"></div>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a0f' }}>
+          <div className="absolute inset-0 pointer-events-none" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundSize: '28px 28px'
+          }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="space-y-6 rounded-3xl p-12 shadow-2xl glass-dark rise-up">
+            <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
+              background: 'linear-gradient(135deg, rgba(30,27,75,0.95) 0%, rgba(17,24,39,0.98) 100%)',
+              border: '1px solid rgba(99,102,241,0.3)',
+              boxShadow: '0 0 80px rgba(79,70,229,0.2), 0 25px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
+              backdropFilter: 'blur(30px)'
+            }}>
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
@@ -870,14 +1030,14 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                   {`Join Now - ${courseData.currency}${courseData.price}`}
                 </Button>
               </div>
-              <div className="flex items-center justify-center gap-8 pt-4 text-sm" style={{ color: '#edebde' }}>
+              <div className="flex items-center justify-center gap-8 pt-4 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>100% Secure Payment</span>
+                  <CheckCircle2 className="w-5 h-5" style={{ color: '#818cf8' }} />
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>100% Secure Payment</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Video className="w-5 h-5" />
-                  <span style={{ fontFamily: 'Google Sans, sans-serif' }}>Live Course</span>
+                  <Video className="w-5 h-5" style={{ color: '#818cf8' }} />
+                  <span style={{ fontFamily: 'Poppins, sans-serif' }}>Live Course</span>
                 </div>
               </div>
             </div>
