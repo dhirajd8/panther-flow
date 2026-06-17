@@ -45,6 +45,150 @@ const iconMap = {
   Rocket,      // ← Add this
   DollarSign   // ← Add this
 };
+const ModuleShowcaseCarousel = ({ modules }) => {
+  const [active, setActive] = React.useState(0);
+
+  const prev = () => setActive((a) => (a - 1 + modules.length) % modules.length);
+  const next = () => setActive((a) => (a + 1) % modules.length);
+
+  const getPosition = (idx) => {
+    const diff = idx - active;
+    const len = modules.length;
+    const wrapped = ((diff + Math.floor(len / 2) + len) % len) - Math.floor(len / 2);
+    return wrapped;
+  };
+
+  return (
+    <div className="relative w-full overflow-hidden py-8" style={{ minHeight: '380px' }}>
+      {/* Cards */}
+      <div className="relative flex items-center justify-center" style={{ height: '320px' }}>
+        {modules.map((module, idx) => {
+          const pos = getPosition(idx);
+          const isActive = pos === 0;
+          const isVisible = Math.abs(pos) <= 2;
+          if (!isVisible) return null;
+
+          const scale = isActive ? 1 : Math.abs(pos) === 1 ? 0.78 : 0.62;
+          const opacity = isActive ? 1 : Math.abs(pos) === 1 ? 0.7 : 0.4;
+          const translateX = pos * 280;
+          const zIndex = isActive ? 10 : Math.abs(pos) === 1 ? 5 : 1;
+
+          return (
+            <div
+              key={module.id}
+              onClick={() => !isActive && setActive(idx)}
+              style={{
+                position: 'absolute',
+                transform: `translateX(${translateX}px) scale(${scale})`,
+                opacity,
+                zIndex,
+                transition: 'all 0.45s cubic-bezier(0.4,0,0.2,1)',
+                cursor: isActive ? 'default' : 'pointer',
+                width: '300px',
+              }}
+            >
+              <div
+                className="rounded-3xl p-7 shadow-2xl"
+                style={{
+                  background: isActive
+                    ? '#ffffff'
+                    : 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+                  border: isActive ? '3px solid rgba(79,70,229,0.3)' : '2px solid rgba(79,70,229,0.15)',
+                  boxShadow: isActive ? '0 25px 60px rgba(79,70,229,0.25)' : 'none',
+                  minHeight: '260px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  gap: '12px',
+                }}
+              >
+                {/* Module label */}
+                <div
+                  className="text-xs font-bold px-3 py-1 rounded-full"
+                  style={{
+                    background: isActive ? 'linear-gradient(135deg,#4F46E5,#7C3AED)' : 'rgba(255,255,255,0.15)',
+                    color: '#ffffff',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
+                  {module.module}
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="text-lg font-bold leading-snug"
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    color: isActive ? '#0f0f0f' : '#ffffff',
+                  }}
+                >
+                  {module.title}
+                </h3>
+
+                {/* Topics — only on active */}
+                {isActive && (
+                  <ul className="space-y-2 w-full text-left mt-2">
+                    {module.topics.slice(0, 4).map((topic, i) => (
+                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '13px' }}>
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                    {module.topics.length > 4 && (
+                      <li className="text-xs font-semibold" style={{ color: '#4F46E5', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
+                        +{module.topics.length - 4} more topics
+                      </li>
+                    )}
+                  </ul>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Arrows */}
+      <div className="flex items-center justify-center gap-6 mt-6">
+        <button
+          onClick={prev}
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
+          style={{ background: 'rgba(79,70,229,0.15)', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
+        >
+          ‹
+        </button>
+
+        {/* Dots */}
+        <div className="flex gap-2">
+          {modules.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              style={{
+                width: i === active ? '28px' : '8px',
+                height: '8px',
+                borderRadius: '999px',
+                background: i === active ? '#4F46E5' : 'rgba(79,70,229,0.3)',
+                transition: 'all 0.3s ease',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={next}
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
+          style={{ background: 'rgba(79,70,229,0.15)', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
+        >
+          ›
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const ModuleAccordion = ({ modules }) => {
   const [openModule, setOpenModule] = React.useState(null);
 
@@ -664,7 +808,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </div>
               </div>
             </div>
-            <ModuleAccordion modules={courseData.courseContent} />
+            <ModuleShowcaseCarousel
+  modules={courseData.courseContent}
+/>
           </div>
         </section>
 
