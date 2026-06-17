@@ -653,6 +653,8 @@ background: 'none',        pointerEvents: 'none',
           </div>
         </section>
 
+        
+
         {/* Trainer Section */}
         <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%)' }}>
           {/* Ambient glow */}
@@ -751,8 +753,6 @@ background: 'none',        pointerEvents: 'none',
                 <div className="md:col-span-3 space-y-5">
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
-                      background: 'linear-gradient(135deg, rgba(79,70,229,0.95), rgba(124,58,237,0.95))',
-                      color: '#ffffff',
                       fontFamily: 'Google Sans, sans-serif',
                       backdropFilter: 'blur(10px)',
                       webkitBackdropFilter: 'blur(10px)',
@@ -936,85 +936,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 
-        {/* Course Content Section */}
-        <section id="course" className="py-20 px-4 relative overflow-hidden">
-          {/* Grid background pattern */}
-          <div className="absolute inset-0 grid-bg pointer-events-none"></div>
-
-          <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
-                COURSE <span className="gradient-text">OVERVIEW</span>
-              </h2>
-              <p className="text-xl rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#6b7280' }}>
-                संपूर्ण Meta Ads Training - Basic ते Advanced
-              </p>
-            </div>
-
-            {/* 25 Days Live Classes Banner */}
-            <div className="max-w-3xl mx-auto mb-16">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(79,70,229,0.28) 0%, rgba(124,58,237,0.22) 100%)',
-                border: '1.8px solid rgba(255,255,255,0.25)',
-                backdropFilter: 'blur(20px)',
-                webkitBackdropFilter: 'blur(20px)',
-                boxShadow: '0 24px 60px rgba(79,70,229,0.18)'
-              }}>
-                {/* Decorative gradient orb */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)'
-                }}></div>
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)'
-                }}></div>
-
-                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
-                  {/* Icon Badge */}
-                  <div className="flex-shrink-0 relative">
-                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)'
-                    }}>
-                      <div className="text-4xl font-bold text-white leading-none" style={{ fontFamily: 'Times New Roman, serif' }}>25</div>
-                      <div className="text-xs text-white uppercase tracking-wider mt-1" style={{ fontFamily: 'Google Sans, sans-serif' }}>Days</div>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
-                        color: '#ffffff',
-                        fontFamily: 'Google Sans, sans-serif'
-                      }}>
-                        <span className="w-2 h-2 bg-yellow-300 rounded-full"></span>
-                        LIVE
-                      </span>
-                      <Video className="w-5 h-5" style={{ color: '#ffffff' }} />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-                      25 Days Live Classes
-                    </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
-                      <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: 'linear-gradient(135deg, #2563eb, #7c3aed)',
-                      color: '#ffffff',
-                      fontFamily: 'Poppins, sans-serif'
-                    }}>
-                      <Calendar className="w-4 h-4" />
-                      <span>New Batch Starting on 20th June</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <ModuleShowcaseCarousel
-  modules={courseData.courseContent}
-/>
-          </div>
-        </section>
+        
 
         {/* CTA Section */}
         <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(79,70,229,0.05) 100%)' }}>
@@ -1154,9 +1076,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 </section>
         {/* Footer */}
         <footer className="py-12 px-4 border-t" style={{
-          background: '#fafafa',
-          borderColor: 'rgba(79, 70, 229, 0.2)',
-          color: '#0f0f0f'
+          background: 'linear-gradient(135deg, rgba(79,70,229,0.18) 0%, rgba(124,58,237,0.16) 100%)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          color: 'rgba(255,255,255,0.95)',
+          backdropFilter: 'blur(12px)',
+          webkitBackdropFilter: 'blur(12px)',
+          boxShadow: '0 -20px 60px rgba(79,70,229,0.06)'
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
@@ -1164,23 +1089,23 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-28 w-auto" />
 </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Contact Email</p>
-                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Contact Email</p>
+                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
                   contactpantherflow@gmail.com
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Contact Number</p>
-                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Contact Number</p>
+                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
                   +91 9307378191
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Address</p>
-                <p style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.85 }}>Dharashiv धाराशिव</p>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Address</p>
+                <p style={{ fontFamily: 'Google Sans, sans-serif', color: 'rgba(255,255,255,0.9)', opacity: 0.95 }}>Dharashiv धाराशिव</p>
               </div>
-              <div className="pt-6 border-t" style={{ borderColor: 'rgba(129, 1, 0, 0.2)' }}>
-                <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.7 }}>
+              <div className="pt-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+                <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: 'rgba(255,255,255,0.8)', opacity: 0.9 }}>
                   © 2026 Panther Flow. All rights reserved.
                 </p>
               </div>
@@ -1189,14 +1114,19 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </footer>
       </div>
 {/* Bottom Sticky Bar */}
-<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl glass-dark" style={{
-  borderTop: '1px solid rgba(255,255,255,0.1)',
-  fontFamily: 'Poppins, sans-serif'
+<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl" style={{
+  borderTop: '1px solid rgba(255,255,255,0.06)',
+  fontFamily: 'Poppins, sans-serif',
+  background: 'linear-gradient(135deg, rgba(79,70,229,0.22) 0%, rgba(124,58,237,0.18) 100%)',
+  border: '1px solid rgba(255,255,255,0.08)',
+  backdropFilter: 'blur(10px)',
+  webkitBackdropFilter: 'blur(10px)',
+  boxShadow: '0 -10px 30px rgba(79,70,229,0.06)'
 }}>
   <div className="flex items-center gap-2">
     <span style={{ color: '#edebde' }}>⚡</span>
     <span className="text-xs sm:text-sm font-semibold" style={{ color: '#edebde' }}>
-      💰 पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical! 🎯
+      <span className="emoji-gradient">💰</span>&nbsp;पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical!&nbsp;<span className="emoji-gradient">🎯</span>
     </span>
   </div>
   <div className="flex items-center gap-3">
@@ -1208,11 +1138,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       onClick={handleEnrollClick}
       className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
       style={{
-        background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
-        color: '#ffffff'
+        background: '#ffffff',
+        color: '#111827',
+        boxShadow: '0 8px 30px rgba(124,58,237,0.12)'
       }}
     >
-      आजच Join करा →
+      <span className="gradient-text">आजच Join करा →</span>
     </button>
   </div>
 </div>
