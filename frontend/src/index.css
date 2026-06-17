@@ -98,10 +98,35 @@ code {
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
 }
 .btn-blue:hover {
   box-shadow: 0 8px 30px rgba(79, 70, 229, 0.6);
   transform: translateY(-2px) scale(1.03);
+}
+.btn-animated-border {
+  position: relative;
+  z-index: 1;
+}
+.btn-animated-border::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 35%, #4F46E5 70%, #7C3AED 100%);
+  background-size: 200% 100%;
+  z-index: -1;
+  animation: border-slide 2.5s linear infinite;
+}
+@keyframes border-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
 }
 
 /* Hide scrollbar for carousel */

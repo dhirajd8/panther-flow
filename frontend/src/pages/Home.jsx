@@ -617,13 +617,13 @@ background: 'none',        pointerEvents: 'none',
                 <Button
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white text-lg px-8 py-6 rounded-xl font-bold btn-blue"
+                  className="text-white text-lg px-8 py-6 rounded-xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                   data-testid="hero-join-now"
                 >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
-                <div className="flex flex-col items-start gap-1">
+                <div className="flex flex-col items-start gap-1 rise-up rise-up-delay-4">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Users className="w-5 h-5 text-indigo-500" />
                     <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>✅ 45+ Students Trained & Running Ads</span>
