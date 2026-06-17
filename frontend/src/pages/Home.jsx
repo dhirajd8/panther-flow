@@ -654,6 +654,23 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
         
+        {/* Course Overview Section */}
+        <section id="course-overview" className="py-20 px-4 relative overflow-hidden">
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="text-center mb-12 rise-up">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                COURSE <span className="gradient-text">OVERVIEW</span>
+              </h2>
+              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: '#6b7280' }}>
+                संपूर्ण Meta Ads Training — Basic ते Advanced. Live sessions, practical campaigns, आणि hands-on projects.
+              </p>
+            </div>
+
+            <div className="rise-up rise-up-delay-1">
+              <ModuleShowcaseCarousel modules={courseData.courseContent} />
+            </div>
+          </div>
+        </section>
 
         {/* Trainer Section */}
         <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%)' }}>
