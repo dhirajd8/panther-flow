@@ -91,18 +91,26 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 className="rounded-3xl p-7 shadow-2xl"
                 style={{
                   background: isActive
-                    ? '#ffffff'
-                    : 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
-                  border: isActive ? '3px solid rgba(79,70,229,0.3)' : '2px solid rgba(79,70,229,0.15)',
-                  boxShadow: isActive ? '0 25px 60px rgba(79,70,229,0.25)' : 'none',
+                    ? 'linear-gradient(145deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)'
+                    : 'linear-gradient(135deg, #0c0c1e 0%, #13103a 100%)',
+                  border: isActive
+                    ? '1.5px solid rgba(139,92,246,0.45)'
+                    : '1px solid rgba(79,70,229,0.15)',
+                  boxShadow: isActive
+                    ? '0 0 0 1px rgba(139,92,246,0.1), 0 25px 60px rgba(79,70,229,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
+                    : 'none',
                   minHeight: '260px',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   textAlign: 'center',
                   gap: '12px',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
               >
+                {isActive && <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '120px', height: '120px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%)', pointerEvents: 'none' }}></div>}
+                {isActive && <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', width: '100px', height: '100px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>}
                 {/* Module label */}
                 <div
                   className="text-xs font-bold px-3 py-1 rounded-full"
@@ -120,7 +128,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   className="text-lg font-bold leading-snug"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    color: isActive ? '#0f0f0f' : '#ffffff',
+                    color: '#ffffff',
                   }}
                 >
                   {module.title}
@@ -130,8 +138,8 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 {isActive && (
                   <ul className="space-y-2 w-full text-left mt-2">
                     {module.topics.slice(0, 4).map((topic, i) => (
-                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#4F46E5', fontSize: '13px' }}>
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
+                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(196,181,253,0.9)', fontSize: '13px' }}>
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -637,7 +645,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
             <div className="grid grid-cols-2 gap-4">
 
               {/* Business Owner */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(145deg, #080818 0%, #0f0e2e 50%, #13103a 100%)', border: '1px solid rgba(99,102,241,0.2)', boxShadow: '0 8px 32px rgba(79,70,229,0.12), inset 0 1px 0 rgba(255,255,255,0.04)' }}>
                 <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <Store className="w-5 h-5 text-white" />
@@ -659,7 +667,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Freelancers */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(145deg, #080818 0%, #0f0e2e 50%, #13103a 100%)', border: '1px solid rgba(99,102,241,0.2)', boxShadow: '0 8px 32px rgba(79,70,229,0.12), inset 0 1px 0 rgba(255,255,255,0.04)' }}>
                 <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <Briefcase className="w-5 h-5 text-white" />
@@ -685,7 +693,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Students */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(145deg, #080818 0%, #0f0e2e 50%, #13103a 100%)', border: '1px solid rgba(99,102,241,0.2)', boxShadow: '0 8px 32px rgba(79,70,229,0.12), inset 0 1px 0 rgba(255,255,255,0.04)' }}>
                 <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <GraduationCap className="w-5 h-5 text-white" />
@@ -708,7 +716,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Marketers */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(145deg, #080818 0%, #0f0e2e 50%, #13103a 100%)', border: '1px solid rgba(99,102,241,0.2)', boxShadow: '0 8px 32px rgba(79,70,229,0.12), inset 0 1px 0 rgba(255,255,255,0.04)' }}>
                 <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 flex gap-1">
                   {/* FB */}
