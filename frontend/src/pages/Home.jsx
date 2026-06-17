@@ -723,16 +723,14 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   
   <div className="container mx-auto max-w-4xl text-center relative z-10">
     <div className="inline-block mb-4">
-      <h2 className="text-3xl md:text-5xl font-bold px-8 py-3" style={{ 
+      <h2 className="text-3xl md:text-5xl font-bold rise-up" style={{ 
         fontFamily: 'Poppins, sans-serif', 
-        color: '#ffffff',
-        background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
-        borderRadius: '6px',
+        color: '#0f0f0f',
       }}>
-        Follow Us
+        Follow <span className="gradient-text">Us</span>
       </h2>
     </div>
-    <p className="mb-10 text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', opacity: 0.7 }}>
+    <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#6b7280' }}>
       Stay connected with Panther Flow on social media
     </p>
     <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
