@@ -984,19 +984,22 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a0f' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(79,70,229,0.05) 100%)' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.03) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
           }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(30,27,75,0.95) 0%, rgba(17,24,39,0.98) 100%)',
-              border: '1px solid rgba(99,102,241,0.3)',
-              boxShadow: '0 0 80px rgba(79,70,229,0.2), 0 25px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
-              backdropFilter: 'blur(30px)'
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%)',
+              border: '1.5px solid rgba(255,255,255,0.25)',
+              boxShadow: '0 0 40px rgba(139,92,246,0.15), 0 8px 32px rgba(79,70,229,0.1), inset 0 1px 20px rgba(255,255,255,0.1)',
+              backdropFilter: 'blur(20px)',
+              webkitBackdropFilter: 'blur(20px)'
             }}>
               {/* Urgency Banner */}
               <button 
