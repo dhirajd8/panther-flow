@@ -128,7 +128,10 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   className="text-lg font-bold leading-snug"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    color: '#ffffff',
+                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
                   }}
                 >
                   {module.title}
@@ -269,8 +272,14 @@ const ModuleAccordion = ({ modules }) => {
 
             {/* Title */}
             <h3
-              className="text-xl font-bold text-white text-center leading-snug"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="text-xl font-bold text-center leading-snug"
+              style={{
+                fontFamily: 'Poppins, sans-serif',
+                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
             >
               {module.title}
             </h3>
@@ -373,7 +382,12 @@ const ModuleAccordion = ({ modules }) => {
               <div className="text-sm font-semibold mb-1" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 {module.module}
               </div>
-              <div className="text-base font-bold leading-snug" style={{ color: '#ffffff' }}>
+              <div className="text-base font-bold leading-snug" style={{
+                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 {module.title}
               </div>
             </button>
@@ -381,7 +395,7 @@ const ModuleAccordion = ({ modules }) => {
             {/* Mobile: opens below each card */}
             {openModule === module.id && (
               <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
-                <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #2d0000, #810100)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+                <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
                   {module.title}
                 </div>
                 <ul className="space-y-3">
@@ -403,7 +417,7 @@ const ModuleAccordion = ({ modules }) => {
         <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
           {modules.filter(m => m.id === openModule).map(module => (
             <div key={module.id}>
-              <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #2d0000 0%, #810100 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+              <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
                 {module.title}
               </div>
               <ul className="space-y-4">
@@ -626,7 +640,7 @@ background: 'none',        pointerEvents: 'none',
                 <div className="flex flex-col items-start gap-1 rise-up rise-up-delay-4">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Users className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>✅ 45+ Students Trained & Running Ads</span>
+                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}><span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>✅</span> 45+ Students Trained & Running Ads</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <Calendar className="w-4 h-4 text-indigo-500" />
@@ -646,11 +660,11 @@ background: 'none',        pointerEvents: 'none',
           <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%)',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 0 40px rgba(139,92,246,0.15), 0 8px 32px rgba(79,70,229,0.1), inset 0 1px 20px rgba(255,255,255,0.1)',
-              backdropFilter: 'blur(20px)',
-              webkitBackdropFilter: 'blur(20px)'
+              background: 'linear-gradient(135deg, rgba(79,70,229,0.18) 0%, rgba(124,58,237,0.12) 100%)',
+              border: '1.5px solid rgba(255,255,255,0.22)',
+              boxShadow: '0 20px 60px rgba(79,70,229,0.15), inset 0 1px 0 rgba(255,255,255,0.12)',
+              backdropFilter: 'blur(22px)',
+              webkitBackdropFilter: 'blur(22px)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -700,24 +714,30 @@ background: 'none',        pointerEvents: 'none',
             </div>
                     {/* Floating Stats Badge - 45+ Students */}
                     <div className="absolute -bottom-6 -right-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-                      border: '2px solid rgba(255,255,255,0.3)'
+                      background: 'linear-gradient(135deg, rgba(79,70,229,0.95) 0%, rgba(124,58,237,0.95) 100%)',
+                      border: '1px solid rgba(255,255,255,0.35)',
+                      backdropFilter: 'blur(10px)',
+                      webkitBackdropFilter: 'blur(10px)'
                     }}>
                       <div className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
                       <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
                     </div>
                     {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
                     <div className="absolute -bottom-6 -left-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%)',
-                      border: '2px solid rgba(255,255,255,0.3)'
+                      background: 'linear-gradient(135deg, rgba(124,58,237,0.95) 0%, rgba(79,70,229,0.95) 100%)',
+                      border: '1px solid rgba(255,255,255,0.35)',
+                      backdropFilter: 'blur(10px)',
+                      webkitBackdropFilter: 'blur(10px)'
                     }}>
                       <div className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
                       <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
                     <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-xl z-20" style={{
-                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-                      border: '2px solid rgba(255,255,255,0.4)'
+                      background: 'rgba(79,70,229,0.18)',
+                      border: '1px solid rgba(255,255,255,0.35)',
+                      backdropFilter: 'blur(12px)',
+                      webkitBackdropFilter: 'blur(12px)'
                     }}>
                       <div className="flex items-center gap-2">
                         <Sparkles className="w-4 h-4" style={{ color: '#ffffff' }} />
@@ -731,11 +751,14 @@ background: 'none',        pointerEvents: 'none',
                 <div className="md:col-span-3 space-y-5">
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
-                      background: '#ffffff',
-                      color: '#810100',
-                      fontFamily: 'Google Sans, sans-serif'
+                      background: 'linear-gradient(135deg, rgba(79,70,229,0.95), rgba(124,58,237,0.95))',
+                      color: '#ffffff',
+                      fontFamily: 'Google Sans, sans-serif',
+                      backdropFilter: 'blur(10px)',
+                      webkitBackdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255,255,255,0.25)'
                     }}>
-                      <Award className="w-4 h-4" style={{ color: '#810100' }} />
+                      <Award className="w-4 h-4" style={{ color: '#ffffff' }} />
                       Meet Your Instructor
                     </span>
                     <h2 className="font-bold mb-2 gradient-text" style={{ 
@@ -760,10 +783,13 @@ background: 'none',        pointerEvents: 'none',
 
                   {/* Quote */}
                   <div className="relative pl-6 py-4 rounded-2xl" style={{
-                    background: 'rgba(79,70,229,0.12)',
-                    borderLeft: '4px solid #4F46E5'
+                    background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))',
+                    border: '1px solid rgba(255,255,255,0.22)',
+                    backdropFilter: 'blur(20px)',
+                    webkitBackdropFilter: 'blur(20px)',
+                    boxShadow: '0 10px 30px rgba(79,70,229,0.15)'
                   }}>
-                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#818cf8' }} />
+                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#ffffff' }} />
                     <p className="italic text-lg leading-relaxed font-semibold" style={{ 
                       fontFamily: 'Aparajita, serif',
                       color: '#a5b4fc'
@@ -777,17 +803,17 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
                   {/* Stats Row */}
                  <div className="grid grid-cols-3 gap-3 pt-2">
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>100%</div>
-                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>मराठीतून शिकवणी</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>मराठीतून शिकवणी</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
-                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
-                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
+                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
@@ -928,10 +954,11 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
             {/* 25 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(79,70,229,0.15) 0%, rgba(124,58,237,0.15) 100%)',
-                border: '1.5px solid rgba(139,92,246,0.4)',
-                backdropFilter: 'blur(15px)',
-                webkitBackdropFilter: 'blur(15px)'
+                background: 'linear-gradient(135deg, rgba(79,70,229,0.28) 0%, rgba(124,58,237,0.22) 100%)',
+                border: '1.8px solid rgba(255,255,255,0.25)',
+                backdropFilter: 'blur(20px)',
+                webkitBackdropFilter: 'blur(20px)',
+                boxShadow: '0 24px 60px rgba(79,70,229,0.18)'
               }}>
                 {/* Decorative gradient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
@@ -1001,11 +1028,11 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%)',
+              background: 'linear-gradient(135deg, rgba(79,70,229,0.16) 0%, rgba(124,58,237,0.14) 100%)',
               border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 0 40px rgba(139,92,246,0.15), 0 8px 32px rgba(79,70,229,0.1), inset 0 1px 20px rgba(255,255,255,0.1)',
-              backdropFilter: 'blur(20px)',
-              webkitBackdropFilter: 'blur(20px)'
+              boxShadow: '0 0 40px rgba(79,70,229,0.18), 0 12px 36px rgba(124,58,237,0.12), inset 0 1px 20px rgba(255,255,255,0.12)',
+              backdropFilter: 'blur(22px)',
+              webkitBackdropFilter: 'blur(22px)'
             }}>
               {/* Urgency Banner */}
               <button 
@@ -1022,7 +1049,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.9) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: '1.2' }}>
+             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: '1.2' }}>
                 Join the Next Batch and Start Advertising Smarter
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
@@ -1032,7 +1059,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white text-xl px-12 py-8 rounded-xl font-bold btn-blue"
+                  className="text-white text-xl px-12 py-8 rounded-xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                   data-testid="cta-join-now"
                 >
