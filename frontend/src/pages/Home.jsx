@@ -62,10 +62,10 @@ const ModuleAccordion = ({ modules }) => {
               className="w-full rounded-2xl px-6 py-4 text-center transition-all duration-300 hover:opacity-90 shadow-xl"
               style={{
                 background: openModule === module.id
-                  ? 'linear-gradient(180deg, #000000 0%, #4a0000 50%, #810100 100%)'
-                  : 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)',
-                border: openModule === module.id ? '3px solid #ffffff' : '2px solid transparent',
-                boxShadow: openModule === module.id ? '0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(129,1,0,0.5)' : '',
+                  ? 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 100%)'
+                  : 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+                border: openModule === module.id ? '3px solid rgba(79,70,229,0.8)' : '2px solid rgba(79,70,229,0.2)',
+                boxShadow: openModule === module.id ? '0 0 20px rgba(79,70,229,0.4), 0 0 40px rgba(79,70,229,0.2)' : '',
                 transform: openModule === module.id ? 'scale(1.03)' : 'scale(1)',
                 fontFamily: 'Poppins, sans-serif',
               }}
@@ -148,10 +148,10 @@ React.useEffect(() => {
   };
 
   return (
-    <div className="min-h-screen" style={{ 
-background: '#ffffff',
-      position: 'relative'
-    }}>
+    <div className="min-h-screen dot-grid-bg" style={{ 
+  background: '#ffffff',
+  position: 'relative'
+}}>
       {/* Radial gradient overlays for premium AI-site feel */}
       <div style={{
         position: 'absolute',
@@ -181,12 +181,10 @@ background: 'none',        pointerEvents: 'none',
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
-          background: 'linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #ffffff 100%)',
-          backgroundSize: '200% 100%',
-          animation: 'gradient-shift 4s ease infinite',
-          fontFamily: 'Google Sans, sans-serif'
+          background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+          fontFamily: 'Poppins, sans-serif'
         }} data-testid="announcement-bar">
-          <div className="flex items-center justify-center gap-2 text-[#810100] text-xs sm:text-sm font-semibold flex-wrap">
+          <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
             <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-#edebde"></span>
             </span>
@@ -195,7 +193,7 @@ background: 'none',        pointerEvents: 'none',
             <span className="sm:hidden">🔥 New Batch · <strong> 20th June</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
-              className="underline hover:no-underline font-bold text-[#810100] whitespace-nowrap"
+              className="underline hover:no-underline font-bold text-white whitespace-nowrap"
               data-testid="announcement-cta"
             >
               Join Now →
@@ -204,14 +202,14 @@ background: 'none',        pointerEvents: 'none',
         </div>
 
        <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
-  <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-[#810100]/30 px-2 sm:px-3 py-1.5 sm:py-2" style={{
-    background: 'linear-gradient(135deg, rgba(129, 1, 0, 0.85) 0%, rgba(90, 0, 0, 0.85) 100%)',
-    boxShadow: '0 10px 40px rgba(129, 1, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-  }}>
+  <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
+            background: 'rgba(255, 255, 255, 0.95)',
+            boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
+          }}>
     <div className="flex items-center justify-between w-full gap-1">
       {/* Brand - hidden on mobile */}
       <span
-        className="hidden md:inline-block text-[#edebde] font-bold px-3 py-2 text-base tracking-wide whitespace-nowrap"
+        className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         Panther Flow
@@ -222,21 +220,21 @@ background: 'none',        pointerEvents: 'none',
       <div className="flex items-center gap-0.5 sm:gap-1">
         <button
           onClick={() => scrollToSection('about')}
-          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
+          className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           About
         </button>
         <button
           onClick={() => scrollToSection('course')}
-          className="text-[#edebde] hover:bg-[#edebde]/10 font-medium px-2 sm:px-4 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm whitespace-nowrap"
+          className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           Course
         </button>
         <button
   onClick={() => scrollToSection('socials')}
-  className="text-[#edebde] font-bold px-2 sm:px-3 lg:px-4 py-2 text-xs sm:text-base tracking-wide whitespace-nowrap"
+  className="text-gray-700 hover:bg-indigo-50 font-bold px-2 sm:px-3 lg:px-4 py-2 text-xs sm:text-base tracking-wide whitespace-nowrap"
   style={{ fontFamily: 'Poppins, sans-serif' }}
 >
   <span className="hidden sm:inline">Panther Flow</span>
@@ -247,8 +245,8 @@ background: 'none',        pointerEvents: 'none',
       {/* Join Now Button */}
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 hover:scale-105 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0"
-        style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)', border: '2px solid rgba(255,255,255,0.3)' }}
+        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue"
+        style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
         Join Now
       </Button>
@@ -290,40 +288,40 @@ background: 'none',        pointerEvents: 'none',
             <div className="text-center space-y-6">
               {/* New Batch Urgency Banner */}
 
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black reveal" style={{ 
-  fontFamily: "'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif",
-  fontWeight: 800,
-  color: '#0f172a',
-  lineHeight: '1.4',
-  textShadow: 'none'
-}}>
-  Zero ते Expert<br />
-  <span style={{
-    background: 'linear-gradient(135deg, #2563eb 0%, #a855f7 100%)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text'
-  }}>Meta Ads चा संपूर्ण</span><br />
-  Course, मराठीत!
-</h1>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-                <Button 
-  onClick={handleEnrollClick}
-  size="lg"
-  className="text-white text-lg px-8 py-6 rounded-xl font-semibold shadow-lg btn-glow reveal"
-  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)' }}
-  data-testid="hero-join-now"
->
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black rise-up" style={{ 
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 800,
+                color: '#0f0f0f',
+                lineHeight: '1.2',
+              }}>
+                Master Meta Ads<br />
+                <span className="gradient-text">From Zero to Expert</span><br />
+                <span style={{ fontSize: '0.75em', fontWeight: 700, color: '#0f0f0f' }}>In Marathi, Starting 20th June!</span>
+              </h1>
+              <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
+                fontFamily: "'Poppins', 'Noto Sans Devanagari', sans-serif",
+                color: '#4b5563'
+              }}>
+                फक्त Theory नाही. Live Sessions, Practical Training आणि Real Campaign Setup सह Meta Ads शिका.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 rise-up rise-up-delay-2">
+                <Button
+                  onClick={handleEnrollClick}
+                  size="lg"
+                  className="text-white text-lg px-8 py-6 rounded-xl font-bold btn-blue"
+                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+                  data-testid="hero-join-now"
+                >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
                 <div className="flex flex-col items-start gap-1">
-                  <div className="flex items-center gap-2 text-[#810100]/90">
-                    <Users className="w-5 h-5" />
-                    <span className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif' }}>✅ 45+ Students Trained & Running Ads</span>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Users className="w-5 h-5 text-indigo-500" />
+                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>✅ 45+ Students Trained & Running Ads</span>
                   </div>
-                  <div className="flex items-center gap-2 gap-2 text-[#810100]">
-                    <Calendar className="w-4 h-4" />
-                    <span className="text-sm font-semibold" style={{ fontFamily: 'Google Sans, sans-serif' }}>Limited Seats · 20th June Batch</span>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Calendar className="w-4 h-4 text-indigo-500" />
+                    <span className="text-sm font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>Limited Seats · 20th June Batch</span>
                   </div>
                 </div>
               </div>
@@ -336,10 +334,8 @@ background: 'none',        pointerEvents: 'none',
         <section id="about" className="py-20 px-4 relative">
           <div className="container mx-auto max-w-6xl">
             {/* Section Backdrop with premium gradient */}
-            <div className="relative rounded-3xl overflow-hidden p-8 md:p-12" style={{
-              background: '#810100',
-              boxShadow: '0 25px 80px -20px rgba(23, 36, 90, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
-              border: '1px solid rgba(255, 255, 255, 0.6)'
+            <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 glass-dark rise-up" style={{
+              boxShadow: '0 25px 80px -20px rgba(0,0,0,0.5)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -427,22 +423,18 @@ background: 'none',        pointerEvents: 'none',
                       <Award className="w-4 h-4" style={{ color: '#810100' }} />
                       Meet Your Instructor
                     </span>
-                    <h2 className="font-bold mb-2" style={{ 
+                    <h2 className="font-bold mb-2 gradient-text" style={{ 
                       fontSize: '24px',
-                      fontFamily: 'Times New Roman, serif',
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 50%, #810100 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text'
+                      fontFamily: 'Poppins, sans-serif'
                     }}>
                       धिरज दयानंद
                     </h2>
-                    <p className="text-lg font-medium" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
-                      <strong> Panther Flow AI Labs · Facebook Ads Strategist</strong>
+                    <p className="text-lg font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+                      <strong>Panther Flow AI Labs · Facebook Ads Strategist</strong>
                     </p>
                   </div>
 
-                  <div className="space-y-4" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
+                  <div className="space-y-4" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
                     <p className="text-base leading-relaxed">
                       Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#edebde' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong style={{ color: '#edebde' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#edebde' }}>live शिकवलं जातं</strong>.
                     </p>
@@ -469,24 +461,18 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                   </div>
 
                   {/* Stats Row */}
-                  <div className="grid grid-cols-3 gap-3 pt-2">
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: '#ffffff'
-                    }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Results</div>
+                 <div className="grid grid-cols-3 gap-3 pt-2">
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                      <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>100%</div>
+                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>मराठीतून शिकवणी</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: '#ffffff'
-                    }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                      <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
+                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{
-                      background: '#ffffff'
-                    }}>
-                      <div className="text-2xl font-bold text-[#810100]" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
-                      <div className="text-xs text-[#810100]/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                      <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
+                      <div className="text-xs text-white/80 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
@@ -497,14 +483,14 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 {/* Right For You Section */}
         <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100' }}>
-              Right For You?
+           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
+              Right For <span className="gradient-text">You?</span>
             </h2>
             <div className="grid grid-cols-2 gap-4">
 
               {/* Business Owner */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #810100 100%)' }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#810100', color: '#ffffff', fontFamily: 'Poppins, sans-serif', border: '1px solid rgba(255,255,255,0.3)' }}>FOR YOU</span>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <Store className="w-5 h-5 text-white" />
                 </div>
@@ -525,8 +511,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Freelancers */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #810100 100%)' }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#810100', color: '#ffffff', fontFamily: 'Poppins, sans-serif', border: '1px solid rgba(255,255,255,0.3)' }}>FOR YOU</span>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <Briefcase className="w-5 h-5 text-white" />
                 </div>
@@ -551,8 +537,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Students */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #810100 100%)' }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#810100', color: '#ffffff', fontFamily: 'Poppins, sans-serif', border: '1px solid rgba(255,255,255,0.3)' }}>FOR YOU</span>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.15)' }}>
                   <GraduationCap className="w-5 h-5 text-white" />
                 </div>
@@ -574,8 +560,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               </div>
 
               {/* Marketers */}
-              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(180deg, #1a0000 0%, #3d0000 50%, #810100 100%)' }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: '#810100', color: '#ffffff', fontFamily: 'Poppins, sans-serif', border: '1px solid rgba(255,255,255,0.3)' }}>FOR YOU</span>
+              <div className="rounded-2xl p-6 relative overflow-hidden min-h-[220px] flex flex-col justify-end" style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 50%, #312e81 100%)' }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
                 <div className="absolute top-4 left-4 flex gap-1">
                   {/* FB */}
                   <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ background: '#1877F2' }}>
@@ -613,19 +599,17 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)', borderRadius: '6px' }}>
-  COURSE OVERVIEW
-</h2>
-              <p className="text-xl" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
+                COURSE <span className="gradient-text">OVERVIEW</span>
+              </h2>
+              <p className="text-xl rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#6b7280' }}>
                 संपूर्ण Meta Ads Training - Basic ते Advanced
               </p>
             </div>
 
             {/* 25 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl card-grid-pattern" style={{
-                background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)'
-              }}>
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl glass-dark rise-up">
                 {/* Decorative gradient orb */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
                   background: 'radial-gradient(circle, rgba(23, 36, 90, 0.15) 0%, transparent 70%)'
@@ -658,16 +642,16 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                       </span>
                       <Video className="w-5 h-5" style={{ color: '#ffffff' }} />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Times New Roman, serif', color: '#ffffff' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       25 Days Live Classes
                     </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Google Sans, sans-serif', color: '#ffffff' }}>
+                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: '#ffffff',
-                      color: '#810100',
-                      fontFamily: 'Google Sans, sans-serif'
+                      background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+                      color: '#ffffff',
+                      fontFamily: 'Poppins, sans-serif'
                     }}>
                       <Calendar className="w-4 h-4" />
                       <span>New Batch Starting on 20th June</span>
@@ -686,40 +670,34 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           <div className="absolute inset-0 dot-bg pointer-events-none"></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="space-y-6 backdrop-blur-md rounded-3xl p-12 border-2 shadow-2xl" style={{ 
-              background: '#810100',
-              borderColor: 'rgba(237, 235, 222, 0.3)'
-            }}>
+            <div className="space-y-6 rounded-3xl p-12 shadow-2xl glass-dark rise-up">
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 click-ripple"
-                style={{
-                  background: '#ffffff',
-                  fontFamily: 'Google Sans, sans-serif'
-                }}
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+                style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)', fontFamily: 'Poppins, sans-serif' }}
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#810100' }}></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#818cf8' }}></span>
                 </span>
-                <Calendar className="w-4 h-4" style={{ color: '#810100' }} />
-                <span className="text-sm font-bold tracking-wide" style={{ color: '#810100' }}>
+                <Calendar className="w-4 h-4 text-white" />
+                <span className="text-sm font-bold tracking-wide text-white">
                   New Batch Starting on 20th June · Limited Seats!
                 </span>
               </button>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-[#810100] mb-8 reveal" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-                Take the First Step
+             <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Join the Next Batch and Start Advertising Smarter
               </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Google Sans, sans-serif', color: '#edebde' }}>
-                फक्त ₹1099 मध्ये संपूर्ण कोर्स + Lifetime Access
+              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+                Join our live Marathi training, get hands-on experience, and master Meta Ads from zero to expert. all for just ₹1099 with lifetime access.
               </p>
               <div className="pt-6">
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white hover:opacity-90 text-xl px-12 py-8 rounded-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
-                  style={{ fontFamily: 'Google Sans, sans-serif', background: 'linear-gradient(180deg, #2d0000 0%, #6b0000 50%, #810100 100%)' }}
+                  className="text-white text-xl px-12 py-8 rounded-xl font-bold btn-blue"
+                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                   data-testid="cta-join-now"
                 >
                   {`Join Now - ${courseData.currency}${courseData.price}`}
@@ -804,9 +782,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 </section>
         {/* Footer */}
         <footer className="py-12 px-4 border-t" style={{
-          background: '#ffffff',
-          borderColor: 'rgba(129, 1, 0, 0.2)',
-          color: '#810100'
+          background: '#fafafa',
+          borderColor: 'rgba(79, 70, 229, 0.2)',
+          color: '#0f0f0f'
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
@@ -814,19 +792,19 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-28 w-auto" />
 </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Email</p>
-                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Contact Email</p>
+                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>
                   contactpantherflow@gmail.com
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Contact Number</p>
-                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Contact Number</p>
+                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>
                   +91 9307378191
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100' }}>Address</p>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>Address</p>
                 <p style={{ fontFamily: 'Google Sans, sans-serif', color: '#810100', opacity: 0.85 }}>Dharashiv धाराशिव</p>
               </div>
               <div className="pt-6 border-t" style={{ borderColor: 'rgba(129, 1, 0, 0.2)' }}>
@@ -839,10 +817,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </footer>
       </div>
 {/* Bottom Sticky Bar */}
-<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl" style={{
-  background: '#810100',
-  borderTop: '2px solid rgba(237, 235, 222, 0.3)',
-  fontFamily: 'Google Sans, sans-serif'
+<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl glass-dark" style={{
+  borderTop: '1px solid rgba(255,255,255,0.1)',
+  fontFamily: 'Poppins, sans-serif'
 }}>
   <div className="flex items-center gap-2">
     <span style={{ color: '#edebde' }}>⚡</span>
@@ -859,8 +836,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       onClick={handleEnrollClick}
       className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
       style={{
-        background: '#edebde',
-        color: '#810100'
+        background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+        color: '#ffffff'
       }}
     >
       आजच Join करा →
