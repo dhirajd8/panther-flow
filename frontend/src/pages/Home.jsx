@@ -334,8 +334,12 @@ background: 'none',        pointerEvents: 'none',
         <section id="about" className="py-20 px-4 relative">
           <div className="container mx-auto max-w-6xl">
             {/* Section Backdrop with premium gradient */}
-            <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 glass-dark rise-up" style={{
-              boxShadow: '0 25px 80px -20px rgba(0,0,0,0.5)'
+            <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(10,10,30,0.95) 50%, rgba(15,15,50,0.98) 100%)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              border: '1px solid rgba(79,70,229,0.3)',
+              boxShadow: '0 25px 80px -20px rgba(0,0,0,0.8), 0 0 60px rgba(79,70,229,0.15), inset 0 1px 0 rgba(255,255,255,0.05)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -445,13 +449,13 @@ background: 'none',        pointerEvents: 'none',
 
                   {/* Quote */}
                   <div className="relative pl-6 py-4 rounded-2xl" style={{
-                    background: '#ffffff',
-                    borderLeft: '4px solid #810100'
+                    background: 'rgba(79,70,229,0.12)',
+                    borderLeft: '4px solid #4F46E5'
                   }}>
-                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#810100' }} />
+                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#818cf8' }} />
                     <p className="italic text-lg leading-relaxed font-semibold" style={{ 
                       fontFamily: 'Aparajita, serif',
-                      color: '#810100'
+                      color: '#a5b4fc'
                     }}>
                       पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
 लवकर Job पाहिजे म्हणून बघून Admission ही घेतात, पण Course संपून गेला तरी Skills येत नाहीत, Confidence येत नाही.
