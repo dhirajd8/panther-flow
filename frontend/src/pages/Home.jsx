@@ -286,13 +286,22 @@ const Home = () => {
   };
 React.useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.rise-up').forEach((el, i) => {
+    el.dataset.delay = (i % 6) * 80;
+    observer.observe(el);
+  });
+
   return () => observer.disconnect();
 }, []);
   const openWhatsApp = () => {
