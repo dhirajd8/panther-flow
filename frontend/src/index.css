@@ -290,3 +290,11 @@ code {
   background-clip: text;
   filter: drop-shadow(0 1px rgba(0,0,0,0.06));
 }
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+.live-dot {
+  background: #ef4444 !important;
+  animation: liveBlink 1.1s ease-in-out infinite;
+}
