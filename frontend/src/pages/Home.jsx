@@ -588,8 +588,8 @@ background: 'none',        pointerEvents: 'none',
   className="text-gray-700 hover:bg-indigo-50 font-bold px-2 sm:px-3 lg:px-4 py-2 text-xs sm:text-base tracking-wide whitespace-nowrap"
   style={{ fontFamily: 'Poppins, sans-serif' }}
 >
-  <span className="hidden sm:inline">Panther Flow</span>
-  <span className="sm:hidden">PF</span>
+  <span className="hidden sm:inline">Connect</span>
+  <span className="sm:hidden">Co</span>
 </button>
       </div>
 
@@ -1138,30 +1138,27 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 {/* Socials Section */}
 <section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.05) 0%, rgba(124,58,237,0.05) 100%)' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
-    backgroundImage: 'radial-gradient(circle, rgba(139,92,246,0.08) 1px, transparent 1px)',
+    backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.15) 1.5px, transparent 1.5px)',
     backgroundSize: '28px 28px'
   }}></div>
   
   <div className="container mx-auto max-w-4xl text-center relative z-10">
     <div className="inline-block mb-4">
       <h2 className="text-3xl md:text-5xl font-bold rise-up" style={{ 
-        fontFamily: 'Poppins, sans-serif', 
-        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text'
-      }}>
-        Follow <span style={{
-          background: 'linear-gradient(135deg, #2563eb 0%, #4F46E5 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>Us</span>
-      </h2>
+  fontFamily: 'Poppins, sans-serif',
+  color: '#0f0f0f'
+}}>
+  Follow <span style={{
+    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text'
+  }}>Us</span>
+</h2>
     </div>
-    <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#4F46E5' }}>
-      Stay connected with Panther Flow on social media
-    </p>
+    <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
+  Stay connected with Panther Flow on social media
+</p>
     <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
 
       {/* Facebook */}
