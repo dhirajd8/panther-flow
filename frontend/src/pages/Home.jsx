@@ -90,15 +90,15 @@ const ModuleShowcaseCarousel = ({ modules }) => {
               <div
                 className="rounded-3xl p-7 shadow-2xl"
                 style={{
-                  background: isActive
-                    ? 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
-                    : 'linear-gradient(135deg, #1f1147 0%, #2a1758 100%)',
+                  background: '#ffffff',
+                  backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.12) 1px, transparent 1px)',
+                  backgroundSize: '14px 14px',
                   border: isActive
-                    ? '1.5px solid rgba(139,92,246,0.45)'
-                    : '1px solid rgba(79,70,229,0.15)',
+                    ? '2px solid #7C3AED'
+                    : '1.5px solid rgba(124,58,237,0.3)',
                   boxShadow: isActive
-                    ? '0 0 0 1px rgba(139,92,246,0.1), 0 25px 60px rgba(79,70,229,0.3), inset 0 1px 0 rgba(255,255,255,0.05)'
-                    : 'none',
+                    ? '0 0 0 1px rgba(139,92,246,0.15), 0 25px 60px rgba(79,70,229,0.25), inset 0 1px 0 rgba(255,255,255,0.5)'
+                    : '0 4px 16px rgba(79,70,229,0.1)',
                   minHeight: '260px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -109,13 +109,11 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   overflow: 'hidden',
                 }}
               >
-                {isActive && <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '120px', height: '120px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%)', pointerEvents: 'none' }}></div>}
-                {isActive && <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', width: '100px', height: '100px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>}
                 {/* Module label */}
                 <div
                   className="text-xs font-bold px-3 py-1 rounded-full"
                   style={{
-                    background: isActive ? 'linear-gradient(135deg,#4F46E5,#7C3AED)' : 'rgba(255,255,255,0.15)',
+                    background: 'linear-gradient(135deg,#4F46E5,#7C3AED)',
                     color: '#ffffff',
                     fontFamily: 'Poppins, sans-serif',
                   }}
@@ -128,7 +126,10 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   className="text-lg font-bold leading-snug"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    color: '#ffffff'
+                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
                   }}
                 >
                   {module.title}
@@ -138,8 +139,8 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 {isActive && (
                   <ul className="space-y-2 w-full text-left mt-2">
                     {module.topics.slice(0, 4).map((topic, i) => (
-                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(196,181,253,0.9)', fontSize: '13px' }}>
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
+                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f', fontSize: '13px' }}>
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
                         <span>{topic}</span>
                       </li>
                     ))}
