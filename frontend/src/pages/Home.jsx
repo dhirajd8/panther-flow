@@ -631,7 +631,7 @@ background: 'none',        pointerEvents: 'none',
                 <Button
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white text-lg px-8 py-6 rounded-xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
+                  className="text-white text-lg px-8 py-6 rounded-2xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                   data-testid="hero-join-now"
                 >
@@ -998,7 +998,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white text-xl px-12 py-8 rounded-xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
+                  className="text-white text-xl px-12 py-8 rounded-2xl font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                   data-testid="cta-join-now"
                 >
