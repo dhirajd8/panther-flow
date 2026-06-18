@@ -128,10 +128,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   className="text-lg font-bold leading-snug"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
+                    color: '#ffffff'
                   }}
                 >
                   {module.title}
@@ -655,13 +652,17 @@ background: 'none',        pointerEvents: 'none',
 
         
         {/* Course Overview Section */}
-       <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+       <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+          <div className="absolute inset-0 pointer-events-none" style={{
+            backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12 rise-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
   COURSE <span className="gradient-text">OVERVIEW</span>
 </h2>
-             <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(196,181,253,0.85)' }}>
+             <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: '#4b5563' }}>
                 संपूर्ण Meta Ads Training — Basic ते Advanced. Live sessions, practical campaigns, आणि hands-on projects.
               </p>
             </div>
