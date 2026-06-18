@@ -1094,7 +1094,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 urgency-banner-btn"
                 style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.3) 0%, rgba(124,58,237,0.3) 100%)', border: '1.5px solid rgba(139,92,246,0.6)', fontFamily: 'Poppins, sans-serif' }}
               >
                 <span className="relative flex h-2.5 w-2.5">
