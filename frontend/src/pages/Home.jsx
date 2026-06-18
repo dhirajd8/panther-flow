@@ -1094,16 +1094,13 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
-                className="urgency-banner-btn inline-flex items-center gap-3 px-6 py-3 rounded-full shadow-xl"
-                style={{ 
-                  background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 100%)',
-                  border: '1.5px solid rgba(139,92,246,0.45)',
-                  boxShadow: '0 0 20px rgba(79,70,229,0.2)',
-                  fontFamily: 'Poppins, sans-serif'
-                }}
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 urgency-banner-btn"
+                style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.3) 0%, rgba(124,58,237,0.3) 100%)', border: '1.5px solid rgba(139,92,246,0.6)', fontFamily: 'Poppins, sans-serif' }}
               >
-                <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: '#fbbf24', boxShadow: '0 0 6px rgba(251,191,36,0.7)' }}></span>
-                <Calendar className="w-4 h-4 text-white flex-shrink-0" />
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#fbbf24' }}></span>
+                </span>
+                <Calendar className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold tracking-wide text-white">
                   New Batch Starting on 20th June · Limited Seats!
                 </span>
