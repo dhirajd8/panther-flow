@@ -606,9 +606,14 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden hero-dot-bg">
+        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
-    background: 'radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(124,58,237,0.08) 0%, transparent 60%)'
+    backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.15) 1.5px, transparent 1.5px)',
+    backgroundSize: '24px 24px'
+  }}></div>
+  <div className="absolute inset-0 pointer-events-none" style={{
+    background: 'radial-gradient(ellipse at 20% 30%, rgba(79,70,229,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(236,72,153,0.05) 0%, transparent 60%)',
+    backdropFilter: 'blur(40px)'
   }}></div>
           
           {/* Premium ambient gradient orbs */}
