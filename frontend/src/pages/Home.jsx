@@ -607,38 +607,15 @@ background: 'none',        pointerEvents: 'none',
 
         {/* Hero Section */}
         <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
-  {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
-    backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
-    backgroundSize: '48px 48px',
-    zIndex: 1
-  }}></div>
-  {/* Scattered confetti dots */}
-  <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-    {[...Array(40)].map((_, i) => {
-      const size = [3, 4, 5, 6][i % 4];
-      const colors = ['rgba(99,102,241,0.4)', 'rgba(124,58,237,0.35)', 'rgba(236,72,153,0.3)'];
-      const color = colors[i % colors.length];
-      const top = (i * 37) % 100;
-      const left = (i * 53) % 100;
-      return (
-        <div
-          key={i}
-          style={{
-            position: 'absolute',
-            top: `${top}%`,
-            left: `${left}%`,
-            width: `${size}px`,
-            height: `${size}px`,
-            borderRadius: '50%',
-            background: color,
-          }}
-        ></div>
-      );
-    })}
-  </div>
+  backgroundImage: 'radial-gradient(circle, rgba(139,92,246,0.15) 1px, transparent 1px)',
+  backgroundSize: '28px 28px',
+  zIndex: 1,
+  animation: 'moveDots 8s linear infinite'
+}}></div>
   <div className="absolute inset-0 pointer-events-none" style={{
     background: 'radial-gradient(ellipse at 20% 30%, rgba(79,70,229,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(236,72,153,0.05) 0%, transparent 60%)',
+    backdropFilter: 'blur(40px)'
   }}></div>
           
           {/* Premium ambient gradient orbs */}
