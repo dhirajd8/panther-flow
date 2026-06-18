@@ -59,9 +59,9 @@ const ModuleShowcaseCarousel = ({ modules }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden py-8" style={{ minHeight: '380px' }}>
+    <div className="relative w-full overflow-hidden py-8 px-2" style={{ minHeight: '380px' }}>
       {/* Cards */}
-      <div className="relative flex items-center justify-center" style={{ height: '320px' }}>
+      <div className="relative flex items-center justify-center overflow-visible" style={{ height: '320px' }}>
         {modules.map((module, idx) => {
           const pos = getPosition(idx);
           const isActive = pos === 0;
