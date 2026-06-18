@@ -758,8 +758,8 @@ background: 'none',        pointerEvents: 'none',
                         color: '#7C3AED',
                         fontFamily: 'Poppins, sans-serif'
                       }}>
-                        <span className="w-2 h-2 bg-[#7C3AED] rounded-full"></span>
-                        LIVE
+                        <span className="w-2 h-2 rounded-full live-dot"></span>
+                        <span style={{ color: '#ef4444', fontWeight: 800 }}>LIVE</span>
                       </span>
                       <Video className="w-5 h-5 text-white" />
                     </div>
@@ -1083,12 +1083,14 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
-  background: 'linear-gradient(135deg, rgba(30,27,75,0.55) 0%, rgba(46,16,101,0.5) 100%)',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 0 40px rgba(79,70,229,0.18), 0 12px 36px rgba(124,58,237,0.12), inset 0 1px 20px rgba(255,255,255,0.12)',
-              backdropFilter: 'blur(28px)',
-              webkitBackdropFilter: 'blur(28px)'
+              background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
+              border: '1.5px solid rgba(139,92,246,0.35)',
+              boxShadow: '0 0 0 1px rgba(139,92,246,0.08), 0 25px 60px rgba(79,70,229,0.35), inset 0 1px 0 rgba(255,255,255,0.05)',
+              position: 'relative',
+              overflow: 'hidden'
             }}>
+              <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+              <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '200px', height: '200px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,70,229,0.18) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
@@ -1104,7 +1106,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: '1.2' }}>
+             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', lineHeight: '1.2' }}>
                 Join the Next Batch and Start Advertising Smarter
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
