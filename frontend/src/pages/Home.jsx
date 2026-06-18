@@ -585,7 +585,7 @@ background: 'none',        pointerEvents: 'none',
         </button>
         <button
   onClick={() => scrollToSection('socials')}
-  className="text-gray-700 hover:bg-indigo-50 font-bold px-2 sm:px-3 lg:px-4 py-2 text-xs sm:text-base tracking-wide whitespace-nowrap"
+  className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
   style={{ fontFamily: 'Poppins, sans-serif' }}
 >
   <span className="hidden sm:inline">Connect</span>
@@ -1148,12 +1148,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   fontFamily: 'Poppins, sans-serif',
   color: '#0f0f0f'
 }}>
-  Follow <span style={{
+  <span style={{
     background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text'
-  }}>Us</span>
+  }}>Follow</span> Us
 </h2>
     </div>
     <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
