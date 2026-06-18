@@ -47,6 +47,8 @@ const iconMap = {
 };
 const ModuleShowcaseCarousel = ({ modules }) => {
   const [active, setActive] = React.useState(0);
+  const touchStartX = React.useRef(null);
+  const touchEndX = React.useRef(null);
 
   const prev = () => setActive((a) => (a - 1 + modules.length) % modules.length);
   const next = () => setActive((a) => (a + 1) % modules.length);
@@ -58,10 +60,38 @@ const ModuleShowcaseCarousel = ({ modules }) => {
     return wrapped;
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return;
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        next();
+      } else {
+        prev();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
-    <div className="relative w-full overflow-hidden py-8 px-2" style={{ minHeight: '380px' }}>
+    <div className="relative w-full overflow-hidden py-8 px-2" style={{ minHeight: '420px' }}>
       {/* Cards */}
-      <div className="relative flex items-center justify-center overflow-visible" style={{ height: '320px' }}>
+      <div
+        className="relative flex items-center justify-center overflow-visible"
+        style={{ height: '320px', touchAction: 'pan-y' }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {modules.map((module, idx) => {
           const pos = getPosition(idx);
           const isActive = pos === 0;
@@ -157,12 +187,12 @@ const ModuleShowcaseCarousel = ({ modules }) => {
         })}
       </div>
 
-      {/* Arrows */}
-      <div className="flex items-center justify-center gap-6 mt-6">
+      {/* Arrows + Dots — clearly separated below cards */}
+      <div className="flex items-center justify-center gap-6 mt-10 relative z-20">
         <button
           onClick={prev}
-          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          style={{ background: 'rgba(79,70,229,0.15)', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
+          className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
+          style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
           ‹
         </button>
@@ -177,7 +207,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 width: i === active ? '28px' : '8px',
                 height: '8px',
                 borderRadius: '999px',
-                background: i === active ? '#4F46E5' : 'rgba(79,70,229,0.3)',
+                background: i === active ? 'linear-gradient(135deg, #4F46E5, #7C3AED)' : 'rgba(124,58,237,0.3)',
                 transition: 'all 0.3s ease',
                 border: 'none',
                 cursor: 'pointer',
@@ -188,8 +218,8 @@ const ModuleShowcaseCarousel = ({ modules }) => {
 
         <button
           onClick={next}
-          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          style={{ background: 'rgba(79,70,229,0.15)', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
+          className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
+          style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
           ›
         </button>
