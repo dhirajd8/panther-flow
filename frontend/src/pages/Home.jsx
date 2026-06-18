@@ -698,7 +698,7 @@ background: 'none',        pointerEvents: 'none',
                 <div className="flex flex-col items-start gap-1 rise-up rise-up-delay-4">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Users className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}><span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>✅</span> 45+ Students Trained & Running Ads</span>
+                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}><span style={{ color: '#818cf8' }}>✓</span> 45+ Students Trained & Running Ads</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-600">
                     <Calendar className="w-4 h-4 text-indigo-500" />
@@ -728,111 +728,6 @@ background: 'none',        pointerEvents: 'none',
               </p>
             </div>
 
-            {/* 25 Days Live Classes Banner */}
-            <div className="max-w-3xl mx-auto mb-16 rise-up">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
-              }}>
-                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)'
-                }}></div>
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)'
-                }}></div>
-
-                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
-                  <div className="flex-shrink-0 relative">
-                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: '#ffffff'
-                    }}>
-                      <div className="text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>25</div>
-                      <div className="text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#7C3AED' }}>Days</div>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: '#ffffff',
-                        color: '#7C3AED',
-                        fontFamily: 'Poppins, sans-serif'
-                      }}>
-                        <span className="w-2 h-2 bg-[#7C3AED] rounded-full"></span>
-                        LIVE
-                      </span>
-                      <Video className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-                      25 Days Live Classes
-                    </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
-                      <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: '#ffffff',
-                      color: '#7C3AED',
-                      fontFamily: 'Poppins, sans-serif'
-                    }}>
-                      <Calendar className="w-4 h-4" />
-                      <span>New Batch Starting on 20th June</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 25 Days Live Classes Banner */}
-            <div className="max-w-3xl mx-auto mb-16 rise-up">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
-              }}>
-                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)'
-                }}></div>
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full pointer-events-none" style={{
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)'
-                }}></div>
-
-                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
-                  <div className="flex-shrink-0 relative">
-                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
-                      background: '#ffffff'
-                    }}>
-                      <div className="text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>25</div>
-                      <div className="text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#7C3AED' }}>Days</div>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
-                        background: '#ffffff',
-                        color: '#7C3AED',
-                        fontFamily: 'Poppins, sans-serif'
-                      }}>
-                        <span className="w-2 h-2 bg-[#7C3AED] rounded-full"></span>
-                        LIVE
-                      </span>
-                      <Video className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-                      25 Days Live Classes
-                    </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
-                      <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
-                      background: '#ffffff',
-                      color: '#7C3AED',
-                      fontFamily: 'Poppins, sans-serif'
-                    }}>
-                      <Calendar className="w-4 h-4" />
-                      <span>New Batch Starting on 20th June</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* 25 Days Live Classes Banner */}
             <div className="max-w-3xl mx-auto mb-16 rise-up">
