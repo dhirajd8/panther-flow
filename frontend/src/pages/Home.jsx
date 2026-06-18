@@ -91,8 +91,8 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 className="rounded-3xl p-7 shadow-2xl"
                 style={{
                   background: isActive
-                    ? 'linear-gradient(145deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)'
-                    : 'linear-gradient(135deg, #0c0c1e 0%, #13103a 100%)',
+                    ? 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
+                    : 'linear-gradient(135deg, #1f1147 0%, #2a1758 100%)',
                   border: isActive
                     ? '1.5px solid rgba(139,92,246,0.45)'
                     : '1px solid rgba(79,70,229,0.15)',
