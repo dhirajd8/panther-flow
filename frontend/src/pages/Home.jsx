@@ -608,7 +608,7 @@ background: 'none',        pointerEvents: 'none',
         {/* Hero Section */}
         <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
-    backgroundImage: 'linear-gradient(rgba(79,70,229,0.25) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(79,70,229,0.25) 1.5px, transparent 1.5px)',
+    backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
     backgroundSize: '40px 40px',
     zIndex: 1
   }}></div>
