@@ -96,11 +96,12 @@ code {
 /* ─── Button ─── */
 .btn-blue {
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
   position: relative;
   z-index: 1;
   border: 2px solid transparent;
+  background-clip: padding-box;
 }
 .btn-blue:hover {
   box-shadow: 0 8px 30px rgba(79, 70, 229, 0.6);
@@ -109,23 +110,38 @@ code {
 .btn-animated-border {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background-clip: padding-box;
 }
 .btn-animated-border::before {
   content: '';
   position: absolute;
   inset: -3px;
-  border-radius: 1rem;
-  background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 35%, #4F46E5 70%, #7C3AED 100%);
-  background-size: 200% 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #4F46E5 0%,
+    #7C3AED 20%,
+    #22D3EE 40%,
+    #ec4899 60%,
+    #f97316 80%,
+    #4F46E5 100%
+  );
+  background-size: 300% 100%;
   z-index: -1;
-  animation: border-slide 2.5s linear infinite;
+  animation: border-slide 3s linear infinite;
+}
+.btn-animated-border:hover {
+  transform: scale(1.02);
 }
 @keyframes border-slide {
   0% {
     background-position: 0% 0%;
   }
   100% {
-    background-position: 200% 0%;
+    background-position: 300% 0%;
   }
 }
 

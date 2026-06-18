@@ -394,14 +394,14 @@ const ModuleAccordion = ({ modules }) => {
 
             {/* Mobile: opens below each card */}
             {openModule === module.id && (
-              <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
+              <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', borderColor: 'rgba(79,70,229,0.6)' }}>
                 <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
                   {module.title}
                 </div>
                 <ul className="space-y-3">
                   {module.topics.map((topic, idx) => (
-                    <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '14px' }}>
-                      <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                    <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)', fontSize: '14px' }}>
+<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
                       <span>{topic}</span>
                     </li>
                   ))}
@@ -414,7 +414,7 @@ const ModuleAccordion = ({ modules }) => {
 
       {/* Desktop: opens below all 6 buttons */}
       {openModule && (
-        <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ backgroundColor: '#ffffff', borderColor: '#810100' }}>
+        <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', borderColor: 'rgba(79,70,229,0.6)' }}>
           {modules.filter(m => m.id === openModule).map(module => (
             <div key={module.id}>
               <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
@@ -422,8 +422,8 @@ const ModuleAccordion = ({ modules }) => {
               </div>
               <ul className="space-y-4">
                 {module.topics.map((topic, idx) => (
-                  <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: '#810100', fontSize: '15px' }}>
-                    <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#810100' }} />
+                  <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)', fontSize: '15px' }}>
+<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
                     <span>{topic}</span>
                   </li>
                 ))}
@@ -568,7 +568,7 @@ background: 'none',        pointerEvents: 'none',
       {/* Join Now Button */}
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue"
+        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
         Join Now
@@ -655,7 +655,7 @@ background: 'none',        pointerEvents: 'none',
 
         
         {/* Course Overview Section */}
-        <section id="course-overview" className="py-20 px-4 relative overflow-hidden">
+        <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%)' }}>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12 rise-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
