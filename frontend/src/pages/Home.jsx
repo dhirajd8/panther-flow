@@ -608,8 +608,8 @@ background: 'none',        pointerEvents: 'none',
         {/* Hero Section */}
         <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
-    backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.15) 1.5px, transparent 1.5px)',
-    backgroundSize: '24px 24px'
+    backgroundImage: 'linear-gradient(rgba(99,102,241,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.18) 1px, transparent 1px)',
+    backgroundSize: '40px 40px'
   }}></div>
   <div className="absolute inset-0 pointer-events-none" style={{
     background: 'radial-gradient(ellipse at 20% 30%, rgba(79,70,229,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(236,72,153,0.05) 0%, transparent 60%)',
