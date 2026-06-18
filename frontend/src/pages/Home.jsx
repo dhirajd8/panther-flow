@@ -655,13 +655,13 @@ background: 'none',        pointerEvents: 'none',
 
         
         {/* Course Overview Section */}
-        <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%)' }}>
+       <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-12 rise-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                COURSE <span className="gradient-text">OVERVIEW</span>
-              </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: '#6b7280' }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
+  COURSE <span className="gradient-text">OVERVIEW</span>
+</h2>
+             <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(196,181,253,0.85)' }}>
                 संपूर्ण Meta Ads Training — Basic ते Advanced. Live sessions, practical campaigns, आणि hands-on projects.
               </p>
             </div>
@@ -673,7 +673,7 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
         {/* Trainer Section */}
-        <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%)' }}>
+        <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
           {/* Ambient glow */}
           <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
@@ -839,7 +839,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 {/* Right For You Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(124,58,237,0.08) 0%, rgba(79,70,229,0.08) 100%)' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
           {/* Ambient glow */}
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
@@ -967,7 +967,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(79,70,229,0.16) 0%, rgba(124,58,237,0.14) 100%)',
+  background: 'linear-gradient(135deg, #1e1b4b 0%, #2e1065 100%)',
               border: '1.5px solid rgba(255,255,255,0.25)',
               boxShadow: '0 0 40px rgba(79,70,229,0.18), 0 12px 36px rgba(124,58,237,0.12), inset 0 1px 20px rgba(255,255,255,0.12)',
               backdropFilter: 'blur(22px)',
