@@ -1139,7 +1139,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 {/* Socials Section */}
-<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)' }}>
+<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: '#13103a' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.15) 1.5px, transparent 1.5px)',
     backgroundSize: '28px 28px'
@@ -1209,7 +1209,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 </section>
         {/* Footer */}
         <footer className="py-12 px-4" style={{
-          background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
+          background: '#13103a',
           color: 'rgba(255,255,255,0.95)'
         }}>
           <div className="container mx-auto max-w-6xl">
