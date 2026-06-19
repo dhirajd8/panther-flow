@@ -678,7 +678,7 @@ background: 'none',        pointerEvents: 'none',
               }}>
                 Master Meta Ads<br />
                 <span className="gradient-text">From Zero to Expert</span><br />
-                <span style={{ fontSize: '0.75em', fontWeight: 700, color: '#0f0f0f' }}>In Marathi, Starting 20th June!</span>
+                <span className="hover-gradient-fill" style={{ fontSize: '0.5em', fontWeight: 700, color: '#0f0f0f' }}>In Marathi, Next Batch 20th June!</span>
               </h1>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', sans-serif",
@@ -1241,35 +1241,26 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       </div>
 {/* Bottom Sticky Bar */}
 <div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl" style={{
-  borderTop: '1px solid rgba(255,255,255,0.06)',
   fontFamily: 'Poppins, sans-serif',
-  background: 'linear-gradient(135deg, rgba(79,70,229,0.22) 0%, rgba(124,58,237,0.18) 100%)',
-  border: '1px solid rgba(255,255,255,0.08)',
-  backdropFilter: 'blur(10px)',
-  webkitBackdropFilter: 'blur(10px)',
-  boxShadow: '0 -10px 30px rgba(79,70,229,0.06)'
+  background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+  boxShadow: '0 -10px 30px rgba(79,70,229,0.25)'
 }}>
   <div className="flex items-center gap-2">
-    <span style={{ color: '#edebde' }}>⚡</span>
-    <span className="text-xs sm:text-sm font-semibold" style={{ color: '#edebde' }}>
-      <span className="emoji-gradient">💰</span>&nbsp;पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical!&nbsp;<span className="emoji-gradient">🎯</span>
+    <span style={{ color: '#ffffff' }}>⚡</span>
+    <span className="text-xs sm:text-sm font-semibold" style={{ color: '#ffffff' }}>
+      💰&nbsp;पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical!&nbsp;🎯
     </span>
   </div>
   <div className="flex items-center gap-3">
     <div className="hidden sm:flex items-center gap-1">
-      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-      <span className="text-xs" style={{ color: '#edebde' }}>फक्त 10 Seats उरल्या!</span>
+      <span className="w-2 h-2 rounded-full bg-green-300 animate-pulse"></span>
+      <span className="text-xs" style={{ color: '#ffffff' }}>फक्त 10 Seats उरल्या!</span>
     </div>
     <button
       onClick={handleEnrollClick}
-      className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
-      style={{
-        background: '#ffffff',
-        color: '#111827',
-        boxShadow: '0 8px 30px rgba(124,58,237,0.12)'
-      }}
+      className="sticky-bar-btn px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
     >
-      <span className="gradient-text">आजच Join करा →</span>
+      आजच Join करा →
     </button>
   </div>
 </div>
