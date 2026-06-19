@@ -1073,7 +1073,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(79,70,229,0.05) 100%)' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
             backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.03) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
@@ -1084,6 +1084,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-6 sm:p-12 rise-up" style={{
+              background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
+              border: '1.5px solid rgba(139,92,246,0.35)',
+              boxShadow: '0 0 0 1px rgba(139,92,246,0.08), 0 25px 60px rgba(79,70,229,0.35), inset 0 1px 0 rgba(255,255,255,0.05)',
               position: 'relative',
               overflow: 'hidden'
             }}>
