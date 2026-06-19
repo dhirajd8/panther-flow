@@ -1206,33 +1206,27 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 </section>
         {/* Footer */}
         <footer className="py-12 px-4 border-t" style={{
-          background: 'linear-gradient(135deg, rgba(79,70,229,0.18) 0%, rgba(124,58,237,0.16) 100%)',
+          background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
           border: '1px solid rgba(255,255,255,0.08)',
-          color: 'rgba(255,255,255,0.95)',
-          backdropFilter: 'blur(12px)',
-          webkitBackdropFilter: 'blur(12px)',
-          boxShadow: '0 -20px 60px rgba(79,70,229,0.06)'
+          color: 'rgba(255,255,255,0.95)'
         }}>
           <div className="container mx-auto max-w-6xl">
             <div className="text-center space-y-4">
-              <div className="flex justify-center mb-4">
-  <img src="/Pantherflowlogo.svg" alt="Panther Flow AI Labs" className="h-28 w-auto" />
-</div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Contact Email</p>
-                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Contact Email</p>
+                <a href="mailto:contactpantherflow@gmail.com" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                   contactpantherflow@gmail.com
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Contact Number</p>
-                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Contact Number</p>
+                <a href="tel:+919307378191" className="hover:opacity-80" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                   +91 9307378191
                 </a>
               </div>
               <div>
-                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.95)' }}>Address</p>
-                <p style={{ fontFamily: 'Google Sans, sans-serif', color: 'rgba(255,255,255,0.9)', opacity: 0.95 }}>Dharashiv धाराशिव</p>
+                <p className="font-semibold mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Address</p>
+                <p style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>At - Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</p>
               </div>
               <div className="pt-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                 <p className="text-sm" style={{ fontFamily: 'Google Sans, sans-serif', color: 'rgba(255,255,255,0.8)', opacity: 0.9 }}>
