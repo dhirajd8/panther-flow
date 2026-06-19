@@ -1095,7 +1095,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 urgency-banner-btn"
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 urgency-banner-btn rise-up"
                 style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.3) 0%, rgba(124,58,237,0.3) 100%)', border: '1.5px solid rgba(139,92,246,0.6)', fontFamily: 'Poppins, sans-serif' }}
               >
                 <span className="relative flex h-2.5 w-2.5">
@@ -1107,10 +1107,10 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', lineHeight: '1.25' }}>
+             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', lineHeight: '1.25' }}>
                 Join the Next Batch and Start Advertising Smarter
               </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+              <p className="text-xl max-w-2xl mx-auto rise-up rise-up-delay-2" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
                 Join our live Marathi training, get hands-on experience, and master Meta Ads from zero to expert. all for just ₹1099 with lifetime access.
               </p>
               <div className="pt-6">
