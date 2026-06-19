@@ -557,8 +557,8 @@ background: 'none',        pointerEvents: 'none',
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
           }}>
-    <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-1.5 sm:gap-1">
-      <div className="flex items-center justify-between w-full sm:w-auto gap-1">
+    <div className="flex flex-row items-center justify-between w-full gap-0.5">
+      <div className="flex items-center justify-between gap-0.5">
         {/* Brand - hidden on mobile */}
         <span
           className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
@@ -569,24 +569,24 @@ background: 'none',        pointerEvents: 'none',
         <div className="hidden md:block w-px h-6 bg-white/20"></div>
 
         {/* Nav Links */}
-        <div className="flex items-center justify-center gap-0.5 sm:gap-1 w-full sm:w-auto">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           <button
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             About
           </button>
           <button
             onClick={() => scrollToSection('course')}
-            className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Course
           </button>
           <button
     onClick={() => scrollToSection('socials')}
-    className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base whitespace-nowrap"
+    className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
     style={{ fontFamily: 'Poppins, sans-serif' }}
   >
     Connect
@@ -597,7 +597,7 @@ background: 'none',        pointerEvents: 'none',
       {/* Join Now Button */}
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-bold px-5 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-sm sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border w-full sm:w-auto"
+        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
         Join Now
@@ -1240,25 +1240,25 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </footer>
       </div>
 {/* Bottom Sticky Bar */}
-<div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-1.5 flex items-center justify-between shadow-2xl" style={{
+<div className="fixed bottom-0 left-0 right-0 z-50 px-2 sm:px-4 py-1.5 flex items-center justify-between gap-2 shadow-2xl overflow-hidden" style={{
   fontFamily: 'Poppins, sans-serif',
-  background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-  boxShadow: '0 -10px 30px rgba(79,70,229,0.25)'
+  background: '#1e1b4b',
+  boxShadow: '0 -10px 30px rgba(30,27,75,0.4)'
 }}>
-  <div className="flex items-center gap-2">
-    <span style={{ color: '#ffffff' }}>⚡</span>
-    <span className="text-xs sm:text-sm font-semibold" style={{ color: '#ffffff' }}>
-      💰&nbsp;पुणे-मुंबईच्या Training Institutes पेक्षा कितीतरी Affordable & Practical!&nbsp;🎯
+  <div className="flex items-center gap-1 sm:gap-2 min-w-0 flex-1">
+    <span className="flex-shrink-0 text-sm sm:text-base" style={{ color: '#ffffff' }}>⚡</span>
+    <span className="text-[10px] sm:text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ color: '#ffffff' }}>
+      💰<span className="gradient-tick">✓</span>&nbsp;पुणे-मुंबईच्या classes पेक्षा कितीतरी affordable आणि practical!
     </span>
   </div>
-  <div className="flex items-center gap-3">
+  <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
     <div className="hidden sm:flex items-center gap-1">
       <span className="w-2 h-2 rounded-full bg-green-300 animate-pulse"></span>
       <span className="text-xs" style={{ color: '#ffffff' }}>फक्त 10 Seats उरल्या!</span>
     </div>
     <button
       onClick={handleEnrollClick}
-      className="sticky-bar-btn px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
+      className="sticky-bar-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap flex-shrink-0"
     >
       <span>आजच Join करा →</span>
     </button>
