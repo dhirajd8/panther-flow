@@ -553,50 +553,51 @@ background: 'none',        pointerEvents: 'none',
         </div>
 
        <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
-  <nav className="backdrop-blur-xl rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
+  <nav className="backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
           }}>
-    <div className="flex items-center justify-between w-full gap-1">
-      {/* Brand - hidden on mobile */}
-      <span
-        className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
-      >
-        Panther Flow
-      </span>
-      <div className="hidden md:block w-px h-6 bg-white/20"></div>
+    <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-1.5 sm:gap-1">
+      <div className="flex items-center justify-between w-full sm:w-auto gap-1">
+        {/* Brand - hidden on mobile */}
+        <span
+          className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Panther Flow
+        </span>
+        <div className="hidden md:block w-px h-6 bg-white/20"></div>
 
-      {/* Nav Links */}
-      <div className="flex items-center gap-0.5 sm:gap-1">
-        <button
-          onClick={() => scrollToSection('about')}
-          className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
-        >
-          About
-        </button>
-        <button
-          onClick={() => scrollToSection('course')}
-          className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
-        >
-          Course
-        </button>
-        <button
-  onClick={() => scrollToSection('socials')}
-  className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
-  style={{ fontFamily: 'Poppins, sans-serif' }}
->
-  <span className="hidden sm:inline">Connect</span>
-  <span className="sm:hidden">Co</span>
-</button>
+        {/* Nav Links */}
+        <div className="flex items-center justify-center gap-0.5 sm:gap-1 w-full sm:w-auto">
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollToSection('course')}
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Course
+          </button>
+          <button
+    onClick={() => scrollToSection('socials')}
+    className="text-gray-700 hover:bg-indigo-50 font-medium px-2 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-sm sm:text-base whitespace-nowrap"
+    style={{ fontFamily: 'Poppins, sans-serif' }}
+  >
+    Connect
+  </button>
+        </div>
       </div>
 
       {/* Join Now Button */}
       <Button
         onClick={handleEnrollClick}
-        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
+        className="text-white font-bold px-5 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-sm sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border w-full sm:w-auto"
         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
         Join Now
@@ -730,7 +731,7 @@ background: 'none',        pointerEvents: 'none',
 
 
             {/* 25 Days Live Classes Banner */}
-            <div className="max-w-3xl mx-auto mb-16 rise-up">
+            <div className="max-w-sm sm:max-w-3xl mx-auto mb-16 rise-up">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
                 background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
               }}>
@@ -741,13 +742,13 @@ background: 'none',        pointerEvents: 'none',
                   background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)'
                 }}></div>
 
-                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
+                <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 sm:gap-6 p-5 sm:p-8">
                   <div className="flex-shrink-0 relative">
-                    <div className="w-24 h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
                       background: '#ffffff'
                     }}>
-                      <div className="text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>25</div>
-                      <div className="text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#7C3AED' }}>Days</div>
+                      <div className="text-2xl sm:text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>25</div>
+                      <div className="text-[10px] sm:text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#7C3AED' }}>Days</div>
                     </div>
                   </div>
 
@@ -763,10 +764,10 @@ background: 'none',        pointerEvents: 'none',
                       </span>
                       <Video className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
                       25 Days Live Classes
                     </h3>
-                    <p className="text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
+                    <p className="text-sm sm:text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
                       <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-bold shadow-md" style={{
@@ -1072,7 +1073,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(79,70,229,0.05) 100%)' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
             backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.03) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
@@ -1082,10 +1083,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="space-y-6 rounded-3xl p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
-              border: '1.5px solid rgba(139,92,246,0.35)',
-              boxShadow: '0 0 0 1px rgba(139,92,246,0.08), 0 25px 60px rgba(79,70,229,0.35), inset 0 1px 0 rgba(255,255,255,0.05)',
+            <div className="space-y-6 rounded-3xl p-6 sm:p-12 rise-up" style={{
               position: 'relative',
               overflow: 'hidden'
             }}>
@@ -1106,7 +1104,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
               </button>
 
-             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', lineHeight: '1.2' }}>
+             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', lineHeight: '1.25' }}>
                 Join the Next Batch and Start Advertising Smarter
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
