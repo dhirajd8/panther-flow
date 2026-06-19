@@ -1208,9 +1208,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   </div>
 </section>
         {/* Footer */}
-        <footer className="py-12 px-4 border-t" style={{
+        <footer className="py-12 px-4" style={{
           background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
-          border: '1px solid rgba(255,255,255,0.08)',
           color: 'rgba(255,255,255,0.95)'
         }}>
           <div className="container mx-auto max-w-6xl">
