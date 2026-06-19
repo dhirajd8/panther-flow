@@ -1260,7 +1260,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       onClick={handleEnrollClick}
       className="sticky-bar-btn px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105"
     >
-      आजच Join करा →
+      <span>आजच Join करा →</span>
     </button>
   </div>
 </div>

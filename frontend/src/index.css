@@ -314,14 +314,20 @@ code {
   background: #1e1b4b;
   color: #ffffff;
   box-shadow: 0 8px 30px rgba(30,27,75,0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.sticky-bar-btn span {
+  transition: color 0.3s ease;
 }
 .sticky-bar-btn:hover {
-  background: #ffffff;
-  background-image: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+  background: #ffffff !important;
+  box-shadow: 0 8px 30px rgba(124,58,237,0.3);
+}
+.sticky-bar-btn:hover span {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  box-shadow: 0 8px 30px rgba(124,58,237,0.25);
 }
 
 /* ─── Urgency banner hover fill ─── */
