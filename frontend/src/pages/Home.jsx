@@ -1060,7 +1060,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                  <div className="grid grid-cols-3 gap-3 pt-2">
                     <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>100%</div>
-                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>मराठीतून शिकवणी</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>मराठी</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
