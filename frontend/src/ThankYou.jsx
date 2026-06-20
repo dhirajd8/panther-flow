@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle2, Calendar, Users } from 'lucide-react';
-import { courseData } from '../../data/mock';
+// price hardcoded to avoid import path issues
+const coursePrice = 998;
 
 const ThankYou = () => {
   const openWhatsApp = () => {
@@ -51,7 +52,7 @@ const ThankYou = () => {
           color: '#4F46E5',
           fontFamily: 'Poppins, sans-serif'
         }}>
-          ✓ Payment Confirmed · ₹{courseData.price}
+          ✓ Payment Confirmed · ₹{coursePrice}
         </span>
         {paymentId && (
           <span className="text-xs" style={{ color: '#94a3b8', fontFamily: 'Poppins, sans-serif' }}>
