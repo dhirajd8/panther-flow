@@ -380,3 +380,12 @@ code {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero-line-3 {
+  display: inline-block;
+  font-size: 0.45em;
+}
+@media (max-width: 640px) {
+  .hero-line-3 {
+    font-size: 0.32em;
+  }
+}

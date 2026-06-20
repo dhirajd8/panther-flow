@@ -120,14 +120,12 @@ const ModuleShowcaseCarousel = ({ modules }) => {
               <div
                 className="rounded-3xl p-7 shadow-2xl"
                 style={{
-                  background: '#ffffff',
-                  backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.12) 1px, transparent 1px)',
-                  backgroundSize: '14px 14px',
+                  background: '#1e1b4b',
                   border: isActive
                     ? '2px solid #7C3AED'
                     : '1.5px solid rgba(124,58,237,0.3)',
                   boxShadow: isActive
-                    ? '0 0 0 1px rgba(139,92,246,0.15), 0 25px 60px rgba(79,70,229,0.25), inset 0 1px 0 rgba(255,255,255,0.5)'
+                    ? '0 0 0 1px rgba(139,92,246,0.15), 0 25px 60px rgba(79,70,229,0.25)'
                     : '0 4px 16px rgba(79,70,229,0.1)',
                   minHeight: '260px',
                   display: 'flex',
@@ -143,7 +141,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 <div
                   className="text-xs font-bold px-3 py-1 rounded-full"
                   style={{
-                    background: '#1e1b4b',
+                    background: '#ffffff',
                     fontFamily: 'Poppins, sans-serif',
                   }}
                 >
@@ -162,10 +160,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   className="text-lg font-bold leading-snug"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
+                    color: '#ffffff'
                   }}
                 >
                   {module.title}
@@ -175,13 +170,13 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 {isActive && (
                   <ul className="space-y-2 w-full text-left mt-2">
                     {module.topics.slice(0, 4).map((topic, i) => (
-                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f', fontSize: '13px' }}>
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
+                      <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', fontSize: '13px' }}>
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
                         <span>{topic}</span>
                       </li>
                     ))}
                     {module.topics.length > 4 && (
-                      <li className="text-xs font-semibold" style={{ color: '#7C3AED', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
+                      <li className="text-xs font-semibold" style={{ color: '#818cf8', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
                         +{module.topics.length - 4} more topics
                       </li>
                     )}
@@ -584,7 +579,7 @@ background: 'none',        pointerEvents: 'none',
             About
           </button>
           <button
-            onClick={() => scrollToSection('course')}
+            onClick={() => scrollToSection('course-overview')}
             className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
@@ -684,8 +679,8 @@ background: 'none',        pointerEvents: 'none',
               }}>
                 Master Meta Ads<br />
                 <span className="gradient-text">From Zero to Expert</span><br />
-                <span style={{ color: '#0f0f0f' }}>In Marathi, Next Batch{' '}
-                  <span style={{ background: '#1e1b4b', color: '#ffffff', padding: '0 0.15em', borderRadius: '0.15em' }}>20 June</span>
+                <span className="hero-line-3" style={{ color: '#0f0f0f', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
+                  <span style={{ background: '#1e1b4b', color: '#ffffff', padding: '0 0.2em', borderRadius: '0.15em', display: 'inline-block' }}>20 June</span>
                 </span>
               </h1>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
@@ -1013,8 +1008,7 @@ background: 'none',        pointerEvents: 'none',
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
                       fontFamily: 'Google Sans, sans-serif',
-                      backdropFilter: 'blur(10px)',
-                      webkitBackdropFilter: 'blur(10px)',
+                      background: '#1e1b4b',
                       border: '1px solid rgba(255,255,255,0.25)',
                       color: '#ffffff'
                     }}>
