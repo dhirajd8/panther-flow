@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2, Calendar, Users } from 'lucide-react';
-import { courseData } from '../data/mock';
+import { courseData } from '../../data/mock';
 
 const ThankYou = () => {
   const openWhatsApp = () => {
