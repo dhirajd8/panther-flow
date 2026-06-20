@@ -683,22 +683,11 @@ background: 'none',        pointerEvents: 'none',
                 lineHeight: '1.2',
               }}>
                 Master Meta Ads<br />
-                <span className="gradient-text">From Zero to Expert</span>
+                <span className="gradient-text">From Zero to Expert</span><br />
+                <span style={{ color: '#0f0f0f' }}>In Marathi, Next Batch{' '}
+                  <span style={{ background: '#1e1b4b', color: '#ffffff', padding: '0 0.15em', borderRadius: '0.15em' }}>20 June</span>
+                </span>
               </h1>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center rise-up rise-up-delay-1">
-                <Button
-                  className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
-                >
-                  <span className="hero-pill-text">मराठी</span>
-                </Button>
-                <Button
-                  className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
-                >
-                  <span className="hero-pill-text">Next Batch · 20 June</span>
-                </Button>
-              </div>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
                 fontFamily: "'Poppins', 'Noto Sans Devanagari', sans-serif",
                 color: '#4b5563'
