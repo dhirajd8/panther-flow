@@ -1043,14 +1043,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </section>
   
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.03) 1px, transparent 1px)',
-            backgroundSize: '28px 28px'
+            backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+            zIndex: 1
           }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-6 sm:p-12 rise-up" style={{
