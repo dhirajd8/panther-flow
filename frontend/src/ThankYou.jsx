@@ -89,9 +89,21 @@ const ThankYou = () => {
 
       {/* Workflow Steps */}
       <div className="ty-card-3 w-full max-w-lg mb-8 relative z-10">
-        <p className="text-sm font-bold mb-6 text-center" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f172a' }}>
-          Your next 3 steps ⭐
-        </p>
+        <div className="text-center mb-8">
+          <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block" style={{
+            background: 'rgba(79,70,229,0.08)',
+            color: '#4F46E5',
+            fontFamily: 'Poppins, sans-serif',
+            letterSpacing: '0.15em'
+          }}>What's Next</span>
+          <h3 className="text-2xl font-black" style={{
+            fontFamily: 'Poppins, sans-serif',
+            background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Your Next 3 Steps ⭐</h3>
+        </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-0">
 
           {/* Step 1 */}
