@@ -553,7 +553,7 @@ background: 'none',        pointerEvents: 'none',
           </div>
         </div>
 
-       <header className="fixed top-14 sm:top-12 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
+       <header className="fixed top-16 sm:top-14 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
   <nav className="backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
@@ -609,7 +609,7 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-44 sm:pt-40 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <section className="pt-52 sm:pt-44 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
@@ -680,8 +680,10 @@ background: 'none',        pointerEvents: 'none',
               }}>
                 Master Meta Ads<br />
                 <span className="gradient-text">From Zero to Expert</span><br />
-                <span className="hero-line-3" style={{ color: '#0f0f0f', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
-                  <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', fontSize: '0.95em', boxShadow: '0 4px 16px rgba(79,70,229,0.4)' }}>20 June</span>
+                <span className="hero-line-3" style={{ color: '#0f0f0f' }}>
+                  <span style={{ fontSize: 'clamp(1rem, 4vw, 1.2em)', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
+                    <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', boxShadow: '0 4px 16px rgba(79,70,229,0.4)', fontSize: 'clamp(0.9rem, 3.5vw, 1em)' }}>20 June</span>
+                  </span>
                 </span>
               </h1>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
@@ -824,7 +826,7 @@ background: 'none',        pointerEvents: 'none',
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
 
               {/* Business Owner */}
               <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
