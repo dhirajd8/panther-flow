@@ -1133,18 +1133,12 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       Free Meta Ads tips, real campaign results आणि updates साठी आम्हाला follow करा 👇
     </p>
 
-    {/* Community teaser pill */}
-    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-10 rise-up rise-up-delay-1" style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.35)' }}>
-      <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
-      <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>45+ Students आधीच community मध्ये आहेत</span>
-    </div>
-
     {/* Social Cards */}
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 rise-up rise-up-delay-2">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
 
       {/* Facebook */}
       <a href="https://www.facebook.com/profile.php?id=61590443666474" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 rise-up rise-up-delay-1"
         style={{ background: 'rgba(24,119,242,0.12)', border: '1.5px solid rgba(24,119,242,0.35)' }}>
         <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: '#1877F2' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -1159,7 +1153,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
       {/* Instagram */}
       <a href="https://www.instagram.com/_pantherflow/" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 rise-up rise-up-delay-2"
         style={{ background: 'rgba(220,39,67,0.1)', border: '1.5px solid rgba(220,39,67,0.3)' }}>
         <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -1174,7 +1168,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
       {/* LinkedIn */}
       <a href="https://www.linkedin.com/company/panther-flow/" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 rise-up rise-up-delay-3"
         style={{ background: 'rgba(0,119,181,0.1)', border: '1.5px solid rgba(0,119,181,0.3)' }}>
         <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: '#0077B5' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -1189,7 +1183,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
       {/* YouTube */}
       <a href="https://www.youtube.com/@DhirajDayanand" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+        className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 rise-up rise-up-delay-4"
         style={{ background: 'rgba(255,0,0,0.1)', border: '1.5px solid rgba(255,0,0,0.25)' }}>
         <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: '#FF0000' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
