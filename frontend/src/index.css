@@ -339,3 +339,19 @@ code {
   box-shadow: 0 8px 30px rgba(79,70,229,0.5);
   border-color: transparent !important;
 }
+.batch-date-btn {
+  background: #ffffff;
+  color: #7C3AED;
+}
+.batch-date-btn:hover {
+  background: #1e1b4b;
+}
+.batch-date-btn:hover .batch-date-text {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.batch-date-btn:hover .batch-date-icon {
+  color: #818cf8;
+}
