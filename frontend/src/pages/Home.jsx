@@ -805,7 +805,7 @@ background: 'none',        pointerEvents: 'none',
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
-           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#000000' }}>
+           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -915,15 +915,15 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
 {/* Trainer Section */}
-        <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-          {/* Ambient glow */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+        <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+          <div className="absolute inset-0 pointer-events-none" style={{
+            backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
               background: 'linear-gradient(135deg, rgba(79,70,229,0.18) 0%, rgba(124,58,237,0.12) 100%)',
-              border: '1.5px solid rgba(255,255,255,0.22)',
-              boxShadow: '0 20px 60px rgba(79,70,229,0.15), inset 0 1px 0 rgba(255,255,255,0.12)',
+              boxShadow: '0 20px 60px rgba(79,70,229,0.15)',
               backdropFilter: 'blur(22px)',
               webkitBackdropFilter: 'blur(22px)'
             }}>
@@ -994,11 +994,11 @@ background: 'none',        pointerEvents: 'none',
                       <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
                     </div>
                     {/* Floating Top Badge */}
-                    <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-xl z-20" style={{
-                      background: 'rgba(79,70,229,0.18)',
+                    <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-2xl z-20" style={{
+                      background: 'linear-gradient(135deg, rgba(124,58,237,0.95) 0%, rgba(79,70,229,0.95) 100%)',
                       border: '1px solid rgba(255,255,255,0.35)',
-                      backdropFilter: 'blur(12px)',
-                      webkitBackdropFilter: 'blur(12px)'
+                      backdropFilter: 'blur(10px)',
+                      webkitBackdropFilter: 'blur(10px)'
                     }}>
                       <div className="flex items-center gap-2">
                         <Sparkles className="w-4 h-4" style={{ color: '#ffffff' }} />
@@ -1015,10 +1015,16 @@ background: 'none',        pointerEvents: 'none',
                       fontFamily: 'Google Sans, sans-serif',
                       backdropFilter: 'blur(10px)',
                       webkitBackdropFilter: 'blur(10px)',
-                      border: '1px solid rgba(255,255,255,0.25)'
+                      border: '1px solid rgba(255,255,255,0.25)',
+                      color: '#ffffff'
                     }}>
-                      <Award className="w-4 h-4" style={{ color: '#ffffff' }} />
-                      Meet Your Instructor
+                      <Award className="w-4 h-4" style={{ color: '#1e1b4b' }} />
+                      <span style={{
+                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>Meet Your Instructor</span>
                     </span>
                     <h2 className="font-bold mb-2 gradient-text" style={{ 
                       fontSize: '24px',
