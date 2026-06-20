@@ -681,14 +681,12 @@ background: 'none',        pointerEvents: 'none',
               </h1>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center rise-up rise-up-delay-1">
                 <Button
-                  onClick={handleEnrollClick}
                   className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                 >
                   <span className="hero-pill-text">मराठी</span>
                 </Button>
                 <Button
-                  onClick={handleEnrollClick}
                   className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                 >
@@ -1155,7 +1153,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </section>
 {/* Socials Section */}
-<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: '#13103a' }}>
+<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.15) 1.5px, transparent 1.5px)',
     backgroundSize: '28px 28px'
@@ -1165,7 +1163,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
     <div className="inline-block mb-4">
       <h2 className="text-3xl md:text-5xl font-bold rise-up" style={{ 
   fontFamily: 'Poppins, sans-serif',
-  color: '#ffffff'
+  color: '#0f0f0f'
 }}>
   <span style={{
     background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
@@ -1175,7 +1173,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
   }}>Follow</span> Us
 </h2>
     </div>
-    <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+    <p className="mb-10 text-base rise-up rise-up-delay-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#4b5563' }}>
   Stay connected with Panther Flow on social media
 </p>
     <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-6">
