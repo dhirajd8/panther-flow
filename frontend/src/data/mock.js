@@ -2,7 +2,7 @@
 
 export const courseData = {
   title: "Beginner Meta Ads Training",
-  price: 1099,
+  price: 998,
   currency: "₹",
   heroHeadline: "Most affordable & practical Course in Marathi",
   heroCTA: "Join Now - फक्त ₹1099",

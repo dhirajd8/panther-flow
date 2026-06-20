@@ -541,8 +541,8 @@ background: 'none',        pointerEvents: 'none',
               <span className="relative inline-flex rounded-full h-2 w-2 bg-#edebde"></span>
             </span>
             <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>20th June</strong> · Limited Seats Available!</span>
-            <span className="sm:hidden">🔥 New Batch · <strong> 20th June</strong> · Limited Seats!</span>
+            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>1st July</strong> · Limited Seats Available!</span>
+            <span className="sm:hidden">🔥 New Batch · <strong>1st July</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
               className="font-bold text-white whitespace-nowrap announcement-pulse"
@@ -682,7 +682,7 @@ background: 'none',        pointerEvents: 'none',
                 <span className="gradient-text">From Zero to Expert</span><br />
                 <span className="hero-line-3" style={{ color: '#0f0f0f' }}>
                   <span style={{ fontSize: 'clamp(1rem, 4vw, 1.2em)', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
-                    <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', boxShadow: '0 4px 16px rgba(79,70,229,0.4)', fontSize: 'clamp(0.9rem, 3.5vw, 1em)' }}>20 June</span>
+                    <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', boxShadow: '0 4px 16px rgba(79,70,229,0.4)', fontSize: 'clamp(0.9rem, 3.5vw, 1em)' }}>1 July</span>
                   </span>
                 </span>
               </h1>
@@ -729,7 +729,7 @@ background: 'none',        pointerEvents: 'none',
                     </div>
                     <div>
                       <div className="text-sm font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}>Limited Seats</div>
-                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>20th June Batch</div>
+                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>1st July Batch</div>
                     </div>
                   </div>
                 </div>
@@ -805,7 +805,7 @@ background: 'none',        pointerEvents: 'none',
                       }}
                     >
                       <Calendar className="w-4 h-4 batch-date-icon" />
-                      <span className="batch-date-text">New Batch Starting on 20th June</span>
+                      <span className="batch-date-text">New Batch Starting on 1st July</span>
                     </button>
                   </div>
                 </div>
@@ -1073,7 +1073,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 </span>
                 <Calendar className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold tracking-wide text-white">
-                  New Batch Starting on 20th June · Limited Seats!
+                  New Batch Starting on 1st July · Limited Seats!
                 </span>
               </button>
 
@@ -1088,8 +1088,8 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               <div className="flex items-center justify-center gap-4 rise-up rise-up-delay-2">
                 <span className="text-lg line-through" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'Poppins, sans-serif' }}>₹4,999</span>
                 <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(139,92,246,0.4)' }}>
-                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹1,099</span>
-                  <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>78% OFF</span>
+                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹998</span>
+                  <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>80% OFF</span>
                 </div>
               </div>
 
