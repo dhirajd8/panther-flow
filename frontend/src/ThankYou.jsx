@@ -136,7 +136,7 @@ const ThankYou = () => {
       {/* WhatsApp Join Button */}
       <button
         onClick={openWhatsApp}
-        className="ty-wa-btn ty-card-4 flex items-center gap-3 px-8 py-4 rounded-2xl shadow-xl text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative z-10"
+        className="ty-wa-btn flex items-center gap-3 px-8 py-4 rounded-2xl shadow-xl text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative z-10"
         style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)', fontFamily: 'Poppins, sans-serif' }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor">

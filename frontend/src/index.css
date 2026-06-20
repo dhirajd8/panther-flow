@@ -463,11 +463,6 @@ code {
   animation-delay: 0.5s;
   opacity: 0;
 }
-.ty-card-4 {
-  animation: slide-up-fade 0.6s ease forwards;
-  animation-delay: 0.65s;
-  opacity: 0;
-}
 
 .ty-wa-btn {
   animation: wa-glow 2s ease-in-out infinite;
