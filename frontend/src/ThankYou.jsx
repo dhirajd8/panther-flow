@@ -30,7 +30,7 @@ const ThankYou = () => {
       }}></div>
 
       {/* Success Icon */}
-      <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10" style={{
+      <div className="ty-success-icon w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10" style={{
         background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)'
       }}>
         <CheckCircle2 className="w-10 h-10 text-white" />
@@ -45,9 +45,8 @@ const ThankYou = () => {
       </h1>
 
       {/* Fix 2: Order reference */}
-      <div className="flex items-center gap-3 mb-4 relative z-10">
-        <span className="text-xs px-3 py-1 rounded-full font-medium" style={{
-          background: 'rgba(79,70,229,0.08)',
+      <div className="ty-card-1 flex items-center gap-3 mb-4 relative z-10">
+        <span className="ty-badge-shimmer text-xs px-3 py-1 rounded-full font-medium" style={{
           border: '1px solid rgba(79,70,229,0.2)',
           color: '#4F46E5',
           fontFamily: 'Poppins, sans-serif'
@@ -89,7 +88,7 @@ const ThankYou = () => {
       </p>
 
       {/* Fix 1: Batch Info Card — using courseData */}
-      <div className="w-full max-w-md rounded-2xl p-6 mb-6 shadow-xl relative z-10" style={{
+      <div className="ty-card-2 w-full max-w-md rounded-2xl p-6 mb-6 shadow-xl relative z-10" style={{
         background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)'
       }}>
         <div className="flex items-center gap-3 mb-3">
@@ -107,7 +106,7 @@ const ThankYou = () => {
       </div>
 
       {/* Fix 5: 3-step next steps */}
-      <div className="w-full max-w-md rounded-2xl p-6 mb-8 relative z-10" style={{
+      <div className="ty-card-3 w-full max-w-md rounded-2xl p-6 mb-8 relative z-10" style={{
         background: '#ffffff',
         border: '1.5px solid rgba(79,70,229,0.15)',
         boxShadow: '0 4px 24px rgba(79,70,229,0.08)'
@@ -121,7 +120,7 @@ const ThankYou = () => {
           '1 जुलैपासून Live Session सुरू होईल'
         ].map((step, i) => (
           <div key={i} className="flex items-start gap-3 mb-3 last:mb-0">
-            <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white" style={{
+            <div className="ty-step-num w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white" style={{
               background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
               minWidth: '28px'
             }}>
@@ -137,7 +136,7 @@ const ThankYou = () => {
       {/* WhatsApp Join Button */}
       <button
         onClick={openWhatsApp}
-        className="flex items-center gap-3 px-8 py-4 rounded-2xl shadow-xl text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative z-10"
+        className="ty-wa-btn ty-card-4 flex items-center gap-3 px-8 py-4 rounded-2xl shadow-xl text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative z-10"
         style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)', fontFamily: 'Poppins, sans-serif' }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor">
