@@ -1010,7 +1010,7 @@ background: 'none',        pointerEvents: 'none',
                     }}>
                       <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
                       <span style={{
-                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
@@ -1028,7 +1028,7 @@ background: 'none',        pointerEvents: 'none',
                       background: '#ffffff'
                     }}>
                       <strong style={{
-                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
