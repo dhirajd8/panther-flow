@@ -682,17 +682,17 @@ background: 'none',        pointerEvents: 'none',
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center rise-up rise-up-delay-1">
                 <Button
                   onClick={handleEnrollClick}
-                  className="text-white font-bold px-6 py-3 rounded-full transition-all duration-300 text-sm sm:text-base h-auto btn-blue btn-animated-border"
+                  className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                 >
-                  मराठी
+                  <span className="hero-pill-text">मराठी</span>
                 </Button>
                 <Button
                   onClick={handleEnrollClick}
-                  className="text-white font-bold px-6 py-3 rounded-full transition-all duration-300 text-sm sm:text-base h-auto btn-blue btn-animated-border"
+                  className="hero-pill-btn font-bold rounded-full transition-all duration-300 text-sm sm:text-base h-auto"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
                 >
-                  Next Batch · 20 June
+                  <span className="hero-pill-text">Next Batch · 20 June</span>
                 </Button>
               </div>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{

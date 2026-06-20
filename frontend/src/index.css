@@ -346,12 +346,37 @@ code {
 .batch-date-btn:hover {
   background: #1e1b4b;
 }
+.batch-date-text {
+  transition: all 0.3s ease;
+}
 .batch-date-btn:hover .batch-date-text {
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .batch-date-btn:hover .batch-date-icon {
   color: #818cf8;
+}
+.hero-pill-btn {
+  width: 220px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 2px solid #1e1b4b;
+  box-shadow: 0 4px 15px rgba(30,27,75,0.12);
+}
+.hero-pill-btn:hover {
+  background: #1e1b4b;
+  border-color: #1e1b4b;
+  transform: translateY(-2px) scale(1.02);
+}
+.hero-pill-text {
+  color: #1e1b4b;
+  transition: all 0.3s ease;
+}
+.hero-pill-btn:hover .hero-pill-text {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
