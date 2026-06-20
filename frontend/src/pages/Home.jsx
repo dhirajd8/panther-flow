@@ -959,7 +959,7 @@ background: 'none',        pointerEvents: 'none',
                       background: '#ffffff'
                     }}>
                       <img 
-  src="https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/Untitled%20design.svg" 
+  src="https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/image.png" 
   alt="Dhiraj - Panther Flow Founder" 
   className="w-full h-auto object-cover"
 />
