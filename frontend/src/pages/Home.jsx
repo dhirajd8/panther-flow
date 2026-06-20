@@ -1006,11 +1006,9 @@ background: 'none',        pointerEvents: 'none',
                   <div>
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style={{
                       fontFamily: 'Google Sans, sans-serif',
-                      background: '#1e1b4b',
-                      border: '1px solid rgba(255,255,255,0.25)',
-                      color: '#ffffff'
+                      background: '#ffffff'
                     }}>
-                      <Award className="w-4 h-4" style={{ color: '#1e1b4b' }} />
+                      <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
                       <span style={{
                         background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
                         WebkitBackgroundClip: 'text',
@@ -1025,14 +1023,16 @@ background: 'none',        pointerEvents: 'none',
                     }}>
                       धिरज दयानंद
                     </h2>
-                    <p className="text-lg font-medium" style={{
+                    <p className="inline-block text-lg font-medium px-3 py-1 rounded-lg" style={{
                       fontFamily: 'Poppins, sans-serif',
-                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text'
+                      background: '#ffffff'
                     }}>
-                      <strong>Panther Flow AI Labs · Facebook Ads Strategist</strong>
+                      <strong style={{
+                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>Panther Flow AI Labs · Facebook Ads Strategist</strong>
                     </p>
                   </div>
 
@@ -1050,7 +1050,7 @@ background: 'none',        pointerEvents: 'none',
                     background: '#ffffff',
                     boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
                   }}>
-                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#1e1b4b' }} />
+            
                     <p className="italic text-lg leading-relaxed" style={{ 
                       fontFamily: 'Aparajita, serif',
                       color: '#1e1b4b',
