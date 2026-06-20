@@ -609,7 +609,7 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-52 sm:pt-44 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <section className="pt-36 sm:pt-44 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
@@ -826,7 +826,7 @@ background: 'none',        pointerEvents: 'none',
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
             </h2>
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
               {/* Business Owner */}
               <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
