@@ -545,7 +545,7 @@ background: 'none',        pointerEvents: 'none',
             <span className="sm:hidden">🔥 New Batch · <strong> 20th June</strong> · Limited Seats!</span>
             <button 
               onClick={handleEnrollClick}
-              className="underline hover:no-underline font-bold text-white whitespace-nowrap"
+              className="font-bold text-white whitespace-nowrap announcement-pulse"
               data-testid="announcement-cta"
             >
               Join Now →
@@ -609,7 +609,7 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-44 sm:pt-40 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <section className="pt-44 sm:pt-40 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
@@ -681,7 +681,7 @@ background: 'none',        pointerEvents: 'none',
                 Master Meta Ads<br />
                 <span className="gradient-text">From Zero to Expert</span><br />
                 <span className="hero-line-3" style={{ color: '#0f0f0f', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
-                  <span style={{ background: '#1e1b4b', color: '#ffffff', padding: '0 0.2em', borderRadius: '0.15em', display: 'inline-block' }}>20 June</span>
+                  <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', fontSize: '0.95em', boxShadow: '0 4px 16px rgba(79,70,229,0.4)' }}>20 June</span>
                 </span>
               </h1>
               <p className="text-lg sm:text-xl rise-up rise-up-delay-1 max-w-2xl mx-auto" style={{
@@ -690,7 +690,7 @@ background: 'none',        pointerEvents: 'none',
               }}>
                 फक्त Theory नाही. Live Sessions, Practical Training आणि Real Campaign Setup सह Meta Ads शिका.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 rise-up rise-up-delay-2">
+              <div className="flex flex-col items-center gap-6 pt-4 rise-up rise-up-delay-2">
                 <Button
                   onClick={handleEnrollClick}
                   size="lg"
@@ -700,14 +700,35 @@ background: 'none',        pointerEvents: 'none',
                 >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
                 </Button>
-                <div className="flex flex-col items-start gap-1 rise-up rise-up-delay-4">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Users className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}><span style={{ color: '#818cf8' }}>✓</span> 45+ Students Trained & Running Ads</span>
+
+                {/* Trust Signal Cards */}
+                <div className="flex flex-col sm:flex-row gap-3 rise-up rise-up-delay-4">
+                  <div className="flex items-center gap-3 px-5 py-3 rounded-2xl" style={{
+                    background: 'rgba(79,70,229,0.07)',
+                    border: '1.5px solid rgba(79,70,229,0.18)',
+                    backdropFilter: 'blur(8px)'
+                  }}>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}>45+ Students</div>
+                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>Trained & Running Ads</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Calendar className="w-4 h-4 text-indigo-500" />
-                    <span className="text-sm font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>Limited Seats · 20th June Batch</span>
+
+                  <div className="flex items-center gap-3 px-5 py-3 rounded-2xl" style={{
+                    background: 'rgba(79,70,229,0.07)',
+                    border: '1.5px solid rgba(79,70,229,0.18)',
+                    backdropFilter: 'blur(8px)'
+                  }}>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
+                      <Calendar className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}>Limited Seats</div>
+                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>20th June Batch</div>
+                    </div>
                   </div>
                 </div>
               </div>
