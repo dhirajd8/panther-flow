@@ -1043,7 +1043,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </section>
   
         {/* CTA Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(79,70,229,0.05) 100%)' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
             backgroundImage: 'radial-gradient(circle, rgba(99,102,241,0.03) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
@@ -1081,9 +1081,19 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
                 Join the Next Batch and Start Advertising Smarter
               </h2>
               <p className="text-xl max-w-2xl mx-auto rise-up rise-up-delay-2" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
-                Join our live Marathi training, get hands-on experience, and master Meta Ads from zero to expert. all for just ₹1099 with lifetime access.
+                Join our live Marathi training, get hands-on experience, and master Meta Ads from zero to expert.
               </p>
-              <div className="pt-6">
+
+              {/* Price Anchor */}
+              <div className="flex items-center justify-center gap-4 rise-up rise-up-delay-2">
+                <span className="text-lg line-through" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'Poppins, sans-serif' }}>₹4,999</span>
+                <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(139,92,246,0.4)' }}>
+                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹1,099</span>
+                  <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>78% OFF</span>
+                </div>
+              </div>
+
+              <div className="pt-2">
                 <Button 
                   onClick={handleEnrollClick}
                   size="lg"
