@@ -85,7 +85,7 @@ const ThankYou = () => {
         fontFamily: 'Poppins, sans-serif',
         color: '#94a3b8'
       }}>
-        📧 Confirmation email वर पण पाठवला आहे, तो पण check करा.
+        📧 Check your inbox — we've sent your booking confirmation there too.
       </p>
 
       {/* Fix 1: Batch Info Card — using courseData */}
@@ -113,7 +113,7 @@ const ThankYou = () => {
         boxShadow: '0 4px 24px rgba(79,70,229,0.08)'
       }}>
         <p className="text-sm font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f172a' }}>
-          पुढे काय करायचं?
+          Your next 3 steps ⭐
         </p>
         {[
           'खाली दिलेल्या WhatsApp Group मध्ये Join व्हा',
@@ -148,7 +148,7 @@ const ThankYou = () => {
 
       {/* Fix 3: WhatsApp fallback contact */}
       <p className="text-xs text-center mt-3 mb-10 relative z-10" style={{ fontFamily: 'Poppins, sans-serif', color: '#94a3b8' }}>
-        Link काम करत नाहीये? Call किंवा WhatsApp करा{' '}
+        Group link not opening? Reach us directly on{' '} +91 9307378191
         <a href="tel:+919307378191" style={{ color: '#4F46E5', textDecoration: 'underline' }}>
           +91 9307378191
         </a>
@@ -156,10 +156,10 @@ const ThankYou = () => {
 
       {/* Fix 6: Personal touch from instructor */}
       <p className="text-sm text-center italic mb-10 max-w-sm relative z-10" style={{
-        fontFamily: 'Aparajita, serif',
+        fontFamily: 'Poppins, sans-serif',
         color: '#475569'
       }}>
-        "मी स्वतः group मध्ये तुमचं स्वागत करेन 🙏 - धिरज"
+        "Can't wait to see you in the group. Let's build something great together! 🙏 — Dhiraj"
       </p>
 
       {/* Fix 8: De-emphasized social section */}
