@@ -946,14 +946,7 @@ background: 'none',        pointerEvents: 'none',
                 {/* Photo Column - 2/5 width */}
                 <div className="md:col-span-2 relative">
                   <div className="relative">
-                    {/* Glowing border effect */}
-                    <div className="absolute inset-0 rounded-3xl" style={{
-                      background: 'linear-gradient(135deg, #810100 0%, #810100 50%, #edebde 100%)',
-                      transform: 'scale(1.05)',
-                      filter: 'blur(20px)',
-                      opacity: 0.5,
-                      zIndex: 0
-                    }}></div>
+      
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10" style={{
                       border: '4px solid #edebde',
                       background: '#ffffff'
