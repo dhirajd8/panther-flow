@@ -917,10 +917,8 @@ background: 'none',        pointerEvents: 'none',
           }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, rgba(79,70,229,0.18) 0%, rgba(124,58,237,0.12) 100%)',
-              boxShadow: '0 20px 60px rgba(79,70,229,0.15)',
-              backdropFilter: 'blur(22px)',
-              webkitBackdropFilter: 'blur(22px)'
+              background: '#1e1b4b',
+              boxShadow: '0 20px 60px rgba(30,27,75,0.4)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -1020,38 +1018,43 @@ background: 'none',        pointerEvents: 'none',
                         backgroundClip: 'text'
                       }}>Meet Your Instructor</span>
                     </span>
-                    <h2 className="font-bold mb-2 gradient-text" style={{ 
+                    <h2 className="font-bold mb-2" style={{ 
                       fontSize: '24px',
-                      fontFamily: 'Poppins, sans-serif'
+                      fontFamily: 'Poppins, sans-serif',
+                      color: '#ffffff'
                     }}>
                       धिरज दयानंद
                     </h2>
-                    <p className="text-lg font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+                    <p className="text-lg font-medium" style={{
+                      fontFamily: 'Poppins, sans-serif',
+                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
                       <strong>Panther Flow AI Labs · Facebook Ads Strategist</strong>
                     </p>
                   </div>
 
-                  <div className="space-y-4" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>
+                  <div className="space-y-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
                     <p className="text-base leading-relaxed">
-                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{ color: '#edebde' }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong style={{ color: '#edebde' }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{ color: '#edebde' }}>live शिकवलं जातं</strong>.
+                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong className="gradient-text">आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong className="gradient-text">मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong className="gradient-text">live शिकवलं जातं</strong>.
                     </p>
                     <p className="text-base leading-relaxed">
-                      Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{ color: '#edebde' }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
+                      Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong className="gradient-text">raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
                     </p>
                   </div>
 
                   {/* Quote */}
                   <div className="relative pl-6 py-4 rounded-2xl" style={{
-                    background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))',
-                    border: '1px solid rgba(255,255,255,0.22)',
-                    backdropFilter: 'blur(20px)',
-                    webkitBackdropFilter: 'blur(20px)',
-                    boxShadow: '0 10px 30px rgba(79,70,229,0.15)'
+                    background: '#ffffff',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
                   }}>
-                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#ffffff' }} />
-                    <p className="italic text-lg leading-relaxed font-semibold" style={{ 
+                    <Quote className="absolute -top-2 -left-3 w-7 h-7" style={{ color: '#1e1b4b' }} />
+                    <p className="italic text-lg leading-relaxed" style={{ 
                       fontFamily: 'Aparajita, serif',
-                      color: '#a5b4fc'
+                      color: '#1e1b4b',
+                      fontWeight: 400
                     }}>
                       पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
 लवकर Job पाहिजे म्हणून बघून Admission ही घेतात, पण Course संपून गेला तरी Skills येत नाहीत, Confidence येत नाही.
@@ -1062,17 +1065,17 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 
                   {/* Stats Row */}
                  <div className="grid grid-cols-3 gap-3 pt-2">
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>100%</div>
-                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>मराठीतून शिकवणी</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>मराठीतून शिकवणी</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
-                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Sessions</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>Sessions</div>
                     </div>
-                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.22), rgba(124,58,237,0.18))', border: '1px solid rgba(255,255,255,0.18)' }}>
+                    <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
-                      <div className="text-xs text-white/90 mt-1" style={{ fontFamily: 'Poppins, sans-serif' }}>Campaigns</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
