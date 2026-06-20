@@ -159,7 +159,7 @@ const ThankYou = () => {
         fontFamily: 'Poppins, sans-serif',
         color: '#475569'
       }}>
-        "Can't wait to see you in the group. Let's build something great together! 🙏 — Dhiraj"
+        "Can't wait to see you in the group. Let's build something great together! — Dhiraj"
       </p>
 
       {/* Fix 8: De-emphasized social section */}
