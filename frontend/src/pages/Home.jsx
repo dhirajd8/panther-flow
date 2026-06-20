@@ -143,12 +143,18 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 <div
                   className="text-xs font-bold px-3 py-1 rounded-full"
                   style={{
-                    background: 'linear-gradient(135deg,#4F46E5,#7C3AED)',
-                    color: '#ffffff',
+                    background: '#1e1b4b',
                     fontFamily: 'Poppins, sans-serif',
                   }}
                 >
-                  {module.module}
+                  <span style={{
+                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}>
+                    {module.module}
+                  </span>
                 </div>
 
                 {/* Title */}
