@@ -1,16 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
-// price hardcoded to avoid import path issues
+
 const coursePrice = 998;
 
+// Your Render backend URL — replace with your actual backend URL
+const BACKEND_URL = 'https://your-backend.onrender.com';
+
 const ThankYou = () => {
+  const [verified, setVerified] = useState(false);
+  const [checking, setChecking] = useState(true);
+
   const openWhatsApp = () => {
     window.open('https://chat.whatsapp.com/LmFZzat6inPK3LvFKGHhHB', '_blank', 'noopener,noreferrer');
   };
 
-  // Fix 2: Get payment ID from URL if Razorpay passes it
   const urlParams = new URLSearchParams(window.location.search);
   const paymentId = urlParams.get('razorpay_payment_id');
+
+  useEffect(() => {
+    const verifyPayment = async () => {
+      if (!paymentId) {
+        setChecking(false);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${BACKEND_URL}/api/verify-payment`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ payment_id: paymentId }),
+        });
+        const data = await res.json();
+
+        if (data.verified) {
+          setVerified(true);
+
+          // Fire Meta Pixel Purchase event ONLY after real verification
+          // event_id prevents duplicate counting on page refresh
+          if (window.fbq) {
+            window.fbq('track', 'Purchase', {
+              value: coursePrice,
+              currency: 'INR',
+            }, {
+              eventID: paymentId, // dedup key
+            });
+          }
+        }
+      } catch (err) {
+        console.error('Payment verification failed:', err);
+      } finally {
+        setChecking(false);
+      }
+    };
+
+    verifyPayment();
+  }, [paymentId]);
+
+  // UI stays exactly the same for everyone — page never blocks or shows errors
+  // verified/checking state is only used internally to decide whether to fire the pixel
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden" style={{
@@ -19,7 +66,6 @@ const ThankYou = () => {
       backgroundSize: '28px 28px'
     }}>
 
-      {/* Ambient gradient orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none" style={{
         background: 'radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%)',
         filter: 'blur(40px)'
@@ -29,14 +75,12 @@ const ThankYou = () => {
         filter: 'blur(40px)'
       }}></div>
 
-      {/* Success Icon */}
       <div className="ty-success-icon w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10" style={{
         background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)'
       }}>
         <CheckCircle2 className="w-10 h-10 text-white" />
       </div>
 
-      {/* Heading */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 relative z-10" style={{
         fontFamily: 'Poppins, sans-serif',
         color: '#0f172a'
@@ -44,7 +88,6 @@ const ThankYou = () => {
         Payment Successful! 🎉
       </h1>
 
-      {/* Fix 2: Order reference */}
       <div className="ty-card-1 flex items-center gap-3 mb-4 relative z-10">
         <span className="ty-badge-shimmer text-xs px-3 py-1 rounded-full font-medium" style={{
           border: '1px solid rgba(79,70,229,0.2)',
@@ -60,7 +103,6 @@ const ThankYou = () => {
         )}
       </div>
 
-      {/* Gradient highlight */}
       <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 relative z-10" style={{
         fontFamily: 'Poppins, sans-serif',
         background: 'linear-gradient(135deg, #2563eb 0%, #a855f7 100%)',
@@ -79,7 +121,6 @@ const ThankYou = () => {
         तुम्हाला Class चे सर्व details WhatsApp वर मिळतील. खाली दिलेल्या Group मध्ये Join व्हा.
       </p>
 
-      {/* Fix 4: Email confirmation note */}
       <p className="text-xs text-center mb-8 relative z-10" style={{
         fontFamily: 'Poppins, sans-serif',
         color: '#94a3b8'
@@ -87,7 +128,6 @@ const ThankYou = () => {
         📧 Check your inbox — we've sent your booking confirmation there too.
       </p>
 
-      {/* Workflow Steps */}
       <div className="ty-card-3 w-full max-w-lg mb-8 relative z-10">
         <div className="text-center mb-8">
           <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block" style={{
@@ -106,7 +146,6 @@ const ThankYou = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-0">
 
-          {/* Step 1 */}
           <div className="flex flex-col items-center text-center" style={{ maxWidth: '160px' }}>
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-lg" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
@@ -117,10 +156,8 @@ const ThankYou = () => {
             <p className="text-xs leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif', color: '#334155' }}>WhatsApp Group मध्ये Join व्हा</p>
           </div>
 
-          {/* Arrow */}
           <div className="flex-shrink-0 mx-3 my-3 sm:my-0 rotate-90 sm:rotate-0 text-2xl font-bold" style={{ color: '#c4b5fd' }}>→</div>
 
-          {/* Step 2 */}
           <div className="flex flex-col items-center text-center" style={{ maxWidth: '160px' }}>
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-lg" style={{ background: 'linear-gradient(135deg, #7C3AED, #a855f7)' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -134,10 +171,8 @@ const ThankYou = () => {
             <p className="text-xs leading-relaxed" style={{ fontFamily: 'Poppins, sans-serif', color: '#334155' }}>Class चे सर्व details Group मध्ये मिळतील</p>
           </div>
 
-          {/* Arrow */}
           <div className="flex-shrink-0 mx-3 my-3 sm:my-0 rotate-90 sm:rotate-0 text-2xl font-bold" style={{ color: '#c4b5fd' }}>→</div>
 
-          {/* Step 3 */}
           <div className="flex flex-col items-center text-center" style={{ maxWidth: '160px' }}>
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-lg" style={{ background: 'linear-gradient(135deg, #a855f7, #EC4899)' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -152,7 +187,6 @@ const ThankYou = () => {
         </div>
       </div>
 
-      {/* WhatsApp Join Button */}
       <button
         onClick={openWhatsApp}
         className="ty-wa-btn flex items-center gap-3 px-8 py-4 rounded-2xl shadow-xl text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative z-10"
@@ -164,7 +198,6 @@ const ThankYou = () => {
         WhatsApp Group Join करा →
       </button>
 
-      {/* Fix 3: WhatsApp fallback contact */}
       <p className="text-xs text-center mt-3 mb-10 relative z-10" style={{ fontFamily: 'Poppins, sans-serif', color: '#94a3b8' }}>
         Group link not opening? Reach us directly on{' '} +91 9307378191
         <a href="tel:+919307378191" style={{ color: '#4F46E5', textDecoration: 'underline' }}>
@@ -172,7 +205,6 @@ const ThankYou = () => {
         </a>
       </p>
 
-      {/* Fix 6: Personal touch from instructor */}
       <p className="text-sm text-center italic mb-10 max-w-sm relative z-10" style={{
         fontFamily: 'Poppins, sans-serif',
         color: '#475569'
@@ -180,7 +212,6 @@ const ThankYou = () => {
         "Can't wait to see you in the group. Let's build something great together! — Dhiraj"
       </p>
 
-      {/* Fix 8: De-emphasized social section */}
       <div className="mt-4 relative z-10" style={{ paddingTop: '24px', borderTop: '1px solid rgba(79,70,229,0.1)', width: '100%', maxWidth: '400px' }}>
         <p className="text-sm font-semibold text-center mb-4" style={{
           fontFamily: 'Poppins, sans-serif',
@@ -188,7 +219,6 @@ const ThankYou = () => {
         }}>
           Connect With Us
         </p>
-        {/* Fix 8: smaller icons */}
         <div className="flex gap-3 justify-center mb-8">
           <a href="https://www.facebook.com/profile.php?id=61590443666474" target="_blank" rel="noopener noreferrer"
             className="w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all duration-300 hover:scale-110"
