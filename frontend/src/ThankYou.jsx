@@ -4,7 +4,7 @@ import { CheckCircle2 } from 'lucide-react';
 const coursePrice = 998;
 
 // Your Render backend URL — replace with your actual backend URL
-const BACKEND_URL = 'https://your-backend.onrender.com';
+const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
 
 const ThankYou = () => {
   const [verified, setVerified] = useState(false);
