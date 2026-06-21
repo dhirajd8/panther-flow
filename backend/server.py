@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import List
 import uuid
 from datetime import datetime, timezone
-
+import requests as http_requests
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -29,42 +29,100 @@ api_router = APIRouter(prefix="/api")
 # Define Models
 class StatusCheck(BaseModel):
     model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
-    
+
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
+
 class StatusCheckCreate(BaseModel):
     client_name: str
+
+
+class VerifyPaymentRequest(BaseModel):
+    payment_id: str
+
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
 
+
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
     status_obj = StatusCheck(**status_dict)
-    
+
     # Convert to dict and serialize datetime to ISO string for MongoDB
     doc = status_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
-    
+
     _ = await db.status_checks.insert_one(doc)
     return status_obj
+
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
     # Exclude MongoDB's _id field from the query results
     status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
-    
+
     # Convert ISO string timestamps back to datetime objects
     for check in status_checks:
         if isinstance(check['timestamp'], str):
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
+
     return status_checks
+
+
+@api_router.post("/verify-payment")
+async def verify_payment(payload: VerifyPaymentRequest):
+    """
+    Verifies a Razorpay payment server-side before the frontend fires
+    the Meta Pixel Purchase event. Prevents fake/duplicate purchase events
+    from being fired just because someone loads the Thank You page.
+    """
+    payment_id = payload.payment_id
+
+    razorpay_key_id = os.environ.get('RAZORPAY_KEY_ID')
+    razorpay_key_secret = os.environ.get('RAZORPAY_KEY_SECRET')
+
+    if not razorpay_key_id or not razorpay_key_secret:
+        logger.error("Razorpay API keys not configured in environment variables")
+        return {"verified": False, "error": "Server configuration error"}
+
+    try:
+        response = http_requests.get(
+            f"https://api.razorpay.com/v1/payments/{payment_id}",
+            auth=(razorpay_key_id, razorpay_key_secret),
+            timeout=10
+        )
+
+        if response.status_code != 200:
+            logger.warning(f"Razorpay verification failed for payment_id={payment_id}, status={response.status_code}")
+            return {"verified": False}
+
+        payment = response.json()
+        is_verified = payment.get("status") == "captured"
+
+        # Optional: store verified purchases in MongoDB to prevent duplicate pixel fires
+        # even across page refreshes (extra safety beyond eventID deduplication)
+        if is_verified:
+            existing = await db.verified_payments.find_one({"payment_id": payment_id})
+            if not existing:
+                await db.verified_payments.insert_one({
+                    "payment_id": payment_id,
+                    "amount": payment.get("amount"),
+                    "status": payment.get("status"),
+                    "verified_at": datetime.now(timezone.utc).isoformat()
+                })
+
+        return {"verified": is_verified, "status": payment.get("status")}
+
+    except http_requests.exceptions.RequestException as e:
+        logger.error(f"Razorpay API request failed: {str(e)}")
+        return {"verified": False, "error": "Verification request failed"}
+
 
 # Include the router in the main app
 app.include_router(api_router)
@@ -83,6 +141,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
