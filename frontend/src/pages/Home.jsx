@@ -467,7 +467,7 @@ const ModuleAccordion = ({ modules }) => {
 const Home = () => {
   const handleEnrollClick = () => {
   const options = {
-    key: 'rzp_live_T5L4MSGCkBslKz',
+    key: 'rzp_live_T5MCyPPJShFkS5',
     amount: 99800, // ₹998 in paise
     currency: 'INR',
     name: 'Panther Flow AI Labs',
