@@ -474,7 +474,13 @@ const Home = () => {
     description: 'मराठी Meta Ads Live Course — 1 July Batch',
     image: 'https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon_1_.png',
     handler: function (response) {
-      // Payment successful — redirect to Thank You page with payment ID
+      if (typeof fbq === 'function') {
+        fbq('track', 'Purchase', {
+          value: 998,
+          currency: 'INR',
+          content_name: 'Panther Flow Meta Ads Course',
+        });
+      }
       window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
     },
     prefill: {
