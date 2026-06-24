@@ -465,7 +465,11 @@ const ModuleAccordion = ({ modules }) => {
   );
 };
 const Home = () => {
-  const handleEnrollClick = () => {
+  const [showForm, setShowForm] = React.useState(false);
+  const [formData, setFormData] = React.useState({ name: '', phone: '' });
+  const [formError, setFormError] = React.useState('');
+
+  const openRazorpay = (name, phone) => {
   const options = {
     key: 'rzp_live_T5MCyPPJShFkS5',
     amount: 99800, // ₹998 in paise
@@ -484,8 +488,12 @@ const Home = () => {
       window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
     },
     prefill: {
-      name: '',
-      contact: '',
+      name: name,
+      contact: phone,
+    },
+    notes: {
+      name: name,
+      phone: phone,
     },
     theme: {
       color: '#4F46E5',
@@ -501,6 +509,18 @@ const Home = () => {
   const rzp = new window.Razorpay(options);
   rzp.open();
 };
+
+  const handleEnrollClick = () => {
+    setShowForm(true);
+  };
+
+  const handleFormSubmit = () => {
+    if (!formData.name.trim()) { setFormError('नाव टाका'); return; }
+    if (!formData.phone.trim() || formData.phone.length < 10) { setFormError('Valid phone number टाका'); return; }
+    setShowForm(false);
+    setFormError('');
+    openRazorpay(formData.name, formData.phone);
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
