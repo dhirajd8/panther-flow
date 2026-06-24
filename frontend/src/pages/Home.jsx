@@ -522,6 +522,27 @@ const Home = () => {
     openRazorpay(formData.name, formData.phone);
   };
 
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowForm(true);
+    }, 3000); // shows after 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowForm(true);
+    }, 3000); // shows after 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowForm(true);
+    }, 3000); // shows after 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
