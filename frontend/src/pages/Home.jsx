@@ -466,8 +466,35 @@ const ModuleAccordion = ({ modules }) => {
 };
 const Home = () => {
   const handleEnrollClick = () => {
-    window.open('https://rzp.io/rzp/pantherflow', '_blank', 'noopener,noreferrer');
+  const options = {
+    key: 'rzp_live_T5L4MSGCkBslKz',
+    amount: 99800, // ₹998 in paise
+    currency: 'INR',
+    name: 'Panther Flow AI Labs',
+    description: 'मराठी Meta Ads Live Course — 1 July Batch',
+    image: 'https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon_1_.png',
+    handler: function (response) {
+      // Payment successful — redirect to Thank You page with payment ID
+      window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
+    },
+    prefill: {
+      name: '',
+      contact: '',
+    },
+    theme: {
+      color: '#4F46E5',
+    },
+    modal: {
+      ondismiss: function () {
+        // User closed the modal without paying — do nothing
+        console.log('Payment modal closed');
+      },
+    },
   };
+
+  const rzp = new window.Razorpay(options);
+  rzp.open();
+};
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
