@@ -1322,11 +1322,11 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       <div className="space-y-4">
         <div>
           <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>तुमचं नाव *</label>
-          <input type="text" placeholder="तुमचं नाव" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
+          <input type="text" name="name" autoComplete="name" placeholder="तुमचं नाव" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
         </div>
         <div>
           <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>Phone Number *</label>
-          <input type="tel" placeholder="10 digit mobile number" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
+          <input type="tel" name="tel" autoComplete="tel-national" placeholder="10 digit mobile number" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
         </div>
         {formError && <p className="text-xs text-center" style={{ color: '#f87171' }}>{formError}</p>}
         <button onClick={handleFormSubmit} className="w-full py-4 rounded-xl text-white font-bold text-base transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
