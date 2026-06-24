@@ -1296,11 +1296,11 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
 {showForm && (
   <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }} onClick={() => setShowForm(false)}>
     <div className="w-full max-w-sm rounded-3xl p-8 shadow-2xl" style={{ background: '#1e1b4b', border: '1.5px solid rgba(124,58,237,0.5)', fontFamily: 'Poppins, sans-serif' }} onClick={e => e.stopPropagation()}>
-      <h3 className="text-xl font-bold text-white text-center mb-1">एक Step बाकी आहे! 🚀</h3>
-      <p className="text-xs text-center mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>तुमची माहिती द्या, मग payment करा</p>
+      <h3 className="text-xl font-bold text-white text-center mb-1">⏳ Seats भरत आहेत. फक्त एक Step बाकी आहे!</h3>
+      <p className="text-xs text-center mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>फक्त ₹998 मध्ये Meta Ads Mastery. मर्यादित Seats उपलब्ध असून जागा लवकर भरत आहेत. ⏳</p>
       <div className="space-y-4">
         <div>
-          <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>पूर्ण नाव *</label>
+          <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>तुमचं नाव *</label>
           <input type="text" placeholder="तुमचं नाव" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
         </div>
         <div>
@@ -1309,7 +1309,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </div>
         {formError && <p className="text-xs text-center" style={{ color: '#f87171' }}>{formError}</p>}
         <button onClick={handleFormSubmit} className="w-full py-4 rounded-xl text-white font-bold text-base transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
-          Payment करा → ₹998
+          Book Your Seat → ₹998
         </button>
         <button onClick={() => setShowForm(false)} className="w-full py-2 text-xs text-center" style={{ color: 'rgba(255,255,255,0.3)', background: 'none', border: 'none', cursor: 'pointer' }}>
           Cancel
