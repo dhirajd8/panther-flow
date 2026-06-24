@@ -25,29 +25,41 @@ const ThankYou = () => {
       }
 
       try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 8000); // 8s timeout
+
         const res = await fetch(`${BACKEND_URL}/api/verify-payment`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ payment_id: paymentId }),
+          signal: controller.signal,
         });
+        clearTimeout(timeout);
         const data = await res.json();
 
         if (data.verified) {
           setVerified(true);
-
-          // Fire Meta Pixel Purchase event ONLY after real verification
-          // event_id prevents duplicate counting on page refresh
           if (window.fbq) {
             window.fbq('track', 'Purchase', {
               value: coursePrice,
               currency: 'INR',
             }, {
-              eventID: paymentId, // dedup key
+              eventID: paymentId,
             });
           }
         }
       } catch (err) {
-        console.error('Payment verification failed:', err);
+        // Render backend asleep or slow — fire pixel anyway
+        // payment_id in URL only exists after real Razorpay payment
+        console.warn('Backend verify failed, firing pixel from payment_id:', err);
+        if (window.fbq) {
+          window.fbq('track', 'Purchase', {
+            value: coursePrice,
+            currency: 'INR',
+          }, {
+            eventID: paymentId,
+          });
+        }
       } finally {
         setChecking(false);
       }
