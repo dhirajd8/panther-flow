@@ -1303,8 +1303,9 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
         </footer>
       </div>
 {showForm && (
-  <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }} onClick={() => setShowForm(false)}>
-    <div className="w-full max-w-sm rounded-3xl p-8 shadow-2xl" style={{ background: '#1e1b4b', border: '1.5px solid rgba(124,58,237,0.5)', fontFamily: 'Poppins, sans-serif' }} onClick={e => e.stopPropagation()}>
+  <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}>
+    <div className="w-full max-w-sm rounded-3xl p-8 shadow-2xl relative" style={{ background: '#1e1b4b', border: '1.5px solid rgba(124,58,237,0.5)', fontFamily: 'Poppins, sans-serif' }}>
+      <button onClick={() => setShowForm(false)} style={{ position: 'absolute', top: '14px', right: '16px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.6)', fontSize: '18px', lineHeight: 1 }}>✕</button>
       <h3 className="text-xl font-bold text-white text-center mb-1">⚡ Live Meta Ads Course. ONLY FEW SEATS LEFT !</h3>
       <p className="text-xs text-center mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>फक्त ₹998 मध्ये Meta Ads Mastery. मर्यादित Seats उपलब्ध असून जागा लवकर भरत आहेत. ⏳</p>
       <div className="space-y-4">
