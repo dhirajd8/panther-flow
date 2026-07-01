@@ -20,46 +20,33 @@ const ThankYou = () => {
   useEffect(() => {
     const verifyPayment = async () => {
       if (!paymentId) {
+        console.warn('No payment ID found in URL');
         setChecking(false);
         return;
       }
 
       try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 8000); // 8s timeout
+        const timeout = setTimeout(() => controller.abort(), 10000);
 
         const res = await fetch(`${BACKEND_URL}/api/verify-payment`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ payment_id: paymentId }),
+          body: JSON.stringify({ razorpay_payment_id: paymentId }),
           signal: controller.signal,
         });
+
         clearTimeout(timeout);
         const data = await res.json();
 
         if (data.verified) {
+          console.log('Payment verified successfully:', paymentId);
           setVerified(true);
-          if (window.fbq) {
-            window.fbq('track', 'Purchase', {
-              value: coursePrice,
-              currency: 'INR',
-            }, {
-              eventID: paymentId,
-            });
-          }
+        } else {
+          console.warn('Payment verification failed — not marking as verified. No pixel fired here.');
         }
       } catch (err) {
-        // Render backend asleep or slow — fire pixel anyway
-        // payment_id in URL only exists after real Razorpay payment
-        console.warn('Backend verify failed, firing pixel from payment_id:', err);
-        if (window.fbq) {
-          window.fbq('track', 'Purchase', {
-            value: coursePrice,
-            currency: 'INR',
-          }, {
-            eventID: paymentId,
-          });
-        }
+        console.warn('Backend verification error:', err.message);
       } finally {
         setChecking(false);
       }
@@ -67,9 +54,6 @@ const ThankYou = () => {
 
     verifyPayment();
   }, [paymentId]);
-
-  // UI stays exactly the same for everyone — page never blocks or shows errors
-  // verified/checking state is only used internally to decide whether to fire the pixel
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 relative overflow-hidden" style={{
