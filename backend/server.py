@@ -40,7 +40,7 @@ class StatusCheckCreate(BaseModel):
 
 
 class VerifyPaymentRequest(BaseModel):
-    payment_id: str
+    razorpay_payment_id: str
 
 
 # Add your routes to the router instead of directly to app
@@ -82,7 +82,7 @@ async def verify_payment(payload: VerifyPaymentRequest):
     the Meta Pixel Purchase event. Prevents fake/duplicate purchase events
     from being fired just because someone loads the Thank You page.
     """
-    payment_id = payload.payment_id
+    payment_id = payload.razorpay_payment_id
 
     razorpay_key_id = os.environ.get('RAZORPAY_KEY_ID')
     razorpay_key_secret = os.environ.get('RAZORPAY_KEY_SECRET')

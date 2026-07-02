@@ -477,15 +477,33 @@ const Home = () => {
     name: 'Panther Flow AI Labs',
     description: 'मराठी Meta Ads Live Course — 5 July Batch',
     image: 'https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon_1_.png',
-    handler: function (response) {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Purchase', {
-          value: 998,
-          currency: 'INR',
-          content_name: 'Panther Flow Meta Ads Course',
+    handler: async function (response) {
+      try {
+        const verifyRes = await fetch('https://panther-flow-backend.onrender.com/api/verify-payment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+          }),
         });
+        const verifyData = await verifyRes.json();
+
+        if (verifyData.verified) {
+          if (typeof fbq === 'function') {
+            fbq('track', 'Purchase', {
+              value: 998,
+              currency: 'INR',
+              content_name: 'Panther Flow Meta Ads Course',
+            });
+          }
+        } else {
+          console.warn('Payment not captured — pixel not fired:', verifyData.status);
+        }
+      } catch (err) {
+        console.error('Payment verification error — pixel not fired:', err);
+      } finally {
+        window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
       }
-      window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
     },
     prefill: {
       name: name,
