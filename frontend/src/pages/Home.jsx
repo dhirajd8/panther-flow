@@ -999,7 +999,7 @@ background: 'none',        pointerEvents: 'none',
                       background: '#ffffff'
                     }}>
                       <img 
-  src="https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon image.png" 
+  src="https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon photo.png" 
   alt="Dhiraj - Panther Flow Founder" 
   className="w-full h-auto object-cover"
 />
