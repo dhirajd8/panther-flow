@@ -847,10 +847,31 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
 {/* Right For You Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a14' }}>
+          <style>{`
+            .glass-card {
+              position: relative;
+              isolation: isolate;
+            }
+            .glass-card::before {
+              content: '';
+              position: absolute;
+              inset: 0;
+              border-radius: inherit;
+              padding: 1px;
+              background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.05) 30%, transparent 60%);
+              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude;
+              pointer-events: none;
+              z-index: 1;
+            }
+          `}</style>
+          {/* Vivid color blobs directly behind the card grid to fuel the glass blur */}
+          <div className="absolute top-10 left-10 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.9) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
+          <div className="absolute top-40 right-16 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.85) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.9) 0%, transparent 70%)', filter: 'blur(55px)' }}></div>
+          <div className="absolute bottom-24 right-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.7) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
@@ -858,12 +879,12 @@ background: 'none',        pointerEvents: 'none',
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
               {/* Business Owner */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+              <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(24px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
@@ -876,12 +897,12 @@ background: 'none',        pointerEvents: 'none',
               </div>
 
               {/* Freelancers */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+              <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(24px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
@@ -894,12 +915,12 @@ background: 'none',        pointerEvents: 'none',
               </div>
 
               {/* Students */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+              <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(24px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
@@ -912,12 +933,12 @@ background: 'none',        pointerEvents: 'none',
               </div>
 
               {/* Marketers */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+              <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(24px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
