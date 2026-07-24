@@ -762,7 +762,7 @@ background: 'none',        pointerEvents: 'none',
             </div>
 
 
-            {/* 25 Days Live Classes Banner */}
+            {/* 14 Days Live Classes Banner */}
             <div className="max-w-sm sm:max-w-3xl mx-auto mb-16 rise-up">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
                 background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
@@ -797,10 +797,10 @@ background: 'none',        pointerEvents: 'none',
                       <Video className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-                      25 Days Live Classes
+                      15 Days Live Classes
                     </h3>
                     <p className="text-sm sm:text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
-                      <strong>२५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
+                      <strong>१५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <button
                       onClick={handleEnrollClick}

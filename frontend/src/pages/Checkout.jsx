@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CheckCircle2, ShieldCheck, Video, Users, Award } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Video, ShieldCheck, Award } from 'lucide-react';
 
 const COURSE_PRICE = 799;
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
 const RAZORPAY_KEY = 'YOUR_RAZORPAY_KEY_ID'; // TODO: replace with your live/test key
 
 const highlights = [
-  '25 Days Live Classes — 100% Marathi मध्ये',
+  '15 Days Live Classes — 100% Marathi मध्ये',
   'Real Meta Ads Campaigns सोबत Hands-on Practice',
   'Basic ते Advanced — पूर्ण Structured Curriculum',
   'Live Doubt Solving — रोज नवीन concept',
@@ -139,11 +139,6 @@ const Checkout = () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-6 mt-10 pt-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4" style={{ color: '#818cf8' }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>45+ Students</span>
-            </div>
             <div className="flex items-center gap-2">
               <Video className="w-4 h-4" style={{ color: '#818cf8' }} />
               <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>Live Sessions</span>
