@@ -109,3 +109,58 @@ async def verify_payment(payload: VerifyPaymentRequest):
     razorpay_key_secret = os.environ.get('RAZORPAY_KEY_SECRET')
 
     if not razorpay_key_id or not razorpay_key_secret:
+        logger.error("Razorpay API keys not configured in environment variables")
+        return {"verified": False, "error": "Server configuration error"}
+
+    try:
+        response = http_requests.get(
+            f"https://api.razorpay.com/v1/payments/{payment_id}",
+            auth=(razorpay_key_id, razorpay_key_secret),
+            timeout=10
+        )
+
+        if response.status_code != 200:
+            logger.warning(f"Razorpay verification failed for payment_id={payment_id}, status={response.status_code}")
+            return {"verified": False}
+
+        payment = response.json()
+        is_verified = payment.get("status") == "captured"
+
+        if is_verified:
+            existing = await db.verified_payments.find_one({"payment_id": payment_id})
+            if not existing:
+                await db.verified_payments.insert_one({
+                    "payment_id": payment_id,
+                    "amount": payment.get("amount"),
+                    "status": payment.get("status"),
+                    "verified_at": datetime.now(timezone.utc).isoformat()
+                })
+
+        return {"verified": is_verified, "status": payment.get("status")}
+
+    except http_requests.exceptions.RequestException as e:
+        logger.error(f"Razorpay API request failed: {str(e)}")
+        return {"verified": False, "error": "Verification request failed"}
+
+
+# Include the router in the main app
+app.include_router(api_router)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_credentials=True,
+    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    client.close()
