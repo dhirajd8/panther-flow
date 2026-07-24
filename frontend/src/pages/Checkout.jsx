@@ -65,7 +65,16 @@ const Checkout = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: COURSE_PRICE * 100, name, phone }),
       });
+
+      if (!orderRes.ok) {
+        throw new Error(`Order creation failed: ${orderRes.status}`);
+      }
+
       const orderData = await orderRes.json();
+
+      if (!orderData.id) {
+        throw new Error('No order id returned from backend');
+      }
 
       const options = {
         key: RAZORPAY_KEY,
@@ -155,11 +164,8 @@ const Checkout = () => {
     <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>
       Secure Payment
     </span>
-  </div>
-</div>
-          </div>
-        </div>
-      </div>
+          </div>   {/* relative z-10 */}
+      </div>     {/* Left panel */}
 
       {/* Right: Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-6 py-16">
