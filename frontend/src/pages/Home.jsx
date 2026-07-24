@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { courseData } from '../data/mock';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -465,87 +466,11 @@ const ModuleAccordion = ({ modules }) => {
   );
 };
 const Home = () => {
-  const [showForm, setShowForm] = React.useState(false);
-  const [formData, setFormData] = React.useState({ name: '', phone: '' });
-  const [formError, setFormError] = React.useState('');
-
-  const openRazorpay = (name, phone) => {
-  const options = {
-    key: 'rzp_live_T5MCyPPJShFkS5',
-    amount: 99800, // ₹998 in paise
-    currency: 'INR',
-    name: 'Panther Flow AI Labs',
-    description: 'मराठी Meta Ads Live Course — 20 July Batch',
-    image: 'https://raw.githubusercontent.com/dhirajd8/panther-flow/main/frontend/public/favicon_1_.png',
-    handler: async function (response) {
-      try {
-        const verifyRes = await fetch('https://panther-flow-backend.onrender.com/api/verify-payment', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            razorpay_payment_id: response.razorpay_payment_id,
-          }),
-        });
-        const verifyData = await verifyRes.json();
-
-        if (verifyData.verified) {
-          if (typeof fbq === 'function') {
-            fbq('track', 'Purchase', {
-              value: 998,
-              currency: 'INR',
-              content_name: 'Panther Flow Meta Ads Course',
-            });
-          }
-        } else {
-          console.warn('Payment not captured — pixel not fired:', verifyData.status);
-        }
-      } catch (err) {
-        console.error('Payment verification error — pixel not fired:', err);
-      } finally {
-        window.location.href = `/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`;
-      }
-    },
-    prefill: {
-      name: name,
-      contact: phone,
-    },
-    notes: {
-      name: name,
-      phone: phone,
-    },
-    theme: {
-      color: '#4F46E5',
-    },
-    modal: {
-      ondismiss: function () {
-        // User closed the modal without paying — do nothing
-        console.log('Payment modal closed');
-      },
-    },
-  };
-
-  const rzp = new window.Razorpay(options);
-  rzp.open();
-};
+  const navigate = useNavigate();
 
   const handleEnrollClick = () => {
-    setShowForm(true);
+    navigate('/checkout');
   };
-
-  const handleFormSubmit = () => {
-    if (!formData.name.trim()) { setFormError('नाव टाका'); return; }
-    if (!formData.phone.trim() || formData.phone.length < 10) { setFormError('Valid phone number टाका'); return; }
-    setShowForm(false);
-    setFormError('');
-    openRazorpay(formData.name, formData.phone);
-  };
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowForm(true);
-    }, 3000); // shows after 3 seconds
-    return () => clearTimeout(timer);
-  }, []);
 
 
 
@@ -1320,32 +1245,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
           </div>
         </footer>
       </div>
-{showForm && (
-  <div className="fixed inset-0 z-[100] flex items-center justify-center px-4" style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}>
-    <div className="w-full max-w-sm rounded-3xl p-8 shadow-2xl relative" style={{ background: '#1e1b4b', border: '1.5px solid rgba(124,58,237,0.5)', fontFamily: 'Poppins, sans-serif' }}>
-      <button onClick={() => setShowForm(false)} style={{ position: 'absolute', top: '14px', right: '16px', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.6)', fontSize: '18px', lineHeight: 1, flexShrink: 0, zIndex: 10 }} onMouseEnter={e => { e.currentTarget.style.background = 'rgba(239,68,68,0.8)'; e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.border = '1px solid rgba(239,68,68,0.9)'; }} onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)'; e.currentTarget.style.border = '1px solid rgba(255,255,255,0.15)'; }}>✕</button>
-      <h3 className="text-xl font-bold text-white text-center mb-1" style={{ paddingRight: '36px', paddingLeft: '4px' }}>⚡ Live Meta Ads Course. ONLY FEW SEATS LEFT !</h3>
-      <p className="text-xs text-center mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>फक्त ₹998 मध्ये Meta Ads Mastery. मर्यादित Seats उपलब्ध असून जागा लवकर भरत आहेत. ⏳</p>
-      <div className="space-y-4">
-        <div>
-          <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>तुमचं नाव *</label>
-          <input type="text" name="name" autoComplete="name" placeholder="तुमचं नाव" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
-        </div>
-        <div>
-          <label className="text-xs font-semibold mb-1 block" style={{ color: '#a5b4fc' }}>Phone Number *</label>
-          <input type="tel" name="tel" autoComplete="tel-national" placeholder="10 digit mobile number" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })} className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(124,58,237,0.4)', fontFamily: 'Poppins, sans-serif' }} />
-        </div>
-        {formError && <p className="text-xs text-center" style={{ color: '#f87171' }}>{formError}</p>}
-        <button onClick={handleFormSubmit} className="w-full py-4 rounded-xl text-white font-bold text-base transition-all duration-300 hover:scale-105" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
-          Book Your Seat → ₹998
-        </button>
-        <button onClick={() => setShowForm(false)} className="w-full py-2 text-xs text-center" style={{ color: 'rgba(255,255,255,0.3)', background: 'none', border: 'none', cursor: 'pointer' }}>
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+      
 
 {/* Bottom Sticky Bar */}
 <div className="fixed bottom-0 left-0 right-0 z-50 px-2 sm:px-4 py-1.5 flex items-center justify-between gap-2 shadow-2xl overflow-hidden" style={{
