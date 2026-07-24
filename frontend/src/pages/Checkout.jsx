@@ -139,14 +139,24 @@ const Checkout = () => {
             ))}
           </ul>
 
-            <div className="flex items-center gap-2">
-              <Video className="w-4 h-4" style={{ color: '#818cf8' }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>Live Sessions</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>Secure Payment</span>
-            </div>
+            <div
+  className="flex items-center gap-6 mt-10 pt-6"
+  style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
+>
+  <div className="flex items-center gap-2">
+    <Video className="w-4 h-4" style={{ color: '#818cf8' }} />
+    <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>
+      Live Sessions
+    </span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
+    <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>
+      Secure Payment
+    </span>
+  </div>
+</div>
           </div>
         </div>
       </div>
