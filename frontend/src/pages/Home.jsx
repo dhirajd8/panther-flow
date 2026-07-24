@@ -33,6 +33,20 @@ import {
   Calendar
 } from 'lucide-react';
 
+// Generates a stable set of slowly drifting dots for hero section
+const heroParticles = Array.from({ length: 35 }).map((_, i) => {
+  const colors = ['rgba(99,102,241,0.45)', 'rgba(124,58,237,0.4)', 'rgba(236,72,153,0.35)'];
+  return {
+    id: i,
+    left: Math.random() * 100,
+    size: [3, 4, 5, 6][i % 4],
+    color: colors[i % colors.length],
+    duration: 18 + Math.random() * 20,
+    delay: Math.random() * 20,
+    driftX: (Math.random() - 0.5) * 80,
+  };
+});
+
 const iconMap = {
   Target,
   Infinity,
@@ -621,30 +635,115 @@ background: 'none',        pointerEvents: 'none',
     backgroundSize: '48px 48px',
     zIndex: 1
   }}></div>
-  {/* Scattered confetti dots */}
-  <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-    {[...Array(40)].map((_, i) => {
-      const size = [3, 4, 5, 6][i % 4];
-      const colors = ['rgba(99,102,241,0.4)', 'rgba(124,58,237,0.35)', 'rgba(236,72,153,0.3)'];
-      const color = colors[i % colors.length];
-      const top = (i * 37) % 100;
-      const left = (i * 53) % 100;
-      return (
-        <div
-          key={i}
-          style={{
-            position: 'absolute',
-            top: `${top}%`,
-            left: `${left}%`,
-            width: `${size}px`,
-            height: `${size}px`,
-            borderRadius: '50%',
-            background: color,
-          }}
-        ></div>
-      );
-    })}
+
+  <style>{`
+    @keyframes heroDriftUp {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: var(--dot-opacity); }
+      90% { opacity: var(--dot-opacity); }
+      100% { transform: translateY(-110vh) translateX(var(--dot-drift-x)); opacity: 0; }
+    }
+    .hero-dot {
+      position: absolute;
+      bottom: -10px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: heroDriftUp linear infinite;
+    }
+  `}</style>
+
+  {/* Moving dots */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
+    {heroParticles.map((p) => (
+      <span
+        key={p.id}
+        className="hero-dot"
+        style={{
+          left: `${p.left}%`,
+          width: `${p.size}px`,
+          height: `${p.size}px`,
+          background: p.color,
+          animationDuration: `${p.duration}s`,
+          animationDelay: `${p.delay}s`,
+          '--dot-drift-x': `${p.driftX}px`,
+          '--dot-opacity': 1,
+        }}
+      />
+    ))}
   </div>
+
+  <style>{`
+    @keyframes heroDriftUp {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: var(--dot-opacity); }
+      90% { opacity: var(--dot-opacity); }
+      100% { transform: translateY(-110vh) translateX(var(--dot-drift-x)); opacity: 0; }
+    }
+    .hero-dot {
+      position: absolute;
+      bottom: -10px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: heroDriftUp linear infinite;
+    }
+  `}</style>
+
+  {/* Moving dots */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
+    {heroParticles.map((p) => (
+      <span
+        key={p.id}
+        className="hero-dot"
+        style={{
+          left: `${p.left}%`,
+          width: `${p.size}px`,
+          height: `${p.size}px`,
+          background: p.color,
+          animationDuration: `${p.duration}s`,
+          animationDelay: `${p.delay}s`,
+          '--dot-drift-x': `${p.driftX}px`,
+          '--dot-opacity': 1,
+        }}
+      />
+    ))}
+  </div>
+
+  <style>{`
+    @keyframes heroDriftUp {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: var(--dot-opacity); }
+      90% { opacity: var(--dot-opacity); }
+      100% { transform: translateY(-110vh) translateX(var(--dot-drift-x)); opacity: 0; }
+    }
+    .hero-dot {
+      position: absolute;
+      bottom: -10px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: heroDriftUp linear infinite;
+    }
+  `}</style>
+
+  {/* Moving dots */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
+    {heroParticles.map((p) => (
+      <span
+        key={p.id}
+        className="hero-dot"
+        style={{
+          left: `${p.left}%`,
+          width: `${p.size}px`,
+          height: `${p.size}px`,
+          background: p.color,
+          animationDuration: `${p.duration}s`,
+          animationDelay: `${p.delay}s`,
+          '--dot-drift-x': `${p.driftX}px`,
+          '--dot-opacity': 1,
+        }}
+      />
+    ))}
+  </div>
+
   <div className="absolute inset-0 pointer-events-none" style={{
     background: 'radial-gradient(ellipse at 20% 30%, rgba(79,70,229,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(236,72,153,0.05) 0%, transparent 60%)',
   }}></div>
