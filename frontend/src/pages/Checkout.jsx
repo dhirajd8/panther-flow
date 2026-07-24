@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CheckCircle2, ShieldCheck, Video, ShieldCheck, Award } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Video, Award } from 'lucide-react';
 
 const COURSE_PRICE = 799;
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
