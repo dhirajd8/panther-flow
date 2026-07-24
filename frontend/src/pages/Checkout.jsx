@@ -4,7 +4,7 @@ import { CheckCircle2, ShieldCheck, Video, Award } from 'lucide-react';
 
 const COURSE_PRICE = 799;
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
-const RAZORPAY_KEY = 'YOUR_RAZORPAY_KEY_ID'; // TODO: replace with your live/test key
+const RAZORPAY_KEY = 'rzp_live_T5MCyPPJShFkS5'; // TODO: replace with your live/test key
 
 const highlights = [
   '15 Days Live Classes — 100% Marathi मध्ये',
