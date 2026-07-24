@@ -672,83 +672,7 @@ background: 'none',        pointerEvents: 'none',
     ))}
   </div>
 
-  <style>{`
-    @keyframes heroDriftUp {
-      0% { transform: translateY(0) translateX(0); opacity: 0; }
-      10% { opacity: var(--dot-opacity); }
-      90% { opacity: var(--dot-opacity); }
-      100% { transform: translateY(-110vh) translateX(var(--dot-drift-x)); opacity: 0; }
-    }
-    .hero-dot {
-      position: absolute;
-      bottom: -10px;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: heroDriftUp linear infinite;
-    }
-  `}</style>
-
-  {/* Moving dots */}
-  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
-    {heroParticles.map((p) => (
-      <span
-        key={p.id}
-        className="hero-dot"
-        style={{
-          left: `${p.left}%`,
-          width: `${p.size}px`,
-          height: `${p.size}px`,
-          background: p.color,
-          animationDuration: `${p.duration}s`,
-          animationDelay: `${p.delay}s`,
-          '--dot-drift-x': `${p.driftX}px`,
-          '--dot-opacity': 1,
-        }}
-      />
-    ))}
-  </div>
-
-  <style>{`
-    @keyframes heroDriftUp {
-      0% { transform: translateY(0) translateX(0); opacity: 0; }
-      10% { opacity: var(--dot-opacity); }
-      90% { opacity: var(--dot-opacity); }
-      100% { transform: translateY(-110vh) translateX(var(--dot-drift-x)); opacity: 0; }
-    }
-    .hero-dot {
-      position: absolute;
-      bottom: -10px;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: heroDriftUp linear infinite;
-    }
-  `}</style>
-
-  {/* Moving dots */}
-  <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
-    {heroParticles.map((p) => (
-      <span
-        key={p.id}
-        className="hero-dot"
-        style={{
-          left: `${p.left}%`,
-          width: `${p.size}px`,
-          height: `${p.size}px`,
-          background: p.color,
-          animationDuration: `${p.duration}s`,
-          animationDelay: `${p.delay}s`,
-          '--dot-drift-x': `${p.driftX}px`,
-          '--dot-opacity': 1,
-        }}
-      />
-    ))}
-  </div>
-
-  <div className="absolute inset-0 pointer-events-none" style={{
-    background: 'radial-gradient(ellipse at 20% 30%, rgba(79,70,229,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(236,72,153,0.05) 0%, transparent 60%)',
-  }}></div>
-          
-          {/* Premium ambient gradient orbs */}
+  {/* Premium ambient gradient orbs */}
           <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full animate-pulse-glow pointer-events-none" style={{
             background: 'none',
             filter: 'blur(40px)'
@@ -924,8 +848,9 @@ background: 'none',        pointerEvents: 'none',
 
 {/* Right For You Section */}
         <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%)', filter: 'blur(100px)' }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
@@ -933,44 +858,72 @@ background: 'none',        pointerEvents: 'none',
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
               {/* Business Owner */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.7)'; e.currentTarget.style.boxShadow = '0 0 24px rgba(168,85,247,0.2)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(123,94,167,0.25)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
-                <div style={{ fontSize: '2.8rem', lineHeight: 1 }}>🛍️</div>
+              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+                transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>🛍️</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Business Owner</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>तुमचा product promote करायला कुठून सुरुवात करावी कळत नाही?</p>
                 <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads ने directly customers मिळवा — खर्च कमी, result जास्त.</p>
               </div>
 
               {/* Freelancers */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.7)'; e.currentTarget.style.boxShadow = '0 0 24px rgba(168,85,247,0.2)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(123,94,167,0.25)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
-                <div style={{ fontSize: '2.8rem', lineHeight: 1 }}>💻</div>
+              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+                transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>💻</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Freelancers</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Clients मिळत नाहीत, income unstable आहे?</p>
                 <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads skill शिका आणि premium clients साठी नवीन service add करा.</p>
               </div>
 
               {/* Students */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.7)'; e.currentTarget.style.boxShadow = '0 0 24px rgba(168,85,247,0.2)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(123,94,167,0.25)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
-                <div style={{ fontSize: '2.8rem', lineHeight: 1 }}>🎓</div>
+              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+                transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>🎓</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Students</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Degree आहे पण job-ready skill नाही?</p>
                 <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Real campaigns शिकून digital marketing career सुरू करा.</p>
               </div>
 
               {/* Marketers */}
-              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)', transition: 'border-color 0.3s ease, box-shadow 0.3s ease' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.7)'; e.currentTarget.style.boxShadow = '0 0 24px rgba(168,85,247,0.2)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(123,94,167,0.25)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>FOR YOU</span>
-                <div style={{ fontSize: '2.8rem', lineHeight: 1 }}>📣</div>
+              <div className="rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+                transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>📣</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Marketers</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Boosting करतोय पण ROAS कमी येतो?</p>
                 <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Advanced targeting आणि strategy शिकून results दुप्पट करा.</p>
