@@ -1159,7 +1159,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
       </a>
 
       {/* Instagram */}
-      <a href="https://www.instagram.com/_pantherflow/" target="_blank" rel="noopener noreferrer"
+      <a href="https://www.instagram.com/pantherflow.in/" target="_blank" rel="noopener noreferrer"
         className="flex flex-col items-center gap-3 px-4 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 rise-up rise-up-delay-2"
         style={{ background: 'rgba(220,39,67,0.1)', border: '1.5px solid rgba(220,39,67,0.3)' }}>
         <div className="w-11 h-11 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}>
