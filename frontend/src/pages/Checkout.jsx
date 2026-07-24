@@ -194,11 +194,14 @@ const Checkout = () => {
             <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>84% OFF</span>
           </div>
 
-          <div className="space-y-4">
+          <form className="space-y-4" onSubmit={(e) => e.preventDefault()} autoComplete="on">
             <div>
-              <label className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Full Name</label>
+              <label htmlFor="fullName" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Full Name</label>
               <input
+                id="fullName"
+                name="name"
                 type="text"
+                autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="तुमचं नाव"
@@ -207,9 +210,13 @@ const Checkout = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Phone Number</label>
+              <label htmlFor="phoneNumber" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Phone Number</label>
               <input
+                id="phoneNumber"
+                name="tel"
                 type="tel"
+                autoComplete="tel"
+                inputMode="numeric"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                 placeholder="10-digit mobile number"
@@ -221,6 +228,7 @@ const Checkout = () => {
             {error && <p className="text-sm" style={{ color: '#ef4444' }}>{error}</p>}
 
             <button
+              type="button"
               onClick={handlePay}
               disabled={loading}
               className="w-full py-3.5 rounded-xl font-bold text-white transition-all duration-300 hover:scale-[1.02] disabled:opacity-60"
@@ -233,7 +241,7 @@ const Checkout = () => {
               <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
               <span className="text-xs" style={{ color: '#9ca3af' }}>100% Secure Payment via Razorpay</span>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
