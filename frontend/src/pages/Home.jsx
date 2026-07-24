@@ -1093,7 +1093,7 @@ Affordable Price मध्ये, Practical Marathi मध्ये शिकव
               <div className="flex items-center justify-center gap-4 rise-up rise-up-delay-2">
                 <span className="text-lg line-through" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'Poppins, sans-serif' }}>₹4,999</span>
                 <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(139,92,246,0.4)' }}>
-                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹998</span>
+                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
                   <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>80% OFF</span>
                 </div>
               </div>
