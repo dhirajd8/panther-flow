@@ -1055,28 +1055,10 @@ background: 'none',        pointerEvents: 'none',
 
                   <div className="space-y-4" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
                     <p className="text-base leading-relaxed">
-                      Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong className="gradient-text">आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong className="gradient-text">मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong className="gradient-text">live शिकवलं जातं</strong>.
+                      Internet वर मार्केटिंग शिकवणारे भरपूर courses आहेत, पण <strong className="gradient-text">मराठीत, सोप्या भाषेत आणि परवडणाऱ्या किमतीत</strong> शिकवणारा course सापडणं अवघड आहे. हीच गरज लक्षात घेऊन Panther Flow सुरू केलं — जिथे प्रत्येक concept मराठीत, उदाहरणांसह समजावून सांगितलं जातं. मी धाराशिवचा असून गेली काही वर्षं Performance Marketing मध्ये काम करतोय, आणि हे सगळं ज्ञान थेट, <strong className="gradient-text">live सेशन्सच्या माध्यमातून शिकवतो</strong> — recorded videos नाही.
                     </p>
                     <p className="text-base leading-relaxed">
-                      Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong className="gradient-text">raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
-                    </p>
-                  </div>
-
-                  {/* Quote */}
-                  <div className="relative pl-6 py-4 rounded-2xl" style={{
-                    background: '#ffffff',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                  }}>
-            
-                    <p className="italic text-lg leading-relaxed" style={{ 
-                      fontFamily: 'Aparajita, serif',
-                      color: '#1e1b4b',
-                      fontWeight: 400
-                    }}>
-                      पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
-लवकर Job पाहिजे म्हणून बघून Admission ही घेतात, पण Course संपून गेला तरी Skills येत नाहीत, Confidence येत नाही.
-आणि हाच Problem आम्ही Solve करतोय.
-Affordable Price मध्ये, Practical Marathi मध्ये शिकवणारा Meta Ads + AI Complete Course. 🚀
+                      पुणे-मुंबईच्या Digital Marketing Institutes ची fees सगळ्यांना परवडणारी नसते. लवकर job हवी म्हणून admission घेतली जाते, पण course संपल्यावरही skills आणि confidence तयार होत नाही. हाच problem सोडवण्यासाठी Panther Flow आहे — <strong className="gradient-text">affordable किमतीत, practical पद्धतीने, मराठीत</strong> शिकवणारा Meta Ads course.
                     </p>
                   </div>
 
