@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
-const coursePrice = 998;
+const coursePrice = 799;
 
 // Your Render backend URL — replace with your actual backend URL
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
