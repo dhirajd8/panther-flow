@@ -213,7 +213,7 @@ const Checkout = () => {
               <label htmlFor="phoneNumber" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Phone Number</label>
               <input
                 id="phoneNumber"
-                name="tel"
+                name="phone"
                 type="tel"
                 autoComplete="tel"
                 inputMode="numeric"
