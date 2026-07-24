@@ -164,8 +164,10 @@ const Checkout = () => {
     <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>
       Secure Payment
     </span>
-          </div>   {/* relative z-10 */}
-      </div>     {/* Left panel */}
+  </div>
+        </div>   {/* end gap-6 stats row */}
+        </div>   {/* end relative z-10 max-w-md */}
+      </div>     {/* end Left panel */}
 
       {/* Right: Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-6 py-16">
