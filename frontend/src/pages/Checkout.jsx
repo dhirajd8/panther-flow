@@ -32,6 +32,13 @@ const loadRazorpayScript = () =>
 
 const Checkout = () => {
   const navigate = useNavigate();
+
+  // Wake the backend as soon as this page loads, so it's warm by the time
+  // the person finishes filling the form and clicks Pay.
+  React.useEffect(() => {
+    fetch(`${BACKEND_URL}/api/`).catch(() => {});
+  }, []);
+
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
