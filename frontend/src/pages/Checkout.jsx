@@ -33,6 +33,11 @@ const loadRazorpayScript = () =>
 const Checkout = () => {
   const navigate = useNavigate();
 
+  // Scroll to top the moment this page mounts, so it never opens mid-page.
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Wake the backend as soon as this page loads, so it's warm by the time
   // the person finishes filling the form and clicks Pay.
   React.useEffect(() => {
