@@ -654,7 +654,7 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-36 sm:pt-44 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <section className="pt-28 sm:pt-32 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
