@@ -615,13 +615,13 @@ background: 'none',        pointerEvents: 'none',
         </div>
       </div>
 
-      {/* Join Now Button */}
+      {/* Contact Button */}
       <Button
-        onClick={handleEnrollClick}
+        onClick={() => scrollToSection('footer')}
         className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
-        Join Now
+        Contact
       </Button>
     </div>
   </nav>
