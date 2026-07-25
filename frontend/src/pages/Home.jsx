@@ -581,11 +581,11 @@ background: 'none',        pointerEvents: 'none',
       <div className="flex items-center justify-between gap-0.5">
         {/* Brand - hidden on mobile */}
         <button
-          onClick={() => scrollToSection('footer')}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
           style={{ fontFamily: 'Poppins, sans-serif', background: 'none', border: 'none', cursor: 'pointer' }}
         >
-          Panther Flow
+          Home
         </button>
         <div className="hidden md:block w-px h-6 bg-white/20"></div>
 
