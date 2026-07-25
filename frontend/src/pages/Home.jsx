@@ -609,14 +609,6 @@ background: 'none',        pointerEvents: 'none',
     <div className="flex flex-row items-center justify-between w-full gap-0.5">
       <div className="flex items-center justify-between gap-0.5">
         {/* Brand - hidden on mobile */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="hidden md:inline-block text-gray-800 font-bold px-3 lg:px-4 py-2 text-base tracking-wide whitespace-nowrap"
-          style={{ fontFamily: 'Poppins, sans-serif', background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          Home
-        </button>
-        <div className="hidden md:block w-px h-6 bg-white/20"></div>
 
         {/* Nav Links */}
         <div className="flex items-center gap-0.5 sm:gap-1">
