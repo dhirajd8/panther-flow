@@ -35,6 +35,7 @@ const Checkout = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
+  const [slowLoading, setSlowLoading] = useState(false);
   const [error, setError] = useState('');
 
   const validate = () => {
@@ -51,9 +52,13 @@ const Checkout = () => {
     }
     setError('');
     setLoading(true);
+    setSlowLoading(false);
+
+    const slowTimer = setTimeout(() => setSlowLoading(true), 4000);
 
     const sdkLoaded = await loadRazorpayScript();
     if (!sdkLoaded) {
+      clearTimeout(slowTimer);
       setError('Payment SDK load होऊ शकलं नाही. पुन्हा प्रयत्न करा.');
       setLoading(false);
       return;
@@ -101,6 +106,8 @@ const Checkout = () => {
       console.error(err);
       setError('काहीतरी चूक झाली. पुन्हा प्रयत्न करा किंवा आम्हाला WhatsApp करा.');
     } finally {
+      clearTimeout(slowTimer);
+      setSlowLoading(false);
       setLoading(false);
     }
   };
@@ -188,7 +195,7 @@ const Checkout = () => {
               className="w-full py-4 rounded-xl font-bold text-white text-base transition-all duration-300 hover:scale-[1.02] disabled:opacity-60"
               style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', boxShadow: '0 8px 24px rgba(79,70,229,0.3)' }}
             >
-              {loading ? 'Processing...' : `Pay ₹${COURSE_PRICE} & Enroll →`}
+              {loading ? (slowLoading ? 'Almost there, setting things up...' : 'Processing...') : `Pay ₹${COURSE_PRICE} & Enroll →`}
             </button>
 
             <div className="flex items-center justify-center gap-2 pt-1">
