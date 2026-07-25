@@ -113,6 +113,66 @@ const Checkout = () => {
         background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)',
       }}
     >
+      <style>{`
+        @keyframes checkoutGridPulse {
+          0%, 100% { opacity: 0.35; }
+          50% { opacity: 0.6; }
+        }
+        @keyframes checkoutDotDrift {
+          0% { transform: translateY(0) translateX(0); opacity: 0; }
+          10% { opacity: var(--co-dot-opacity); }
+          90% { opacity: var(--co-dot-opacity); }
+          100% { transform: translateY(-110vh) translateX(var(--co-dot-drift-x)); opacity: 0; }
+        }
+        .checkout-grid {
+          animation: checkoutGridPulse 6s ease-in-out infinite;
+        }
+        .checkout-dot {
+          position: absolute;
+          bottom: -10px;
+          border-radius: 50%;
+          background: #ffffff;
+          pointer-events: none;
+          animation: checkoutDotDrift linear infinite;
+        }
+      `}</style>
+
+      {/* Subtle animated grid pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none checkout-grid"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(139,92,246,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.12) 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+      />
+
+      {/* Slowly drifting dots */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 28 }).map((_, i) => {
+          const left = Math.random() * 100;
+          const size = 1.5 + Math.random() * 2.5;
+          const duration = 16 + Math.random() * 18;
+          const delay = Math.random() * 20;
+          const driftX = (Math.random() - 0.5) * 70;
+          const opacity = 0.15 + Math.random() * 0.3;
+          return (
+            <span
+              key={i}
+              className="checkout-dot"
+              style={{
+                left: `${left}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                animationDuration: `${duration}s`,
+                animationDelay: `${delay}s`,
+                '--co-dot-drift-x': `${driftX}px`,
+                '--co-dot-opacity': opacity,
+              }}
+            />
+          );
+        })}
+      </div>
+
       {/* Ambient glows across the whole dark background */}
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
