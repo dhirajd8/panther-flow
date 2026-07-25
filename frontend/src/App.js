@@ -5,6 +5,8 @@ import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 import ThankYou from './ThankYou';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
