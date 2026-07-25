@@ -249,15 +249,22 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* Right: Floating white card */}
+        {/* Right: Floating white card with glowing accent border */}
         <div className="flex-1 flex items-center justify-center">
           <div
-            className="w-full max-w-sm rounded-3xl px-6 py-8 sm:px-8 sm:py-10"
+            className="w-full max-w-sm rounded-3xl relative"
             style={{
-              background: '#ffffff',
-              boxShadow: '0 25px 70px rgba(0,0,0,0.45), 0 4px 16px rgba(0,0,0,0.2)',
+              padding: '2px',
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              boxShadow: '0 0 40px rgba(139,92,246,0.5), 0 25px 70px rgba(0,0,0,0.45), 0 4px 16px rgba(0,0,0,0.2)',
             }}
           >
+            <div
+              className="w-full h-full rounded-3xl px-6 py-8 sm:px-8 sm:py-10"
+              style={{
+                background: '#ffffff',
+              }}
+            >
             <button
               onClick={() => navigate('/')}
               className="text-sm mb-6"
@@ -353,6 +360,7 @@ const Checkout = () => {
                 </span>
               </div>
             </form>
+            </div>
           </div>
         </div>
       </div>
