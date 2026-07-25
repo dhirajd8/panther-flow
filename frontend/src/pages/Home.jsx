@@ -621,6 +621,13 @@ background: 'none',        pointerEvents: 'none',
         {/* Nav Links */}
         <div className="flex items-center gap-0.5 sm:gap-1">
           <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Home
+          </button>
+          <button
             onClick={() => scrollToSection('about')}
             className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
@@ -635,12 +642,12 @@ background: 'none',        pointerEvents: 'none',
             Course
           </button>
           <button
-    onClick={() => scrollToSection('socials')}
-    className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
-    style={{ fontFamily: 'Poppins, sans-serif' }}
-  >
-    Connect
-  </button>
+            onClick={() => navigate('/blog')}
+            className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Blogs
+          </button>
           <button
     onClick={() => scrollToSection('footer')}
     className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
@@ -650,15 +657,6 @@ background: 'none',        pointerEvents: 'none',
   </button>
         </div>
       </div>
-
-      {/* Join Now Button */}
-      <Button
-        onClick={handleEnrollClick}
-        className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
-        style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
-      >
-        Join Now
-      </Button>
     </div>
   </nav>
 </header>
