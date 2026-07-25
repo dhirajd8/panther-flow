@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CheckCircle2, ShieldCheck, Video, Award } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Video, Award, Lock, Users } from 'lucide-react';
 
 const COURSE_PRICE = 799;
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
@@ -106,35 +106,117 @@ const Checkout = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-10 sm:py-16" style={{ background: '#f7f7fb', fontFamily: 'Poppins, sans-serif' }}>
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-0 rounded-3xl overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(15,15,26,0.12)' }}>
+    <div className="min-h-screen px-4 py-8 sm:py-14" style={{ background: '#f7f7fb', fontFamily: 'Poppins, sans-serif' }}>
+      <div className="w-full max-w-lg mx-auto">
 
-        {/* Left: Compact summary card, 2/5 width */}
-        <div className="lg:col-span-2 p-8 sm:p-10 flex flex-col justify-center" style={{ background: '#0f0f1a' }}>
+        <button
+          onClick={() => navigate('/')}
+          className="text-sm mb-4"
+          style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}
+        >
+          ← Back to Home
+        </button>
+
+        {/* Main event: the form, elevated and prominent */}
+        <div
+          className="rounded-3xl p-6 sm:p-8"
+          style={{ background: '#ffffff', boxShadow: '0 20px 60px rgba(15,15,26,0.12)', border: '1px solid #f0f0f5' }}
+        >
           <span
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 w-fit"
-            style={{ background: '#ffffff' }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit"
+            style={{ background: 'rgba(79,70,229,0.08)' }}
           >
-            <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>Meta Ads Marathi Course</span>
+            <Award className="w-3.5 h-3.5" style={{ color: '#7C3AED' }} />
+            <span style={{ color: '#4F46E5' }}>Meta Ads Marathi Course</span>
           </span>
 
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#ffffff' }}>
-            Master Meta Ads
-            <br />
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+          <h1 className="text-2xl sm:text-3xl font-bold mb-1" style={{ color: '#0f0f0f' }}>Complete Your Enrollment</h1>
+          <p className="text-sm mb-6" style={{ color: '#6b7280' }}>Details भरा आणि secure payment करा.</p>
+
+          <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-xl" style={{ background: 'rgba(79,70,229,0.06)', border: '1px solid rgba(79,70,229,0.15)' }}>
+            <span className="text-lg line-through" style={{ color: '#9ca3af' }}>₹4,999</span>
+            <span className="text-2xl font-black" style={{
+              background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            }}>From Zero to Expert</span>
-          </h1>
+            }}>₹{COURSE_PRICE}</span>
+            <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>84% OFF</span>
+          </div>
 
+          <form className="space-y-4" onSubmit={(e) => e.preventDefault()} autoComplete="on">
+            <div>
+              <label htmlFor="fullName" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Full Name</label>
+              <input
+                id="fullName"
+                name="name"
+                type="text"
+                autoComplete="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="तुमचं नाव"
+                className="w-full px-4 py-3.5 rounded-xl text-sm outline-none transition-colors"
+                style={{ border: '1.5px solid #e5e7eb' }}
+                onFocus={(e) => e.target.style.borderColor = '#818cf8'}
+                onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
+              />
+            </div>
+            <div>
+              <label htmlFor="phoneNumber" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Phone Number</label>
+              <input
+                id="phoneNumber"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                inputMode="numeric"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                placeholder="10-digit mobile number"
+                className="w-full px-4 py-3.5 rounded-xl text-sm outline-none transition-colors"
+                style={{ border: '1.5px solid #e5e7eb' }}
+                onFocus={(e) => e.target.style.borderColor = '#818cf8'}
+                onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
+              />
+            </div>
+
+            {error && <p className="text-sm" style={{ color: '#ef4444' }}>{error}</p>}
+
+            <button
+              type="button"
+              onClick={handlePay}
+              disabled={loading}
+              className="w-full py-4 rounded-xl font-bold text-white text-base transition-all duration-300 hover:scale-[1.02] disabled:opacity-60"
+              style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', boxShadow: '0 8px 24px rgba(79,70,229,0.3)' }}
+            >
+              {loading ? 'Processing...' : `Pay ₹${COURSE_PRICE} & Enroll →`}
+            </button>
+
+            <div className="flex items-center justify-center gap-2 pt-1">
+              <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
+              <span className="text-xs" style={{ color: '#9ca3af' }}>100% Secure Payment via Razorpay</span>
+            </div>
+          </form>
+        </div>
+
+        {/* Trust strip right under the form */}
+        <div className="grid grid-cols-3 gap-2 mt-4">
+          <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
+            <Lock className="w-4 h-4" style={{ color: '#7C3AED' }} />
+            <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>Secure Checkout</span>
+          </div>
+          <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
+            <Video className="w-4 h-4" style={{ color: '#7C3AED' }} />
+            <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>Live Sessions</span>
+          </div>
+          <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
+            <Users className="w-4 h-4" style={{ color: '#7C3AED' }} />
+            <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>45+ Students</span>
+          </div>
+        </div>
+
+        {/* Course highlights, secondary, below the form */}
+        <div className="rounded-2xl p-6 mt-4" style={{ background: '#0f0f1a' }}>
+          <h3 className="text-sm font-bold mb-4" style={{ color: '#ffffff' }}>What's included</h3>
           <ul className="space-y-3">
             {highlights.map((point, idx) => (
               <li key={idx} className="flex items-start gap-2.5">
@@ -143,96 +225,6 @@ const Checkout = () => {
               </li>
             ))}
           </ul>
-
-          <div
-            className="flex items-center gap-6 mt-8 pt-6"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
-          >
-            <div className="flex items-center gap-2">
-              <Video className="w-4 h-4" style={{ color: '#818cf8' }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>Live Sessions</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
-              <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>Secure Payment</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Form, 3/5 width */}
-        <div className="lg:col-span-3 p-8 sm:p-12 flex items-center" style={{ background: '#ffffff' }}>
-          <div className="w-full max-w-sm mx-auto">
-            <button
-              onClick={() => navigate('/')}
-              className="text-sm mb-6"
-              style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}
-            >
-              ← Back to Home
-            </button>
-
-            <h2 className="text-2xl font-bold mb-1" style={{ color: '#0f0f0f' }}>Complete Your Enrollment</h2>
-            <p className="text-sm mb-8" style={{ color: '#6b7280' }}>Details भरा आणि secure payment करा.</p>
-
-            <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-xl" style={{ background: 'rgba(79,70,229,0.06)', border: '1px solid rgba(79,70,229,0.15)' }}>
-              <span className="text-lg line-through" style={{ color: '#9ca3af' }}>₹4,999</span>
-              <span className="text-2xl font-black" style={{
-                background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}>₹{COURSE_PRICE}</span>
-              <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>84% OFF</span>
-            </div>
-
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()} autoComplete="on">
-              <div>
-                <label htmlFor="fullName" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Full Name</label>
-                <input
-                  id="fullName"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="तुमचं नाव"
-                  className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-                  style={{ border: '1.5px solid #e5e7eb' }}
-                />
-              </div>
-              <div>
-                <label htmlFor="phoneNumber" className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Phone Number</label>
-                <input
-                  id="phoneNumber"
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  inputMode="numeric"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
-                  placeholder="10-digit mobile number"
-                  className="w-full px-4 py-3 rounded-xl text-sm outline-none"
-                  style={{ border: '1.5px solid #e5e7eb' }}
-                />
-              </div>
-
-              {error && <p className="text-sm" style={{ color: '#ef4444' }}>{error}</p>}
-
-              <button
-                type="button"
-                onClick={handlePay}
-                disabled={loading}
-                className="w-full py-3.5 rounded-xl font-bold text-white transition-all duration-300 hover:scale-[1.02] disabled:opacity-60"
-                style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
-              >
-                {loading ? 'Processing...' : `Pay ₹${COURSE_PRICE} & Enroll →`}
-              </button>
-
-              <div className="flex items-center justify-center gap-2 pt-2">
-                <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
-                <span className="text-xs" style={{ color: '#9ca3af' }}>100% Secure Payment via Razorpay</span>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </div>
