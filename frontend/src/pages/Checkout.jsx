@@ -106,7 +106,18 @@ const Checkout = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-stretch" style={{ background: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+    <div className="min-h-screen flex items-stretch relative" style={{ background: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+      {/* Soft blend layer sitting at the seam between the two panels */}
+      <div
+        className="hidden lg:block absolute top-0 bottom-0 pointer-events-none"
+        style={{
+          left: 'calc(50% - 140px)',
+          width: '280px',
+          background: 'linear-gradient(90deg, #13103a 0%, rgba(19,16,58,0.5) 35%, rgba(255,255,255,0.5) 65%, #ffffff 100%)',
+          zIndex: 1,
+        }}
+      />
+
       {/* Left: Highlights */}
       <div
         className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 py-16 relative overflow-hidden"
