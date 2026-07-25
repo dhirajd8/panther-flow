@@ -5,6 +5,8 @@ export const blogPosts = [
     slug: 'meta-ads-course-marathi-beginners-guide',
     title: 'Meta Ads Course in Marathi — Complete Beginner\'s Guide',
     metaDescription: 'मराठीत Meta Ads शिकण्यासाठी संपूर्ण मार्गदर्शक. Zero पासून सुरुवात करून Facebook आणि Instagram जाहिराती कशा चालवायच्या ते शिका.',
+    category: 'Meta Ads',
+    author: 'Panther Flow',
     date: '2026-07-25',
     readTime: '5 min read',
     content: `
