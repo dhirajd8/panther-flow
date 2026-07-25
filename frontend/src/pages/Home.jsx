@@ -612,16 +612,23 @@ background: 'none',        pointerEvents: 'none',
   >
     Connect
   </button>
+          <button
+    onClick={() => scrollToSection('footer')}
+    className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
+    style={{ fontFamily: 'Poppins, sans-serif' }}
+  >
+    Contact
+  </button>
         </div>
       </div>
 
-      {/* Contact Button */}
+      {/* Join Now Button */}
       <Button
-        onClick={() => scrollToSection('footer')}
+        onClick={handleEnrollClick}
         className="text-white font-bold px-3 sm:px-5 py-1.5 rounded-full transition-all duration-300 text-xs sm:text-sm h-auto whitespace-nowrap flex-shrink-0 btn-blue btn-animated-border"
         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
       >
-        Contact
+        Join Now
       </Button>
     </div>
   </nav>
