@@ -534,10 +534,10 @@ React.useEffect(() => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
 
   document.querySelectorAll('.rise-up').forEach((el, i) => {
-    el.dataset.delay = (i % 6) * 80;
+    el.dataset.delay = (i % 6) * 30;
     observer.observe(el);
   });
 
