@@ -1,21 +1,35 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
 import { Calendar, Clock } from 'lucide-react';
+
+const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
 
 const BlogPost = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const post = blogPosts.find((p) => p.slug === slug);
+  const [post, setPost] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    if (post) {
-      document.title = `${post.title} — Panther Flow AI Labs`;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', post.metaDescription);
-    }
-  }, [post]);
+    fetch(`${BACKEND_URL}/api/blog/${slug}`)
+      .then((res) => {
+        if (!res.ok) throw new Error('not found');
+        return res.json();
+      })
+      .then((data) => {
+        setPost(data);
+        document.title = `${data.title} — Panther Flow AI Labs`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', data.metaDescription);
+      })
+      .catch(() => setPost(null))
+      .finally(() => setLoading(false));
+  }, [slug]);
+
+  if (loading) {
+    return <div className="min-h-screen flex items-center justify-center" style={{ fontFamily: 'Poppins, sans-serif' }}>Loading...</div>;
+  }
 
   if (!post) {
     return (

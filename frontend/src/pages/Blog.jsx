@@ -1,14 +1,20 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { blogPosts } from '../data/blogPosts';
 import { Calendar, Clock, User, Sparkles, Megaphone } from 'lucide-react';
+
+const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
 
 const Blog = () => {
   const navigate = useNavigate();
+  const [blogPosts, setBlogPosts] = React.useState([]);
 
   React.useEffect(() => {
     document.title = 'Blogs — Panther Flow AI Labs | Meta Ads Tips in Marathi';
     window.scrollTo(0, 0);
+    fetch(`${BACKEND_URL}/api/blog`)
+      .then((res) => res.json())
+      .then((data) => setBlogPosts(data))
+      .catch(() => setBlogPosts([]));
   }, []);
 
   return (

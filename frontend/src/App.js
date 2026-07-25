@@ -7,6 +7,12 @@ import Checkout from './pages/Checkout';
 import ThankYou from './ThankYou';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import AdminLogin from './pages/AdminLogin';
+import AdminBlogList from './pages/AdminBlogList';
+import AdminBlogEditor from './pages/AdminBlogEditor';
+import AdminLogin from './pages/AdminLogin';
+import AdminBlogList from './pages/AdminBlogList';
+import AdminBlogEditor from './pages/AdminBlogEditor';
 
 function App() {
   return (
@@ -18,6 +24,10 @@ function App() {
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/blogs" element={<AdminBlogList />} />
+          <Route path="/admin/blogs/new" element={<AdminBlogEditor />} />
+          <Route path="/admin/blogs/edit/:id" element={<AdminBlogEditor />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
