@@ -65,6 +65,11 @@ class LoginRequest(BaseModel):
     password: str
 
 
+class FAQItem(BaseModel):
+    question: str
+    answer: str
+
+
 class BlogPostCreate(BaseModel):
     title: str
     slug: Optional[str] = None
@@ -73,6 +78,7 @@ class BlogPostCreate(BaseModel):
     metaDescription: Optional[str] = ""
     content: str
     status: Optional[str] = "draft"  # "draft" or "published"
+    faqs: Optional[List[FAQItem]] = []
 
 
 class BlogPostUpdate(BaseModel):
@@ -83,6 +89,7 @@ class BlogPostUpdate(BaseModel):
     metaDescription: Optional[str] = None
     content: Optional[str] = None
     status: Optional[str] = None
+    faqs: Optional[List[FAQItem]] = None
 
 
 # ---------------- Helpers ----------------
@@ -316,6 +323,7 @@ async def admin_create_blog(payload: BlogPostCreate, user: str = Depends(verify_
         "metaDescription": payload.metaDescription or "",
         "content": payload.content,
         "status": payload.status or "draft",
+        "faqs": [f.model_dump() for f in (payload.faqs or [])],
         "readTime": estimate_read_time(payload.content),
         "date": now.strftime("%Y-%m-%d"),
         "createdAt": now.isoformat(),
@@ -333,6 +341,8 @@ async def admin_update_blog(post_id: str, payload: BlogPostUpdate, user: str = D
         raise HTTPException(status_code=404, detail="Post not found")
 
     update_data = {k: v for k, v in payload.model_dump().items() if v is not None}
+    if "faqs" in update_data and update_data["faqs"] is not None:
+        update_data["faqs"] = [f if isinstance(f, dict) else f.model_dump() for f in update_data["faqs"]]
 
     if "slug" in update_data:
         slug_conflict = await db.blog_posts.find_one({"slug": update_data["slug"], "id": {"$ne": post_id}})
