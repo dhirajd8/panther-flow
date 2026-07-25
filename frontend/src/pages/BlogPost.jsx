@@ -133,7 +133,7 @@ const BlogPost = () => {
                   a: ({ node, href, children, ...props }) => {
                     const isExternal = href && href.startsWith('http');
                     return (
-                      
+                      <a
                         href={href}
                         target={isExternal ? '_blank' : undefined}
                         rel={isExternal ? 'noopener noreferrer' : undefined}
