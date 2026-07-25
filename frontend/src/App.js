@@ -10,9 +10,6 @@ import BlogPost from './pages/BlogPost';
 import AdminLogin from './pages/AdminLogin';
 import AdminBlogList from './pages/AdminBlogList';
 import AdminBlogEditor from './pages/AdminBlogEditor';
-import AdminLogin from './pages/AdminLogin';
-import AdminBlogList from './pages/AdminBlogList';
-import AdminBlogEditor from './pages/AdminBlogEditor';
 
 function App() {
   return (
