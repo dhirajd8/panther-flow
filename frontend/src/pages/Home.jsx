@@ -486,6 +486,21 @@ const ModuleAccordion = ({ modules }) => {
 };
 const Home = () => {
   const navigate = useNavigate();
+
+  // Warm the backend early so it's ready by the time someone reaches checkout.
+  React.useEffect(() => {
+    fetch('https://panther-flow-backend.onrender.com/api/').catch(() => {});
+  }, []);
+
+  // Warm the backend early so it's ready by the time someone reaches checkout.
+  React.useEffect(() => {
+    fetch('https://panther-flow-backend.onrender.com/api/').catch(() => {});
+  }, []);
+
+  // Warm the backend early so it's ready by the time someone reaches checkout.
+  React.useEffect(() => {
+    fetch('https://panther-flow-backend.onrender.com/api/').catch(() => {});
+  }, []);
   const [newsletterEmail, setNewsletterEmail] = React.useState('');
   const [subscribed, setSubscribed] = React.useState(false);
 
