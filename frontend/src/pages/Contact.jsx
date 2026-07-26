@@ -23,7 +23,7 @@ const Contact = () => {
      {/* Hero */}
       <section className="pt-36 sm:pt-44 pb-12 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl mb-4" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 700 }}>
+          <h1 className="text-4xl md:text-5xl mb-4 uppercase" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 900, WebkitTextStroke: '0.5px #ffffff' }}>
             Contact Us
           </h1>
           <p className="text-lg" style={{ color: 'rgba(255,255,255,0.75)' }}>
