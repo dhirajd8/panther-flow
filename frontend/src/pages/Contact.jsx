@@ -21,7 +21,7 @@ const Contact = () => {
       <Header />
 
      {/* Hero */}
-      <section className="pt-24 sm:pt-28 pb-10 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+      <section className="pt-32 sm:pt-40 pb-14 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h1 className="text-4xl md:text-5xl mb-4 uppercase" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 900, WebkitTextStroke: '1px #ffffff' }}>
             Contact Us
@@ -31,7 +31,7 @@ const Contact = () => {
 
       {/* Contact cards */}
       <section className="px-4 pb-16">
-        <div className="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="container mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-8">
           <a
             href="mailto:contactpantherflow@gmail.com"
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
