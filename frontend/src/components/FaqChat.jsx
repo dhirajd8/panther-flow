@@ -25,10 +25,6 @@ const FaqChat = () => {
     }
   }, [messages, open]);
 
-  const openWhatsApp = () => {
-    window.open('https://wa.link/bh0lm8', '_blank', 'noopener,noreferrer');
-  };
-
   const handleQuickQuestion = (item) => {
     setMessages((prev) => [...prev, { from: 'user', text: item.q }, { from: 'bot', text: item.a }]);
     setAskedOnce(true);
@@ -96,8 +92,7 @@ const FaqChat = () => {
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="text-sm font-bold text-white">Panther Flow Assistant</div>
-              <div className="text-xs" style={{ color: 'rgba(255,255,255,0.8)' }}>सहसा काही मिनिटांत उत्तर देतो</div>
+              <div className="text-sm font-bold text-white">AI Mitra</div>
             </div>
           </div>
 
@@ -135,11 +130,11 @@ const FaqChat = () => {
 
             {askedOnce && (
               <button
-                onClick={openWhatsApp}
+                onClick={() => setAskedOnce(false)}
                 className="w-full text-center text-xs px-3 py-2 rounded-xl font-semibold transition-all duration-200 hover:scale-[1.02]"
-                style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#ffffff' }}
+                style={{ background: '#ffffff', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
               >
-                WhatsApp वर थेट बोला →
+                ← मुख्य मेनू वर परत जा
               </button>
             )}
           </div>
