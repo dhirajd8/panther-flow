@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Calendar, Clock, User, Sparkles, Megaphone } from 'lucide-react';
 
 const BACKEND_URL = 'https://panther-flow-backend.onrender.com';
@@ -9,8 +12,6 @@ const Blog = () => {
   const [blogPosts, setBlogPosts] = React.useState([]);
 
   React.useEffect(() => {
-    document.title = 'Blogs — Panther Flow AI Labs | Meta Ads Tips in Marathi';
-    window.scrollTo(0, 0);
     fetch(`${BACKEND_URL}/api/blog`)
       .then((res) => res.json())
       .then((data) => setBlogPosts(data))
@@ -19,43 +20,14 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen" style={{ background: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
-
-      {/* Announcement Bar */}
-      <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
-        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
-        fontFamily: 'Poppins, sans-serif'
-      }}>
-        <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
-          <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-          <span className="hidden sm:inline">🔥 New Batch Starting on <strong>1st August</strong> · Limited Seats Available!</span>
-          <span className="sm:hidden">🔥 New Batch · <strong>1st August</strong> · Limited Seats!</span>
-          <button
-            onClick={() => navigate('/checkout')}
-            className="font-bold text-white whitespace-nowrap"
-          >
-            Join Now →
-          </button>
-        </div>
-      </div>
-
-      {/* Nav */}
-      <header className="fixed top-16 sm:top-14 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
-        <nav className="backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
-          background: 'rgba(255, 255, 255, 0.95)',
-          boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
-        }}>
-          <div className="flex items-center gap-0.5 sm:gap-1">
-            <button onClick={() => navigate('/')} className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap">Home</button>
-            <button onClick={() => navigate('/')} className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap">About</button>
-            <button onClick={() => navigate('/')} className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap">Course</button>
-            <button className="font-bold px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap" style={{ color: '#4F46E5', background: 'rgba(79,70,229,0.08)' }}>Blogs</button>
-            <button onClick={() => navigate('/')} className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap">Contact</button>
-          </div>
-        </nav>
-      </header>
+      <Helmet>
+        <title>Blogs — Panther Flow AI Labs | Meta Ads Tips in Marathi</title>
+        <meta name="description" content="Meta Ads, Digital Marketing आणि Growth Tips — मराठीत, practical अनुभवातून. Panther Flow च्या blog मधून शिका." />
+      </Helmet>
+      <Header />
 
       {/* Hero banner */}
-      <section className="pt-32 sm:pt-36 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+      <section className="pt-36 sm:pt-44 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
@@ -133,6 +105,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
@@ -166,6 +167,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
