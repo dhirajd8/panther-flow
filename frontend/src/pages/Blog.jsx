@@ -95,8 +95,15 @@ const Blog = () => {
                 style={{ background: '#ffffff', textDecoration: 'none', boxShadow: '0 8px 24px rgba(15,15,26,0.08)' }}
               >
                 {/* Banner */}
-                <div className="relative h-44 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)' }}>
-                  <Megaphone className="w-12 h-12" style={{ color: 'rgba(255,255,255,0.35)' }} />
+                <div
+                  className="relative h-44 flex items-center justify-center"
+                  style={
+                    post.coverImage
+                      ? { backgroundImage: `url(${post.coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                      : { background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)' }
+                  }
+                >
+                  {!post.coverImage && <Megaphone className="w-12 h-12" style={{ color: 'rgba(255,255,255,0.35)' }} />}
                   <div className="absolute top-3 left-3 flex gap-2">
                     <span className="text-[11px] font-bold px-2.5 py-1 rounded-full text-white" style={{ background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(6px)' }}>
                       {post.category || 'Digital Marketing'}
