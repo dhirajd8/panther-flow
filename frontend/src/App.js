@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from './components/ui/sonner';
 import ScrollToTop from './components/ScrollToTop';
+import FaqChat from './components/FaqChat';
 import Home from './pages/Home';
 import About from './pages/About';
 import Course from './pages/Course';
@@ -38,6 +39,7 @@ function App() {
           </Routes>
         </BrowserRouter>
         <Toaster position="top-center" richColors />
+        <FaqChat />
       </div>
     </HelmetProvider>
   );
