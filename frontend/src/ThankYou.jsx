@@ -194,21 +194,7 @@ const ThankYou = () => {
         WhatsApp Group Join करा →
       </button>
 
-      <p className="text-xs text-center mt-3 mb-10 relative z-10" style={{ fontFamily: 'Poppins, sans-serif', color: '#94a3b8' }}>
-        Group link not opening? Reach us directly on{' '} +91 9307378191
-        <a href="tel:+919307378191" style={{ color: '#FF5A09', textDecoration: 'underline' }}>
-          +91 9307378191
-        </a>
-      </p>
-
-      <p className="text-sm text-center italic mb-10 max-w-sm relative z-10" style={{
-        fontFamily: 'Poppins, sans-serif',
-        color: '#475569'
-      }}>
-        "Can't wait to see you in the group. Let's build something great together! — Dhiraj"
-      </p>
-
-      <div className="mt-4 relative z-10" style={{ paddingTop: '24px', borderTop: '1px solid rgba(255,90,9,0.1)', width: '100%', maxWidth: '400px' }}>
+      <div className="mt-4 relative z-10" style={{ paddingTop: '12px', borderTop: '1px solid rgba(255,90,9,0.1)', width: '100%', maxWidth: '400px' }}>
         <p className="text-sm font-semibold text-center mb-4" style={{
           fontFamily: 'Poppins, sans-serif',
           color: '#94a3b8'
