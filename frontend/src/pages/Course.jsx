@@ -84,27 +84,29 @@ const Course = () => {
       </section>
 
       {/* Course Intro */}
-      <section className="pt-36 sm:pt-44 pb-14 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden text-center" style={{ background: '#ffffff' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(99,102,241,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.12) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}></div>
 
         <div className="container mx-auto max-w-4xl relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5" style={{ background: '#ffffff' }}>
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5' }}>
             <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
             <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Meta Ads Marathi Course</span>
           </span>
 
-          <h2 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
-            Meta Ads शिका Zero ते Expert
+          <h2 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
+            Meta Ads शिका <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Zero ते Expert</span>
           </h2>
-          <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: '#334155' }}>
             १५ दिवसांचा Live Course — फक्त Theory नाही, तर Real Campaigns सोबत Practical Training. १०० टक्के मराठीत.
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="text-lg line-through" style={{ color: 'rgba(255,255,255,0.35)' }}>₹4,999</span>
-            <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(139,92,246,0.4)' }}>
-              <span className="text-3xl font-black" style={{ background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
+            <span className="text-lg line-through" style={{ color: '#9ca3af' }}>₹4,999</span>
+            <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(79,70,229,0.06)', border: '1.5px solid rgba(79,70,229,0.2)' }}>
+              <span className="text-3xl font-black" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
               <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>84% OFF</span>
             </div>
           </div>
@@ -117,7 +119,7 @@ const Course = () => {
             Enroll Now — फक्त ₹799 →
           </button>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-xs sm:text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-xs sm:text-sm" style={{ color: '#6b7280' }}>
             <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />45+ Students Trained</span>
             <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />Next Batch: 1st August</span>
             <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4" />100% Secure Payment</span>
