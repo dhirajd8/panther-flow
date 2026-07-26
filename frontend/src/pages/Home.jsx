@@ -226,42 +226,23 @@ const ModuleShowcaseCarousel = ({ modules }) => {
         })}
       </div>
 
-      {/* Arrows + Dots — clearly separated below cards */}
-      <div className="flex items-center justify-center gap-6 mt-10 relative z-20">
-        <button
-          onClick={() => { prev(); pauseThenResume(); }}
-          className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
-          style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
-        >
-          ‹
-        </button>
-
-        {/* Dots */}
-        <div className="flex gap-2">
-          {modules.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => { setActive(i); pauseThenResume(); }}
-              style={{
-                width: i === active ? '28px' : '8px',
-                height: '8px',
-                borderRadius: '999px',
-                background: i === active ? 'linear-gradient(135deg, #FF5A09, #FF5A09)' : 'rgba(255,90,9,0.3)',
-                transition: 'all 0.3s ease',
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={() => { next(); pauseThenResume(); }}
-          className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
-          style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
-        >
-          ›
-        </button>
+      {/* Dots */}
+      <div className="flex items-center justify-center gap-2 mt-10 relative z-20">
+        {modules.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setActive(i); pauseThenResume(); }}
+            style={{
+              width: i === active ? '28px' : '8px',
+              height: '8px',
+              borderRadius: '999px',
+              background: i === active ? 'linear-gradient(135deg, #FF5A09, #FF5A09)' : 'rgba(255,90,9,0.3)',
+              transition: 'all 0.3s ease',
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          />
+        ))}
       </div>
     </div>
   );
