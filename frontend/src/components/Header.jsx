@@ -20,7 +20,6 @@ const Header = () => {
         style={{
           background: 'rgba(15, 15, 26, 0.75)',
           border: '1px solid rgba(139,92,246,0.35)',
-          boxShadow: '0 8px 32px rgba(79, 70, 229, 0.35), inset 0 1px 0 rgba(255,255,255,0.06)',
         }}
       >
         {/* Brand mark */}
@@ -48,7 +47,6 @@ const Header = () => {
                   fontFamily: 'Poppins, sans-serif',
                   color: isActive ? '#ffffff' : 'rgba(255,255,255,0.65)',
                   background: isActive ? 'linear-gradient(135deg, #4F46E5, #7C3AED)' : 'transparent',
-                  boxShadow: isActive ? '0 4px 14px rgba(124,58,237,0.5)' : 'none',
                 }}
                 onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = '#ffffff'; }}
                 onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; }}
