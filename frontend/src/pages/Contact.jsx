@@ -21,14 +21,11 @@ const Contact = () => {
       <Header />
 
      {/* Hero */}
-      <section className="pt-36 sm:pt-44 pb-12 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+      <section className="pt-24 sm:pt-28 pb-10 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h1 className="text-4xl md:text-5xl mb-4 uppercase" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 900, WebkitTextStroke: '0.5px #ffffff' }}>
             Contact Us
           </h1>
-          <p className="text-lg" style={{ color: 'rgba(255,255,255,0.75)' }}>
-            प्रश्न आहेत? Course बद्दल अधिक माहिती हवी आहे? आम्हाला थेट संपर्क करा.
-          </p>
         </div>
       </section>
 
