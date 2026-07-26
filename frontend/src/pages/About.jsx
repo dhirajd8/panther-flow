@@ -31,7 +31,7 @@ const About = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="container mx-auto max-w-3xl relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mt-4 uppercase" style={{ color: '#ffffff', fontFamily: "'Big Shoulders', 'Poppins', sans-serif", fontWeight: 900, WebkitTextStroke: '1.5px #ffffff', letterSpacing: '0.01em' }}>
+          <h1 className="text-4xl md:text-6xl mt-4" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 700 }}>
             About
           </h1>
         </div>
