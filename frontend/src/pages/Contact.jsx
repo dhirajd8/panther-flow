@@ -20,17 +20,13 @@ const Contact = () => {
       </Helmet>
       <Header />
 
-      {/* Hero */}
-      <section className="pt-36 sm:pt-44 pb-12 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'linear-gradient(rgba(79,70,229,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.12) 1px, transparent 1px)',
-          backgroundSize: '48px 48px'
-        }}></div>
+     {/* Hero */}
+      <section className="pt-36 sm:pt-44 pb-12 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
             Contact Us
           </h1>
-          <p className="text-lg" style={{ color: '#4b5563' }}>
+          <p className="text-lg" style={{ color: 'rgba(255,255,255,0.75)' }}>
             प्रश्न आहेत? Course बद्दल अधिक माहिती हवी आहे? आम्हाला थेट संपर्क करा.
           </p>
         </div>
