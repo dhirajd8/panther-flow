@@ -32,15 +32,7 @@ const About = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="container mx-auto max-w-3xl relative z-10">
-          <span
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
-            style={{ border: '1.5px solid rgba(139,92,246,0.5)', background: 'rgba(139,92,246,0.1)', color: '#c4b5fd' }}
-          >
-            <Sparkles className="w-4 h-4" />
-            About Panther Flow
-          </span>
-
-          <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#ffffff' }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 mt-4" style={{ color: '#ffffff' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text',
