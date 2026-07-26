@@ -198,15 +198,6 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Quote */}
-                <div className="relative pl-6 py-4 rounded-2xl" style={{ background: '#ffffff', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-                  <p className="italic text-lg leading-relaxed" style={{ fontFamily: 'Aparajita, serif', color: '#1e1b4b', fontWeight: 400 }}>
-                    पुणे-मुंबईच्या Digital Marketing Institutes ची Fees प्रत्येकाला Affordable नाहीये.
-                    लवकर Job पाहिजे म्हणून बघून Admission ही घेतात, पण Course संपून गेला तरी Skills येत नाहीत, Confidence येत नाही.
-                    आणि हाच Problem आम्ही Solve करतोय.
-                    Affordable Price मध्ये, Practical Marathi मध्ये शिकवणारा Meta Ads + AI Complete Course. 🚀
-                  </p>
-                </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-3 pt-2">
