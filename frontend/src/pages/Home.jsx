@@ -536,7 +536,7 @@ React.useEffect(() => {
   return () => observer.disconnect();
 }, []);
   const openWhatsApp = () => {
-    window.open('https://wa.link/bh0lm8', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.link/7wd6u7', '_blank', 'noopener,noreferrer');
   };
 
   return (
