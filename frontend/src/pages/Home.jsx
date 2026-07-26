@@ -1391,32 +1391,7 @@ background: 'none',        pointerEvents: 'none',
       </div>
       
 
-{/* Bottom Sticky Bar */}
-<div className="fixed bottom-0 left-0 right-0 z-50 px-2 sm:px-4 py-1.5 flex items-center justify-between gap-2 shadow-2xl overflow-hidden" style={{
-  fontFamily: 'Poppins, sans-serif',
-  background: '#1e1b4b',
-  boxShadow: '0 -10px 30px rgba(30,27,75,0.4)'
-}}>
-  <div className="flex items-center gap-1 sm:gap-2 min-w-0 flex-1">
-    <span className="flex-shrink-0 text-sm sm:text-base" style={{ color: '#ffffff' }}>⚡</span>
-    <span className="text-[10px] sm:text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis" style={{ color: '#ffffff' }}>
-      💰<span className="gradient-tick">✓</span>&nbsp;पुणे-मुंबईच्या classes पेक्षा कितीतरी affordable आणि practical!
-    </span>
-  </div>
-  <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-    <div className="hidden sm:flex items-center gap-1">
-      <span className="w-2 h-2 rounded-full bg-green-300 animate-pulse"></span>
-      <span className="text-xs" style={{ color: '#ffffff' }}>फक्त 10 Seats उरल्या!</span>
-    </div>
-    <button
-      onClick={handleEnrollClick}
-      className="sticky-bar-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 hover:scale-105 whitespace-nowrap flex-shrink-0"
-    >
-      <span>आजच Join करा →</span>
-    </button>
-  </div>
 </div>
-      </div>
   );
 };
 
