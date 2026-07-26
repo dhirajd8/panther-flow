@@ -893,9 +893,7 @@ background: 'none',        pointerEvents: 'none',
 
               {/* Business Owner */}
               <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(24px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                background: '#0a0a0a',
                 border: '1px solid rgba(255,255,255,0.18)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
@@ -911,9 +909,7 @@ background: 'none',        pointerEvents: 'none',
 
               {/* Freelancers */}
               <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(24px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                background: '#0a0a0a',
                 border: '1px solid rgba(255,255,255,0.18)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
@@ -929,9 +925,7 @@ background: 'none',        pointerEvents: 'none',
 
               {/* Students */}
               <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(24px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                background: '#0a0a0a',
                 border: '1px solid rgba(255,255,255,0.18)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
@@ -947,9 +941,7 @@ background: 'none',        pointerEvents: 'none',
 
               {/* Marketers */}
               <div className="glass-card rounded-2xl p-6 relative flex flex-col gap-4 rise-up" style={{
-                background: 'rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(24px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+                background: '#0a0a0a',
                 border: '1px solid rgba(255,255,255,0.18)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
