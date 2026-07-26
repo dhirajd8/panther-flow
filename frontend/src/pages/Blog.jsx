@@ -40,7 +40,7 @@ const Blog = () => {
             Insights &amp; Tips
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase" style={{ color: '#ffffff', fontFamily: "'Big Shoulders', 'Poppins', sans-serif", fontWeight: 900 }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase" style={{ color: '#ffffff', fontFamily: "'Big Shoulders', 'Poppins', sans-serif", fontWeight: 900, WebkitTextStroke: '1.5px #ffffff', letterSpacing: '0.01em' }}>
             Blogs
           </h1>
 
