@@ -69,9 +69,26 @@ const ModuleShowcaseCarousel = ({ modules }) => {
   const [active, setActive] = React.useState(0);
   const touchStartX = React.useRef(null);
   const touchEndX = React.useRef(null);
+  const autoScrollRef = React.useRef(null);
+  const [isPaused, setIsPaused] = React.useState(false);
 
   const prev = () => setActive((a) => (a - 1 + modules.length) % modules.length);
   const next = () => setActive((a) => (a + 1) % modules.length);
+
+  // Auto-scroll every 3.5s, pausing briefly whenever the user interacts
+  React.useEffect(() => {
+    if (isPaused) return;
+    autoScrollRef.current = setInterval(() => {
+      setActive((a) => (a + 1) % modules.length);
+    }, 3500);
+    return () => clearInterval(autoScrollRef.current);
+  }, [isPaused, modules.length]);
+
+  const pauseThenResume = () => {
+    setIsPaused(true);
+    clearInterval(autoScrollRef.current);
+    setTimeout(() => setIsPaused(false), 6000);
+  };
 
   const getPosition = (idx) => {
     const diff = idx - active;
@@ -82,6 +99,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
+    pauseThenResume();
   };
 
   const handleTouchMove = (e) => {
@@ -126,7 +144,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
           return (
             <div
               key={module.id}
-              onClick={() => !isActive && setActive(idx)}
+              onClick={() => { if (!isActive) { setActive(idx); pauseThenResume(); } }}
               style={{
                 position: 'absolute',
                 transform: `translateX(${translateX}px) scale(${scale})`,
@@ -211,7 +229,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
       {/* Arrows + Dots — clearly separated below cards */}
       <div className="flex items-center justify-center gap-6 mt-10 relative z-20">
         <button
-          onClick={prev}
+          onClick={() => { prev(); pauseThenResume(); }}
           className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
           style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
@@ -223,7 +241,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
           {modules.map((_, i) => (
             <button
               key={i}
-              onClick={() => setActive(i)}
+              onClick={() => { setActive(i); pauseThenResume(); }}
               style={{
                 width: i === active ? '28px' : '8px',
                 height: '8px',
@@ -238,7 +256,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
         </div>
 
         <button
-          onClick={next}
+          onClick={() => { next(); pauseThenResume(); }}
           className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
           style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
