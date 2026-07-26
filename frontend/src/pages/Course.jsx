@@ -4,10 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { courseData } from '../data/mock';
-import {
-  CheckCircle2, Award, Video, Users, Calendar, ChevronDown,
-  Target, TrendingUp, ShieldCheck, Clock
-} from 'lucide-react';
+import { CheckCircle2, ChevronDown } from 'lucide-react';
 
 const learningOutcomes = [
   'Meta Business Suite आणि Ad Account Setup — सुरुवातीपासून',
@@ -83,61 +80,23 @@ const Course = () => {
         </div>
       </section>
 
-      {/* Course Intro */}
-      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden text-center" style={{ background: '#ffffff' }}>
+      {/* Course Content */}
+      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
         <div className="absolute inset-0 pointer-events-none" style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.12) 1px, transparent 1px)',
           backgroundSize: '40px 40px'
         }}></div>
-
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5' }}>
-            <Award className="w-4 h-4" style={{ color: '#FF5A09' }} />
-            <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Meta Ads Marathi Course</span>
-          </span>
-
-          <h2 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
-            Meta Ads शिका <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Zero ते Expert</span>
-          </h2>
-          <p className="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: '#334155' }}>
-            १५ दिवसांचा Live Course — फक्त Theory नाही, तर Real Campaigns सोबत Practical Training. १०० टक्के मराठीत.
-          </p>
-
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="text-lg line-through" style={{ color: '#9ca3af' }}>₹4,999</span>
-            <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,90,9,0.06)', border: '1.5px solid rgba(255,90,9,0.2)' }}>
-              <span className="text-3xl font-black" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
-              <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>84% OFF</span>
-            </div>
-          </div>
-
-          <button
-            onClick={handleEnroll}
-            className="px-8 py-4 rounded-full font-bold text-white text-base sm:text-lg transition-all duration-300 hover:scale-105"
-            style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', boxShadow: '0 8px 24px rgba(255,90,9,0.4)' }}
-          >
-            Enroll Now — फक्त ₹799 →
-          </button>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-xs sm:text-sm" style={{ color: '#6b7280' }}>
-            <span className="flex items-center gap-1.5"><Users className="w-4 h-4" />45+ Students Trained</span>
-            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />Next Batch: 1st August</span>
-            <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4" />100% Secure Payment</span>
-          </div>
-        </div>
-      </section>
-
-      {/* What you'll learn */}
-      <section className="py-16 px-4" style={{ background: '#ffffff' }}>
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-3xl font-bold text-center mb-10" style={{ color: '#0f0f0f' }}>
-            काय <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>शिकाल</span>?
+            Course <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Content</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {learningOutcomes.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded-xl" style={{ background: '#f7f7fb' }}>
-                <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#FF5A09' }} />
-                <span className="text-sm sm:text-base" style={{ color: '#374151' }}>{item}</span>
+              <div key={idx} className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(0,0,0,0.05)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#FF5A09' }}>
+                  <CheckCircle2 className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-sm sm:text-base pt-1" style={{ color: '#374151' }}>{item}</span>
               </div>
             ))}
           </div>
@@ -145,8 +104,12 @@ const Course = () => {
       </section>
 
       {/* Curriculum */}
-      <section className="py-16 px-4" style={{ background: '#f7f7fb' }}>
-        <div className="container mx-auto max-w-5xl">
+      <section className="py-16 px-4 relative overflow-hidden" style={{ background: '#f7f7fb' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}></div>
+        <div className="container mx-auto max-w-5xl relative z-10">
           <h2 className="text-3xl font-bold text-center mb-3" style={{ color: '#0f0f0f' }}>
             Complete <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Curriculum</span>
           </h2>
@@ -193,8 +156,12 @@ const Course = () => {
       </section>
 
       {/* FAQs */}
-      <section className="py-16 px-4" style={{ background: '#ffffff' }}>
-        <div className="container mx-auto max-w-3xl">
+      <section className="py-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}></div>
+        <div className="container mx-auto max-w-3xl relative z-10">
           <h2 className="text-3xl font-bold text-center mb-10" style={{ color: '#0f0f0f' }}>Frequently Asked Questions</h2>
           <div className="space-y-3">
             {faqs.map((item, idx) => (
@@ -205,8 +172,12 @@ const Course = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-4" style={{ background: '#f7f7fb' }}>
-        <div className="container mx-auto max-w-3xl text-center rounded-3xl p-10" style={{ background: 'linear-gradient(135deg, #000000 0%, #000000 50%, #0d0d0d 100%)' }}>
+      <section className="py-16 px-4 relative overflow-hidden" style={{ background: '#f7f7fb' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}></div>
+        <div className="container mx-auto max-w-3xl text-center rounded-3xl p-10 relative z-10" style={{ background: 'linear-gradient(135deg, #000000 0%, #000000 50%, #0d0d0d 100%)' }}>
           <h2 className="text-2xl sm:text-3xl font-bold mb-3" style={{ color: '#ffffff' }}>Ready to Master Meta Ads?</h2>
           <p className="mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>Next Batch Starting 1st August — Limited Seats</p>
           <button
