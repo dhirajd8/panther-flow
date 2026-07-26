@@ -27,9 +27,9 @@ const Blog = () => {
       <Header />
 
       {/* Hero banner */}
-      <section className="pt-24 sm:pt-28 pb-10 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+      <section className="pt-24 sm:pt-28 pb-10 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 60%, #000000 100%)' }}>
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="relative z-10 container mx-auto max-w-3xl">
           <h1 className="text-4xl md:text-6xl mb-4 uppercase mt-4" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 900, WebkitTextStroke: '1px #ffffff' }}>
@@ -59,7 +59,7 @@ const Blog = () => {
                   style={
                     post.coverImage
                       ? { backgroundImage: `url(${post.coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
-                      : { background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)' }
+                      : { background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)' }
                   }
                 >
                   {!post.coverImage && <Megaphone className="w-12 h-12" style={{ color: 'rgba(255,255,255,0.35)' }} />}

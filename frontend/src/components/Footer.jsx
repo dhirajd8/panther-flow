@@ -15,21 +15,21 @@ const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="py-16 px-4" style={{ background: '#13103a', color: 'rgba(255,255,255,0.95)' }}>
+    <footer id="footer" className="py-16 px-4" style={{ background: '#0d0d0d', color: 'rgba(255,255,255,0.95)' }}>
       <div className="container mx-auto max-w-6xl">
 
         {/* Trust badges */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Clock className="w-4 h-4" style={{ color: '#a78bfa' }} />
+            <Clock className="w-4 h-4" style={{ color: '#FF5A09' }} />
             <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>Response within 24 hours</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Users className="w-4 h-4" style={{ color: '#a78bfa' }} />
+            <Users className="w-4 h-4" style={{ color: '#FF5A09' }} />
             <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>45+ Students Trained</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Star className="w-4 h-4" style={{ color: '#a78bfa' }} />
+            <Star className="w-4 h-4" style={{ color: '#FF5A09' }} />
             <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>₹4.5L+ Ad Spend Managed</span>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Footer = () => {
 
           <div className="space-y-4">
             <a href="mailto:contactpantherflow@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <Mail className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -58,7 +58,7 @@ const Footer = () => {
             </a>
 
             <a href="tel:+919307378191" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <Phone className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -68,7 +68,7 @@ const Footer = () => {
             </a>
 
             <a href="https://www.google.com/maps/search/?api=1&query=Barmachiwadi+Tal+Kalamb+Dist+Dharashiv+413525" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <MapPin className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -78,7 +78,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="p-6 rounded-2xl flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.15) 0%, rgba(124,58,237,0.1) 100%)', border: '1px solid rgba(139,92,246,0.25)' }}>
+          <div className="p-6 rounded-2xl flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, rgba(255,90,9,0.15) 0%, rgba(255,90,9,0.1) 100%)', border: '1px solid rgba(255,90,9,0.25)' }}>
             <h3 className="font-bold text-lg mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Stay Updated</h3>
             <p className="text-sm mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.65)' }}>
               Free Meta Ads tips आणि नवीन batch updates थेट तुमच्या inbox मध्ये.
@@ -102,7 +102,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:scale-[1.02] whitespace-nowrap"
-                  style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+                  style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
                 >
                   <Send className="w-4 h-4" />
                   Get Updates

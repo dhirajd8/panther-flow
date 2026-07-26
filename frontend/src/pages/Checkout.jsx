@@ -95,7 +95,7 @@ const Checkout = () => {
         description: 'Meta Ads Marathi Course',
         order_id: orderData.id,
         prefill: { name, contact: phone },
-        theme: { color: '#4F46E5' },
+        theme: { color: '#FF5A09' },
         handler: function (response) {
           navigate(`/thank-you?razorpay_payment_id=${response.razorpay_payment_id}`);
         },
@@ -120,14 +120,14 @@ const Checkout = () => {
     <div style={{ fontFamily: 'Poppins, sans-serif', background: '#ffffff' }}>
 
       {/* Hero strip */}
-      <section className="pt-16 pb-10 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+      <section className="pt-16 pb-10 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 60%, #000000 100%)' }}>
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <button
           onClick={() => navigate('/')}
           className="absolute top-6 left-4 sm:left-8 text-sm z-20"
-          style={{ color: '#c4b5fd', background: 'none', border: 'none', cursor: 'pointer' }}
+          style={{ color: '#FF5A09', background: 'none', border: 'none', cursor: 'pointer' }}
         >
           ← Back to Home
         </button>
@@ -137,9 +137,9 @@ const Checkout = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5"
             style={{ background: '#ffffff' }}
           >
-            <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
+            <Award className="w-4 h-4" style={{ color: '#FF5A09' }} />
             <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -162,15 +162,15 @@ const Checkout = () => {
           {/* Left: form, dominant */}
           <div className="lg:col-span-3">
             <div className="rounded-3xl p-6 sm:p-8" style={{ background: '#ffffff', boxShadow: '0 8px 32px rgba(15,15,26,0.08)' }}>
-              <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-xl" style={{ background: 'rgba(79,70,229,0.06)', border: '1px solid rgba(79,70,229,0.15)' }}>
+              <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-xl" style={{ background: 'rgba(255,90,9,0.06)', border: '1px solid rgba(255,90,9,0.15)' }}>
                 <span className="text-lg line-through" style={{ color: '#9ca3af' }}>₹4,999</span>
                 <span className="text-2xl font-black" style={{
-                  background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+                  background: 'linear-gradient(135deg, #FF5A09, #FF5A09)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
                 }}>₹{COURSE_PRICE}</span>
-                <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>84% OFF</span>
+                <span className="text-xs font-bold px-2 py-1 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>84% OFF</span>
               </div>
 
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()} autoComplete="on">
@@ -186,7 +186,7 @@ const Checkout = () => {
                     placeholder="तुमचं नाव"
                     className="w-full px-4 py-3.5 rounded-xl text-sm outline-none transition-colors"
                     style={{ border: '1.5px solid #e5e7eb' }}
-                    onFocus={(e) => e.target.style.borderColor = '#818cf8'}
+                    onFocus={(e) => e.target.style.borderColor = '#FF5A09'}
                     onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                   />
                 </div>
@@ -203,7 +203,7 @@ const Checkout = () => {
                     placeholder="10-digit mobile number"
                     className="w-full px-4 py-3.5 rounded-xl text-sm outline-none transition-colors"
                     style={{ border: '1.5px solid #e5e7eb' }}
-                    onFocus={(e) => e.target.style.borderColor = '#818cf8'}
+                    onFocus={(e) => e.target.style.borderColor = '#FF5A09'}
                     onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                   />
                 </div>
@@ -215,13 +215,13 @@ const Checkout = () => {
                   onClick={handlePay}
                   disabled={loading}
                   className="w-full py-4 rounded-xl font-bold text-white text-base transition-all duration-300 hover:scale-[1.02] disabled:opacity-60"
-                  style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', boxShadow: '0 8px 24px rgba(79,70,229,0.3)' }}
+                  style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', boxShadow: '0 8px 24px rgba(255,90,9,0.3)' }}
                 >
                   {loading ? 'Processing...' : `Pay ₹${COURSE_PRICE} & Enroll →`}
                 </button>
 
                 <div className="flex items-center justify-center gap-2 pt-1">
-                  <ShieldCheck className="w-4 h-4" style={{ color: '#818cf8' }} />
+                  <ShieldCheck className="w-4 h-4" style={{ color: '#FF5A09' }} />
                   <span className="text-xs" style={{ color: '#9ca3af' }}>100% Secure Payment via Razorpay</span>
                 </div>
               </form>
@@ -230,15 +230,15 @@ const Checkout = () => {
             {/* Trust strip */}
             <div className="grid grid-cols-3 gap-2 mt-4">
               <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
-                <Lock className="w-4 h-4" style={{ color: '#7C3AED' }} />
+                <Lock className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>Secure Checkout</span>
               </div>
               <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
-                <Video className="w-4 h-4" style={{ color: '#7C3AED' }} />
+                <Video className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>Live Sessions</span>
               </div>
               <div className="flex flex-col items-center gap-1.5 py-3 rounded-xl" style={{ background: '#ffffff', border: '1px solid #f0f0f5' }}>
-                <Users className="w-4 h-4" style={{ color: '#7C3AED' }} />
+                <Users className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-[11px] text-center font-medium" style={{ color: '#4b5563' }}>45+ Students</span>
               </div>
             </div>
@@ -246,10 +246,10 @@ const Checkout = () => {
 
           {/* Right: course highlights sidebar */}
           <div className="lg:col-span-2">
-            <div className="rounded-3xl p-6 sm:p-8 lg:sticky lg:top-8" style={{ background: '#0f0f1a' }}>
+            <div className="rounded-3xl p-6 sm:p-8 lg:sticky lg:top-8" style={{ background: '#000000' }}>
               <h2 className="text-xl font-bold mb-1" style={{ color: '#ffffff' }}>Master Meta Ads</h2>
               <p className="text-sm mb-6" style={{
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+                background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -259,7 +259,7 @@ const Checkout = () => {
               <ul className="space-y-3">
                 {highlights.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
+                    <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#FF5A09' }} />
                     <span className="text-sm" style={{ color: 'rgba(255,255,255,0.85)' }}>{point}</span>
                   </li>
                 ))}
@@ -269,7 +269,7 @@ const Checkout = () => {
                 className="flex items-center gap-3 mt-6 pt-6"
                 style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}
               >
-                <Calendar className="w-4 h-4" style={{ color: '#818cf8' }} />
+                <Calendar className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-xs" style={{ color: 'rgba(255,255,255,0.7)' }}>New Batch Starting 1st August</span>
               </div>
             </div>

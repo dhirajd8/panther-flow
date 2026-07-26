@@ -21,7 +21,7 @@ const Contact = () => {
       <Header />
 
      {/* Hero */}
-      <section className="pt-36 sm:pt-44 pb-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+      <section className="pt-36 sm:pt-44 pb-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 60%, #000000 100%)' }}>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h1 className="text-4xl md:text-5xl mb-4 uppercase" style={{ color: '#ffffff', fontFamily: 'Helvetica', fontWeight: 900, WebkitTextStroke: '1px #ffffff' }}>
             Contact Us
@@ -37,11 +37,11 @@ const Contact = () => {
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
               <Mail className="w-6 h-6 text-white" />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Email</div>
-            <div className="text-sm break-all" style={{ color: '#6366f1' }}>contactpantherflow@gmail.com</div>
+            <div className="text-sm break-all" style={{ color: '#FF5A09' }}>contactpantherflow@gmail.com</div>
           </a>
 
           <a
@@ -49,18 +49,18 @@ const Contact = () => {
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
               <Phone className="w-6 h-6 text-white" />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Phone</div>
-            <div className="text-sm" style={{ color: '#6366f1' }}>+91 9307378191</div>
+            <div className="text-sm" style={{ color: '#FF5A09' }}>+91 9307378191</div>
           </a>
 
           <div
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4F46E5, #EC4899)' }}>
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
               <MapPin className="w-6 h-6 text-white" />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Address</div>
@@ -86,13 +86,13 @@ const Contact = () => {
       </section>
 
       {/* Socials */}
-      <section className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+      <section className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 60%, #000000 100%)' }}>
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#ffffff' }}>
-            <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Follow</span> Us
+            <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Follow</span> Us
           </h2>
           <p className="mb-10 text-base" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Free Meta Ads tips, real campaign results आणि updates साठी आम्हाला follow करा 👇

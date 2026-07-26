@@ -170,7 +170,7 @@ const AdminBlogEditor = () => {
         <button
           onClick={() => navigate('/admin/blogs')}
           className="text-sm mb-6"
-          style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}
+          style={{ color: '#FF5A09', background: 'none', border: 'none', cursor: 'pointer' }}
         >
           ← Back to Blog Posts
         </button>
@@ -311,7 +311,7 @@ const AdminBlogEditor = () => {
                 type="button"
                 onClick={addFaq}
                 className="flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg"
-                style={{ background: 'rgba(79,70,229,0.08)', color: '#4F46E5' }}
+                style={{ background: 'rgba(255,90,9,0.08)', color: '#FF5A09' }}
               >
                 <Plus className="w-3.5 h-3.5" /> Add FAQ
               </button>
@@ -367,7 +367,7 @@ const AdminBlogEditor = () => {
               onClick={() => handleSave(true)}
               disabled={saving}
               className="px-5 py-3 rounded-xl font-bold text-white text-sm disabled:opacity-60"
-              style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+              style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
             >
               {saving ? 'Saving...' : 'Publish'}
             </button>

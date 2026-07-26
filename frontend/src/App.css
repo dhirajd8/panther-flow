@@ -177,7 +177,7 @@ linear-gradient(90deg, rgba(129, 1, 0, 0.08) 1px, transparent 1px);
 
 /* Shimmer text effect */
 .shimmer-text {
-  background: linear-gradient(90deg, #edebde 0%, #b4c3e6 50%, #edebde 100%);
+  background: linear-gradient(90deg, #edebde 0%, #e5e5e5 50%, #edebde 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -307,7 +307,7 @@ linear-gradient(90deg, rgba(129, 1, 0, 0.08) 1px, transparent 1px);
   background-image: 
     linear-gradient(rgba(23, 36, 90, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 36, 90, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #edebde 0%, #810100 100%) !important;
+    linear-gradient(135deg, #edebde 0%, #000000 100%) !important;
   background-size: 16px 16px, 16px 16px, 100% 100% !important;
   background-blend-mode: normal, normal, normal !important;
 }
@@ -331,7 +331,7 @@ linear-gradient(90deg, rgba(129, 1, 0, 0.08) 1px, transparent 1px);
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(135deg, #810100 0%, #810100 100%) !important;
+    linear-gradient(135deg, #000000 0%, #000000 100%) !important;
   background-size: 20px 20px, 20px 20px, 100% 100% !important;
 }
 

@@ -67,7 +67,7 @@ const AdminBlogList = () => {
             <button
               onClick={() => navigate('/admin/blogs/new')}
               className="px-4 py-2 rounded-xl font-bold text-white text-sm"
-              style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+              style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
             >
               + New Blog
             </button>
@@ -109,7 +109,7 @@ const AdminBlogList = () => {
                 <button
                   onClick={() => navigate(`/admin/blogs/edit/${post.id}`)}
                   className="text-sm font-semibold"
-                  style={{ color: '#4F46E5', background: 'none', border: 'none', cursor: 'pointer' }}
+                  style={{ color: '#FF5A09', background: 'none', border: 'none', cursor: 'pointer' }}
                 >
                   Edit
                 </button>

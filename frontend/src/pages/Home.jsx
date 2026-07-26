@@ -40,7 +40,7 @@ import {
 
 // Generates a stable set of slowly drifting dots for hero section
 const heroParticles = Array.from({ length: 35 }).map((_, i) => {
-  const colors = ['rgba(99,102,241,0.45)', 'rgba(124,58,237,0.4)', 'rgba(236,72,153,0.35)'];
+  const colors = ['rgba(0,0,0,0.35)', 'rgba(255,90,9,0.45)', 'rgba(0,0,0,0.25)'];
   return {
     id: i,
     left: Math.random() * 100,
@@ -140,13 +140,13 @@ const ModuleShowcaseCarousel = ({ modules }) => {
               <div
                 className="rounded-3xl p-7 shadow-2xl"
                 style={{
-                  background: '#1e1b4b',
+                  background: '#000000',
                   border: isActive
-                    ? '2px solid #7C3AED'
-                    : '1.5px solid rgba(124,58,237,0.3)',
+                    ? '2px solid #FF5A09'
+                    : '1.5px solid rgba(255,90,9,0.3)',
                   boxShadow: isActive
-                    ? '0 0 0 1px rgba(139,92,246,0.15), 0 25px 60px rgba(79,70,229,0.25)'
-                    : '0 4px 16px rgba(79,70,229,0.1)',
+                    ? '0 0 0 1px rgba(255,90,9,0.15), 0 25px 60px rgba(255,90,9,0.25)'
+                    : '0 4px 16px rgba(255,90,9,0.1)',
                   minHeight: '260px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -166,7 +166,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   }}
                 >
                   <span style={{
-                    background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+                    background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
@@ -191,12 +191,12 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                   <ul className="space-y-2 w-full text-left mt-2">
                     {module.topics.slice(0, 4).map((topic, i) => (
                       <li key={i} className="flex items-start gap-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff', fontSize: '13px' }}>
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: '#FF5A09' }} />
                         <span>{topic}</span>
                       </li>
                     ))}
                     {module.topics.length > 4 && (
-                      <li className="text-xs font-semibold" style={{ color: '#818cf8', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
+                      <li className="text-xs font-semibold" style={{ color: '#FF5A09', fontFamily: 'Poppins, sans-serif', paddingLeft: '22px' }}>
                         +{module.topics.length - 4} more topics
                       </li>
                     )}
@@ -213,7 +213,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
         <button
           onClick={prev}
           className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
-          style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
+          style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
           ‹
         </button>
@@ -228,7 +228,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
                 width: i === active ? '28px' : '8px',
                 height: '8px',
                 borderRadius: '999px',
-                background: i === active ? 'linear-gradient(135deg, #4F46E5, #7C3AED)' : 'rgba(124,58,237,0.3)',
+                background: i === active ? 'linear-gradient(135deg, #FF5A09, #FF5A09)' : 'rgba(255,90,9,0.3)',
                 transition: 'all 0.3s ease',
                 border: 'none',
                 cursor: 'pointer',
@@ -240,7 +240,7 @@ const ModuleShowcaseCarousel = ({ modules }) => {
         <button
           onClick={next}
           className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110 flex-shrink-0"
-          style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
+          style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', border: '2px solid rgba(255,255,255,0.4)', color: '#ffffff', fontSize: '20px', fontWeight: 'bold' }}
         >
           ›
         </button>
@@ -294,8 +294,8 @@ const ModuleAccordion = ({ modules }) => {
             style={{
               width: 'min(340px, 85vw)',
               background: index === activeIndex
-                ? 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%)'
-                : 'linear-gradient(135deg, #1f2937 0%, #111827 100%)',
+                ? 'linear-gradient(135deg, #000000 0%, #0d0d0d 50%, #000000 100%)'
+                : 'linear-gradient(135deg, #000000 0%, #0d0d0d 100%)',
               border: index === activeIndex
                 ? '2px solid rgba(139, 92, 246, 0.6)'
                 : '2px solid rgba(255,255,255,0.08)',
@@ -311,7 +311,7 @@ const ModuleAccordion = ({ modules }) => {
               <span
                 className="px-4 py-1.5 rounded-full text-sm font-bold text-white"
                 style={{
-                  background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+                  background: 'linear-gradient(135deg, #FF5A09, #FF5A09)',
                   fontFamily: 'Poppins, sans-serif'
                 }}
               >
@@ -324,7 +324,7 @@ const ModuleAccordion = ({ modules }) => {
               className="text-xl font-bold text-center leading-snug"
               style={{
                 fontFamily: 'Poppins, sans-serif',
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -344,7 +344,7 @@ const ModuleAccordion = ({ modules }) => {
                   >
                     <CheckCircle2
                       className="w-4 h-4 mt-0.5 flex-shrink-0"
-                      style={{ color: '#818cf8' }}
+                      style={{ color: '#FF5A09' }}
                     />
                     <span>{topic}</span>
                   </li>
@@ -366,7 +366,7 @@ const ModuleAccordion = ({ modules }) => {
               width: idx === activeIndex ? '24px' : '8px',
               height: '8px',
               background: idx === activeIndex
-                ? 'linear-gradient(135deg, #4F46E5, #7C3AED)'
+                ? 'linear-gradient(135deg, #FF5A09, #FF5A09)'
                 : 'rgba(255,255,255,0.2)'
             }}
           />
@@ -380,7 +380,7 @@ const ModuleAccordion = ({ modules }) => {
           disabled={activeIndex === 0}
           className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-30"
           style={{
-            background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+            background: 'linear-gradient(135deg, #FF5A09, #FF5A09)',
             border: '2px solid rgba(255,255,255,0.2)'
           }}
         >
@@ -391,7 +391,7 @@ const ModuleAccordion = ({ modules }) => {
           disabled={activeIndex === modules.length - 1}
           className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-30"
           style={{
-            background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+            background: 'linear-gradient(135deg, #FF5A09, #FF5A09)',
             border: '2px solid rgba(255,255,255,0.2)'
           }}
         >
@@ -420,10 +420,10 @@ const ModuleAccordion = ({ modules }) => {
               className="w-full rounded-2xl px-6 py-4 text-center transition-all duration-300 hover:opacity-90 shadow-xl"
               style={{
                 background: openModule === module.id
-                  ? 'linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 100%)'
-                  : 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
-                border: openModule === module.id ? '3px solid rgba(79,70,229,0.8)' : '2px solid rgba(79,70,229,0.2)',
-                boxShadow: openModule === module.id ? '0 0 20px rgba(79,70,229,0.4), 0 0 40px rgba(79,70,229,0.2)' : '',
+                  ? 'linear-gradient(135deg, #0f0f0f 0%, #000000 100%)'
+                  : 'linear-gradient(135deg, #000000 0%, #0d0d0d 100%)',
+                border: openModule === module.id ? '3px solid rgba(255,90,9,0.8)' : '2px solid rgba(255,90,9,0.2)',
+                boxShadow: openModule === module.id ? '0 0 20px rgba(255,90,9,0.4), 0 0 40px rgba(255,90,9,0.2)' : '',
                 transform: openModule === module.id ? 'scale(1.03)' : 'scale(1)',
                 fontFamily: 'Poppins, sans-serif',
               }}
@@ -432,7 +432,7 @@ const ModuleAccordion = ({ modules }) => {
                 {module.module}
               </div>
               <div className="text-base font-bold leading-snug" style={{
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -443,14 +443,14 @@ const ModuleAccordion = ({ modules }) => {
 
             {/* Mobile: opens below each card */}
             {openModule === module.id && (
-              <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', borderColor: 'rgba(79,70,229,0.6)' }}>
-                <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+              <div className="mt-2 rounded-2xl px-6 py-6 lg:hidden shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 100%)', borderColor: 'rgba(255,90,9,0.6)' }}>
+                <div className="inline-block px-4 py-2 rounded-lg mb-4 text-base font-bold w-full text-center" style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
                   {module.title}
                 </div>
                 <ul className="space-y-3">
                   {module.topics.map((topic, idx) => (
                     <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)', fontSize: '14px' }}>
-<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
+<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#FF5A09' }} />
                       <span>{topic}</span>
                     </li>
                   ))}
@@ -463,16 +463,16 @@ const ModuleAccordion = ({ modules }) => {
 
       {/* Desktop: opens below all 6 buttons */}
       {openModule && (
-        <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', borderColor: 'rgba(79,70,229,0.6)' }}>
+        <div className="hidden lg:block rounded-2xl px-8 py-8 shadow-xl border-2" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 100%)', borderColor: 'rgba(255,90,9,0.6)' }}>
           {modules.filter(m => m.id === openModule).map(module => (
             <div key={module.id}>
-              <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+              <div className="inline-block px-6 py-3 rounded-xl mb-6 text-xl font-bold" style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
                 {module.title}
               </div>
               <ul className="space-y-4">
                 {module.topics.map((topic, idx) => (
                   <li key={idx} className="flex items-start gap-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)', fontSize: '15px' }}>
-<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#818cf8' }} />
+<CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#FF5A09' }} />
                     <span>{topic}</span>
                   </li>
                 ))}
@@ -573,7 +573,7 @@ background: 'none',        pointerEvents: 'none',
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
-          background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+          background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)',
           fontFamily: 'Poppins, sans-serif'
         }} data-testid="announcement-bar">
           <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
@@ -649,7 +649,7 @@ background: 'none',        pointerEvents: 'none',
         <section className="pt-28 sm:pt-32 pb-2 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
-    backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
+    backgroundImage: 'linear-gradient(rgba(255,90,9,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,90,9,0.15) 1px, transparent 1px)',
     backgroundSize: '48px 48px',
     zIndex: 1
   }}></div>
@@ -728,7 +728,7 @@ background: 'none',        pointerEvents: 'none',
                 <span className="gradient-text">From Zero to Expert</span><br />
                 <span className="hero-line-3" style={{ color: '#0f0f0f' }}>
                   <span style={{ fontSize: 'clamp(1rem, 4vw, 1.2em)', whiteSpace: 'nowrap' }}>In Marathi, Next Batch{' '}
-                    <span style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', boxShadow: '0 4px 16px rgba(79,70,229,0.4)', fontSize: 'clamp(0.9rem, 3.5vw, 1em)' }}>1st August</span>
+                    <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', padding: '0.05em 0.4em', borderRadius: '0.25em', display: 'inline-block', boxShadow: '0 4px 16px rgba(255,90,9,0.4)', fontSize: 'clamp(0.9rem, 3.5vw, 1em)' }}>1st August</span>
                   </span>
                 </span>
               </h1>
@@ -752,30 +752,30 @@ background: 'none',        pointerEvents: 'none',
                 {/* Trust Signal Cards */}
                 <div className="flex flex-col sm:flex-row gap-3 rise-up rise-up-delay-4">
                   <div className="flex items-center gap-3 px-5 py-3 rounded-2xl" style={{
-                    background: 'rgba(79,70,229,0.07)',
-                    border: '1.5px solid rgba(79,70,229,0.18)',
+                    background: 'rgba(255,90,9,0.07)',
+                    border: '1.5px solid rgba(255,90,9,0.18)',
                     backdropFilter: 'blur(8px)'
                   }}>
-                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                       <Users className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <div className="text-sm font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}>45+ Students</div>
-                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>Trained & Running Ads</div>
+                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>Trained & Running Ads</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3 px-5 py-3 rounded-2xl" style={{
-                    background: 'rgba(79,70,229,0.07)',
-                    border: '1.5px solid rgba(79,70,229,0.18)',
+                    background: 'rgba(255,90,9,0.07)',
+                    border: '1.5px solid rgba(255,90,9,0.18)',
                     backdropFilter: 'blur(8px)'
                   }}>
-                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                       <Calendar className="w-4 h-4 text-white" />
                     </div>
                     <div>
                       <div className="text-sm font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e293b' }}>Limited Seats</div>
-                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#6366f1' }}>1st August Batch</div>
+                      <div className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>1st August Batch</div>
                     </div>
                   </div>
                 </div>
@@ -789,7 +789,7 @@ background: 'none',        pointerEvents: 'none',
         {/* Course Overview Section */}
        <section id="course-overview" className="pt-8 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
-            backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)',
             backgroundSize: '40px 40px'
           }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -806,7 +806,7 @@ background: 'none',        pointerEvents: 'none',
             {/* 14 Days Live Classes Banner */}
             <div className="max-w-sm sm:max-w-3xl mx-auto mb-16 rise-up">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
-                background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)'
+                background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)'
               }}>
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
                   background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)'
@@ -820,8 +820,8 @@ background: 'none',        pointerEvents: 'none',
                     <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl flex flex-col items-center justify-center shadow-xl" style={{
                       background: '#ffffff'
                     }}>
-                      <div className="text-2xl sm:text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>15</div>
-                      <div className="text-[10px] sm:text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#7C3AED' }}>Days</div>
+                      <div className="text-2xl sm:text-4xl font-bold leading-none" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>15</div>
+                      <div className="text-[10px] sm:text-xs uppercase tracking-wider mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>Days</div>
                     </div>
                   </div>
 
@@ -829,7 +829,7 @@ background: 'none',        pointerEvents: 'none',
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                       <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold shadow-md" style={{
                         background: '#ffffff',
-                        color: '#7C3AED',
+                        color: '#FF5A09',
                         fontFamily: 'Poppins, sans-serif'
                       }}>
                         <span className="w-2 h-2 rounded-full live-dot"></span>
@@ -865,7 +865,7 @@ background: 'none',        pointerEvents: 'none',
         </section>
 
 {/* Right For You Section */}
-        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#0a0a14' }}>
+        <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#000000' }}>
           <style>{`
             .glass-card {
               position: relative;
@@ -886,13 +886,13 @@ background: 'none',        pointerEvents: 'none',
             }
           `}</style>
           {/* Vivid color blobs directly behind the card grid to fuel the glass blur */}
-          <div className="absolute top-10 left-10 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.9) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
-          <div className="absolute top-40 right-16 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.85) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-          <div className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.9) 0%, transparent 70%)', filter: 'blur(55px)' }}></div>
-          <div className="absolute bottom-24 right-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.7) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
+          <div className="absolute top-10 left-10 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.9) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
+          <div className="absolute top-40 right-16 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.85) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+          <div className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.9) 0%, transparent 70%)', filter: 'blur(55px)' }}></div>
+          <div className="absolute bottom-24 right-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.7) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-              Right For <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
+              Right For <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
@@ -905,13 +905,13 @@ background: 'none',        pointerEvents: 'none',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,90,9,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(255,90,9,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(255,90,9,0.4)' }}>FOR YOU</span>
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>🛍️</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Business Owner</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>तुमचा product promote करायला कुठून सुरुवात करावी कळत नाही?</p>
-                <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads ने directly customers मिळवा — खर्च कमी, result जास्त.</p>
+                <p className="text-sm font-medium" style={{ color: '#FF5A09', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads ने directly customers मिळवा — खर्च कमी, result जास्त.</p>
               </div>
 
               {/* Freelancers */}
@@ -923,13 +923,13 @@ background: 'none',        pointerEvents: 'none',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,90,9,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(255,90,9,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(255,90,9,0.4)' }}>FOR YOU</span>
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>💻</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Freelancers</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Clients मिळत नाहीत, income unstable आहे?</p>
-                <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads skill शिका आणि premium clients साठी नवीन service add करा.</p>
+                <p className="text-sm font-medium" style={{ color: '#FF5A09', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Meta Ads skill शिका आणि premium clients साठी नवीन service add करा.</p>
               </div>
 
               {/* Students */}
@@ -941,13 +941,13 @@ background: 'none',        pointerEvents: 'none',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,90,9,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(255,90,9,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(255,90,9,0.4)' }}>FOR YOU</span>
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>🎓</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Students</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Degree आहे पण job-ready skill नाही?</p>
-                <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Real campaigns शिकून digital marketing career सुरू करा.</p>
+                <p className="text-sm font-medium" style={{ color: '#FF5A09', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Real campaigns शिकून digital marketing career सुरू करा.</p>
               </div>
 
               {/* Marketers */}
@@ -959,13 +959,13 @@ background: 'none',        pointerEvents: 'none',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
                 transition: 'border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease'
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,90,9,0.6)'; e.currentTarget.style.boxShadow = '0 8px 40px rgba(255,90,9,0.35), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(79,70,229,0.4)' }}>FOR YOU</span>
+                <span className="absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 12px rgba(255,90,9,0.4)' }}>FOR YOU</span>
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)', fontSize: '1.8rem', backdropFilter: 'blur(8px)' }}>📣</div>
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>Marketers</h3>
                 <p className="text-sm" style={{ color: '#a0a0b8', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Boosting करतोय पण ROAS कमी येतो?</p>
-                <p className="text-sm font-medium" style={{ color: '#c4b5fd', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Advanced targeting आणि strategy शिकून results दुप्पट करा.</p>
+                <p className="text-sm font-medium" style={{ color: '#FF5A09', fontFamily: 'Poppins, sans-serif', lineHeight: 1.5 }}>Advanced targeting आणि strategy शिकून results दुप्पट करा.</p>
               </div>
 
             </div>
@@ -975,13 +975,13 @@ background: 'none',        pointerEvents: 'none',
 {/* Trainer Section */}
         <section id="about" className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
-            backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)',
             backgroundSize: '40px 40px'
           }}></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="relative rounded-3xl overflow-hidden p-8 md:p-12 rise-up" style={{
-              background: '#1e1b4b',
-              boxShadow: '0 20px 60px rgba(30,27,75,0.4)'
+              background: '#000000',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.4)'
             }}>
               {/* Decorative gradient orbs */}
               <div style={{
@@ -1024,7 +1024,7 @@ background: 'none',        pointerEvents: 'none',
             </div>
                     {/* Floating Stats Badge - 45+ Students */}
                     <div className="absolute -bottom-6 -right-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, rgba(79,70,229,0.95) 0%, rgba(124,58,237,0.95) 100%)',
+                      background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
                       border: '1px solid rgba(255,255,255,0.35)',
                       backdropFilter: 'blur(10px)',
                       webkitBackdropFilter: 'blur(10px)'
@@ -1034,7 +1034,7 @@ background: 'none',        pointerEvents: 'none',
                     </div>
                     {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
                     <div className="absolute -bottom-6 -left-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, rgba(124,58,237,0.95) 0%, rgba(79,70,229,0.95) 100%)',
+                      background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
                       border: '1px solid rgba(255,255,255,0.35)',
                       backdropFilter: 'blur(10px)',
                       webkitBackdropFilter: 'blur(10px)'
@@ -1044,7 +1044,7 @@ background: 'none',        pointerEvents: 'none',
                     </div>
                     {/* Floating Top Badge */}
                     <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, rgba(124,58,237,0.95) 0%, rgba(79,70,229,0.95) 100%)',
+                      background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
                       border: '1px solid rgba(255,255,255,0.35)',
                       backdropFilter: 'blur(10px)',
                       webkitBackdropFilter: 'blur(10px)'
@@ -1064,9 +1064,9 @@ background: 'none',        pointerEvents: 'none',
                       fontFamily: 'Google Sans, sans-serif',
                       background: '#ffffff'
                     }}>
-                      <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
+                      <Award className="w-4 h-4" style={{ color: '#FF5A09' }} />
                       <span style={{
-                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+                        background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
@@ -1084,7 +1084,7 @@ background: 'none',        pointerEvents: 'none',
                       background: '#ffffff'
                     }}>
                       <strong style={{
-                        background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+                        background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
@@ -1105,15 +1105,15 @@ background: 'none',        pointerEvents: 'none',
                  <div className="grid grid-cols-3 gap-3 pt-2">
                     <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>100%</div>
-                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>मराठी</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#000000' }}>मराठी</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Live</div>
-                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>Sessions</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#000000' }}>Sessions</div>
                     </div>
                     <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
                       <div className="text-2xl font-bold gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>Real</div>
-                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#1e1b4b' }}>Campaigns</div>
+                      <div className="text-xs mt-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#000000' }}>Campaigns</div>
                     </div>
                   </div>
                 </div>
@@ -1125,29 +1125,29 @@ background: 'none',        pointerEvents: 'none',
         {/* CTA Section */}
         <section className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
-            backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(255,90,9,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,90,9,0.15) 1px, transparent 1px)',
             backgroundSize: '48px 48px',
             zIndex: 1
           }}></div>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="space-y-6 rounded-3xl p-6 sm:p-12 rise-up" style={{
-              background: 'linear-gradient(135deg, #0f0f1a 0%, #1a1040 50%, #13103a 100%)',
-              border: '1.5px solid rgba(139,92,246,0.35)',
-              boxShadow: '0 0 0 1px rgba(139,92,246,0.08), 0 25px 60px rgba(79,70,229,0.35), inset 0 1px 0 rgba(255,255,255,0.05)',
+              background: 'linear-gradient(135deg, #000000 0%, #000000 50%, #0d0d0d 100%)',
+              border: '1.5px solid rgba(255,90,9,0.35)',
+              boxShadow: '0 0 0 1px rgba(255,90,9,0.08), 0 25px 60px rgba(255,90,9,0.35), inset 0 1px 0 rgba(255,255,255,0.05)',
               position: 'relative',
               overflow: 'hidden'
             }}>
-              <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
-              <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '200px', height: '200px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,70,229,0.18) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+              <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,90,9,0.2) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+              <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '200px', height: '200px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,90,9,0.18) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
               {/* Urgency Banner */}
               <button 
                 onClick={handleEnrollClick}
                 className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 urgency-banner-btn rise-up"
-                style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.3) 0%, rgba(124,58,237,0.3) 100%)', border: '1.5px solid rgba(139,92,246,0.6)', fontFamily: 'Poppins, sans-serif' }}
+                style={{ background: 'linear-gradient(135deg, rgba(255,90,9,0.3) 0%, rgba(255,90,9,0.3) 100%)', border: '1.5px solid rgba(255,90,9,0.6)', fontFamily: 'Poppins, sans-serif' }}
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#fbbf24' }}></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5" style={{ background: '#FF5A09' }}></span>
                 </span>
                 <Calendar className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold tracking-wide text-white">
@@ -1165,9 +1165,9 @@ background: 'none',        pointerEvents: 'none',
               {/* Price Anchor */}
               <div className="flex items-center justify-center gap-4 rise-up rise-up-delay-2">
                 <span className="text-lg line-through" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'Poppins, sans-serif' }}>₹4,999</span>
-                <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(139,92,246,0.4)' }}>
-                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #a78bfa, #ec4899)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
-                  <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>80% OFF</span>
+                <div className="flex items-center gap-2 px-5 py-2 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', border: '1.5px solid rgba(255,90,9,0.4)' }}>
+                  <span className="text-3xl font-black" style={{ fontFamily: 'Poppins, sans-serif', background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>₹799</span>
+                  <span className="text-xs font-bold px-2 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>80% OFF</span>
                 </div>
               </div>
 
@@ -1184,11 +1184,11 @@ background: 'none',        pointerEvents: 'none',
               </div>
               <div className="flex items-center justify-center gap-8 pt-4 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" style={{ color: '#818cf8' }} />
+                  <CheckCircle2 className="w-5 h-5" style={{ color: '#FF5A09' }} />
                   <span style={{ fontFamily: 'Poppins, sans-serif' }}>100% Secure Payment</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Video className="w-5 h-5" style={{ color: '#818cf8' }} />
+                  <Video className="w-5 h-5" style={{ color: '#FF5A09' }} />
                   <span style={{ fontFamily: 'Poppins, sans-serif' }}>Live Course</span>
                 </div>
               </div>
@@ -1197,15 +1197,15 @@ background: 'none',        pointerEvents: 'none',
           </div>
         </section>
 {/* Socials Section */}
-<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-  <div className="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-  <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+<section id="socials" className="py-16 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #000000 0%, #0d0d0d 60%, #000000 100%)' }}>
+  <div className="absolute top-0 right-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.15) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
+  <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
   <div className="container mx-auto max-w-4xl text-center relative z-10">
 
     {/* Heading */}
     <h2 className="text-3xl md:text-5xl font-bold mb-3 rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
-      <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Follow</span> Us
+      <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Follow</span> Us
     </h2>
 
     {/* Purpose line */}
@@ -1281,7 +1281,7 @@ background: 'none',        pointerEvents: 'none',
 </section>
         {/* Footer */}
         <footer id="footer" className="py-16 px-4" style={{
-          background: '#13103a',
+          background: '#0d0d0d',
           color: 'rgba(255,255,255,0.95)'
         }}>
           <div className="container mx-auto max-w-6xl">
@@ -1289,15 +1289,15 @@ background: 'none',        pointerEvents: 'none',
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
               <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Clock className="w-4 h-4" style={{ color: '#a78bfa' }} />
+                <Clock className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>Response within 24 hours</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Users className="w-4 h-4" style={{ color: '#a78bfa' }} />
+                <Users className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>45+ Students Trained</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Star className="w-4 h-4" style={{ color: '#a78bfa' }} />
+                <Star className="w-4 h-4" style={{ color: '#FF5A09' }} />
                 <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>₹4.5L+ Ad Spend Managed</span>
               </div>
             </div>
@@ -1316,38 +1316,38 @@ background: 'none',        pointerEvents: 'none',
               {/* Left: Icon-led contact cards */}
               <div className="space-y-4">
                 <a href="mailto:contactpantherflow@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Email</p>
-                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>contactpantherflow@gmail.com</p>
+                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>contactpantherflow@gmail.com</p>
                   </div>
                 </a>
 
                 <a href="tel:+919307378191" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Phone</p>
-                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>+91 9307378191</p>
+                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>+91 9307378191</p>
                   </div>
                 </a>
 
                 <a href="https://www.google.com/maps/search/?api=1&query=Barmachiwadi+Tal+Kalamb+Dist+Dharashiv+413525" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Address · View on map</p>
-                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</p>
+                    <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#FF5A09' }}>Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</p>
                   </div>
                 </a>
               </div>
 
               {/* Right: Newsletter signup */}
-              <div className="p-6 rounded-2xl flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, rgba(79,70,229,0.15) 0%, rgba(124,58,237,0.1) 100%)', border: '1px solid rgba(139,92,246,0.25)' }}>
+              <div className="p-6 rounded-2xl flex flex-col justify-center" style={{ background: 'linear-gradient(135deg, rgba(255,90,9,0.15) 0%, rgba(255,90,9,0.1) 100%)', border: '1px solid rgba(255,90,9,0.25)' }}>
                 <h3 className="font-bold text-lg mb-1" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Stay Updated</h3>
                 <p className="text-sm mb-4" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.65)' }}>
                   Free Meta Ads tips आणि नवीन batch updates थेट तुमच्या inbox मध्ये.
@@ -1371,7 +1371,7 @@ background: 'none',        pointerEvents: 'none',
                     <button
                       type="submit"
                       className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:scale-[1.02] whitespace-nowrap"
-                      style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+                      style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
                     >
                       <Send className="w-4 h-4" />
                       Get Updates

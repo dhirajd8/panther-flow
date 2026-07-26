@@ -19,7 +19,7 @@ const Header = () => {
         className="flex items-center justify-center gap-1 sm:gap-2 backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl px-2 sm:px-2.5 py-2"
         style={{
           background: 'rgba(15, 15, 26, 0.75)',
-          border: '1px solid rgba(139,92,246,0.35)',
+          border: '1px solid rgba(255,90,9,0.35)',
         }}
       >
         {/* Nav links */}
@@ -34,7 +34,7 @@ const Header = () => {
                 style={{
                   fontFamily: 'Poppins, sans-serif',
                   color: isActive ? '#ffffff' : 'rgba(255,255,255,0.65)',
-                  background: isActive ? 'linear-gradient(135deg, #4F46E5, #7C3AED)' : 'transparent',
+                  background: isActive ? 'linear-gradient(135deg, #FF5A09, #FF5A09)' : 'transparent',
                 }}
                 onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = '#ffffff'; }}
                 onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(255,255,255,0.65)'; }}
@@ -51,7 +51,7 @@ const Header = () => {
         <button
           onClick={() => navigate('/checkout')}
           className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap flex-shrink-0"
-          style={{ background: 'linear-gradient(135deg, #EC4899, #7C3AED)', fontFamily: 'Poppins, sans-serif' }}
+          style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', fontFamily: 'Poppins, sans-serif' }}
         >
           Join Now →
         </button>

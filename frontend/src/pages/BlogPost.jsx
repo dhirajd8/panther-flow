@@ -41,7 +41,7 @@ const markdownComponents = {
         href={href}
         target={isExternal ? '_blank' : undefined}
         rel={isExternal ? 'noopener noreferrer' : undefined}
-        style={{ color: '#4F46E5', fontWeight: 600 }}
+        style={{ color: '#FF5A09', fontWeight: 600 }}
         {...props}
       >
         {children}
@@ -141,7 +141,7 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
         <h1 className="text-2xl font-bold mb-4">Post not found</h1>
-        <Link to="/blog" style={{ color: '#6366f1' }}>← Back to Blog</Link>
+        <Link to="/blog" style={{ color: '#FF5A09' }}>← Back to Blog</Link>
       </div>
     );
   }
@@ -166,7 +166,7 @@ const BlogPost = () => {
         <button
           onClick={() => navigate('/blog')}
           className="text-sm mb-8"
-          style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}
+          style={{ color: '#FF5A09', background: 'none', border: 'none', cursor: 'pointer' }}
         >
           ← Back to Blog
         </button>
@@ -204,12 +204,12 @@ const BlogPost = () => {
           </div>
         )}
 
-        <div className="mt-12 p-6 rounded-2xl text-center" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
+        <div className="mt-12 p-6 rounded-2xl text-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
           <p className="text-white font-bold mb-3">Meta Ads शिकायला तयार आहात?</p>
           <button
             onClick={() => navigate('/checkout')}
             className="px-6 py-3 rounded-xl font-bold"
-            style={{ background: '#ffffff', color: '#4F46E5' }}
+            style={{ background: '#ffffff', color: '#FF5A09' }}
           >
             Join the Course →
           </button>

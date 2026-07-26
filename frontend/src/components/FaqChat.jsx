@@ -65,7 +65,7 @@ const FaqChat = () => {
       <button
         onClick={() => setOpen(!open)}
         className="fixed bottom-16 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110"
-        style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+        style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
         aria-label="Chat with us"
       >
         {open ? <X className="w-7 h-7 text-white" /> : <MessageCircle className="w-7 h-7 text-white" />}
@@ -79,14 +79,14 @@ const FaqChat = () => {
             width: 'min(360px, calc(100vw - 3rem))',
             height: 'min(480px, calc(100vh - 12rem))',
             background: '#ffffff',
-            border: '1.5px solid rgba(79,70,229,0.15)',
+            border: '1.5px solid rgba(255,90,9,0.15)',
             fontFamily: 'Poppins, sans-serif',
           }}
         >
           {/* Header */}
           <div
             className="flex items-center gap-3 px-4 py-3 rounded-t-2xl flex-shrink-0"
-            style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+            style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
           >
             <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255,255,255,0.2)' }}>
               <MessageCircle className="w-5 h-5 text-white" />
@@ -104,7 +104,7 @@ const FaqChat = () => {
                   className="px-3 py-2 rounded-2xl text-sm max-w-[85%]"
                   style={
                     m.from === 'user'
-                      ? { background: 'linear-gradient(135deg, #4F46E5, #7C3AED)', color: '#ffffff' }
+                      ? { background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', color: '#ffffff' }
                       : { background: '#ffffff', color: '#374151', border: '1px solid #eee' }
                   }
                 >
@@ -120,7 +120,7 @@ const FaqChat = () => {
                     key={idx}
                     onClick={() => handleQuickQuestion(item)}
                     className="text-left text-xs px-3 py-2 rounded-xl transition-all duration-200 hover:scale-[1.02]"
-                    style={{ background: '#ffffff', border: '1px solid rgba(79,70,229,0.2)', color: '#4F46E5' }}
+                    style={{ background: '#ffffff', border: '1px solid rgba(255,90,9,0.2)', color: '#FF5A09' }}
                   >
                     {item.q}
                   </button>
@@ -132,7 +132,7 @@ const FaqChat = () => {
               <button
                 onClick={() => setAskedOnce(false)}
                 className="w-full text-center text-xs px-3 py-2 rounded-xl font-semibold transition-all duration-200 hover:scale-[1.02]"
-                style={{ background: '#ffffff', border: '1px solid rgba(79,70,229,0.3)', color: '#4F46E5' }}
+                style={{ background: '#ffffff', border: '1px solid rgba(255,90,9,0.3)', color: '#FF5A09' }}
               >
                 ← मुख्य मेनू वर परत जा
               </button>
@@ -152,7 +152,7 @@ const FaqChat = () => {
             <button
               type="submit"
               className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+              style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
             >
               <Send className="w-4 h-4 text-white" />
             </button>

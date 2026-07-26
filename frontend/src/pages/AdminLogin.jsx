@@ -60,7 +60,7 @@ const AdminLogin = () => {
             type="submit"
             disabled={loading}
             className="w-full py-3 rounded-xl font-bold text-white disabled:opacity-60"
-            style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}
+            style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
           >
             {loading ? 'Logging in...' : 'Log In'}
           </button>
