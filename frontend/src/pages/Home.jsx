@@ -523,6 +523,19 @@ const Home = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  // Scroll to a section if we arrived here via a #hash link from another page
+  React.useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const timer = setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
 React.useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -620,7 +633,7 @@ background: 'none',        pointerEvents: 'none',
             Home
           </button>
           <button
-            onClick={() => scrollToSection('about')}
+            onClick={() => navigate('/about')}
             className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
