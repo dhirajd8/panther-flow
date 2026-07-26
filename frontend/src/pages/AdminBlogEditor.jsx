@@ -17,6 +17,7 @@ const AdminBlogEditor = () => {
     author: 'Panther Flow',
     category: 'Digital Marketing',
     metaDescription: '',
+    coverImage: '',
     content: '',
     status: 'draft',
     faqs: [],
@@ -44,6 +45,7 @@ const AdminBlogEditor = () => {
               author: post.author || 'Panther Flow',
               category: post.category || 'Digital Marketing',
               metaDescription: post.metaDescription || '',
+              coverImage: post.coverImage || '',
               content: post.content || '',
               status: post.status || 'draft',
               faqs: post.faqs || [],
@@ -222,6 +224,42 @@ const AdminBlogEditor = () => {
                 style={{ border: '1.5px solid #e5e7eb' }}
               />
             </div>
+          </div>
+
+          <div>
+            <label className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Cover Image URL (shown on blog card and top of article)</label>
+            <input
+              type="text"
+              value={form.coverImage}
+              onChange={(e) => handleChange('coverImage', e.target.value)}
+              placeholder="https://..."
+              className="w-full px-4 py-3 rounded-xl text-sm outline-none"
+              style={{ border: '1.5px solid #e5e7eb' }}
+            />
+          </div>
+
+          <div>
+            <label className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Cover Image URL (shown on blog card and top of article)</label>
+            <input
+              type="text"
+              value={form.coverImage}
+              onChange={(e) => handleChange('coverImage', e.target.value)}
+              placeholder="https://..."
+              className="w-full px-4 py-3 rounded-xl text-sm outline-none"
+              style={{ border: '1.5px solid #e5e7eb' }}
+            />
+          </div>
+
+          <div>
+            <label className="text-sm font-semibold block mb-1.5" style={{ color: '#374151' }}>Cover Image URL (shown on blog card and top of article)</label>
+            <input
+              type="text"
+              value={form.coverImage}
+              onChange={(e) => handleChange('coverImage', e.target.value)}
+              placeholder="https://..."
+              className="w-full px-4 py-3 rounded-xl text-sm outline-none"
+              style={{ border: '1.5px solid #e5e7eb' }}
+            />
           </div>
 
           <div>
