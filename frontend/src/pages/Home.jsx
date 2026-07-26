@@ -75,12 +75,12 @@ const ModuleShowcaseCarousel = ({ modules }) => {
   const prev = () => setActive((a) => (a - 1 + modules.length) % modules.length);
   const next = () => setActive((a) => (a + 1) % modules.length);
 
-  // Auto-scroll every 3.5s, pausing briefly whenever the user interacts
+  // Auto-scroll every 1.8s, pausing briefly whenever the user interacts
   React.useEffect(() => {
     if (isPaused) return;
     autoScrollRef.current = setInterval(() => {
       setActive((a) => (a + 1) % modules.length);
-    }, 3500);
+    }, 1800);
     return () => clearInterval(autoScrollRef.current);
   }, [isPaused, modules.length]);
 
@@ -1040,26 +1040,6 @@ background: 'none',        pointerEvents: 'none',
       
 
             </div>
-                    {/* Floating Stats Badge - 45+ Students */}
-                    <div className="absolute -bottom-6 -right-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
-                      border: '1px solid rgba(255,255,255,0.35)',
-                      backdropFilter: 'blur(10px)',
-                      webkitBackdropFilter: 'blur(10px)'
-                    }}>
-                      <div className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>45+</div>
-                      <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Happy Students</div>
-                    </div>
-                    {/* Floating Stats Badge - 1.5 Lakhs Ad Spend */}
-                    <div className="absolute -bottom-6 -left-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                      background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
-                      border: '1px solid rgba(255,255,255,0.35)',
-                      backdropFilter: 'blur(10px)',
-                      webkitBackdropFilter: 'blur(10px)'
-                    }}>
-                      <div className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: 'Times New Roman, serif' }}>₹4.5L+</div>
-                      <div className="text-xs text-white/90" style={{ fontFamily: 'Google Sans, sans-serif' }}>Ad Spend Managed</div>
-                    </div>
                     {/* Floating Top Badge */}
                     <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-2xl z-20" style={{
                       background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
