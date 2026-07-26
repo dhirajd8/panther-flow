@@ -124,15 +124,15 @@ const Checkout = () => {
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
-        <div className="container mx-auto max-w-4xl relative z-10 text-center">
-          <button
-            onClick={() => navigate('/')}
-            className="text-sm mb-6"
-            style={{ color: '#c4b5fd', background: 'none', border: 'none', cursor: 'pointer' }}
-          >
-            ← Back to Home
-          </button>
+        <button
+          onClick={() => navigate('/')}
+          className="absolute top-6 left-4 sm:left-8 text-sm z-20"
+          style={{ color: '#c4b5fd', background: 'none', border: 'none', cursor: 'pointer' }}
+        >
+          ← Back to Home
+        </button>
 
+        <div className="container mx-auto max-w-4xl relative z-10 text-center">
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5"
             style={{ background: '#ffffff' }}
