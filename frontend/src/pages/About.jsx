@@ -44,20 +44,38 @@ const About = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="pt-16 sm:pt-20 pb-16 px-4" style={{ background: '#ffffff' }}>
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-lg sm:text-xl leading-relaxed mb-10" style={{ color: '#334155' }}>
-            धाराशिव मधून, मराठीत, Practical Meta Ads Training — Recorded video नाही, Live sessions आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
-          </p>
+      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-10" style={{ color: '#0f0f0f' }}>
+            मराठीत,{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Practical Meta Ads Training</span>{' '}
+            जूने Recorded video नाही,{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Live sessions</span>{' '}
+            आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
+          </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div className="flex items-start gap-3 p-4 rounded-2xl" style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}>
               <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
-              <span className="text-sm" style={{ color: '#334155' }}>धाराशिव मधल्या मराठी मातीतून सुरू झालेला प्रवास</span>
+              <span className="text-sm" style={{ color: '#334155' }}>Course नंतरही Doubt Solving साठी कायम Support</span>
             </div>
             <div className="flex items-start gap-3 p-4 rounded-2xl" style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}>
               <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
-              <span className="text-sm" style={{ color: '#334155' }}>Recorded videos नाही — फक्त Live, Interactive Sessions</span>
+              <span className="text-sm" style={{ color: '#334155' }}>जूने Recorded videos नाही. फक्त Live, Interactive Sessions</span>
             </div>
             <div className="flex items-start gap-3 p-4 rounded-2xl" style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}>
               <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#7C3AED' }} />
