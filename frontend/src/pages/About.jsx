@@ -49,6 +49,33 @@ const About = () => {
           backgroundSize: '40px 40px'
         }}></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f' }}>
+            मराठीत,{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Practical Live Meta Ads Training</span>
+          </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f' }}>
+            मराठीत,{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Practical Live Meta Ads Training</span>
+          </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f' }}>
+            मराठीत,{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>Practical Live Meta Ads Training</span>
+          </h2>
           <p className="text-lg sm:text-xl leading-relaxed mb-10" style={{ color: '#334155' }}>
             जूने Recorded video नाही, Live sessions आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
           </p>
