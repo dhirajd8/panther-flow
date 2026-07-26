@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
 import {
   Award,
   Sparkles,
@@ -16,22 +18,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen" style={{ background: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
-
-      {/* Top bar */}
-      <div className="px-4 pt-8">
-        <div className="container mx-auto max-w-6xl">
-          <button
-            onClick={() => navigate('/')}
-            className="text-sm font-medium"
-            style={{ color: '#6366f1', background: 'none', border: 'none', cursor: 'pointer' }}
-          >
-            ← Back to Home
-          </button>
-        </div>
-      </div>
+      <Helmet>
+        <title>About Us | Panther Flow — Meta Ads Course in Marathi</title>
+        <meta name="description" content="धाराशिव मधून, मराठीत, Practical Meta Ads Training. Panther Flow आणि instructor धिरज दयानंद यांच्याबद्दल जाणून घ्या." />
+      </Helmet>
+      <Header />
 
       {/* Hero */}
-      <section className="pt-10 pb-16 px-4 relative overflow-hidden">
+      <section className="pt-36 sm:pt-44 pb-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{
           backgroundImage: 'linear-gradient(rgba(79,70,229,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.12) 1px, transparent 1px)',
           backgroundSize: '48px 48px'

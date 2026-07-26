@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
 import { courseData } from '../data/mock';
 import {
   CheckCircle2, Award, Video, Users, Calendar, ChevronDown,
@@ -56,24 +58,24 @@ const Course = () => {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Meta Ads Course in Marathi — Full Curriculum | Panther Flow AI Labs';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', '15 Days Live Meta Ads Course in Marathi. Basic ते Advanced, real campaigns, hands-on practice. ₹799 only. Next batch 1st August.');
   }, []);
 
   const handleEnroll = () => navigate('/checkout');
 
   return (
     <div style={{ fontFamily: 'Poppins, sans-serif', background: '#ffffff' }}>
+      <Helmet>
+        <title>Meta Ads Course in Marathi — Full Curriculum | Panther Flow AI Labs</title>
+        <meta name="description" content="15 Days Live Meta Ads Course in Marathi. Basic ते Advanced, real campaigns, hands-on practice. ₹799 only. Next batch 1st August." />
+      </Helmet>
+      <Header />
 
       {/* Hero */}
-      <section className="pt-16 pb-14 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+      <section className="pt-36 sm:pt-44 pb-14 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="container mx-auto max-w-4xl relative z-10">
-          <button onClick={() => navigate('/')} className="text-sm mb-6" style={{ color: '#c4b5fd', background: 'none', border: 'none', cursor: 'pointer' }}>← Back to Home</button>
-
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5" style={{ background: '#ffffff' }}>
             <Award className="w-4 h-4" style={{ color: '#7C3AED' }} />
             <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Meta Ads Marathi Course</span>
