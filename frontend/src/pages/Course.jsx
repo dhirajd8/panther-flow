@@ -72,6 +72,18 @@ const Course = () => {
       <Header />
 
       {/* Hero */}
+      <section className="pt-28 sm:pt-32 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4" style={{ color: '#ffffff' }}>
+            Course
+          </h1>
+        </div>
+      </section>
+
+      {/* Course Intro */}
       <section className="pt-36 sm:pt-44 pb-14 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
@@ -82,9 +94,9 @@ const Course = () => {
             <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Meta Ads Marathi Course</span>
           </span>
 
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
             Meta Ads शिका Zero ते Expert
-          </h1>
+          </h2>
           <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.75)' }}>
             १५ दिवसांचा Live Course — फक्त Theory नाही, तर Real Campaigns सोबत Practical Training. १०० टक्के मराठीत.
           </p>
