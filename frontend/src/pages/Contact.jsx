@@ -17,35 +17,23 @@ const Contact = () => {
       <Helmet>
         <title>Contact Us | Panther Flow — Meta Ads Course in Marathi</title>
         <meta name="description" content="प्रश्न आहेत? Panther Flow च्या Meta Ads Marathi Course बद्दल अधिक माहितीसाठी आम्हाला संपर्क करा — Email, Phone किंवा WhatsApp वर." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Helmet>
       <Header />
 
-      {/* Hero — mirrors About page's minimal dark hero: heading only */}
-      <section className="pt-28 sm:pt-32 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-
-        <div className="container mx-auto max-w-3xl relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mt-4" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+      {/* Hero */}
+      <section className="pt-36 sm:pt-44 pb-12 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: 'linear-gradient(rgba(79,70,229,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.12) 1px, transparent 1px)',
+          backgroundSize: '48px 48px'
+        }}></div>
+        <div className="container mx-auto max-w-3xl text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
             }}>Contact</span> Us
           </h1>
-        </div>
-      </section>
-
-      {/* Intro Section — mirrors About page's grid-pattern intro */}
-      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'linear-gradient(rgba(99,102,241,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.12) 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}></div>
-        <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <p className="text-lg sm:text-xl leading-relaxed" style={{ color: '#334155' }}>
+          <p className="text-lg" style={{ color: '#4b5563' }}>
             प्रश्न आहेत? Course बद्दल अधिक माहिती हवी आहे? आम्हाला थेट संपर्क करा.
           </p>
         </div>
@@ -113,7 +101,7 @@ const Contact = () => {
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.12) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#ffffff' }}>
             <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Follow</span> Us
           </h2>
           <p className="mb-10 text-base" style={{ color: 'rgba(255,255,255,0.7)' }}>

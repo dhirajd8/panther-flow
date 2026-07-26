@@ -23,9 +23,6 @@ const Blog = () => {
       <Helmet>
         <title>Blogs — Panther Flow AI Labs | Meta Ads Tips in Marathi</title>
         <meta name="description" content="Meta Ads, Digital Marketing आणि Growth Tips — मराठीत, practical अनुभवातून. Panther Flow च्या blog मधून शिका." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Helmet>
       <Header />
 
@@ -35,7 +32,15 @@ const Blog = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="relative z-10 container mx-auto max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+          <span
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
+            style={{ border: '1.5px solid rgba(139,92,246,0.5)', background: 'rgba(139,92,246,0.1)', color: '#c4b5fd' }}
+          >
+            <Sparkles className="w-4 h-4" />
+            Insights &amp; Tips
+          </span>
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#ffffff' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text',
@@ -83,7 +88,7 @@ const Blog = () => {
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1">
-                  <h2 className="text-lg font-bold mb-2 leading-snug" style={{ color: '#0f0f0f', fontFamily: "'Montserrat Condensed', sans-serif" }}>{post.title}</h2>
+                  <h2 className="text-lg font-bold mb-2 leading-snug" style={{ color: '#0f0f0f' }}>{post.title}</h2>
                   <p className="text-sm mb-4 flex-1" style={{ color: '#6b7280' }}>{post.metaDescription}</p>
 
                   <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs pt-3" style={{ borderTop: '1px solid #f0f0f5', color: '#9ca3af' }}>

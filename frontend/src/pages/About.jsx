@@ -21,19 +21,17 @@ const About = () => {
       <Helmet>
         <title>About Us | Panther Flow — Meta Ads Course in Marathi</title>
         <meta name="description" content="धाराशिव मधून, मराठीत, Practical Meta Ads Training. Panther Flow आणि instructor धिरज दयानंद यांच्याबद्दल जाणून घ्या." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Helmet>
       <Header />
 
+      {/* Hero */}
       {/* Hero */}
       <section className="pt-28 sm:pt-32 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
 
         <div className="container mx-auto max-w-3xl relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mt-4" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+          <h1 className="text-4xl md:text-6xl font-bold mt-4" style={{ color: '#ffffff' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text',
@@ -51,7 +49,7 @@ const About = () => {
           backgroundSize: '40px 40px'
         }}></div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text',
@@ -166,7 +164,7 @@ const About = () => {
                       backgroundClip: 'text'
                     }}>Meet Your Instructor</span>
                   </span>
-                  <h2 className="font-bold mb-2" style={{ fontSize: '24px', color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+                  <h2 className="font-bold mb-2" style={{ fontSize: '24px', color: '#ffffff' }}>
                     धिरज दयानंद
                   </h2>
                   <p className="inline-block text-lg font-medium px-3 py-1 rounded-lg" style={{ background: '#ffffff' }}>
@@ -245,7 +243,7 @@ const About = () => {
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ color: '#ffffff' }}>
             <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Top</span> Reasons
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -253,21 +251,21 @@ const About = () => {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED)' }}>
                 <span className="text-2xl font-bold text-white">₹</span>
               </div>
-              <h3 className="text-lg font-bold text-white" style={{ fontFamily: "'Montserrat Condensed', sans-serif" }}>Affordable Pricing</h3>
+              <h3 className="text-lg font-bold text-white">Affordable Pricing</h3>
               <p className="text-sm" style={{ color: '#a0a0b8', lineHeight: 1.5 }}>पुणे-मुंबईच्या institutes च्या तुलनेत खूपच कमी किमतीत तितकंच दर्जेदार training.</p>
             </div>
             <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)' }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7C3AED, #EC4899)' }}>
                 <Target className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-white" style={{ fontFamily: "'Montserrat Condensed', sans-serif" }}>100% Practical</h3>
+              <h3 className="text-lg font-bold text-white">100% Practical</h3>
               <p className="text-sm" style={{ color: '#a0a0b8', lineHeight: 1.5 }}>Slides नाही, फक्त theory नाही — real ad accounts, real budgets, real results.</p>
             </div>
             <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#1a1a2e', border: '1.5px solid rgba(123,94,167,0.25)' }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4F46E5, #EC4899)' }}>
                 <Video className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-white" style={{ fontFamily: "'Montserrat Condensed', sans-serif" }}>Live Doubt-Solving</h3>
+              <h3 className="text-lg font-bold text-white">Live Doubt-Solving</h3>
               <p className="text-sm" style={{ color: '#a0a0b8', lineHeight: 1.5 }}>रेकॉर्डिंग बघून अडकून राहायचं नाही — रोज live session मध्ये प्रश्न लगेच सुटतात.</p>
             </div>
           </div>
@@ -286,7 +284,7 @@ const About = () => {
               <Calendar className="w-4 h-4 text-white" />
               <span className="text-white">New Batch Starting on 20th July</span>
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#ffffff', fontFamily: "'Montserrat Condensed', sans-serif" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: '#ffffff' }}>
               Panther Flow सोबत Meta Ads शिकायला तयार आहात?
             </h2>
             <div className="flex items-center justify-center gap-2 pt-2">
