@@ -26,32 +26,31 @@ const About = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-36 sm:pt-44 pb-16 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'linear-gradient(rgba(79,70,229,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.12) 1px, transparent 1px)',
-          backgroundSize: '48px 48px'
-        }}></div>
-        <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5 shadow-sm" style={{ background: 'rgba(79,70,229,0.06)', border: '1px solid rgba(79,70,229,0.15)' }}>
-            <Sparkles className="w-4 h-4" style={{ color: '#7C3AED' }} />
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>About Panther Flow</span>
+      {/* Hero */}
+      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden text-center" style={{ background: 'linear-gradient(135deg, #0f0f1a 0%, #13103a 60%, #1a1040 100%)' }}>
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
+
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <span
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
+            style={{ border: '1.5px solid rgba(139,92,246,0.5)', background: 'rgba(139,92,246,0.1)', color: '#c4b5fd' }}
+          >
+            <Sparkles className="w-4 h-4" />
+            About Panther Flow
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
-            धाराशिव मधून, मराठीत,<br />
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#ffffff' }}>
             <span style={{
               background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            }}>Practical Meta Ads Training</span>
+            }}>About</span>
           </h1>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: '#4b5563' }}>
-            Recorded video नाही — Live sessions, real campaign data, आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
+
+          <p className="text-base sm:text-lg max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.75)' }}>
+            धाराशिव मधून, मराठीत, Practical Meta Ads Training — Recorded video नाही, Live sessions आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
           </p>
         </div>
       </section>
