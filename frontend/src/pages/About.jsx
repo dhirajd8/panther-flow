@@ -40,7 +40,7 @@ const About = () => {
 
 
       {/* Trainer Card */}
-      <section className="px-4 pb-20">
+      <section className="pt-16 sm:pt-20 px-4 pb-20" style={{ background: '#ffffff' }}>
         <div className="container mx-auto max-w-6xl">
           <div className="relative rounded-3xl overflow-hidden p-8 md:p-12" style={{
             background: '#000000',
