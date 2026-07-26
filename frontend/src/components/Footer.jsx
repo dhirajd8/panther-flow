@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Email</p>
-                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>contactpantherflow@gmail.com</p>
+                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>contactpantherflow@gmail.com</p>
               </div>
             </a>
 
@@ -63,7 +63,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Phone</p>
-                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>+91 9307378191</p>
+                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>+91 9307378191</p>
               </div>
             </a>
 
@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Address · View on map</p>
-                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#a78bfa' }}>Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</p>
+                <p className="font-semibold text-sm" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</p>
               </div>
             </a>
           </div>
