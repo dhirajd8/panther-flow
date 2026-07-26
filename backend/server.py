@@ -76,6 +76,7 @@ class BlogPostCreate(BaseModel):
     author: Optional[str] = "Panther Flow"
     category: Optional[str] = "Digital Marketing"
     metaDescription: Optional[str] = ""
+    coverImage: Optional[str] = ""
     content: str
     status: Optional[str] = "draft"  # "draft" or "published"
     faqs: Optional[List[FAQItem]] = []
@@ -87,6 +88,7 @@ class BlogPostUpdate(BaseModel):
     author: Optional[str] = None
     category: Optional[str] = None
     metaDescription: Optional[str] = None
+    coverImage: Optional[str] = None
     content: Optional[str] = None
     status: Optional[str] = None
     faqs: Optional[List[FAQItem]] = None
@@ -321,6 +323,7 @@ async def admin_create_blog(payload: BlogPostCreate, user: str = Depends(verify_
         "author": payload.author or "Panther Flow",
         "category": payload.category or "Digital Marketing",
         "metaDescription": payload.metaDescription or "",
+        "coverImage": payload.coverImage or "",
         "content": payload.content,
         "status": payload.status or "draft",
         "faqs": [f.model_dump() for f in (payload.faqs or [])],
