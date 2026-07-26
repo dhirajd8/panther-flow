@@ -27,11 +27,8 @@ const Contact = () => {
           backgroundSize: '48px 48px'
         }}></div>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-            }}>Contact</span> Us
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
+            Contact Us
           </h1>
           <p className="text-lg" style={{ color: '#4b5563' }}>
             प्रश्न आहेत? Course बद्दल अधिक माहिती हवी आहे? आम्हाला थेट संपर्क करा.

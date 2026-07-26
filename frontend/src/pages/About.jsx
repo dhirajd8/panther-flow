@@ -32,12 +32,7 @@ const About = () => {
 
         <div className="container mx-auto max-w-3xl relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mt-4" style={{ color: '#ffffff' }}>
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>About</span>
+            About
           </h1>
         </div>
       </section>

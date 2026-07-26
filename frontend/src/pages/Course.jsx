@@ -83,7 +83,7 @@ const Course = () => {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
-            Meta Ads शिका <span style={{ background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Zero ते Expert</span>
+            Meta Ads शिका Zero ते Expert
           </h1>
           <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.75)' }}>
             १५ दिवसांचा Live Course — फक्त Theory नाही, तर Real Campaigns सोबत Practical Training. १०० टक्के मराठीत.

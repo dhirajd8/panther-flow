@@ -41,12 +41,7 @@ const Blog = () => {
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ color: '#ffffff' }}>
-            <span style={{
-              background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>Blogs</span>
+            Blogs
           </h1>
 
           <p className="text-base sm:text-lg" style={{ color: 'rgba(255,255,255,0.7)' }}>
