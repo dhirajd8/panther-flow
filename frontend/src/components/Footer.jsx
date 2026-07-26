@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, Users, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -18,21 +18,6 @@ const Footer = () => {
     <footer id="footer" className="py-16 px-4" style={{ background: '#0d0d0d', color: 'rgba(255,255,255,0.95)' }}>
       <div className="container mx-auto max-w-6xl">
 
-        {/* Trust badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Clock className="w-4 h-4" style={{ color: '#FF5A09' }} />
-            <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>Response within 24 hours</span>
-          </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Users className="w-4 h-4" style={{ color: '#FF5A09' }} />
-            <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>45+ Students Trained</span>
-          </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-            <Star className="w-4 h-4" style={{ color: '#FF5A09' }} />
-            <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>₹4.5L+ Ad Spend Managed</span>
-          </div>
-        </div>
 
         {/* Footer Nav Links */}
         <div className="flex justify-center gap-8 flex-wrap pb-8 mb-10" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
