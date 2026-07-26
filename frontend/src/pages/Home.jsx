@@ -606,8 +606,8 @@ background: 'none',        pointerEvents: 'none',
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
           }}>
-    <div className="flex flex-row items-center justify-between w-full gap-0.5">
-      <div className="flex items-center justify-between gap-0.5">
+    <div className="flex flex-row items-center justify-center w-full gap-0.5">
+      <div className="flex items-center justify-center gap-0.5">
         {/* Brand - hidden on mobile */}
 
         {/* Nav Links */}
@@ -627,7 +627,7 @@ background: 'none',        pointerEvents: 'none',
             About
           </button>
           <button
-            onClick={() => scrollToSection('course-overview')}
+            onClick={() => navigate('/course')}
             className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
@@ -654,7 +654,7 @@ background: 'none',        pointerEvents: 'none',
 </header>
 
         {/* Hero Section */}
-        <section className="pt-28 sm:pt-32 pb-10 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+        <section className="pt-28 sm:pt-32 pb-2 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
   {/* Grid lines */}
   <div className="absolute inset-0 pointer-events-none" style={{
     backgroundImage: 'linear-gradient(rgba(79,70,229,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(79,70,229,0.15) 1px, transparent 1px)',
@@ -746,7 +746,7 @@ background: 'none',        pointerEvents: 'none',
               }}>
                 फक्त Theory नाही. Live Sessions, Practical Training आणि Real Campaign Setup सह Meta Ads शिका.
               </p>
-              <div className="flex flex-col items-center gap-6 pt-4 rise-up rise-up-delay-2">
+              <div className="flex flex-col items-center gap-4 pt-1 rise-up rise-up-delay-2">
                 <Button
                   onClick={handleEnrollClick}
                   size="lg"
@@ -795,7 +795,7 @@ background: 'none',        pointerEvents: 'none',
 
         
         {/* Course Overview Section */}
-       <section id="course-overview" className="py-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
+       <section id="course-overview" className="pt-8 pb-20 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="absolute inset-0 pointer-events-none" style={{
             backgroundImage: 'linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)',
             backgroundSize: '40px 40px'

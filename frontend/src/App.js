@@ -10,6 +10,7 @@ import BlogPost from './pages/BlogPost';
 import AdminLogin from './pages/AdminLogin';
 import AdminBlogList from './pages/AdminBlogList';
 import AdminBlogEditor from './pages/AdminBlogEditor';
+import Course from './pages/Course';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin/blogs" element={<AdminBlogList />} />
           <Route path="/admin/blogs/new" element={<AdminBlogEditor />} />
           <Route path="/admin/blogs/edit/:id" element={<AdminBlogEditor />} />
+          <Route path="/course" element={<Course />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
