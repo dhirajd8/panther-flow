@@ -179,22 +179,19 @@ const About = () => {
 
                 <div className="space-y-4" style={{ color: '#ffffff' }}>
                   <p className="text-base leading-relaxed">
-                    Internet वर हजारो Marketing courses उपलब्ध आहेत, पण <strong style={{
+                    Internet वर मार्केटिंग शिकवणारे भरपूर courses आहेत, पण <strong style={{
                       background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-                    }}>आपल्या भाषेत आणि आपल्या लोकांसाठी समजेल आणि affordable</strong> असा course मिळणं कठीण आहे. हीच गोष्ट मनात ठेवून Panther Flow सुरू केलं, जिथे प्रत्येक concept मराठीमध्ये सोप्या पद्धतीने समजावून सांगण्याचा प्रयत्न असतो. <strong style={{
+                    }}>मराठीत, सोप्या भाषेत आणि परवडणाऱ्या किमतीत</strong> शिकवणारा course सापडणं अवघड आहे. हीच गरज लक्षात घेऊन Panther Flow सुरू केलं — जिथे प्रत्येक concept मराठीत, उदाहरणांसह समजावून सांगितलं जातं. मी धाराशिवचा असून गेली काही वर्षं Performance Marketing मध्ये काम करतोय, आणि हे सगळं ज्ञान थेट, <strong style={{
                       background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-                    }}>मराठी मातीतला, धाराशिव मधून आलेला एक २२ वर्षांचा तरुण</strong>, जो Performance Marketing क्षेत्रात स्वतःचं छोटंसं स्थान निर्माण करत आहे आणि हेच knowledge आपल्या मराठी बांधवांपर्यंत सोप्या भाषेत पोहोचवण्याचा प्रयत्न करतोय. आणि हा एक recorded course नाही, तर हे <strong style={{
-                      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
-                      WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-                    }}>live शिकवलं जातं</strong>.
+                    }}>live सेशन्सच्या माध्यमातून शिकवतो</strong> — recorded videos नाही.
                   </p>
                   <p className="text-base leading-relaxed">
-                    Client च्या कामातून जे practical learnings मिळाल्या, जे छोटे छोटे अनुभव आले, तेच सगळं या course मध्ये मांडलं आहे. त्यामुळे इथे फक्त theory नाही, तर खऱ्या कामातून आलेले <strong style={{
+                    पुणे-मुंबईच्या Digital Marketing Institutes ची fees सगळ्यांना परवडणारी नसते. लवकर job हवी म्हणून admission घेतली जाते, पण course संपल्यावरही skills आणि confidence तयार होत नाही. हाच problem सोडवण्यासाठी Panther Flow आहे — <strong style={{
                       background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-                    }}>raw अनुभव</strong> मिळतील, मग ते चांगले असोत किंवा mistakes असोत.
+                    }}>affordable किमतीत, practical पद्धतीने, मराठीत</strong> शिकवणारा Meta Ads course.
                   </p>
                 </div>
 
