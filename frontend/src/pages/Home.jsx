@@ -515,27 +515,6 @@ const Home = () => {
     }
   };
 
-
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  // Scroll to a section if we arrived here via a #hash link from another page
-  React.useEffect(() => {
-    if (window.location.hash) {
-      const id = window.location.hash.replace('#', '');
-      const timer = setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
 React.useEffect(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -654,7 +633,7 @@ background: 'none',        pointerEvents: 'none',
             Blogs
           </button>
           <button
-    onClick={() => scrollToSection('footer')}
+    onClick={() => navigate('/contact')}
     className="text-gray-700 hover:bg-indigo-50 font-medium px-1.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-xs sm:text-base whitespace-nowrap"
     style={{ fontFamily: 'Poppins, sans-serif' }}
   >
@@ -1325,9 +1304,9 @@ background: 'none',        pointerEvents: 'none',
 
             {/* Footer Nav Links */}
             <div className="flex justify-center gap-8 flex-wrap pb-8 mb-10" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              <button onClick={() => scrollToSection('about')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>About</button>
-              <button onClick={() => scrollToSection('course-overview')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Course</button>
-              <button onClick={() => scrollToSection('socials')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Connect</button>
+              <button onClick={() => navigate('/about')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>About</button>
+              <button onClick={() => navigate('/course')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Course</button>
+              <button onClick={() => navigate('/contact')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Connect</button>
               <a href="/privacy-policy" className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontFamily: 'Poppins, sans-serif' }}>Privacy Policy</a>
             </div>
 
