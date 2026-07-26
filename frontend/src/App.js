@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import About from './pages/About';
+import Course from './pages/Course';
+import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import ThankYou from './ThankYou';
 import Blog from './pages/Blog';
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/blog" element={<Blog />} />
