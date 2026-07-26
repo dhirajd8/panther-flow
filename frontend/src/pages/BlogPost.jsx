@@ -30,6 +30,86 @@ const FaqItem = ({ faq }) => {
   );
 };
 
+const markdownComponents = {
+  img: ({ node, ...props }) => (
+    <img {...props} className="rounded-xl my-4 w-full" loading="lazy" />
+  ),
+  a: ({ node, href, children, ...props }) => {
+    const isExternal = href && href.startsWith('http');
+    return (
+      <a
+        href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+        style={{ color: '#4F46E5', fontWeight: 600 }}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
+  h2: ({ node, ...props }) => (
+    <h2 {...props} className="text-2xl font-bold mt-8 mb-3" style={{ color: '#0f0f0f' }} />
+  ),
+  h3: ({ node, ...props }) => (
+    <h3 {...props} className="text-xl font-bold mt-6 mb-2" style={{ color: '#0f0f0f' }} />
+  ),
+  table: ({ node, ...props }) => (
+    <div className="overflow-x-auto my-4">
+      <table className="w-full text-sm" {...props} style={{ borderCollapse: 'collapse' }} />
+    </div>
+  ),
+  th: ({ node, ...props }) => (
+    <th {...props} className="text-left px-3 py-2 font-bold" style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }} />
+  ),
+  td: ({ node, ...props }) => (
+    <td {...props} className="px-3 py-2" style={{ border: '1px solid #f0f0f5' }} />
+  ),
+};
+
+const renderContent = (content) => {
+  const youtubeRegex = /\{\{youtube:(.+?)\}\}/g;
+  const segments = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = youtubeRegex.exec(content)) !== null) {
+    if (match.index > lastIndex) {
+      segments.push({ type: 'markdown', value: content.slice(lastIndex, match.index) });
+    }
+    segments.push({ type: 'youtube', url: match[1].trim() });
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < content.length) {
+    segments.push({ type: 'markdown', value: content.slice(lastIndex) });
+  }
+
+  return segments.map((seg, idx) => {
+    if (seg.type === 'youtube') {
+      const embedUrl = getYoutubeEmbedUrl(seg.url);
+      if (!embedUrl) return null;
+      return (
+        <div key={idx} className="my-6 rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+          <iframe
+            src={embedUrl}
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+            style={{ border: 'none' }}
+          />
+        </div>
+      );
+    }
+    if (!seg.value.trim()) return null;
+    return (
+      <ReactMarkdown key={idx} remarkPlugins={[remarkGfm]} components={markdownComponents}>
+        {seg.value}
+      </ReactMarkdown>
+    );
+  });
+};
+
 const BlogPost = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -66,9 +146,6 @@ const BlogPost = () => {
     );
   }
 
-  // Split content into blocks; render YouTube markers as embeds, everything else as markdown
-  const blocks = post.content.split(/\n{2,}/).filter((b) => b.trim());
-
   const faqSchema = post.faqs && post.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -94,6 +171,15 @@ const BlogPost = () => {
           ← Back to Blog
         </button>
 
+        {post.coverImage && (
+          <img
+            src={post.coverImage}
+            alt={post.title}
+            className="w-full rounded-2xl mb-8"
+            style={{ maxHeight: '400px', objectFit: 'cover' }}
+          />
+        )}
+
         <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#0f0f0f' }}>
           {post.title}
         </h1>
@@ -104,63 +190,7 @@ const BlogPost = () => {
         </div>
 
         <div className="prose max-w-none text-base leading-relaxed" style={{ color: '#374151' }}>
-          {blocks.map((block, idx) => {
-            const youtubeMatch = block.trim().match(/^\{\{youtube:(.+)\}\}$/);
-            if (youtubeMatch) {
-              const embedUrl = getYoutubeEmbedUrl(youtubeMatch[1].trim());
-              if (!embedUrl) return null;
-              return (
-                <div key={idx} className="my-6 rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                  <iframe
-                    src={embedUrl}
-                    title="YouTube video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                    style={{ border: 'none' }}
-                  />
-                </div>
-              );
-            }
-            return (
-              <ReactMarkdown
-                key={idx}
-                remarkPlugins={[remarkGfm]}
-                components={{
-                  img: ({ node, ...props }) => (
-                    <img {...props} className="rounded-xl my-4 w-full" loading="lazy" />
-                  ),
-                  a: ({ node, href, children, ...props }) => {
-                    const isExternal = href && href.startsWith('http');
-                    return (
-                      <a
-                        href={href}
-                        target={isExternal ? '_blank' : undefined}
-                        rel={isExternal ? 'noopener noreferrer' : undefined}
-                        style={{ color: '#4F46E5', fontWeight: 600 }}
-                        {...props}
-                      >
-                        {children}
-                      </a>
-                    );
-                  },
-                  table: ({ node, ...props }) => (
-                    <div className="overflow-x-auto my-4">
-                      <table className="w-full text-sm" {...props} style={{ borderCollapse: 'collapse' }} />
-                    </div>
-                  ),
-                  th: ({ node, ...props }) => (
-                    <th {...props} className="text-left px-3 py-2 font-bold" style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }} />
-                  ),
-                  td: ({ node, ...props }) => (
-                    <td {...props} className="px-3 py-2" style={{ border: '1px solid #f0f0f5' }} />
-                  ),
-                }}
-              >
-                {block}
-              </ReactMarkdown>
-            );
-          })}
+          {renderContent(post.content)}
         </div>
 
         {post.faqs && post.faqs.length > 0 && (
