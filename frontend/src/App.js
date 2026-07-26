@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
+import About from './pages/About';
 import Checkout from './pages/Checkout';
 import ThankYou from './ThankYou';
 import Blog from './pages/Blog';
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/blog" element={<Blog />} />
