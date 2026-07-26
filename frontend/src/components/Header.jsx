@@ -16,24 +16,12 @@ const Header = () => {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
       <nav
-        className="flex items-center gap-1 sm:gap-2 backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl px-2 sm:px-2.5 py-2"
+        className="flex items-center justify-center gap-1 sm:gap-2 backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl px-2 sm:px-2.5 py-2"
         style={{
           background: 'rgba(15, 15, 26, 0.75)',
           border: '1px solid rgba(139,92,246,0.35)',
         }}
       >
-        {/* Brand mark */}
-        <button
-          onClick={() => navigate('/')}
-          className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 font-black text-xs text-white"
-          style={{ background: 'linear-gradient(135deg, #4F46E5, #7C3AED, #EC4899)', fontFamily: 'Poppins, sans-serif' }}
-          aria-label="Panther Flow Home"
-        >
-          PF
-        </button>
-
-        <div className="hidden sm:block w-px h-5 flex-shrink-0" style={{ background: 'rgba(255,255,255,0.15)' }}></div>
-
         {/* Nav links */}
         <div className="flex items-center gap-0.5 sm:gap-1">
           {navItems.map((item) => {
