@@ -37,53 +37,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Intro Section */}
-      <section className="pt-16 sm:pt-20 pb-16 px-4 relative overflow-hidden" style={{ background: '#ffffff' }}>
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.12) 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}></div>
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4" style={{ color: '#0f0f0f' }}>
-            <span style={{
-              background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>Meta Ads Training</span>{' '}मराठी
-          </h2>
-          <p className="text-lg sm:text-xl leading-relaxed mb-10" style={{ color: '#334155' }}>
-            जूने Recorded video नाही, Live sessions आणि raw अनुभवातून शिकवणारा एक Meta Ads course.
-          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-            <div className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(255,90,9,0.06)' }}>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                <CheckCircle2 className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm pt-1" style={{ color: '#334155' }}>Course नंतरही Doubt Solving साठी कायम Support</span>
-            </div>
-            <div className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(255,90,9,0.06)' }}>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                <CheckCircle2 className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm pt-1" style={{ color: '#334155' }}>जूने Recorded videos नाही. फक्त Live, Interactive Sessions</span>
-            </div>
-            <div className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(255,90,9,0.06)' }}>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                <CheckCircle2 className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm pt-1" style={{ color: '#334155' }}>Real client work मधून आलेले raw अनुभव आणि शिकवण</span>
-            </div>
-            <div className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(255,90,9,0.06)' }}>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                <CheckCircle2 className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm pt-1" style={{ color: '#334155' }}>100% Practical — Theory नाही, फक्त Real Ad Campaigns</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Trainer Card */}
       <section className="px-4 pb-20">
@@ -230,21 +184,21 @@ const About = () => {
             <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Top</span> Reasons
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#000000', border: '1.5px solid rgba(0,0,0,0.25)' }}>
+            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#1a1a2e', border: '1.5px solid rgba(255,90,9,0.4)' }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <span className="text-2xl font-bold text-white">₹</span>
               </div>
               <h3 className="text-lg font-bold text-white">Affordable Pricing</h3>
               <p className="text-sm" style={{ color: '#a0a0b8', lineHeight: 1.5 }}>पुणे-मुंबईच्या institutes च्या तुलनेत खूपच कमी किमतीत तितकंच दर्जेदार training.</p>
             </div>
-            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#000000', border: '1.5px solid rgba(0,0,0,0.25)' }}>
+            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#1a1a2e', border: '1.5px solid rgba(255,90,9,0.4)' }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <Target className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-white">100% Practical</h3>
               <p className="text-sm" style={{ color: '#a0a0b8', lineHeight: 1.5 }}>Slides नाही, फक्त theory नाही — real ad accounts, real budgets, real results.</p>
             </div>
-            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#000000', border: '1.5px solid rgba(0,0,0,0.25)' }}>
+            <div className="rounded-2xl p-6 flex flex-col gap-4" style={{ background: '#1a1a2e', border: '1.5px solid rgba(255,90,9,0.4)' }}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
                 <Video className="w-6 h-6 text-white" />
               </div>

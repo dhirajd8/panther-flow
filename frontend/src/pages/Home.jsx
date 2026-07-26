@@ -741,8 +741,8 @@ background: 'none',        pointerEvents: 'none',
                 <Button
                   onClick={handleEnrollClick}
                   size="lg"
-                  className="text-white text-lg px-8 py-6 rounded-full font-bold btn-blue btn-animated-border rise-up rise-up-delay-3"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}
+                  className="text-white text-lg px-8 py-6 rounded-full font-bold rise-up rise-up-delay-3"
+                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', boxShadow: '0 8px 24px rgba(255,90,9,0.4)', border: 'none' }}
                   data-testid="hero-join-now"
                 >
                   {`Join Now - फक्त ${courseData.currency}${courseData.price}`}
@@ -884,11 +884,7 @@ background: 'none',        pointerEvents: 'none',
               z-index: 1;
             }
           `}</style>
-          {/* Vivid color blobs directly behind the card grid to fuel the glass blur */}
-          <div className="absolute top-10 left-10 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.9) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
-          <div className="absolute top-40 right-16 w-80 h-80 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.85) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-          <div className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.9) 0%, transparent 70%)', filter: 'blur(55px)' }}></div>
-          <div className="absolute bottom-24 right-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,90,9,0.7) 0%, transparent 70%)', filter: 'blur(50px)' }}></div>
+
           <div className="container mx-auto max-w-6xl relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center rise-up" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
               Right For <span style={{ background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>You?</span>
@@ -1265,27 +1261,14 @@ background: 'none',        pointerEvents: 'none',
         }}>
           <div className="container mx-auto max-w-6xl">
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Clock className="w-4 h-4" style={{ color: '#FF5A09' }} />
-                <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>Response within 24 hours</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Users className="w-4 h-4" style={{ color: '#FF5A09' }} />
-                <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>45+ Students Trained</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
-                <Star className="w-4 h-4" style={{ color: '#FF5A09' }} />
-                <span className="text-sm font-medium" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.85)' }}>₹4.5L+ Ad Spend Managed</span>
-              </div>
-            </div>
+
 
             {/* Footer Nav Links */}
             <div className="flex justify-center gap-8 flex-wrap pb-8 mb-10" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               <button onClick={() => navigate('/about')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>About</button>
               <button onClick={() => navigate('/course')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Course</button>
-              <button onClick={() => navigate('/contact')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Connect</button>
+              <button onClick={() => navigate('/blog')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Blogs</button>
+              <button onClick={() => navigate('/contact')} className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'Poppins, sans-serif' }}>Contact</button>
               <a href="/privacy-policy" className="text-sm hover:opacity-100 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontFamily: 'Poppins, sans-serif' }}>Privacy Policy</a>
             </div>
 

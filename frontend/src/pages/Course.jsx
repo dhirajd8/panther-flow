@@ -143,7 +143,7 @@ const Course = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {whoItsFor.map((item, idx) => (
-              <div key={idx} className="p-5 rounded-2xl flex items-start gap-4" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}>
+              <div key={idx} className="p-5 rounded-2xl flex items-start gap-4" style={{ background: '#000000', border: '1.5px solid rgba(255,90,9,0.4)' }}>
                 <div style={{ fontSize: '2.2rem', lineHeight: 1 }}>{item.emoji}</div>
                 <div>
                   <h3 className="font-bold mb-1" style={{ color: '#ffffff' }}>{item.title}</h3>
