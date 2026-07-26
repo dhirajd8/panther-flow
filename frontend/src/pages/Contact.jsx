@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -12,6 +13,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen" style={{ background: '#ffffff', fontFamily: 'Poppins, sans-serif' }}>
+      <Helmet>
+        <title>Contact Us | Panther Flow — Meta Ads Course in Marathi</title>
+        <meta name="description" content="प्रश्न आहेत? Panther Flow च्या Meta Ads Marathi Course बद्दल अधिक माहितीसाठी आम्हाला संपर्क करा — Email, Phone किंवा WhatsApp वर." />
+      </Helmet>
       <Header />
 
       {/* Hero */}
