@@ -90,29 +90,28 @@ const Course = () => {
           <h2 className="text-3xl font-bold text-center mb-10" style={{ color: '#0f0f0f' }}>
             Course <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Content</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="flex flex-col gap-8 relative py-4">
             {learningOutcomes.map((item, idx) => {
-              const accents = ['#FF5A09', '#0f0f0f', '#FF5A09', '#0f0f0f'];
-              const rotations = ['-0.6deg', '0.4deg', '0deg', '-0.3deg'];
-              const offsets = ['0px', '18px', '6px', '22px'];
-              const accent = accents[idx % accents.length];
+              const isEven = idx % 2 === 0;
+              const accent = idx % 4 === 1 ? '#FF5A09' : '#0f0f0f';
+              const rotate = isEven ? '-1.5deg' : '1.5deg';
               return (
                 <div
                   key={idx}
-                  className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:rotate-0"
+                  className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:rotate-0 hover:scale-[1.02] w-full sm:w-[72%]"
                   style={{
                     background: idx % 4 === 1 ? '#0f0f0f' : '#f7f7fb',
                     border: `1.5px solid ${idx % 4 === 1 ? 'rgba(255,90,9,0.4)' : '#ececf5'}`,
-                    boxShadow: '0 4px 14px rgba(0,0,0,0.06)',
-                    marginTop: offsets[idx % offsets.length],
-                    transform: `rotate(${rotations[idx % rotations.length]})`,
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.08)',
+                    transform: `rotate(${rotate})`,
+                    alignSelf: isEven ? 'flex-start' : 'flex-end',
                   }}
                 >
                   <div
                     className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ background: accent, transform: idx % 2 === 0 ? 'rotate(0deg)' : 'rotate(45deg)', borderRadius: idx % 3 === 0 ? '50%' : '30%' }}
+                    style={{ background: accent, borderRadius: idx % 3 === 0 ? '50%' : '30%' }}
                   >
-                    <CheckCircle2 className="w-4 h-4 text-white" style={{ transform: idx % 2 === 0 ? 'rotate(0deg)' : 'rotate(-45deg)' }} />
+                    <CheckCircle2 className="w-4 h-4 text-white" />
                   </div>
                   <span
                     className="text-sm sm:text-base pt-1"

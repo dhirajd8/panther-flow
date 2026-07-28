@@ -50,7 +50,7 @@ const Header = () => {
         {/* CTA */}
         <button
           onClick={() => navigate('/checkout')}
-          className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap flex-shrink-0"
+          className="btn-join hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap flex-shrink-0"
           style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', fontFamily: 'Poppins, sans-serif' }}
         >
           Join Now →

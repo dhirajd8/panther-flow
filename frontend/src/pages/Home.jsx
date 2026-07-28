@@ -572,29 +572,7 @@ background: 'none',        pointerEvents: 'none',
       }}></div>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-[60] py-2 px-3 text-center shadow-lg" style={{
-          background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 100%)',
-          fontFamily: 'Poppins, sans-serif'
-        }} data-testid="announcement-bar">
-          <div className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm font-semibold flex-wrap">
-            <span className="relative flex h-2 w-2 flex-shrink-0">
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-#edebde"></span>
-            </span>
-            <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
-            <span className="hidden sm:inline">🔥 New Batch Starting on <strong>1st August</strong> · Limited Seats Available!</span>
-            <span className="sm:hidden">🔥 New Batch · <strong>1st August</strong> · Limited Seats!</span>
-            <button 
-              onClick={handleEnrollClick}
-              className="btn-join font-bold text-white whitespace-nowrap announcement-pulse px-3 py-1 rounded-full"
-              data-testid="announcement-cta"
-            >
-              Join Now →
-            </button>
-          </div>
-        </div>
-
-       <header className="fixed top-16 sm:top-14 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-auto max-w-[calc(100%-1rem)]">
   <nav className="backdrop-blur-xl rounded-3xl sm:rounded-full shadow-2xl border border-gray-200 px-3 sm:px-4 py-2" style={{
             background: 'rgba(255, 255, 255, 0.95)',
             boxShadow: '0 10px 40px rgba(79, 70, 229, 0.15)'
