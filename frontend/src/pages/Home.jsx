@@ -1,4 +1,3 @@
-Video, Quote, Calendar, Mail, Phone, MapPin, Send, Star, Languages
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { courseData } from '../data/mock';
@@ -36,7 +35,8 @@ import {
   Phone,
   MapPin,
   Send,
-  Star
+  Star,
+  Languages
 } from 'lucide-react';
 
 // Generates a stable set of slowly drifting dots for hero section
