@@ -38,6 +38,7 @@ import {
   Star,
   Languages
 } from 'lucide-react';
+import { GmailIcon, PhoneCallIcon, MapPinRealIcon } from '../components/icons';
 
 // Generates a stable set of slowly drifting dots for hero section
 const heroParticles = Array.from({ length: 35 }).map((_, i) => {
