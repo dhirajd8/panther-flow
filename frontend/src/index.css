@@ -342,6 +342,7 @@ code {
 .batch-date-btn {
   background: #ffffff;
   color: #FF5A09;
+  border: 1.5px solid #FF5A09;
 }
 .batch-date-btn:hover {
   background: #000000;

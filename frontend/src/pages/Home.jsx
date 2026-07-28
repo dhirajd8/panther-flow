@@ -806,7 +806,8 @@ background: 'none',        pointerEvents: 'none',
             {/* 14 Days Live Classes Banner */}
             <div className="max-w-sm sm:max-w-3xl mx-auto mb-16 rise-up">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{
-                background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)'
+                background: '#ffffff',
+                border: '1.5px solid #FF5A09'
               }}>
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none" style={{
                   background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)'
@@ -835,13 +836,13 @@ background: 'none',        pointerEvents: 'none',
                         <span className="w-2 h-2 rounded-full live-dot"></span>
                         <span style={{ color: '#ef4444', fontWeight: 800 }}>LIVE</span>
                       </span>
-                      <Video className="w-5 h-5 text-white" />
+                      <Video className="w-5 h-5" style={{ color: '#FF5A09' }} />
                     </div>
-                    <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#ffffff' }}>
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1.5 sm:mb-2" style={{ fontFamily: 'Poppins, sans-serif', color: '#0f0f0f' }}>
                       15 Days Live Classes
                     </h3>
-                    <p className="text-sm sm:text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.9)' }}>
-                      <strong>१५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
+                    <p className="text-sm sm:text-base leading-relaxed mb-3" style={{ fontFamily: 'Poppins, sans-serif', color: '#374151' }}>
+                      <strong style={{ color: '#0f0f0f' }}>१५ दिवस संपूर्ण Live Training</strong> — रोज नवीन concept, real-time doubts solve, आणि practical examples सोबत Meta Ads मास्टर बना!
                     </p>
                     <button
                       onClick={handleEnrollClick}
@@ -1274,8 +1275,8 @@ background: 'none',        pointerEvents: 'none',
               {/* Left: Icon-led contact cards */}
               <div className="space-y-4">
                 <a href="mailto:contactpantherflow@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                    <Mail className="w-5 h-5 text-white" />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <GmailIcon />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Email</p>
@@ -1284,8 +1285,8 @@ background: 'none',        pointerEvents: 'none',
                 </a>
 
                 <a href="tel:+919307378191" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                    <Phone className="w-5 h-5 text-white" />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <PhoneCallIcon />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Phone</p>
@@ -1294,8 +1295,8 @@ background: 'none',        pointerEvents: 'none',
                 </a>
 
                 <a href="https://www.google.com/maps/search/?api=1&query=Barmachiwadi+Tal+Kalamb+Dist+Dharashiv+413525" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 hover:scale-[1.02]" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', textDecoration: 'none' }}>
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-                    <MapPin className="w-5 h-5 text-white" />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: '#ffffff', border: '1px solid rgba(255,255,255,0.15)' }}>
+                    <MapPinRealIcon />
                   </div>
                   <div>
                     <p className="text-xs" style={{ fontFamily: 'Poppins, sans-serif', color: 'rgba(255,255,255,0.5)' }}>Address · View on map</p>
@@ -1328,10 +1329,9 @@ background: 'none',        pointerEvents: 'none',
                     />
                     <button
                       type="submit"
-                      className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:scale-[1.02] whitespace-nowrap"
-                      style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
+                      className="flex items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-[1.02] whitespace-nowrap"
+                      style={{ background: '#000000', border: '1.5px solid #FF5A09', color: '#FF5A09' }}
                     >
-                      <Send className="w-4 h-4" />
                       Get Updates
                     </button>
                   </form>
