@@ -11,6 +11,7 @@ import {
   Calendar,
   Target,
   Video,
+  Languages,
 } from 'lucide-react';
 
 const About = () => {
@@ -70,23 +71,7 @@ const About = () => {
                     />
                   </div>
 
-                  <div className="absolute -bottom-6 -right-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                    background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
-                    border: '1px solid rgba(255,255,255,0.35)',
-                    backdropFilter: 'blur(10px)'
-                  }}>
-                    <div className="text-xl sm:text-3xl font-bold text-white">45+</div>
-                    <div className="text-xs text-white/90">Happy Students</div>
-                  </div>
-
-                  <div className="absolute -bottom-6 -left-6 rounded-2xl p-3 sm:p-6 shadow-2xl z-20" style={{
-                    background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
-                    border: '1px solid rgba(255,255,255,0.35)',
-                    backdropFilter: 'blur(10px)'
-                  }}>
-                    <div className="text-xl sm:text-3xl font-bold text-white">₹4.5L+</div>
-                    <div className="text-xs text-white/90">Ad Spend Managed</div>
-                  </div>
+                  
 
                   <div className="absolute -top-4 -left-4 rounded-full px-5 py-2 shadow-2xl z-20" style={{
                     background: 'linear-gradient(135deg, rgba(255,90,9,0.95) 0%, rgba(255,90,9,0.95) 100%)',
@@ -148,6 +133,7 @@ const About = () => {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-3 pt-2">
                   <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
+                    <Languages className="w-5 h-5 mx-auto mb-1" style={{ color: '#FF5A09' }} />
                     <div className="text-2xl font-bold" style={{
                       background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
@@ -155,6 +141,7 @@ const About = () => {
                     <div className="text-xs mt-1" style={{ color: '#000000' }}>मराठी</div>
                   </div>
                   <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
+                    <Video className="w-5 h-5 mx-auto mb-1" style={{ color: '#FF5A09' }} />
                     <div className="text-2xl font-bold" style={{
                       background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
@@ -162,6 +149,7 @@ const About = () => {
                     <div className="text-xs mt-1" style={{ color: '#000000' }}>Sessions</div>
                   </div>
                   <div className="text-center p-4 rounded-xl shadow-md" style={{ background: '#ffffff' }}>
+                    <Target className="w-5 h-5 mx-auto mb-1" style={{ color: '#FF5A09' }} />
                     <div className="text-2xl font-bold" style={{
                       background: 'linear-gradient(135deg, #FF5A09 0%, #FF5A09 50%, #FF5A09 100%)',
                       WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
@@ -231,7 +219,7 @@ const About = () => {
             <div className="pt-2">
               <button
                 onClick={() => navigate('/checkout')}
-                className="text-white text-lg px-10 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                className="btn-join text-white text-lg px-10 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}
               >
                 Join Now →

@@ -483,3 +483,13 @@ code {
   background-size: 200% auto;
   animation: shimmer 2.5s linear infinite;
 }
+.btn-join {
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.btn-join:hover,
+.btn-join:focus-visible,
+.btn-join:active {
+  background: #ffffff !important;
+  color: #FF5A09 !important;
+  border: 1.5px solid #FF5A09 !important;
+}

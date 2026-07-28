@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { GmailIcon, PhoneCallIcon, MapPinRealIcon } from '../components/icons';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -37,8 +37,8 @@ const Contact = () => {
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-              <Mail className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: '#ffffff', border: '1.5px solid #f0f0f5' }}>
+              <GmailIcon />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Email</div>
             <div className="text-sm break-all" style={{ color: '#FF5A09' }}>contactpantherflow@gmail.com</div>
@@ -49,8 +49,8 @@ const Contact = () => {
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-              <Phone className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: '#ffffff', border: '1.5px solid #f0f0f5' }}>
+              <PhoneCallIcon />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Phone</div>
             <div className="text-sm" style={{ color: '#FF5A09' }}>+91 9307378191</div>
@@ -60,8 +60,8 @@ const Contact = () => {
             className="flex flex-col items-center text-center gap-3 rounded-2xl p-6"
             style={{ background: '#f7f7fb', border: '1px solid #f0f0f5' }}
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)' }}>
-              <MapPin className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: '#ffffff', border: '1.5px solid #f0f0f5' }}>
+              <MapPinRealIcon />
             </div>
             <div className="font-bold" style={{ color: '#0f0f0f' }}>Address</div>
             <div className="text-sm" style={{ color: '#6b7280' }}>At - Barmachiwadi, Tal- Kalamb, Dist - Dharashiv धाराशिव 413525</div>

@@ -90,15 +90,39 @@ const Course = () => {
           <h2 className="text-3xl font-bold text-center mb-10" style={{ color: '#0f0f0f' }}>
             Course <span style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Content</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {learningOutcomes.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1" style={{ background: '#f7f7fb', border: '1.5px solid #ececf5', boxShadow: '0 4px 14px rgba(0,0,0,0.05)' }}>
-                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: '#FF5A09' }}>
-                  <CheckCircle2 className="w-4 h-4 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {learningOutcomes.map((item, idx) => {
+              const accents = ['#FF5A09', '#0f0f0f', '#FF5A09', '#0f0f0f'];
+              const rotations = ['-0.6deg', '0.4deg', '0deg', '-0.3deg'];
+              const offsets = ['0px', '18px', '6px', '22px'];
+              const accent = accents[idx % accents.length];
+              return (
+                <div
+                  key={idx}
+                  className="flex items-start gap-3 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:rotate-0"
+                  style={{
+                    background: idx % 4 === 1 ? '#0f0f0f' : '#f7f7fb',
+                    border: `1.5px solid ${idx % 4 === 1 ? 'rgba(255,90,9,0.4)' : '#ececf5'}`,
+                    boxShadow: '0 4px 14px rgba(0,0,0,0.06)',
+                    marginTop: offsets[idx % offsets.length],
+                    transform: `rotate(${rotations[idx % rotations.length]})`,
+                  }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: accent, transform: idx % 2 === 0 ? 'rotate(0deg)' : 'rotate(45deg)', borderRadius: idx % 3 === 0 ? '50%' : '30%' }}
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-white" style={{ transform: idx % 2 === 0 ? 'rotate(0deg)' : 'rotate(-45deg)' }} />
+                  </div>
+                  <span
+                    className="text-sm sm:text-base pt-1"
+                    style={{ color: idx % 4 === 1 ? '#ffffff' : '#374151' }}
+                  >
+                    {item}
+                  </span>
                 </div>
-                <span className="text-sm sm:text-base pt-1" style={{ color: '#374151' }}>{item}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -182,7 +206,7 @@ const Course = () => {
           <p className="mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>Next Batch Starting 1st August — Limited Seats</p>
           <button
             onClick={handleEnroll}
-            className="px-8 py-4 rounded-full font-bold text-white text-base sm:text-lg transition-all duration-300 hover:scale-105"
+            className="btn-join px-8 py-4 rounded-full font-bold text-white text-base sm:text-lg transition-all duration-300 hover:scale-105"
             style={{ background: 'linear-gradient(135deg, #FF5A09, #FF5A09)', boxShadow: '0 8px 24px rgba(255,90,9,0.4)' }}
           >
             Enroll Now — फक्त ₹799 →
